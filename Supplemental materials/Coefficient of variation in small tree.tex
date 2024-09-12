@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[ 
+xbar, xmin=0, xmax=1.15,
+xlabel={Average Coefficient of Variation Across Equilibria},
+symbolic y coords={
+    {Expenditures},
+    {False Negative Inaccuracy},
+    {False Positive Inaccuracy},
+    {P Wins},
+    {P Loses},
+    {Trial},
+    {Settles},
+    {D Offer},
+    {P Offer},
+    {D Answers},
+    {P Files},
+    },
+ytick=data,
+nodes near coords,
+nodes near coords align={horizontal},
+/pgf/number format/.cd, fixed, fixed zerofill, precision=3,
+/pgf/number format/1000 sep={},
+]
+
+\addplot coordinates {
+    (0.109,{P Files}) 
+    (0.132,{D Answers}) 
+    (0.145,{P Offer}) 
+    (0.186,{D Offer}) 
+    (0.196,{Settles})
+    (0.196,{Trial}) 
+    (0.187,{P Loses}) 
+    (0.217,{P Wins}) 
+    (0.168,{False Positive Inaccuracy}) 
+    (0.073,{False Negative Inaccuracy}) 
+    (0.132,{Expenditures}) 
+};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

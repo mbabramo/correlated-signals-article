@@ -1,0 +1,1339 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{patterns, positioning}
+
+    \usetikzlibrary{calc}
+    \usepackage{relsize}
+    \tikzset{fontscale/.style = {font=\relsize{#1}}}
+\newsavebox{\myboxRACA} 
+\begin{lrbox}{\myboxRACA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.1362);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.3378);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.5261);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.6053);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.5508);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.1362) -- (1.315,3.1721);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.3378) -- (2.345,3.3392);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5261) -- (3.375,3.5261);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.6053) -- (4.405,3.6053);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.5508) -- (5.435,3.5508);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.1721) -- (1.315,3.1979);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.3392) -- (2.345,3.3849);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.5261) -- (3.375,3.5855);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.6053) -- (4.405,3.6631);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.5508) -- (5.435,3.63);
+\draw[orange, line width=1mm, solid] (1.315,3.1979) -- (1.315,3.6001);
+\draw[orange, line width=1mm, solid] (2.345,3.3849) -- (2.345,3.655);
+\draw[orange, line width=1mm, solid] (3.375,3.5855) -- (3.375,3.7181);
+\draw[orange, line width=1mm, solid] (4.405,3.6631) -- (4.405,3.7619);
+\draw[orange, line width=1mm, solid] (5.435,3.63) -- (5.435,3.7423);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.6001) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.655) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.7181) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.7619) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.7423) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRACB} 
+\begin{lrbox}{\myboxRACB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.2221);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.2629);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.3225);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.2483);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.4309);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.2221) -- (1.315,3.2221);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.2629) -- (2.345,3.3114);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.3225) -- (3.375,3.3373);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.2483) -- (4.405,3.2856);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.4309) -- (5.435,3.441);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.2221) -- (1.315,3.2221);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.3114) -- (2.345,3.3599);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.3373) -- (3.375,3.3373);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.2856) -- (4.405,3.323);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.441) -- (5.435,3.451);
+\draw[orange, line width=1mm, solid] (1.315,3.2221) -- (1.315,3.541);
+\draw[orange, line width=1mm, solid] (2.345,3.3599) -- (2.345,3.61);
+\draw[orange, line width=1mm, solid] (3.375,3.3373) -- (3.375,3.5895);
+\draw[orange, line width=1mm, solid] (4.405,3.323) -- (4.405,3.5915);
+\draw[orange, line width=1mm, solid] (5.435,3.451) -- (5.435,3.6555);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.541) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.61) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.5895) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.5915) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.6555) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRACC} 
+\begin{lrbox}{\myboxRACC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.1156);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.3935);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.5261);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.5508);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.5508);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.1156) -- (1.315,3.1329);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.3935) -- (2.345,3.4457);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5261) -- (3.375,3.5855);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.5508) -- (4.405,3.63);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.5508) -- (5.435,3.63);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.1329) -- (1.315,3.1867);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.4457) -- (2.345,3.4473);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.5855) -- (3.375,3.5855);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.63) -- (4.405,3.63);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.63) -- (5.435,3.63);
+\draw[orange, line width=1mm, solid] (1.315,3.1867) -- (1.315,3.4497);
+\draw[orange, line width=1mm, solid] (2.345,3.4473) -- (2.345,3.623);
+\draw[orange, line width=1mm, solid] (3.375,3.5855) -- (3.375,3.7274);
+\draw[orange, line width=1mm, solid] (4.405,3.63) -- (4.405,3.7477);
+\draw[orange, line width=1mm, solid] (5.435,3.63) -- (5.435,3.7477);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.4497) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.623) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.7274) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.7477) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.7477) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRBCA} 
+\begin{lrbox}{\myboxRBCA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 1,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.411);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.6175);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.5361);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.5525);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.4996);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.411) -- (1.315,3.4153);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.6175) -- (2.345,3.6175);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5361) -- (3.375,3.5404);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.5525) -- (4.405,3.6665);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.4996) -- (5.435,3.6912);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.4153) -- (1.315,3.4552);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.6175) -- (2.345,3.6611);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.5404) -- (3.375,3.7181);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.6665) -- (4.405,3.7564);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.6912) -- (5.435,3.7772);
+\draw[orange, line width=1mm, solid] (1.315,3.4552) -- (1.315,3.6875);
+\draw[orange, line width=1mm, solid] (2.345,3.6611) -- (2.345,3.7606);
+\draw[orange, line width=1mm, solid] (3.375,3.7181) -- (3.375,3.7993);
+\draw[orange, line width=1mm, solid] (4.405,3.7564) -- (4.405,3.8126);
+\draw[orange, line width=1mm, solid] (5.435,3.7772) -- (5.435,3.8152);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.6875) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.7606) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.7993) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8126) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8152) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRBCB} 
+\begin{lrbox}{\myboxRBCB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 1,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.2831);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.2444);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.3588);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.3311);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.3311);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.2831) -- (1.315,3.3199);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.2444) -- (2.345,3.2811);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.3588) -- (3.375,3.4896);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.3311) -- (4.405,3.5423);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.3311) -- (5.435,3.5423);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.3199) -- (1.315,3.3566);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.2811) -- (2.345,3.3178);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.4896) -- (3.375,3.6204);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.5423) -- (4.405,3.7535);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.5423) -- (5.435,3.7535);
+\draw[orange, line width=1mm, solid] (1.315,3.3566) -- (1.315,3.6087);
+\draw[orange, line width=1mm, solid] (2.345,3.3178) -- (2.345,3.5889);
+\draw[orange, line width=1mm, solid] (3.375,3.6204) -- (3.375,3.7402);
+\draw[orange, line width=1mm, solid] (4.405,3.7535) -- (4.405,3.8068);
+\draw[orange, line width=1mm, solid] (5.435,3.7535) -- (5.435,3.8068);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.6087) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.5889) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.7402) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8068) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8068) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRBCC} 
+\begin{lrbox}{\myboxRBCC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 1,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.1);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,1.1);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,1.1);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,1.1);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,1.1);
+\draw[blue, line width=1mm, double] (1.315,1.1) -- (1.315,3.4004);
+\draw[blue, line width=1mm, double] (2.345,1.1) -- (2.345,3.6175);
+\draw[blue, line width=1mm, double] (3.375,1.1) -- (3.375,3.5361);
+\draw[blue, line width=1mm, double] (4.405,1.1) -- (4.405,3.5332);
+\draw[blue, line width=1mm, double] (5.435,1.1) -- (5.435,3.4996);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.4004) -- (1.315,3.4503);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.6175) -- (2.345,3.6611);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5361) -- (3.375,3.7138);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.5332) -- (4.405,3.636);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.4996) -- (5.435,3.5856);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.4503) -- (1.315,3.4557);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.6611) -- (2.345,3.6611);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.7138) -- (3.375,3.7181);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.636) -- (4.405,3.759);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.5856) -- (5.435,3.7772);
+\draw[orange, line width=1mm, solid] (1.315,3.4557) -- (1.315,3.6255);
+\draw[orange, line width=1mm, solid] (2.345,3.6611) -- (2.345,3.7606);
+\draw[orange, line width=1mm, solid] (3.375,3.7181) -- (3.375,3.7788);
+\draw[orange, line width=1mm, solid] (4.405,3.759) -- (4.405,3.8067);
+\draw[orange, line width=1mm, solid] (5.435,3.7772) -- (5.435,3.8221);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.6255) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.7606) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.7788) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8067) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8221) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRCCA} 
+\begin{lrbox}{\myboxRCCA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 2,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.7705);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,2.7866);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,2.7808);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,2.6686);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,3.0786);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.7705) -- (1.315,1.7705);
+\draw[magenta, line width=2.5mm, dashed] (2.345,2.7866) -- (2.345,2.8441);
+\draw[magenta, line width=2.5mm, dashed] (3.375,2.7808) -- (3.375,2.7808);
+\draw[magenta, line width=2.5mm, dashed] (4.405,2.6686) -- (4.405,2.6686);
+\draw[magenta, line width=2.5mm, dashed] (5.435,3.0786) -- (5.435,3.0786);
+\draw[blue, line width=1mm, double] (1.315,1.7705) -- (1.315,3.6656);
+\draw[blue, line width=1mm, double] (2.345,2.8441) -- (2.345,3.5942);
+\draw[blue, line width=1mm, double] (3.375,2.7808) -- (3.375,3.5727);
+\draw[blue, line width=1mm, double] (4.405,2.6686) -- (4.405,3.6095);
+\draw[blue, line width=1mm, double] (5.435,3.0786) -- (5.435,3.6534);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.6656) -- (1.315,3.6685);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.5942) -- (2.345,3.7461);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5727) -- (3.375,3.7186);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.6095) -- (4.405,3.6987);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.6534) -- (5.435,3.7299);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.6685) -- (1.315,3.7091);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.7461) -- (2.345,3.7858);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.7186) -- (3.375,3.8131);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.6987) -- (4.405,3.8365);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.7299) -- (5.435,3.8452);
+\draw[orange, line width=1mm, solid] (1.315,3.7091) -- (1.315,3.7863);
+\draw[orange, line width=1mm, solid] (2.345,3.7858) -- (2.345,3.8204);
+\draw[orange, line width=1mm, solid] (3.375,3.8131) -- (3.375,3.8302);
+\draw[orange, line width=1mm, solid] (4.405,3.8365) -- (4.405,3.8486);
+\draw[orange, line width=1mm, solid] (5.435,3.8452) -- (5.435,3.8514);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.7863) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8204) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8302) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8486) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8514) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRCCB} 
+\begin{lrbox}{\myboxRCCB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 2,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.4997);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.4487);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.4487);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.4137);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.5413);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.4997) -- (1.315,1.8965);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.4487) -- (2.345,2.1612);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.4487) -- (3.375,2.1612);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.4137) -- (4.405,1.8247);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.5413) -- (5.435,1.849);
+\draw[blue, line width=1mm, double] (1.315,1.8965) -- (1.315,3.5242);
+\draw[blue, line width=1mm, double] (2.345,2.1612) -- (2.345,3.3926);
+\draw[blue, line width=1mm, double] (3.375,2.1612) -- (3.375,3.3702);
+\draw[blue, line width=1mm, double] (4.405,1.8247) -- (4.405,3.403);
+\draw[blue, line width=1mm, double] (5.435,1.849) -- (5.435,3.2357);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.5242) -- (1.315,3.58);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.3926) -- (2.345,3.5321);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.3702) -- (3.375,3.5098);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.403) -- (4.405,3.6131);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.2357) -- (5.435,3.5368);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.58) -- (1.315,3.6389);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.5321) -- (2.345,3.7668);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.5098) -- (3.375,3.7657);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.6131) -- (4.405,3.8107);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.5368) -- (5.435,3.8344);
+\draw[orange, line width=1mm, solid] (1.315,3.6389) -- (1.315,3.7475);
+\draw[orange, line width=1mm, solid] (2.345,3.7668) -- (2.345,3.8155);
+\draw[orange, line width=1mm, solid] (3.375,3.7657) -- (3.375,3.8194);
+\draw[orange, line width=1mm, solid] (4.405,3.8107) -- (4.405,3.835);
+\draw[orange, line width=1mm, solid] (5.435,3.8344) -- (5.435,3.8466);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.7475) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8155) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8194) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.835) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8466) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRCCC} 
+\begin{lrbox}{\myboxRCCC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 2,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.1);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.1);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1) -- (1.315,1.9381);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.1) -- (2.345,2.7854);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.1) -- (3.375,2.847);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1) -- (4.405,2.9569);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,2.6679);
+\draw[blue, line width=1mm, double] (1.315,1.9381) -- (1.315,3.7182);
+\draw[blue, line width=1mm, double] (2.345,2.7854) -- (2.345,3.5924);
+\draw[blue, line width=1mm, double] (3.375,2.847) -- (3.375,3.5367);
+\draw[blue, line width=1mm, double] (4.405,2.9569) -- (4.405,3.6558);
+\draw[blue, line width=1mm, double] (5.435,2.6679) -- (5.435,3.5521);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.7182) -- (1.315,3.7271);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.5924) -- (2.345,3.6272);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5367) -- (3.375,3.6357);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.6558) -- (4.405,3.7552);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.5521) -- (5.435,3.6976);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.7271) -- (1.315,3.73);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.6272) -- (2.345,3.781);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.6357) -- (3.375,3.8058);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.7552) -- (4.405,3.8394);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.6976) -- (5.435,3.8457);
+\draw[orange, line width=1mm, solid] (1.315,3.73) -- (1.315,3.7911);
+\draw[orange, line width=1mm, solid] (2.345,3.781) -- (2.345,3.8236);
+\draw[orange, line width=1mm, solid] (3.375,3.8058) -- (3.375,3.8355);
+\draw[orange, line width=1mm, solid] (4.405,3.8394) -- (4.405,3.8505);
+\draw[orange, line width=1mm, solid] (5.435,3.8457) -- (5.435,3.8533);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.7911) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8236) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8355) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8505) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8533) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRDCA} 
+\begin{lrbox}{\myboxRDCA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 3,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,2.7018);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,3.1079);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,3.4943);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,3.7963);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,3.86);
+\draw[magenta, line width=2.5mm, dashed] (1.315,2.7018) -- (1.315,2.7995);
+\draw[magenta, line width=2.5mm, dashed] (2.345,3.1079) -- (2.345,3.3594);
+\draw[magenta, line width=2.5mm, dashed] (3.375,3.4943) -- (3.375,3.617);
+\draw[magenta, line width=2.5mm, dashed] (4.405,3.7963) -- (4.405,3.8064);
+\draw[magenta, line width=2.5mm, dashed] (5.435,3.86) -- (5.435,3.86);
+\draw[blue, line width=1mm, double] (1.315,2.7995) -- (1.315,3.7301);
+\draw[blue, line width=1mm, double] (2.345,3.3594) -- (2.345,3.7429);
+\draw[blue, line width=1mm, double] (3.375,3.617) -- (3.375,3.7674);
+\draw[blue, line width=1mm, double] (4.405,3.8064) -- (4.405,3.8444);
+\draw[blue, line width=1mm, double] (5.435,3.86) -- (5.435,3.86);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.7301) -- (1.315,3.7893);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.7429) -- (2.345,3.7898);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.7674) -- (3.375,3.8178);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.8444) -- (4.405,3.8529);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.7893) -- (1.315,3.8232);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.7898) -- (2.345,3.8477);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.8178) -- (3.375,3.8564);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.8529) -- (4.405,3.8598);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[orange, line width=1mm, solid] (1.315,3.8232) -- (1.315,3.8409);
+\draw[orange, line width=1mm, solid] (2.345,3.8477) -- (2.345,3.8557);
+\draw[orange, line width=1mm, solid] (3.375,3.8564) -- (3.375,3.8584);
+\draw[orange, line width=1mm, solid] (4.405,3.8598) -- (4.405,3.8599);
+\draw[orange, line width=1mm, solid] (5.435,3.86) -- (5.435,3.86);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8409) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8557) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8584) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8599) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.86) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRDCB} 
+\begin{lrbox}{\myboxRDCB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 3,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.7882);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.8289);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.9928);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.6136);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.6136);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.7882) -- (1.315,2.4289);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.8289) -- (2.345,2.9707);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.9928) -- (3.375,3.0628);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.6136) -- (4.405,2.6893);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.6136) -- (5.435,2.5447);
+\draw[blue, line width=1mm, double] (1.315,2.4289) -- (1.315,3.6765);
+\draw[blue, line width=1mm, double] (2.345,2.9707) -- (2.345,3.6912);
+\draw[blue, line width=1mm, double] (3.375,3.0628) -- (3.375,3.5765);
+\draw[blue, line width=1mm, double] (4.405,2.6893) -- (4.405,3.4772);
+\draw[blue, line width=1mm, double] (5.435,2.5447) -- (5.435,3.4474);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.6765) -- (1.315,3.7489);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.6912) -- (2.345,3.7562);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.5765) -- (3.375,3.7674);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.4772) -- (4.405,3.7587);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.4474) -- (5.435,3.7292);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.7489) -- (1.315,3.8183);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.7562) -- (2.345,3.8413);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.7674) -- (3.375,3.853);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.7587) -- (4.405,3.8563);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.7292) -- (5.435,3.8567);
+\draw[orange, line width=1mm, solid] (1.315,3.8183) -- (1.315,3.8396);
+\draw[orange, line width=1mm, solid] (2.345,3.8413) -- (2.345,3.8509);
+\draw[orange, line width=1mm, solid] (3.375,3.853) -- (3.375,3.8559);
+\draw[orange, line width=1mm, solid] (4.405,3.8563) -- (4.405,3.8581);
+\draw[orange, line width=1mm, solid] (5.435,3.8567) -- (5.435,3.8584);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8396) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8509) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8559) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8581) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.8584) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRDCC} 
+\begin{lrbox}{\myboxRDCC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 3,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.1455);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.2372);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,1.2526);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,1.1145);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,1.1);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.1455) -- (1.315,2.8143);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.2372) -- (2.345,3.2035);
+\draw[magenta, line width=2.5mm, dashed] (3.375,1.2526) -- (3.375,3.379);
+\draw[magenta, line width=2.5mm, dashed] (4.405,1.1145) -- (4.405,3.7898);
+\draw[magenta, line width=2.5mm, dashed] (5.435,1.1) -- (5.435,3.86);
+\draw[blue, line width=1mm, double] (1.315,2.8143) -- (1.315,3.7245);
+\draw[blue, line width=1mm, double] (2.345,3.2035) -- (2.345,3.741);
+\draw[blue, line width=1mm, double] (3.375,3.379) -- (3.375,3.6814);
+\draw[blue, line width=1mm, double] (4.405,3.7898) -- (4.405,3.8397);
+\draw[blue, line width=1mm, double] (5.435,3.86) -- (5.435,3.86);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.7245) -- (1.315,3.7554);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.741) -- (2.345,3.8188);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.6814) -- (3.375,3.7768);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.8397) -- (4.405,3.8486);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.7554) -- (1.315,3.8217);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.8188) -- (2.345,3.8474);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.7768) -- (3.375,3.8536);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.8486) -- (4.405,3.8597);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[orange, line width=1mm, solid] (1.315,3.8217) -- (1.315,3.8419);
+\draw[orange, line width=1mm, solid] (2.345,3.8474) -- (2.345,3.8524);
+\draw[orange, line width=1mm, solid] (3.375,3.8536) -- (3.375,3.8561);
+\draw[orange, line width=1mm, solid] (4.405,3.8597) -- (4.405,3.8598);
+\draw[orange, line width=1mm, solid] (5.435,3.86) -- (5.435,3.86);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8419) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.8524) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.8561) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.8598) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.86) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRECA} 
+\begin{lrbox}{\myboxRECA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 4,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,3.3066);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,3.7666);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,3.2106);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,2.9729);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,2.71);
+\draw[magenta, line width=2.5mm, dashed] (1.315,3.3066) -- (1.315,3.8459);
+\draw[magenta, line width=2.5mm, dashed] (2.345,3.7666) -- (2.345,3.8358);
+\draw[magenta, line width=2.5mm, dashed] (3.375,3.2106) -- (3.375,3.86);
+\draw[magenta, line width=2.5mm, dashed] (4.405,2.9729) -- (4.405,3.86);
+\draw[magenta, line width=2.5mm, dashed] (5.435,2.71) -- (5.435,3.86);
+\draw[blue, line width=1mm, double] (1.315,3.8459) -- (1.315,3.8545);
+\draw[blue, line width=1mm, double] (2.345,3.8358) -- (2.345,3.8569);
+\draw[blue, line width=1mm, double] (3.375,3.86) -- (3.375,3.86);
+\draw[blue, line width=1mm, double] (4.405,3.86) -- (4.405,3.86);
+\draw[blue, line width=1mm, double] (5.435,3.86) -- (5.435,3.86);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.8545) -- (1.315,3.859);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.8569) -- (2.345,3.8587);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.859) -- (1.315,3.8596);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.8587) -- (2.345,3.8599);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[orange, line width=1mm, solid] (1.315,3.8596) -- (1.315,3.8598);
+\draw[orange, line width=1mm, solid] (2.345,3.8599) -- (2.345,3.86);
+\draw[orange, line width=1mm, solid] (3.375,3.86) -- (3.375,3.86);
+\draw[orange, line width=1mm, solid] (4.405,3.86) -- (4.405,3.86);
+\draw[orange, line width=1mm, solid] (5.435,3.86) -- (5.435,3.86);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8598) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.86) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.86) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.86) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.86) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRECB} 
+\begin{lrbox}{\myboxRECB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 4,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.6018);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,3.2816);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,3.4);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,3.1938);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,2.8664);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.6018) -- (1.315,3.7946);
+\draw[magenta, line width=2.5mm, dashed] (2.345,3.2816) -- (2.345,3.8238);
+\draw[magenta, line width=2.5mm, dashed] (3.375,3.4) -- (3.375,3.86);
+\draw[magenta, line width=2.5mm, dashed] (4.405,3.1938) -- (4.405,3.86);
+\draw[magenta, line width=2.5mm, dashed] (5.435,2.8664) -- (5.435,3.86);
+\draw[blue, line width=1mm, double] (1.315,3.7946) -- (1.315,3.849);
+\draw[blue, line width=1mm, double] (2.345,3.8238) -- (2.345,3.8548);
+\draw[blue, line width=1mm, double] (3.375,3.86) -- (3.375,3.86);
+\draw[blue, line width=1mm, double] (4.405,3.86) -- (4.405,3.86);
+\draw[blue, line width=1mm, double] (5.435,3.86) -- (5.435,3.86);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.849) -- (1.315,3.8559);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.8548) -- (2.345,3.8588);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.8559) -- (1.315,3.8586);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.8588) -- (2.345,3.8599);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[orange, line width=1mm, solid] (1.315,3.8586) -- (1.315,3.8591);
+\draw[orange, line width=1mm, solid] (2.345,3.8599) -- (2.345,3.86);
+\draw[orange, line width=1mm, solid] (3.375,3.86) -- (3.375,3.86);
+\draw[orange, line width=1mm, solid] (4.405,3.86) -- (4.405,3.86);
+\draw[orange, line width=1mm, solid] (5.435,3.86) -- (5.435,3.86);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8591) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.86) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.86) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.86) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.86) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRECC} 
+\begin{lrbox}{\myboxRECC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 4,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,3.86);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.48) {Proportion};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.376) -- (0.85,1.376);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.376) { };
+\draw[black] (0.75,1.652) -- (0.85,1.652);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.652) { };
+\draw[black] (0.75,1.928) -- (0.85,1.928);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.928) { };
+\draw[black] (0.75,2.204) -- (0.85,2.204);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.204) { };
+\draw[black] (0.75,2.48) -- (0.85,2.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.48) { };
+\draw[black] (0.75,2.756) -- (0.85,2.756);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.756) { };
+\draw[black] (0.75,3.032) -- (0.85,3.032);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.032) { };
+\draw[black] (0.75,3.308) -- (0.85,3.308);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.308) { };
+\draw[black] (0.75,3.584) -- (0.85,3.584);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.584) { };
+\draw[black] (0.75,3.86) -- (0.85,3.86);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.86) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[violet, line width=3mm, solid] (1.315,1.1) -- (1.315,1.123);
+\draw[violet, line width=3mm, solid] (2.345,1.1) -- (2.345,1.8123);
+\draw[violet, line width=3mm, solid] (3.375,1.1) -- (3.375,3.2745);
+\draw[violet, line width=3mm, solid] (4.405,1.1) -- (4.405,3.3292);
+\draw[violet, line width=3mm, solid] (5.435,1.1) -- (5.435,2.8743);
+\draw[magenta, line width=2.5mm, dashed] (1.315,1.123) -- (1.315,3.8531);
+\draw[magenta, line width=2.5mm, dashed] (2.345,1.8123) -- (2.345,3.86);
+\draw[magenta, line width=2.5mm, dashed] (3.375,3.2745) -- (3.375,3.86);
+\draw[magenta, line width=2.5mm, dashed] (4.405,3.3292) -- (4.405,3.86);
+\draw[magenta, line width=2.5mm, dashed] (5.435,2.8743) -- (5.435,3.86);
+\draw[blue, line width=1mm, double] (1.315,3.8531) -- (1.315,3.859);
+\draw[blue, line width=1mm, double] (2.345,3.86) -- (2.345,3.86);
+\draw[blue, line width=1mm, double] (3.375,3.86) -- (3.375,3.86);
+\draw[blue, line width=1mm, double] (4.405,3.86) -- (4.405,3.86);
+\draw[blue, line width=1mm, double] (5.435,3.86) -- (5.435,3.86);
+\draw[green, line width=1.5mm, densely dotted] (1.315,3.859) -- (1.315,3.8596);
+\draw[green, line width=1.5mm, densely dotted] (2.345,3.86) -- (2.345,3.86);
+\draw[green, line width=1.5mm, densely dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[green, line width=1.5mm, densely dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[green, line width=1.5mm, densely dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[yellow, line width=1.5mm, dotted] (1.315,3.8596) -- (1.315,3.8599);
+\draw[yellow, line width=1.5mm, dotted] (2.345,3.86) -- (2.345,3.86);
+\draw[yellow, line width=1.5mm, dotted] (3.375,3.86) -- (3.375,3.86);
+\draw[yellow, line width=1.5mm, dotted] (4.405,3.86) -- (4.405,3.86);
+\draw[yellow, line width=1.5mm, dotted] (5.435,3.86) -- (5.435,3.86);
+\draw[orange, line width=1mm, solid] (1.315,3.8599) -- (1.315,3.8599);
+\draw[orange, line width=1mm, solid] (2.345,3.86) -- (2.345,3.86);
+\draw[orange, line width=1mm, solid] (3.375,3.86) -- (3.375,3.86);
+\draw[orange, line width=1mm, solid] (4.405,3.86) -- (4.405,3.86);
+\draw[orange, line width=1mm, solid] (5.435,3.86) -- (5.435,3.86);
+\draw[red, line width=0.5mm, densely dashed] (1.315,3.8599) -- (1.315,3.86);
+\draw[red, line width=0.5mm, densely dashed] (2.345,3.86) -- (2.345,3.86);
+\draw[red, line width=0.5mm, densely dashed] (3.375,3.86) -- (3.375,3.86);
+\draw[red, line width=0.5mm, densely dashed] (4.405,3.86) -- (4.405,3.86);
+\draw[red, line width=0.5mm, densely dashed] (5.435,3.86) -- (5.435,3.86);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+
+\begin{document}
+\begin{tikzpicture}
+\clip(0, -1) rectangle + (20,23.3); 
+\draw[black] (1.7,1.5) -- (1.7,22.3);
+\node[rotate=90, fontscale=2, anchor=center] at (0.7, 12.45) {Costs Multiplier};
+\draw[black] (1.65,4.13) -- (1.75,4.13);
+\node[fontscale=2, anchor=east] at (1.65, 4.13) {0.25};
+\draw[black] (1.65,8.29) -- (1.75,8.29);
+\node[fontscale=2, anchor=east] at (1.65, 8.29) {0.5};
+\draw[black] (1.65,12.45) -- (1.75,12.45);
+\node[fontscale=2, anchor=east] at (1.65, 12.45) {1};
+\draw[black] (1.65,16.61) -- (1.75,16.61);
+\node[fontscale=2, anchor=east] at (1.65, 16.61) {2};
+\draw[black] (1.65,20.77) -- (1.75,20.77);
+\node[fontscale=2, anchor=east] at (1.65, 20.77) {4};
+
+\draw[black] (1.7,1.5) -- (20,1.5);
+\node[fontscale=2, anchor=center] at (11.25, 0.6) {Proportion of Cases Where D Is Truly Liable};
+\draw[black] (5.15,1.45) -- (5.15,1.55);
+\node[fontscale=2, anchor=north] at (5.15, 1.45) {0.1};
+\draw[black] (11.25,1.45) -- (11.25,1.55);
+\node[fontscale=2, anchor=north] at (11.25, 1.45) {0.5};
+\draw[black] (17.35,1.45) -- (17.35,1.55);
+\node[fontscale=2, anchor=north] at (17.35, 1.45) {0.9};
+
+
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,5.56) { \usebox{\myboxRACA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,5.56) { \usebox{\myboxRACB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,5.56) { \usebox{\myboxRACC} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,9.72) { \usebox{\myboxRBCA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,9.72) { \usebox{\myboxRBCB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,9.72) { \usebox{\myboxRBCC} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,13.88) { \usebox{\myboxRCCA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,13.88) { \usebox{\myboxRCCB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,13.88) { \usebox{\myboxRCCC} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,18.04) { \usebox{\myboxRDCA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,18.04) { \usebox{\myboxRDCB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,18.04) { \usebox{\myboxRDCC} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,22.2) { \usebox{\myboxRECA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,22.2) { \usebox{\myboxRECB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,22.2) { \usebox{\myboxRECC} };
+\draw (11.25,0) node[draw=none] (baseCoordinate) {};
+\begin{scope}[align=center]
+        \matrix[scale=0.5, draw=black, below=-0.4cm of baseCoordinate, nodes={draw}, column sep=0.1cm]{
+        
+\draw[violet, line width=3mm, solid] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {No Suit}; &
+
+\draw[magenta, line width=2.5mm, dashed] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {No Answer}; &
+
+\draw[blue, line width=1mm, double] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {Settles}; &
+
+\draw[green, line width=1.5mm, densely dotted] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {P Abandons}; &
+
+\draw[yellow, line width=1.5mm, dotted] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {D Defaults}; &
+
+\draw[orange, line width=1mm, solid] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {P Loses}; &
+
+\draw[red, line width=0.5mm, densely dashed] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {P Wins}; \\
+            };
+\end{scope}
+
+\end{tikzpicture}
+\end{document}

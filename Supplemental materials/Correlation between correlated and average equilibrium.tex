@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[ 
+xbar, xmin=0, xmax=1.15,
+xlabel={Correlation Coefficient},
+symbolic y coords={
+    {Expenditures},
+    {False Negative Inaccuracy},
+    {False Positive Inaccuracy},
+    {P Wins},
+    {P Loses},
+    {Trial},
+    {Settles},
+    {D Offer},
+    {P Offer},
+    {D Answers},
+    {P Files},
+    },
+ytick=data,
+nodes near coords,
+nodes near coords align={horizontal},
+/pgf/number format/.cd, fixed, fixed zerofill, precision=3,
+/pgf/number format/1000 sep={},
+]
+
+\addplot coordinates {
+    (1.000,{P Files}) 
+    (0.997,{D Answers}) 
+    (0.945,{P Offer}) 
+    (0.951,{D Offer}) 
+    (0.976,{Settles})
+    (0.966,{Trial}) 
+    (0.963,{P Loses}) 
+    (0.974,{P Wins}) 
+    (0.987,{False Positive Inaccuracy}) 
+    (0.996,{False Negative Inaccuracy}) 
+    (0.975,{Expenditures}) 
+};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}
