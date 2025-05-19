@@ -1,0 +1,203 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{patterns, positioning}
+
+    \usetikzlibrary{calc}
+    \usepackage{relsize}
+    \tikzset{fontscale/.style = {font=\relsize{#1}}}
+\newsavebox{\myboxRACA} 
+\begin{lrbox}{\myboxRACA}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,0
+% 
+\draw[black] (0.8,1.1) -- (0.8,4.5);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.8) {\$};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.44) -- (0.85,1.44);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.44) { };
+\draw[black] (0.75,1.78) -- (0.85,1.78);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.78) { };
+\draw[black] (0.75,2.12) -- (0.85,2.12);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.12) { };
+\draw[black] (0.75,2.46) -- (0.85,2.46);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.46) { };
+\draw[black] (0.75,2.8) -- (0.85,2.8);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.8) { };
+\draw[black] (0.75,3.14) -- (0.85,3.14);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.14) { };
+\draw[black] (0.75,3.48) -- (0.85,3.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.48) { };
+\draw[black] (0.75,3.82) -- (0.85,3.82);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.82) { };
+\draw[black] (0.75,4.16) -- (0.85,4.16);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.16) { };
+\draw[black] (0.75,4.5) -- (0.85,4.5);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.5) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[blue, opacity=0.70, line width=0.5mm, double] (1.315,3.2283) -- (2.345,2.6566) -- (3.375,2.7078) -- (4.405,2.7575) -- (5.435,3.14);
+\draw[orange, opacity=0.70, line width=1mm, dashed] (1.315,1.1566) -- (2.345,1.2593) -- (3.375,1.3271) -- (4.405,1.3264) -- (5.435,1.293);
+\draw[green, opacity=0.70, line width=1mm, solid] (1.315,2.1995) -- (2.345,1.7479) -- (3.375,1.9014) -- (4.405,1.9399) -- (5.435,1.9233);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRACB} 
+\begin{lrbox}{\myboxRACB}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,1
+% 
+\draw[black] (0.8,1.1) -- (0.8,4.5);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.8) {\$};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.44) -- (0.85,1.44);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.44) { };
+\draw[black] (0.75,1.78) -- (0.85,1.78);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.78) { };
+\draw[black] (0.75,2.12) -- (0.85,2.12);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.12) { };
+\draw[black] (0.75,2.46) -- (0.85,2.46);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.46) { };
+\draw[black] (0.75,2.8) -- (0.85,2.8);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.8) { };
+\draw[black] (0.75,3.14) -- (0.85,3.14);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.14) { };
+\draw[black] (0.75,3.48) -- (0.85,3.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.48) { };
+\draw[black] (0.75,3.82) -- (0.85,3.82);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.82) { };
+\draw[black] (0.75,4.16) -- (0.85,4.16);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.16) { };
+\draw[black] (0.75,4.5) -- (0.85,4.5);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.5) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[blue, opacity=0.70, line width=0.5mm, double] (1.315,2.6354) -- (2.345,2.2244) -- (3.375,2.3587) -- (4.405,2.3621) -- (5.435,2.3537);
+\draw[orange, opacity=0.70, line width=1mm, dashed] (1.315,1.1739) -- (2.345,1.193) -- (3.375,1.2112) -- (4.405,1.2192) -- (5.435,1.2571);
+\draw[green, opacity=0.70, line width=1mm, solid] (1.315,2.2312) -- (2.345,1.7498) -- (3.375,1.8076) -- (4.405,1.8076) -- (5.435,1.9184);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+\newsavebox{\myboxRACC} 
+\begin{lrbox}{\myboxRACC}
+  \begin{tikzpicture}
+    \begin{scope}
+% 
+% Cell 0,2
+% 
+\draw[black] (0.8,1.1) -- (0.8,4.5);
+\node[rotate=90, fontscale=0.7, anchor=center] at (0.4, 2.8) {\$};
+\draw[black] (0.75,1.1) -- (0.85,1.1);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.1) {0};
+\draw[black] (0.75,1.44) -- (0.85,1.44);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.44) { };
+\draw[black] (0.75,1.78) -- (0.85,1.78);
+\node[fontscale=0.7, anchor=east] at (0.75, 1.78) { };
+\draw[black] (0.75,2.12) -- (0.85,2.12);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.12) { };
+\draw[black] (0.75,2.46) -- (0.85,2.46);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.46) { };
+\draw[black] (0.75,2.8) -- (0.85,2.8);
+\node[fontscale=0.7, anchor=east] at (0.75, 2.8) { };
+\draw[black] (0.75,3.14) -- (0.85,3.14);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.14) { };
+\draw[black] (0.75,3.48) -- (0.85,3.48);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.48) { };
+\draw[black] (0.75,3.82) -- (0.85,3.82);
+\node[fontscale=0.7, anchor=east] at (0.75, 3.82) { };
+\draw[black] (0.75,4.16) -- (0.85,4.16);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.16) { };
+\draw[black] (0.75,4.5) -- (0.85,4.5);
+\node[fontscale=0.7, anchor=east] at (0.75, 4.5) {1};
+
+\draw[black] (0.8,1.1) -- (5.95,1.1);
+\node[fontscale=0.7, anchor=center] at (3.375, 0.3) {Fee Shifting Multiplier};
+\draw[black] (1.315,1.05) -- (1.315,1.15);
+\node[fontscale=0.7, anchor=north] at (1.315, 1.05) {0};
+\draw[black] (2.345,1.05) -- (2.345,1.15);
+\node[fontscale=0.7, anchor=north] at (2.345, 1.05) {0.5};
+\draw[black] (3.375,1.05) -- (3.375,1.15);
+\node[fontscale=0.7, anchor=north] at (3.375, 1.05) {1};
+\draw[black] (4.405,1.05) -- (4.405,1.15);
+\node[fontscale=0.7, anchor=north] at (4.405, 1.05) {1.5};
+\draw[black] (5.435,1.05) -- (5.435,1.15);
+\node[fontscale=0.7, anchor=north] at (5.435, 1.05) {2};
+
+\draw[blue, opacity=0.70, line width=0.5mm, double] (1.315,2.449) -- (2.345,1.9785) -- (3.375,1.979) -- (4.405,2.0127) -- (5.435,1.9135);
+\draw[orange, opacity=0.70, line width=1mm, dashed] (1.315,1.1338) -- (2.345,1.1673) -- (3.375,1.1567) -- (4.405,1.1759) -- (5.435,1.152);
+\draw[green, opacity=0.70, line width=1mm, solid] (1.315,2.1766) -- (2.345,1.7491) -- (3.375,1.7482) -- (4.405,1.7729) -- (5.435,1.7379);
+
+  \end{scope}
+  \end{tikzpicture}
+\end{lrbox}
+
+\begin{document}
+\begin{tikzpicture}
+\clip(0, -1) rectangle + (20,7.3); 
+\draw[black] (1.7,1.5) -- (1.7,6.3);
+\node[rotate=90, fontscale=2, anchor=center] at (0.7, 4.45) {Costs Multiplier};
+\draw[black] (1.65,4.45) -- (1.75,4.45);
+\node[fontscale=2, anchor=east] at (1.65, 4.45) {1};
+
+\draw[black] (1.7,1.5) -- (20,1.5);
+\node[fontscale=2, anchor=center] at (11.25, 0.6) {Proportion of Cases Where D Is Truly Liable};
+\draw[black] (5.15,1.45) -- (5.15,1.55);
+\node[fontscale=2, anchor=north] at (5.15, 1.45) {0.1};
+\draw[black] (11.25,1.45) -- (11.25,1.55);
+\node[fontscale=2, anchor=north] at (11.25, 1.45) {0.5};
+\draw[black] (17.35,1.45) -- (17.35,1.55);
+\node[fontscale=2, anchor=north] at (17.35, 1.45) {0.9};
+
+
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (1.75,6.2) { \usebox{\myboxRACA} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (7.85,6.2) { \usebox{\myboxRACB} };
+\node[anchor=north west,inner sep=0pt,outer sep=0pt] at (13.95,6.2) { \usebox{\myboxRACC} };
+\draw (11.25,0) node[draw=none] (baseCoordinate) {};
+\begin{scope}[align=center]
+        \matrix[scale=0.5, draw=black, below=-0.4cm of baseCoordinate, nodes={draw}, column sep=0.1cm]{
+        
+\draw[blue, opacity=0.70, line width=0.5mm, double] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {False Negative Inaccuracy}; &
+
+\draw[orange, opacity=0.70, line width=1mm, dashed] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {False Positive Inaccuracy}; &
+
+\draw[green, opacity=0.70, line width=1mm, solid] (0.25,-0.25) -- (0.75,-0.25); &
+\node[draw=none, font=\small] (B) {Expenditures}; \\
+            };
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
