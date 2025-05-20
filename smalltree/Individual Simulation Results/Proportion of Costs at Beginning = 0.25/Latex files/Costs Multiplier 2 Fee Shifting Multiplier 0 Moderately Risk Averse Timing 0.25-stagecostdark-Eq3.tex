@@ -1,0 +1,153 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns, positioning}
+\usepackage[sfdefault]{ClearSans} %% option 'sfdefault' activates Clear Sans as the default text font
+\usepackage[T1]{fontenc}
+
+\begin{document}
+\begin{tikzpicture}
+\draw[fill=black] (0,0) rectangle (26.667,15);
+\draw[text=white] (0,13.5) rectangle (26.667,15) node[midway] {\huge Costs: 2x; Fee Shift: 0x; Both Risk Averse};
+\draw[white, very thin] (1.5,1.75) -- (1.5,13.5);
+\node[rotate=90, text=white, anchor=center] at (0.3, 7.625) {Proportion of Cases};
+\draw[white, very thin] (1.45,1.75) -- (1.55,1.75);
+\node[text=white, anchor=east] at (1.45, 1.75) {0\%};
+\draw[white, very thin] (1.45,2.925) -- (1.55,2.925);
+\node[text=white, anchor=east] at (1.45, 2.925) {10\%};
+\draw[white, very thin] (1.45,4.1) -- (1.55,4.1);
+\node[text=white, anchor=east] at (1.45, 4.1) {20\%};
+\draw[white, very thin] (1.45,5.275) -- (1.55,5.275);
+\node[text=white, anchor=east] at (1.45, 5.275) {30\%};
+\draw[white, very thin] (1.45,6.45) -- (1.55,6.45);
+\node[text=white, anchor=east] at (1.45, 6.45) {40\%};
+\draw[white, very thin] (1.45,7.625) -- (1.55,7.625);
+\node[text=white, anchor=east] at (1.45, 7.625) {50\%};
+\draw[white, very thin] (1.45,8.8) -- (1.55,8.8);
+\node[text=white, anchor=east] at (1.45, 8.8) {60\%};
+\draw[white, very thin] (1.45,9.975) -- (1.55,9.975);
+\node[text=white, anchor=east] at (1.45, 9.975) {70\%};
+\draw[white, very thin] (1.45,11.15) -- (1.55,11.15);
+\node[text=white, anchor=east] at (1.45, 11.15) {80\%};
+\draw[white, very thin] (1.45,12.325) -- (1.55,12.325);
+\node[text=white, anchor=east] at (1.45, 12.325) {90\%};
+\draw[white, very thin] (1.45,13.5) -- (1.55,13.5);
+\node[text=white, anchor=east] at (1.45, 13.5) {100\%};
+
+\draw[white, very thin] (24.457,1.75) -- (24.457,13.5);
+\draw[white, very thin] (24.407,1.75) -- (24.507,1.75);
+\node[anchor=west] at (24.407, 1.75) {};
+\draw[white, very thin] (24.407,3.2075) -- (24.507,3.2075);
+\node[anchor=west] at (24.407, 3.2075) {};
+\draw[white, very thin] (24.407,4.6597) -- (24.507,4.6597);
+\node[anchor=west] at (24.407, 4.6597) {};
+\draw[white, very thin] (24.407,11.534) -- (24.507,11.534);
+\node[anchor=west] at (24.407, 11.534) {};
+\draw[white, very thin] (24.407,12.343) -- (24.507,12.343);
+\node[anchor=west] at (24.407, 12.343) {};
+\draw[white, very thin] (24.407,13.152) -- (24.507,13.152);
+\node[anchor=west] at (24.407, 13.152) {};
+\draw[white, very thin] (24.407,13.326) -- (24.507,13.326);
+\node[anchor=west] at (24.407, 13.326) {};
+\draw[white, very thin] (24.407,13.5) -- (24.507,13.5);
+\node[anchor=west] at (24.407, 13.5) {};
+
+\draw[white, very thin, fill=blue] (1.75,1.75) rectangle (4.6775,1.9033);
+\draw[white, very thin, fill=red] (1.75,1.9033) rectangle (1.75,3.2075);
+\draw[white, very thin, fill=blue] (1.75,3.2075) rectangle (2.1891,4.509);
+\draw[white, very thin, fill=red] (1.75,4.509) rectangle (1.75,4.6597);
+\draw[white, very thin, fill=blue] (1.75,4.6597) rectangle (4.8239,4.8825);
+\draw[white, very thin, fill=blue] (1.75,4.8825) rectangle (4.2384,5.1711);
+\draw[white, very thin, fill=blue] (1.75,5.1711) rectangle (3.9457,5.3323);
+\draw[white, very thin, fill=blue] (1.75,5.3323) rectangle (3.6529,5.4806);
+\draw[white, very thin, fill=blue] (1.75,5.4806) rectangle (3.3602,5.6162);
+\draw[white, very thin, fill=blue] (1.75,5.6162) rectangle (3.0674,7.0101);
+\draw[white, very thin, fill=blue] (1.75,7.0101) rectangle (2.4819,8.0967);
+\draw[white, very thin, fill=red] (1.75,8.0967) rectangle (1.75,11.534);
+\draw[white, very thin, fill=blue] (1.75,11.534) rectangle (5.1167,11.834);
+\draw[white, very thin, fill=red] (1.75,11.834) rectangle (1.75,12.343);
+\draw[white, very thin, fill=blue] (1.75,12.343) rectangle (2.1891,12.852);
+\draw[white, very thin, fill=red] (1.75,12.852) rectangle (1.75,13.152);
+\draw[white, very thin, fill=blue] (1.75,13.152) rectangle (6.4341,13.205);
+\draw[white, very thin, fill=red] (1.75,13.205) rectangle (1.75,13.326);
+\draw[white, very thin, fill=blue] (1.75,13.326) rectangle (3.5065,13.448);
+\draw[white, very thin, fill=red] (1.75,13.448) rectangle (1.75,13.5);
+\draw[white, very thin, fill=red] (9.3189,1.75) rectangle (9.3189,3.0542);
+\draw[white, very thin, fill=blue] (9.3189,3.0542) rectangle (9.3189,3.2075);
+\draw[white, very thin, fill=red] (9.3189,3.2075) rectangle (12.246,3.3583);
+\draw[white, very thin, fill=blue] (9.3189,3.3583) rectangle (9.3189,4.6597);
+\draw[white, very thin, fill=red] (9.3189,4.6597) rectangle (12.393,4.8824);
+\draw[white, very thin, fill=red] (9.3189,4.8824) rectangle (11.807,5.171);
+\draw[white, very thin, fill=red] (9.3189,5.171) rectangle (11.515,5.3322);
+\draw[white, very thin, fill=red] (9.3189,5.3322) rectangle (11.222,5.4805);
+\draw[white, very thin, fill=red] (9.3189,5.4805) rectangle (10.929,5.6161);
+\draw[white, very thin, fill=red] (9.3189,5.6161) rectangle (10.636,7.0102);
+\draw[white, very thin, fill=red] (9.3189,7.0102) rectangle (10.051,8.0968);
+\draw[white, very thin, fill=blue] (9.3189,8.0968) rectangle (9.4652,9.1833);
+\draw[white, very thin, fill=blue] (9.3189,9.1833) rectangle (9.3189,11.534);
+\draw[white, very thin, fill=red] (9.3189,11.534) rectangle (9.758,12.042);
+\draw[white, very thin, fill=blue] (9.3189,12.042) rectangle (9.3189,12.343);
+\draw[white, very thin, fill=red] (9.3189,12.343) rectangle (12.686,12.644);
+\draw[white, very thin, fill=blue] (9.3189,12.644) rectangle (9.758,13.152);
+\draw[white, very thin, fill=red] (9.3189,13.152) rectangle (11.075,13.274);
+\draw[white, very thin, fill=blue] (9.3189,13.274) rectangle (9.3189,13.326);
+\draw[white, very thin, fill=red] (9.3189,13.326) rectangle (14.003,13.379);
+\draw[white, very thin, fill=blue] (9.3189,13.379) rectangle (11.075,13.5);
+\draw[white, very thin, fill=red] (16.888,1.75) rectangle (16.888,3.0542);
+\draw[white, very thin, fill=blue] (16.888,3.0542) rectangle (16.888,3.2075);
+\draw[white, very thin, fill=red] (16.888,3.2075) rectangle (17.437,3.3583);
+\draw[white, very thin, fill=blue] (16.888,3.3583) rectangle (17.437,4.6597);
+\draw[white, very thin, fill=red] (16.888,4.6597) rectangle (17.986,5.4805);
+\draw[white, very thin, fill=blue] (16.888,5.4805) rectangle (17.986,8.2448);
+\draw[white, very thin, fill=red] (16.888,8.2448) rectangle (17.986,9.3315);
+\draw[white, very thin, fill=blue] (16.888,9.3315) rectangle (17.986,9.5542);
+\draw[white, very thin, fill=red] (16.888,9.5542) rectangle (17.986,11.084);
+\draw[white, very thin, fill=blue] (16.888,11.084) rectangle (17.986,11.534);
+\draw[white, very thin, fill=red] (16.888,11.534) rectangle (17.986,12.042);
+\draw[white, very thin, fill=blue] (16.888,12.042) rectangle (17.986,12.343);
+\draw[white, very thin, fill=red] (16.888,12.343) rectangle (17.986,12.644);
+\draw[white, very thin, fill=blue] (16.888,12.644) rectangle (17.986,13.152);
+\draw[white, very thin, fill=red] (16.888,13.152) rectangle (21.279,13.274);
+\draw[white, very thin, fill=blue] (16.888,13.274) rectangle (21.279,13.326);
+\draw[white, very thin, fill=red] (16.888,13.326) rectangle (21.279,13.379);
+\draw[white, very thin, fill=blue] (16.888,13.379) rectangle (21.279,13.5);
+\draw[white, dotted] (1.5,3.2075) -- (24.457,3.2075);
+\draw[white, dotted] (1.5,4.6597) -- (24.457,4.6597);
+\draw[white, dotted] (1.5,11.534) -- (24.457,11.534);
+\draw[white, dotted] (1.5,12.343) -- (24.457,12.343);
+\draw[white, dotted] (1.5,13.152) -- (24.457,13.152);
+\draw[white, dotted] (1.5,13.326) -- (24.457,13.326);
+\draw[white, very thin] (1.75,1.5) -- (9.0689,1.5);
+\node[text=yellow, anchor=north] at (5.4094, 1.5) {False Negatives};
+\draw[white, very thin] (9.0689,1.45) -- (9.0689,1.55);
+\node[text=white, anchor=north] at (9.0689, 1.45) {2.5};
+
+\draw[white, very thin] (9.3189,1.5) -- (16.638,1.5);
+\node[text=yellow, anchor=north] at (12.978, 1.5) {False Positives};
+\draw[white, very thin] (16.638,1.45) -- (16.638,1.55);
+\node[text=white, anchor=north] at (16.638, 1.45) {2.5};
+
+\draw[white, very thin] (16.888,1.5) -- (24.207,1.5);
+\node[text=yellow, anchor=north] at (20.547, 1.5) {Total Expenditures};
+\draw[white, very thin] (24.207,1.45) -- (24.207,1.55);
+\node[text=white, anchor=north] at (24.207, 1.45) {2};
+
+\node[text=yellow, centered, rotate=90] at (24.777, 2.4788) {No Suit};
+
+\node[text=yellow, centered, rotate=90] at (24.777, 8.0967) {Settles};
+
+
+
+
+
+\draw (12.978300999999998,1.5) node[draw=none] (baseCoordinate) {};
+\begin{scope}[align=center]
+        \matrix[scale=0.5, draw=white, below=0.5cm of baseCoordinate, nodes={draw}, column sep=0.1cm]{
+            \node[rectangle, draw, minimum width=0.5cm, minimum height=0.5cm, fill=blue] {}; &
+            \node[draw=none, font=\small, text=white] (B) {Truly Liable Cases}; &
+            \node[rectangle, draw, minimum width=0.5cm, minimum height=0.5cm, fill=red] {}; &
+            \node[draw=none, font=\small, text=white] (B) {Truly Not Liable Cases}; \\
+            };
+\end{scope}
+
+\end{tikzpicture}
+\end{document}
