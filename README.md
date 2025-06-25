@@ -1,6 +1,6 @@
-# Independent Signals Article
+# Correlated Signals Article
 
-This repository contains data, scripts, and materials related to the Independent Signals research article. Please follow the instructions below to set up your environment correctly, particularly if you're working on Windows, as some file paths in this repository are quite long.
+This repository contains data, scripts, and materials related to the research article "A Correlated Signals Computational Game Theory Model of Litigation Bargaining." Please follow the instructions below to set up your environment correctly, particularly if you're working on Windows, as some file paths in this repository are quite long.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
