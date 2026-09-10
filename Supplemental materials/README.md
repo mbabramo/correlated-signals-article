@@ -4,11 +4,11 @@
 
 [Multiple equilibria](Multiple%20equilibria/) replaces the old `Robustness checks` folder. Its README describes the current multiple-start design, recovery catalogs, outcome/range tables, and diagnostic figures. The fixed-signal ten-versus-fifteen comparisons are integrated into [Results](../Results/).
 
-## Existing explanatory assets awaiting revision
+## Explanatory assets
 
 The following folders contain explanatory assets for the appendix revision. Their intended roles are:
 
-- `Game tree diagrams`: procedural illustrations from the older discrete-state model. The chronology is a useful drafting aid, but probabilities, strategy weights, and payoff labels must be checked or regenerated before reuse.
+- `Game tree diagrams`: regenerated from the current continuous-merits baseline on an illustrative two-signal, two-offer grid. Six PDFs, their LaTeX sources, two previews, and a parameter/regeneration README are included. Full views expand terminal lotteries; simplified views use expected payoffs. The beginning views are identical because continuous merits are integrated out in both. These are structural illustrations with chance probabilities, not solved equilibria or the production-grid results.
 - `Liability signals diagrams`: contains the one retained default diagram, renamed `Truth-conditioned merits - party signals.pdf`. Its construction and parameter settings match the truth-conditioned ten-point merits robustness specification; it shows party signals, not the court's two-bin signal. The nine unused prior/noise/small-game variants were removed. The main continuous-merits and direct-binary models require different illustrations.
 - `Risk aversion`: `risk aversion v2.tex` contains a reusable CARA plotting source. Its moderate curve uses alpha 2, matching the current moderate-risk-aversion cases. A revised appendix may show only risk neutrality and that curve.
 - `Information set pressure analysis`: a historical log from the older model, retained for methodological reference. It has not yet been redone for the current production model.

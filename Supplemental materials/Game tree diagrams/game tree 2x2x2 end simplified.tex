@@ -1,0 +1,75 @@
+\documentclass[border=3pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns, positioning}
+\usetikzlibrary{shapes.misc}
+\usepackage[outline]{contour}
+\contourlength{1.5pt} 
+
+
+\begin{document}
+\begin{tikzpicture}
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N0) at (0, -7.5) {P2};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N1) at (5.8, -3.5) {D3};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N2) at (11.6, -1.5) {P4};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N3) at (17.4, -0.5) {D5};
+\node[anchor=west, inner sep=0pt] (N4) at (23.2, 0) {(10.1, 9.6)};
+\node[anchor=west, inner sep=0pt] (N5) at (23.2, -1) {(10.35, 9.35)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N6) at (17.4, -2.5) {D5};
+\node[anchor=west, inner sep=0pt] (N7) at (23.2, -2) {(10.35, 9.35)};
+\node[anchor=west, inner sep=0pt] (N8) at (23.2, -3) {(10.6, 9.1)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N9) at (11.6, -5.5) {P4};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N10) at (17.4, -4.5) {D6};
+\node[anchor=west, inner sep=0pt] (N11) at (23.2, -4) {(10.1, 9.6)};
+\node[anchor=west, inner sep=0pt] (N12) at (23.2, -5) {(10.35, 9.35)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N13) at (17.4, -6.5) {D6};
+\node[anchor=west, inner sep=0pt] (N14) at (23.2, -6) {(9.85, 9.85)};
+\node[anchor=west, inner sep=0pt] (N15) at (23.2, -7) {(10.6, 9.1)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N16) at (5.8, -11.5) {D3};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N17) at (11.6, -9.5) {P7};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N18) at (17.4, -8.5) {D5};
+\node[anchor=west, inner sep=0pt] (N19) at (23.2, -8) {(10.1, 9.6)};
+\node[anchor=west, inner sep=0pt] (N20) at (23.2, -9) {(10.35, 9.35)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N21) at (17.4, -10.5) {D5};
+\node[anchor=west, inner sep=0pt] (N22) at (23.2, -10) {(10.85, 8.85)};
+\node[anchor=west, inner sep=0pt] (N23) at (23.2, -11) {(10.6, 9.1)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N24) at (11.6, -13.5) {P7};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N25) at (17.4, -12.5) {D6};
+\node[anchor=west, inner sep=0pt] (N26) at (23.2, -12) {(10.1, 9.6)};
+\node[anchor=west, inner sep=0pt] (N27) at (23.2, -13) {(10.35, 9.35)};
+\node[circle, draw, minimum size=0.6cm, inner sep=0pt, font=\scriptsize] (N28) at (17.4, -14.5) {D6};
+\node[anchor=west, inner sep=0pt] (N29) at (23.2, -14) {(9.8557, 9.5443)};
+\node[anchor=west, inner sep=0pt] (N30) at (23.2, -15) {(10.6, 9.1)};
+\draw[->] (N0.east) -- (0.6, -7.5) -- (0.6, -3.5) -- (N1.west) node[midway, above, font=\small] {P exit if no settlement: Yes};
+\draw[->] (N0.east) -- (0.6, -7.5) -- (0.6, -11.5) -- (N16.west) node[midway, above, font=\small] {P exit if no settlement: No};
+\draw[->] (N1.east) -- (6.4, -3.5) -- (6.4, -1.5) -- (N2.west) node[midway, above, font=\small] {D exit if no settlement: Yes};
+\draw[->] (N1.east) -- (6.4, -3.5) -- (6.4, -5.5) -- (N9.west) node[midway, above, font=\small] {D exit if no settlement: No};
+\draw[->] (N2.east) -- (12.2, -1.5) -- (12.2, -0.5) -- (N3.west) node[midway, above, font=\small] {P Offer: 0.25};
+\draw[->] (N2.east) -- (12.2, -1.5) -- (12.2, -2.5) -- (N6.west) node[midway, above, font=\small] {P Offer: 0.75};
+\draw[->] (N3.east) -- (18, -0.5) -- (18, 0) -- (N4.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N3.east) -- (18, -0.5) -- (18, -1) -- (N5.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N6.east) -- (18, -2.5) -- (18, -2) -- (N7.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N6.east) -- (18, -2.5) -- (18, -3) -- (N8.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N9.east) -- (12.2, -5.5) -- (12.2, -4.5) -- (N10.west) node[midway, above, font=\small] {P Offer: 0.25};
+\draw[->] (N9.east) -- (12.2, -5.5) -- (12.2, -6.5) -- (N13.west) node[midway, above, font=\small] {P Offer: 0.75};
+\draw[->] (N10.east) -- (18, -4.5) -- (18, -4) -- (N11.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N10.east) -- (18, -4.5) -- (18, -5) -- (N12.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N13.east) -- (18, -6.5) -- (18, -6) -- (N14.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N13.east) -- (18, -6.5) -- (18, -7) -- (N15.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N16.east) -- (6.4, -11.5) -- (6.4, -9.5) -- (N17.west) node[midway, above, font=\small] {D exit if no settlement: Yes};
+\draw[->] (N16.east) -- (6.4, -11.5) -- (6.4, -13.5) -- (N24.west) node[midway, above, font=\small] {D exit if no settlement: No};
+\draw[->] (N17.east) -- (12.2, -9.5) -- (12.2, -8.5) -- (N18.west) node[midway, above, font=\small] {P Offer: 0.25};
+\draw[->] (N17.east) -- (12.2, -9.5) -- (12.2, -10.5) -- (N21.west) node[midway, above, font=\small] {P Offer: 0.75};
+\draw[->] (N18.east) -- (18, -8.5) -- (18, -8) -- (N19.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N18.east) -- (18, -8.5) -- (18, -9) -- (N20.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N21.east) -- (18, -10.5) -- (18, -10) -- (N22.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N21.east) -- (18, -10.5) -- (18, -11) -- (N23.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N24.east) -- (12.2, -13.5) -- (12.2, -12.5) -- (N25.west) node[midway, above, font=\small] {P Offer: 0.25};
+\draw[->] (N24.east) -- (12.2, -13.5) -- (12.2, -14.5) -- (N28.west) node[midway, above, font=\small] {P Offer: 0.75};
+\draw[->] (N25.east) -- (18, -12.5) -- (18, -12) -- (N26.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N25.east) -- (18, -12.5) -- (18, -13) -- (N27.west) node[midway, above, font=\small] {D Offer: 0.75};
+\draw[->] (N28.east) -- (18, -14.5) -- (18, -14) -- (N29.west) node[midway, above, font=\small] {D Offer: 0.25};
+\draw[->] (N28.east) -- (18, -14.5) -- (18, -15) -- (N30.west) node[midway, above, font=\small] {D Offer: 0.75};
+\node[anchor=south west, align=left, text width=23.2cm, font=\small] at (0, 0.8) {Continuous-merits baseline; illustrative two-signal, two-offer grid. C = chance; repeated P/D numbers identify the same information set. Only chance probabilities are shown; no equilibrium is asserted. Subtree after both signals equal 0.25, filing, and answering. Exit choices take effect only if offers fail to settle. Terminal pairs are expected final wealth (P, D), with terminal lotteries integrated out.};
+
+\end{tikzpicture}
+\end{document}
