@@ -8,10 +8,10 @@ Manuscript and research materials for *A Correlated Signals Computational Game T
 |---|---|
 | [Article and bibliography](Article%20and%20bibliography/) | Existing manuscript, bibliography, and saved draft. The manuscript is being revised incrementally. |
 | [Figures](Figures/) | Reserved for revised publication figures. Its README maps the planned figures to current results. |
-| [Results/CS004](Results/CS004/) | Main clean production output: 130 ten-offer cases and four fifteen-offer cases, including numerical and action reports, equilibria, diagrams, and solver logs. |
-| [Supplemental materials/CS004ME](Supplemental%20materials/CS004ME/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
-| [Results/Provenance](Results/Provenance/) | Original suite manifest, original diagram inventory, and an import manifest mapping every imported file to its original path and SHA-256 hash. |
-| [Supplemental materials](Supplemental%20materials/) | Current CS004ME output plus older explanatory assets awaiting the substantive appendix revision. See its README for status. |
+| [Results](Results/) | Main summary tables, with aggregate comparisons, individual simulations, and process logs in descriptive subfolders. Covers 130 ten-offer cases and four fifteen-offer cases. |
+| [Supplemental materials/Multiple equilibria](Supplemental%20materials/Multiple%20equilibria/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
+| [Results/Run documentation](Results/Run%20documentation/) | Code versions, completed-run records, diagram inventory, and file hashes tracing the imported results to their original run. |
+| [Supplemental materials](Supplemental%20materials/) | Current multiple-equilibrium output, the retained truth-conditioned signal illustration, and explanatory assets awaiting appendix revision. See its README for status. |
 
 The old `smalltree`, `bigtree`, `Supplemental materials/Robustness checks`, and old figure assets were replaced after checkpoint commit `7e92fc01e1d7ff92bf0b07dbe80ac9ff021ce7b3`. Their committed contents remain in Git history. The empty `Updated figures` directory is retired; revised figures will use `Figures`.
 
@@ -26,15 +26,15 @@ The current manuscript still refers to removed figures. Its source and saved PDF
 - Both plans completed aggregation and required artifact/accounting validation.
 - The article import verified 3,983 files byte-for-byte, including 1,358 applicable PDFs and 166 information-set/action reports.
 
-The imported files preserve their original names and bytes. The article repository separates CS004 and CS004ME, so original manifest paths describe the source run; use `Results/Provenance/article import manifest.json` to resolve their new locations.
+The imported files preserve their original names and bytes. The file prefixes `CS004` and `CS004ME` identify the main production run and the multiple-equilibrium run; folder names describe their contents in ordinary language. Original manifest paths describe the source run; use `Results/Run documentation/article import manifest.json` to resolve their current locations.
 
 Full solver reproduction commands, runtime information, plan fingerprints, executable hashes, and reused-equilibrium hashes are retained in the production manifests. The coordinated run used 16 workers. The suite's stored command uses `--processors all`; substitute `--processors 16` to reproduce the resource limit used for this run.
 
 ## Reading the results
 
-Start with `Results/CS004/CS004 numerical results.csv`, `Supplemental materials/CS004ME/CS004ME equilibrium outcomes.csv`, and `Supplemental materials/CS004ME/CS004ME equilibrium ranges.csv`.
+Start with `Results/CS004 numerical results.csv`, `Supplemental materials/Multiple equilibria/CS004ME equilibrium outcomes.csv`, and `Supplemental materials/Multiple equilibria/CS004ME equilibrium ranges.csv`.
 
-The generated diagrams are research outputs, not finished publication exhibits. Generic legacy signal illustrations were excluded from this import. Some retained plots still require revised terminology and layout; the planned manuscript figures and the three-perspective net-outcome presentation have yet to be prepared.
+The generated diagrams are research outputs, not finished publication exhibits. Generic one-time signal illustrations were excluded from the results import. Of the separate pre-existing liability-signal diagrams, the default was retained and renamed for the truth-conditioned merits robustness model; nine unused variants were removed. Some retained plots still require revised terminology and layout; the planned manuscript figures and the three-perspective net-outcome presentation have yet to be prepared.
 
 ## Windows paths
 

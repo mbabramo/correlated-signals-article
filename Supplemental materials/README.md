@@ -2,14 +2,14 @@
 
 ## Current numerical robustness output
 
-[CS004ME](CS004ME/) replaces the old `Robustness checks` folder. Its README describes the current multiple-start design, recovery catalogs, outcome/range tables, and diagnostic figures. The fixed-signal ten-versus-fifteen comparisons are integrated into [Results/CS004](../Results/CS004/).
+[Multiple equilibria](Multiple%20equilibria/) replaces the old `Robustness checks` folder. Its README describes the current multiple-start design, recovery catalogs, outcome/range tables, and diagnostic figures. The fixed-signal ten-versus-fifteen comparisons are integrated into [Results](../Results/).
 
 ## Existing explanatory assets awaiting revision
 
-The following folders were retained pending their separate substantive revision; their old numerical labels are not evidence for the new baseline:
+The following folders contain explanatory assets for the appendix revision. Their intended roles are:
 
 - `Game tree diagrams`: procedural illustrations from the older discrete-state model. The chronology is a useful drafting aid, but probabilities, strategy weights, and payoff labels must be checked or regenerated before reuse.
-- `Liability signals diagrams`: older truth-to-discrete-strength illustrations. Replace the principal illustration with the continuous-merits construction and current signal counts.
+- `Liability signals diagrams`: contains the one retained default diagram, renamed `Truth-conditioned merits - party signals.pdf`. Its construction and parameter settings match the truth-conditioned ten-point merits robustness specification; it shows party signals, not the court's two-bin signal. The nine unused prior/noise/small-game variants were removed. The main continuous-merits and direct-binary models require different illustrations.
 - `Risk aversion`: `risk aversion v2.tex` contains a reusable CARA plotting source. Its moderate curve uses alpha 2, matching the current moderate-risk-aversion cases. A revised appendix may show only risk neutrality and that curve.
 - `Information set pressure analysis`: a historical log from the older model, retained for methodological reference. It has not yet been redone for the current production model.
 
