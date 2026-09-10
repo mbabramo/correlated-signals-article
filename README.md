@@ -1,48 +1,45 @@
 # Correlated Signals Article
 
-This repository contains data, scripts, and materials related to the research article "A Correlated Signals Computational Game Theory Model of Litigation Bargaining." Please follow the instructions below to set up your environment correctly, particularly if you're working on Windows, as some file paths in this repository are quite long.
+Manuscript and research materials for *A Correlated Signals Computational Game Theory Model of Litigation Bargaining*.
 
-## Table of Contents
-- [Getting Started](#getting-started)
-- [Long Path Support](#long-path-support)
-- [Git Setup for Long Paths](#git-setup-for-long-paths)
-- [Cloning the Repository](#cloning-the-repository)
-- [Contributing](#contributing)
+## Current repository layout
 
-## Getting Started
+| Directory | Contents |
+|---|---|
+| [Article and bibliography](Article%20and%20bibliography/) | Existing manuscript, bibliography, and saved draft. The manuscript is being revised incrementally. |
+| [Figures](Figures/) | Reserved for revised publication figures. Its README maps the planned figures to current results. |
+| [Results/CS004](Results/CS004/) | Main clean production output: 130 ten-offer cases and four fifteen-offer cases, including numerical and action reports, equilibria, diagrams, and solver logs. |
+| [Supplemental materials/CS004ME](Supplemental%20materials/CS004ME/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
+| [Results/Provenance](Results/Provenance/) | Original suite manifest, original diagram inventory, and an import manifest mapping every imported file to its original path and SHA-256 hash. |
+| [Supplemental materials](Supplemental%20materials/) | Current CS004ME output plus older explanatory assets awaiting the substantive appendix revision. See its README for status. |
 
-To work with this repository, follow the steps below:
+The old `smalltree`, `bigtree`, `Supplemental materials/Robustness checks`, and old figure assets were replaced after checkpoint commit `7e92fc01e1d7ff92bf0b07dbe80ac9ff021ce7b3`. Their committed contents remain in Git history. The empty `Updated figures` directory is retired; revised figures will use `Figures`.
 
-1. Ensure you have [Git](https://git-scm.com/) installed.
-2. If you are using **Windows**, configure your system for long file path support (see the next section).
-3. Clone the repository following the instructions below.
+The current manuscript still refers to removed figures. Its source and saved PDF were preserved, but rebuilding the source requires replacing those references as the revised figures and sections are prepared.
 
-## Long Path Support
+## Production source
 
-### Windows Users:
-Windows has a default limit of 260 characters for file paths, which may cause issues when working with some files in this repository. To avoid problems, you need to enable long path support on your system.
+- Model and solver repository: `ACESim4`.
+- Numerical production commit: `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`.
+- Diagram-generator commit: `a991f31fa355d788981bf399251123c17f8ebc89`.
+- Original run directory: `ReportResults/Production Runs/ALER Production 31d0f1783643` in the model repository.
+- Both plans completed aggregation and required artifact/accounting validation.
+- The article import verified 3,983 files byte-for-byte, including 1,358 applicable PDFs and 166 information-set/action reports.
 
-#### Enable Long Path Support in Windows 10/11:
-1. **For Windows 10 Pro, Enterprise, or Education**:
-   - Open **Group Policy Editor** by pressing `Win + R`, typing `gpedit.msc`, and pressing Enter.
-   - Navigate to `Local Computer Policy > Computer Configuration > Administrative Templates > System > Filesystem`.
-   - Double-click the `Enable Win32 long paths` option.
-   - Set it to **Enabled** and click **OK**.
+The imported files preserve their original names and bytes. The article repository separates CS004 and CS004ME, so original manifest paths describe the source run; use `Results/Provenance/article import manifest.json` to resolve their new locations.
 
-2. **For Windows 10 Home**:
-   - Open **Registry Editor** by pressing `Win + R`, typing `regedit`, and pressing Enter.
-   - Navigate to:  
-     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`.
-   - Right-click and create a new `DWORD (32-bit) Value` called `LongPathsEnabled`.
-   - Set the value of `LongPathsEnabled` to `1`.
-   - Restart your computer for the changes to take effect.
+Full solver reproduction commands, runtime information, plan fingerprints, executable hashes, and reused-equilibrium hashes are retained in the production manifests. The coordinated run used 16 workers. The suite's stored command uses `--processors all`; substitute `--processors 16` to reproduce the resource limit used for this run.
 
-## Git Setup for Long Paths
+## Reading the results
 
-After enabling long path support in Windows, you need to tell Git to handle long file paths. To do this:
+Start with `Results/CS004/CS004 numerical results.csv`, `Supplemental materials/CS004ME/CS004ME equilibrium outcomes.csv`, and `Supplemental materials/CS004ME/CS004ME equilibrium ranges.csv`.
 
-1. Open a terminal or command prompt in the root directory of this repository.
-2. Run the following command to enable long path support for this repository:
+The generated diagrams are research outputs, not finished publication exhibits. Generic legacy signal illustrations were excluded from this import. Some retained plots still require revised terminology and layout; the planned manuscript figures and the three-perspective net-outcome presentation have yet to be prepared.
 
-   ```bash
-   git config core.longpaths true
+## Windows paths
+
+The preserved source filenames are long. Enable Windows long-path support if needed and configure Git in this checkout:
+
+```powershell
+git config core.longpaths true
+```
