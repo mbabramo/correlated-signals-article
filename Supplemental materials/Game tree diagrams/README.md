@@ -44,7 +44,9 @@ ten-signal, ten-/fifteen-offer production results.
 In ACESim4, run scripts/Generate-ArticleGameTrees.ps1 -OutputDirectory <this folder>.
 This invokes the existing C# tree walker and TikZ generator, compiles all six
 LaTeX sources with LuaLaTeX, and refreshes the two existing PNG previews.
+Explanatory prose is in a matching .txt file for each diagram, not inside the PDF.
+Only node/branch labels, probabilities, and payoff pairs appear in the diagrams.
 No production settings, equilibrium files, or production results are modified.
 The .tex sources are retained here so the figures can also be compiled directly.
 
-Generated from ACESim4 commit 4ecdae5d9facd6e015ecda8a1497d9419ca7bc72 (clean source).
+Generated from ACESim4 commit 2fa3798809ee5c152e66b4f69b1eee190c88ada0 (clean source).
