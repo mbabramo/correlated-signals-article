@@ -1,0 +1,28 @@
+% Generated table fragment; requires booktabs, tabularx, array.
+% Input inside a manuscript table environment; numbering/caption belong there.
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.20}
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.5cm}@{}}
+\toprule
+\textbf{Primitive} & \textbf{Interpretation} & \textbf{Baseline} \\
+\midrule
+Common merits & Shared, unobserved case quality & $Q\sim U[0,1]$ \\
+True liability & Normative liability benchmark & $T\mid Q\sim\mathrm{Bernoulli}(Q)$;\newline $\Pr(T=1)=0.5$ \\
+Private information & One noisy merits signal per party & 10 bins each \\
+Signal noise & Party and court noise parameters & $\sigma_P=\sigma_D=\sigma_C=0.20$ \\
+Adjudication & Unobserved court signal determines trial winner & 2 court-signal bins \\
+Damages & Fixed award if plaintiff wins & $d=1$ \\
+Initial wealth & Wealth before litigation & $w_P=w_D=10$ \\
+Filing / answering & Plaintiff filing and defendant answering costs & 0.15 per acting party \\
+Trial costs & Additional cost if trial occurs & 0.15 per party \\
+Bargaining costs & Additional cost of making demands/offers & 0 \\
+Participation and exit & Endogenous filing/answering; exit precommitted before offers, effective after bargaining fails & P may abandon; D may default \\
+Bargaining & One simultaneous demand/offer round; settlement at midpoint if demand does not exceed offer & 10 actions: $0.05,0.15,\ldots,0.95$ \\
+Preferences & Expected monetary payoff & Risk neutral ($\alpha=0$) \\
+Fee regimes & American: own costs. British: loser pays both parties' costs at trial & No fee shifting on exit \\
+Integration & Integrate over continuous merits; not a 64-state strategic game & 64-point Gauss--Legendre \\
+\bottomrule\end{tabularx}\par\medskip
+{\footnotesize\noindent Monetary amounts are in units of damages. All baseline costs use multiplier 1. Signals are conditionally independent given exact $Q$; parties do not observe $Q$, $T$, or the court signal before bargaining.\par}
+\endgroup

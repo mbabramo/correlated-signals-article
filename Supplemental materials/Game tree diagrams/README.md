@@ -1,6 +1,6 @@
 # Game-tree illustrations
 
-These six diagrams are generated from the revised continuous-merits baseline in
+These five structural diagrams are generated from the revised continuous-merits baseline in
 ACESim4, using two signal bins per party, two court outcomes, and two offer values.
 They illustrate the extensive form; they are not solved equilibria or the
 ten-signal, ten-/fifteen-offer production results.
@@ -27,13 +27,13 @@ ten-signal, ten-/fifteen-offer production results.
   Simplified leaves give expected wealth, not a realized monetary allocation.
   These pairs are not the article's net-outcome-fidelity measure.
 
-## The six views
+## The five structural views
 
 - game tree 2x2x2.pdf: all actions, with court and mutual-exit lotteries explicit.
 - game tree 2x2x2 simplified.pdf: the same game with terminal lotteries integrated out.
-- The two beginning PDFs stop after private signals, at the filing information sets.
-  They are deliberately identical: continuous merits are integrated out in both
-  versions, so the obsolete finite case-strength layer is not reinstated.
+- game tree 2x2x2 beginning.pdf stops after private signals, at the filing information sets.
+  There is no separate simplified beginning: continuous merits are integrated out
+  in both versions, and the terminal-lottery switch does not affect this prefix.
 - The two end PDFs show the first bargaining subtree: both signals are 0.25,
   and the plaintiff has filed and the defendant has answered.
 - The legacy 2x2x2 filenames are retained to avoid unnecessary link changes.
@@ -41,12 +41,38 @@ ten-signal, ten-/fifteen-offer production results.
 
 ## Regeneration
 
-In ACESim4, run scripts/Generate-ArticleGameTrees.ps1 -OutputDirectory <this folder>.
-This invokes the existing C# tree walker and TikZ generator, compiles all six
-LaTeX sources with LuaLaTeX, and refreshes the two existing PNG previews.
+In ACESim4, run `dotnet run --project LitigCharts -c Release -- diagrams game-trees
+--config "<article repository>/article-diagrams.json"` (as one command).
+This invokes the existing C# tree walker and TikZ generator, compiles all five
+LaTeX sources with LuaLaTeX, and generates matching PNG previews.
 Explanatory prose is in a matching .txt file for each diagram, not inside the PDF.
 Only node/branch labels, probabilities, and payoff pairs appear in the diagrams.
 No production settings, equilibrium files, or production results are modified.
 The .tex sources are retained here so the figures can also be compiled directly.
 
-Generated from ACESim4 commit 2fa3798809ee5c152e66b4f69b1eee190c88ada0 (clean source).
+Structural PDFs generated from ACESim4 commit 2fa3798809ee5c152e66b4f69b1eee190c88ada0 (clean source).
+The duplicate simplified beginning was subsequently removed; the generator now emits five views.
+
+## Worked equilibrium path
+
+The separate worked equilibrium path.pdf is a bespoke one-page view of a saved
+ten-signal, ten-offer production equilibrium. It shows one main trial history,
+a neighboring settlement/no-filing branch and selected alternatives. It does
+not use the structural illustrations' arbitrary initialized strategies.
+
+- worked equilibrium paths.request.json: editable selection of histories and source files.
+- worked equilibrium paths.json: extracted probabilities, conditional action utilities,
+  information sets and terminal monetary outcomes; includes source-file hashes.
+- worked equilibrium path.tex: self-contained generated layout and numerical bindings.
+- worked equilibrium path.txt: notation, interpretation, selection caveats and regeneration instructions.
+- worked equilibrium path.png: preview of the one-page PDF.
+
+Regenerate with the C# command above using the `worked-path` target.
+The layout lives in `LitigCharts/WorkedPathDiagram.cs`, and the binding checks
+live in `LitigCharts/ArticleWorkedPathLatexData.cs`. Edit those C# classes to
+change the drawing; the article-side .tex is an output and will be replaced.
+No separate values.tex or hand-maintained template is required.
+
+Use `worked-path-data` for extraction alone, `all` for all article diagrams,
+and `--list` for a read-only inventory. See `LitigCharts/README.md` in ACESim4
+for compile-only, sources-only, output-root and bounded-concurrency modes.

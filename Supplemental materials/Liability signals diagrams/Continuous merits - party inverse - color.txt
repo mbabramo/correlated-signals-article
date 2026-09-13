@@ -1,0 +1,13 @@
+Specification=Specification-Baseline__Cost-1__Fee-American; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.20000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events.
+
+Inverse party-signal diagram: the same joint distribution is transposed, not a forward noise kernel read backwards without its prior. Source buckets are party signals; destination buckets are merits or true liability. Ribbon widths remain joint probability masses. The reference lower-middle signal bucket is 0.45; this label denotes a bin midpoint, not an exact continuous observation. The companion conditional probabilities are posterior destination probabilities given that one signal bin. They are NOT conditioned on filing, answering, trial, or the other party's signal. The adjacent upper-middle signal is its mirror image in these symmetric specifications. Continuous merits retain the same five display intervals as the forward diagram. For truth-conditioned discrete merits, the ten point masses are grouped into those same five intervals for comparison; this does not make the model continuous. Direct-binary signals have true liability, not a latent merits variable, on the destination axis. No equilibrium or solver is used. Explanations and conditional probabilities are intentionally outside the graphic. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination.
+
+Reference source (highlighted in both palettes): 0.45; source probability mass: 0.10760141555602169.
+Conditional destination probabilities, bottom to top (destination bucket: probability):
+0.00--0.20: 0.12313108737420631
+0.20--0.40: 0.2936849743602778
+0.40--0.60: 0.34830856607888383
+0.60--0.80: 0.18598030545231237
+0.80--1.00: 0.048895066734319849
+Each value equals the corresponding ribbon's joint probability mass divided by the reference source mass.
+

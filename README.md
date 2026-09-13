@@ -7,7 +7,8 @@ Manuscript and research materials for *A Correlated Signals Computational Game T
 | Directory | Contents |
 |---|---|
 | [Article and bibliography](Article%20and%20bibliography/) | Existing manuscript, bibliography, and saved draft. The manuscript is being revised incrementally. |
-| [Figures](Figures/) | Reserved for revised publication figures. Its README maps the planned figures to current results. |
+| [Figures](Figures/) | All four selected main-article figures under descriptive, unnumbered filenames: continuous merits and party signals, worked equilibrium path, participation and offers, and disposition. Includes captions, TeX, PNG previews and source-data JSON. |
+| [Tables](Tables/) | Four main-article tables: model primitives, baseline outcomes, comparative net outcomes, and model-form/numerical sensitivity. Includes PDFs, editable TeX fragments, previews, captions, and audited source-data JSON. |
 | [Results](Results/) | Main summary tables, with aggregate comparisons, individual simulations, and process logs in descriptive subfolders. Covers 130 ten-offer cases and four fifteen-offer cases. |
 | [Supplemental materials/Multiple equilibria](Supplemental%20materials/Multiple%20equilibria/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
 | [Results/Run documentation](Results/Run%20documentation/) | Code versions, completed-run records, diagram inventory, and file hashes tracing the imported results to their original run. |
@@ -34,7 +35,7 @@ Full solver reproduction commands, runtime information, plan fingerprints, execu
 
 Start with `Results/CS004 numerical results.csv`, `Supplemental materials/Multiple equilibria/CS004ME equilibrium outcomes.csv`, and `Supplemental materials/Multiple equilibria/CS004ME equilibrium ranges.csv`.
 
-The generated diagrams are research outputs, not finished publication exhibits. Generic one-time signal illustrations were excluded from the results import. Of the separate pre-existing liability-signal diagrams, the default was retained and renamed for the truth-conditioned merits robustness model; nine unused variants were removed. Some retained plots still require revised terminology and layout; the planned manuscript figures and the three-perspective net-outcome presentation have yet to be prepared.
+The imported diagrams are research outputs, not automatically publication exhibits. Generic one-time signal illustrations were excluded from the results import. The signal family has since been regenerated as standalone color/grayscale relationships. All four selected main-article diagrams are now collected in Figures under descriptive, unnumbered filenames, with short labels, separate captions and exact source-data JSON. The four main tables, including the three-perspective net-outcome comparison, are assembled in Tables. Appendix-only illustrations and alternative renderings remain in Supplemental materials. Manuscript integration, appendix-table assembly, and submission-proof review remain to be completed. See Figures/README.md and article-diagrams.json for the diagram workflow, and Tables/README.md and publication-tables.json for the saved-data C# table command.
 
 ## Windows paths
 

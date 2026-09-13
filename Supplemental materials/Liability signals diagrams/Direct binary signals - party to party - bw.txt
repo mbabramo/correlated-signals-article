@@ -1,0 +1,35 @@
+Specification=Specification-DirectBinaryStateSignals__Cost-1__Fee-American; plaintiff sigma=0.34982830399999998; defendant sigma=0.34982830399999998; boundary=EqualWidth. Truth -> signals directly; truth prior P(T=1)=0.5. Signals are independent conditional on binary truth, at source locations 0 and 1. Calibrated noise is read from the production option set. There is no shared intermediate merits variable.
+
+Party-to-party prediction: J[i,j] = P(S_P=i) P(S_D=j | S_P=i), using the production Bayesian signal methods. Ribbon widths are joint masses, not normalized conditional probabilities. The reference fan starts at plaintiff signal 0.45; labels denote signal-bin midpoints, not exact continuous observations. The right column shows possible defendant signals, not an opponent signal observed by the plaintiff. This is Bayesian prediction, not a causal effect of one signal on the other. The probabilities below are the plaintiff's belief before any procedural selection: NOT conditioned on filing, answering, offers, or trial. With equal party noise the same relationship applies in reverse; the adjacent upper-middle signal is the reflected case in these symmetric specifications. No solver, equilibrium file, action utility, or strategic mixing is involved. Both palettes have identical data. Grayscale: all background ribbons have the same pale-gray fill, regardless of signal strength or source range. The reference fan alone uses darker gray and is drawn last. Gray shade indicates highlighting, not signal strength. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. The JSON Highlight index identifies the fan and the companion's reference calculation.
+
+Reference source (highlighted in both palettes): 0.45; source probability mass: 0.083627573506415781.
+Conditional destination probabilities, bottom to top (destination bucket: probability):
+0.05: 0.13794470358136596
+0.15: 0.12989634308614881
+0.25: 0.11561110235644348
+0.35: 0.099764307990371906
+0.45: 0.086977974133349151
+0.55: 0.080277172879482328
+0.65: 0.080197495765823648
+0.75: 0.084816445003033564
+0.85: 0.090626983416180334
+0.95: 0.093887471787800617
+Each value equals the corresponding ribbon's joint probability mass divided by the reference source mass.
+
+Unconditional defendant signal probabilities, bottom to top:
+0.05: 0.11591608737017876
+0.15: 0.11026166332751548
+0.25: 0.10021377373684871
+0.35: 0.089980901909097688
+0.45: 0.083627573506415767
+0.55: 0.083627573472795161
+0.65: 0.089980901810923067
+0.75: 0.10021377358233968
+0.85: 0.11026166313048549
+0.95: 0.11591608815340021
+
+Middle defendant signal range [0.40,0.60), combining bins labeled 0.45, 0.55:
+Unconditional mass: 0.16725514697921093
+Conditional on reference plaintiff signal: 0.16725514701283148
+These comparisons use each model's production calibration, not identical noise standard deviations. In the symmetric, conditionally independent direct-binary benchmark, this symmetric middle range has equal likelihood under both truth states; learning one's own signal therefore does not change its probability for the opponent. It can still change which side of the distribution the opponent is likely to occupy. This is a limitation of that information structure, not of every model with binary truth.
+

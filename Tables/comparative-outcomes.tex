@@ -1,0 +1,28 @@
+% Generated table fragment; requires booktabs, tabularx, array.
+% Input inside a manuscript table environment; numbering/caption belong there.
+\begingroup
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.20}
+\noindent\textbf{American rule}\par\smallskip
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xrrrrr@{}}
+\toprule
+\textbf{Change from baseline} & \textbf{\shortstack{P shortfall\\$T=1$}} & \textbf{\shortstack{D burden\\$T=0$}} & \textbf{\shortstack{D excess\\$T=1$}} & \textbf{\shortstack{Net fidelity\\loss}} & \textbf{\shortstack{Real\\costs}} \\
+\midrule
+Higher costs (2x) & +0.117 & -0.014 & -0.013 & +0.045 & +0.070 \\
+Moderate risk aversion & +0.079 & +0.068 & -0.034 & +0.056 & +0.043 \\
+Lower noise & -0.019 & -0.129 & -0.021 & -0.084 & -0.110 \\
+Lower noise + moderate risk aversion & -0.055 & -0.148 & -0.046 & -0.125 & -0.167 \\
+\bottomrule\end{tabularx}\par\medskip
+\noindent\textbf{British rule}\par\smallskip
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xrrrrr@{}}
+\toprule
+\textbf{Change from baseline} & \textbf{\shortstack{P shortfall\\$T=1$}} & \textbf{\shortstack{D burden\\$T=0$}} & \textbf{\shortstack{D excess\\$T=1$}} & \textbf{\shortstack{Net fidelity\\loss}} & \textbf{\shortstack{Real\\costs}} \\
+\midrule
+Higher costs (2x) & +0.124 & +0.011 & -0.013 & +0.061 & +0.092 \\
+Moderate risk aversion & +0.030 & -0.068 & -0.061 & -0.050 & -0.083 \\
+Lower noise & -0.034 & -0.101 & -0.067 & -0.101 & -0.129 \\
+Lower noise + moderate risk aversion & -0.010 & -0.130 & -0.080 & -0.110 & -0.140 \\
+\bottomrule\end{tabularx}\par\medskip
+{\footnotesize\noindent Each cell is a change in damages units from the same fee rule's baseline (cost 1, risk neutral, noise 0.20). Higher costs: multiplier 2. Moderate risk aversion: CARA $\alpha=2$. Lower noise: party and court $\sigma=0.10$. All use 10 offers. Negative values mean reductions. First three columns condition on truth; final two are ex ante.\par}
+\endgroup

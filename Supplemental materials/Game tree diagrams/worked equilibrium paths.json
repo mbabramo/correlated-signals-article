@@ -1,0 +1,3565 @@
+{
+  "SchemaVersion": "1",
+  "OptionSetName": "Specification-Baseline__Cost-1__Fee-American",
+  "EquilibriumNumber": 1,
+  "EquilibriumSource": {
+    "Path": "C:\\Users\\Admin\\source\\repos\\correlated-signals-article\\Results\\Individual simulations\\CS004 Specification-Baseline__Cost-1__Fee-American -equ.csv",
+    "Sha256": "fa9eabee3042951b883eda254225750f7c7d04f2a36d8109585eda85dcb35e77"
+  },
+  "ActionReportSource": {
+    "Path": "C:\\Users\\Admin\\source\\repos\\correlated-signals-article\\Results\\Individual simulations\\CS004 Specification-Baseline__Cost-1__Fee-American -InformationSetActions.csv",
+    "Sha256": "aae36b6d613813f817501791eddf8bfc2360dce6ce49b1f211ef61d7821aa23f"
+  },
+  "ValidatedActionReportRows": 480,
+  "MaxIntegralUtility": 100000,
+  "RoundOffChanceDigits": 6,
+  "VariableSettings": {
+    "Specification": "Baseline",
+    "Signal Structure": "Continuous merits",
+    "Information Level": "1x",
+    "Party Signal Sigma": "0.2000000000",
+    "Court Signal Sigma": "0.2000000000",
+    "Costs Multiplier": "1",
+    "Fee Shifting Multiplier": "0",
+    "Fee Regime": "American",
+    "Risk Aversion": "Risk Neutral",
+    "CARA Alpha": "0",
+    "Fee Shifting Rule": "English",
+    "Relative Costs": "1",
+    "Filing and Answering": "Endogenous",
+    "Allow Abandon and Defaults": "true",
+    "Probability Truly Liable": "0.5",
+    "Noise to Produce Case Strength": "N/A",
+    "Issue": "Liability",
+    "Proportion of Costs at Beginning": "0.5",
+    "Liability Signal Shaping": "Identity",
+    "Damages Signal Shaping": "Identity",
+    "Number of Signals": "10",
+    "Number of Court Signals": "2",
+    "Number of Offers": "10",
+    "Quality Distribution": "Uniform [0..1] continuous quality",
+    "Quality-Truth Link": "T | Q ~ Bernoulli(Q)",
+    "Integration Method": "Gauss-Legendre",
+    "Quadrature Order": "64",
+    "Detailed Signal Reporting": "true"
+  },
+  "InitialWealth": [
+    10,
+    10
+  ],
+  "Interpretation": [
+    "Action utilities condition on the acting player\u0027s information set, not the selected signal pair; subsequent play retains the saved profile.",
+    "Information-set utilities use the production solver\u0027s rounded terminal utilities and chance probabilities; terminal monetary outcomes use the game\u0027s unrounded accounting.",
+    "History reach is not information-set reach. A zero-probability deviation at a reached information set still has a conditional action utility; an off-path information set does not.",
+    "All-zero saved strategies use the loader\u0027s uniform fallback, explicitly flagged; this is not evidence of equilibrium mixing at an unreached information set.",
+    "Collapsed terminal lotteries are expanded by deterministic game replay; their probabilities condition on the full selected history, not either player\u0027s private information set.",
+    "Net monetary payoff is change in wealth, not final wealth or net-outcome fidelity. Court findings are not true liability; continuous merits remain integrated out.",
+    "Path specifications omit only automatic one-action decisions. Omitted branches in the bespoke figure remain in the full game and are not renormalized."
+  ],
+  "Paths": [
+    {
+      "Name": "trial",
+      "Purpose": "Main worked path: fourth plaintiff signal and third defendant signal, failed settlement, both court findings.",
+      "EquilibriumProbability": 0.016992239,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 53,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.08063391228326466
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 13,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.063524650786839,
+              "UtilityLossFromBest": 0.43989114579354727
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 55,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1;P Abandons: 2",
+          "InformationSetContents": "4,1,1,2",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 8,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0.03563465514326403
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 15,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.49093685677677,
+              "UtilityLossFromBest": 0.01247893980361603
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.478457916973152,
+              "UtilityLossFromBest": 0.024957879607233835
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.465978977169534,
+              "UtilityLossFromBest": 0.03743681941085164
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.453500037365917,
+              "UtilityLossFromBest": 0.049915759214469446
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.4410210975623,
+              "UtilityLossFromBest": 0.062394699018085475
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.428542157758683,
+              "UtilityLossFromBest": 0.07487363882170328
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.24501775998718,
+              "UtilityLossFromBest": 0.25839803659320637
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.134850562137215,
+              "UtilityLossFromBest": 0.3685652344431709
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.067737597148602,
+              "UtilityLossFromBest": 0.4356781994317842
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        9.88662202598833,
+        9.513377974011668
+      ],
+      "ExpectedUtilityUnrounded": [
+        9.88662202598833,
+        9.513377974011668
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Court finds not liable",
+          "CourtSignal": 1,
+          "ConditionalProbability": 0.8133779740116683,
+          "EquilibriumHistoryProbability": 0.013821112931742057,
+          "TransferToPlaintiff": 0,
+          "PlaintiffNetMonetaryPayoff": -0.3,
+          "DefendantNetMonetaryPayoff": -0.3,
+          "PlaintiffFinalWealth": 9.7,
+          "DefendantFinalWealth": 9.7,
+          "PlaintiffUtility": 9.7,
+          "DefendantUtility": 9.7,
+          "PlaintiffNetLitigationExpense": 0.3,
+          "DefendantNetLitigationExpense": 0.3
+        },
+        {
+          "Outcome": "Court finds liable",
+          "CourtSignal": 2,
+          "ConditionalProbability": 0.1866220259883316,
+          "EquilibriumHistoryProbability": 0.0031711260682579416,
+          "TransferToPlaintiff": 1,
+          "PlaintiffNetMonetaryPayoff": 0.7,
+          "DefendantNetMonetaryPayoff": -1.3,
+          "PlaintiffFinalWealth": 10.7,
+          "DefendantFinalWealth": 8.7,
+          "PlaintiffUtility": 10.7,
+          "DefendantUtility": 8.7,
+          "PlaintiffNetLitigationExpense": 0.30000000000000004,
+          "DefendantNetLitigationExpense": 0.30000000000000004
+        }
+      ]
+    },
+    {
+      "Name": "settlement",
+      "Purpose": "Adjacent plaintiff signal: genuine mixing at filing, followed by settlement if filed and answered.",
+      "EquilibriumProbability": 0.017003593221491344,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.10618,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.15475,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.18142,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.18233,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.16002,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.12461,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.08706,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.05488,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.03128,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.01613,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.00752,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 48,
+          "InformationSetLabels": "P Liability Signal: 3",
+          "InformationSetContents": "3",
+          "HistoryReachProbability": 0.0193597994,
+          "InformationSetReachProbability": 0.10618,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.0000029847,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0.8782938743410401,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0.12170612565895991,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.017003593221491344,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 49,
+          "InformationSetLabels": "P Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0.017003593221491344,
+          "InformationSetReachProbability": 0.08344080577459174,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.9000046355,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.04499925714000064
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 13,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0.017003593221491344,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.063524650786839,
+              "UtilityLossFromBest": 0.43989114579354727
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 51,
+          "InformationSetLabels": "P Liability Signal: 3;P Files: 1;D Answers: 1;P Abandons: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0.017003593221491344,
+          "InformationSetReachProbability": 0.08344080577459174,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.9000046355,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.863163692508431,
+              "UtilityLossFromBest": 0.03684094299156904
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 15,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0.017003593221491344,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.49093685677677,
+              "UtilityLossFromBest": 0.01247893980361603
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.478457916973152,
+              "UtilityLossFromBest": 0.024957879607233835
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.465978977169534,
+              "UtilityLossFromBest": 0.03743681941085164
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.453500037365917,
+              "UtilityLossFromBest": 0.049915759214469446
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.4410210975623,
+              "UtilityLossFromBest": 0.062394699018085475
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.428542157758683,
+              "UtilityLossFromBest": 0.07487363882170328
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.24501775998718,
+              "UtilityLossFromBest": 0.25839803659320637
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.134850562137215,
+              "UtilityLossFromBest": 0.3685652344431709
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.067737597148602,
+              "UtilityLossFromBest": 0.4356781994317842
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        9.9,
+        9.8
+      ],
+      "ExpectedUtilityUnrounded": [
+        9.9,
+        9.8
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Settlement",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0.017003593221491344,
+          "TransferToPlaintiff": 0.05,
+          "PlaintiffNetMonetaryPayoff": -0.09999999999999999,
+          "DefendantNetMonetaryPayoff": -0.2,
+          "PlaintiffFinalWealth": 9.9,
+          "DefendantFinalWealth": 9.8,
+          "PlaintiffUtility": 9.9,
+          "DefendantUtility": 9.8,
+          "PlaintiffNetLitigationExpense": 0.15,
+          "DefendantNetLitigationExpense": 0.15000000000000002
+        }
+      ]
+    },
+    {
+      "Name": "no-filing",
+      "Purpose": "Other positive-probability action at the same mixed filing information set.",
+      "EquilibriumProbability": 0.0023562061785086567,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.10618,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.15475,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.18142,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.18233,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.16002,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.12461,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.08706,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.05488,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.03128,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.01613,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.00752,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 48,
+          "InformationSetLabels": "P Liability Signal: 3",
+          "InformationSetContents": "3",
+          "HistoryReachProbability": 0.0193597994,
+          "InformationSetReachProbability": 0.10618,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.0000029847,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0.8782938743410401,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0.12170612565895991,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        10,
+        10
+      ],
+      "ExpectedUtilityUnrounded": [
+        10,
+        10
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "No filing",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0.0023562061785086567,
+          "TransferToPlaintiff": 0,
+          "PlaintiffNetMonetaryPayoff": 0,
+          "DefendantNetMonetaryPayoff": 0,
+          "PlaintiffFinalWealth": 10,
+          "DefendantFinalWealth": 10,
+          "PlaintiffUtility": 10,
+          "DefendantUtility": 10,
+          "PlaintiffNetLitigationExpense": 0,
+          "DefendantNetLitigationExpense": -0
+        }
+      ]
+    },
+    {
+      "Name": "lower-demand-deviation",
+      "Purpose": "Zero-probability low demand at the reached fourth-signal plaintiff offer information set; defendant cannot observe this deviation.",
+      "EquilibriumProbability": 0,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 53,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.08063391228326466
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 13,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.063524650786839,
+              "UtilityLossFromBest": 0.43989114579354727
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 55,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1;P Abandons: 2",
+          "InformationSetContents": "4,1,1,2",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0.03563465514326403
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 15,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.49093685677677,
+              "UtilityLossFromBest": 0.01247893980361603
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.478457916973152,
+              "UtilityLossFromBest": 0.024957879607233835
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.465978977169534,
+              "UtilityLossFromBest": 0.03743681941085164
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.453500037365917,
+              "UtilityLossFromBest": 0.049915759214469446
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.4410210975623,
+              "UtilityLossFromBest": 0.062394699018085475
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.428542157758683,
+              "UtilityLossFromBest": 0.07487363882170328
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.24501775998718,
+              "UtilityLossFromBest": 0.25839803659320637
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.134850562137215,
+              "UtilityLossFromBest": 0.3685652344431709
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.067737597148602,
+              "UtilityLossFromBest": 0.4356781994317842
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        9.9,
+        9.8
+      ],
+      "ExpectedUtilityUnrounded": [
+        9.9,
+        9.8
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Settlement",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0,
+          "TransferToPlaintiff": 0.05,
+          "PlaintiffNetMonetaryPayoff": -0.09999999999999999,
+          "DefendantNetMonetaryPayoff": -0.2,
+          "PlaintiffFinalWealth": 9.9,
+          "DefendantFinalWealth": 9.8,
+          "PlaintiffUtility": 9.9,
+          "DefendantUtility": 9.8,
+          "PlaintiffNetLitigationExpense": 0.15,
+          "DefendantNetLitigationExpense": 0.15000000000000002
+        }
+      ]
+    },
+    {
+      "Name": "no-answer-deviation",
+      "Purpose": "Zero-probability no-answer alternative at the third-signal defendant\u0027s reached answering information set.",
+      "EquilibriumProbability": 0,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        10.85,
+        9
+      ],
+      "ExpectedUtilityUnrounded": [
+        10.85,
+        9
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "No answer",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0,
+          "TransferToPlaintiff": 1,
+          "PlaintiffNetMonetaryPayoff": 0.85,
+          "DefendantNetMonetaryPayoff": -1,
+          "PlaintiffFinalWealth": 10.85,
+          "DefendantFinalWealth": 9,
+          "PlaintiffUtility": 10.85,
+          "DefendantUtility": 9,
+          "PlaintiffNetLitigationExpense": 0.15000000000000002,
+          "DefendantNetLitigationExpense": 0
+        }
+      ]
+    },
+    {
+      "Name": "higher-offer-deviation",
+      "Purpose": "Zero-probability defendant offer that would meet the main path\u0027s demand and settle.",
+      "EquilibriumProbability": 0,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 53,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.08063391228326466
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 13,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.063524650786839,
+              "UtilityLossFromBest": 0.43989114579354727
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 55,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1;P Abandons: 2",
+          "InformationSetContents": "4,1,1,2",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 8,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0.03563465514326403
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 15,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 8,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.49093685677677,
+              "UtilityLossFromBest": 0.01247893980361603
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.478457916973152,
+              "UtilityLossFromBest": 0.024957879607233835
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.465978977169534,
+              "UtilityLossFromBest": 0.03743681941085164
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.453500037365917,
+              "UtilityLossFromBest": 0.049915759214469446
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.4410210975623,
+              "UtilityLossFromBest": 0.062394699018085475
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.428542157758683,
+              "UtilityLossFromBest": 0.07487363882170328
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.24501775998718,
+              "UtilityLossFromBest": 0.25839803659320637
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.134850562137215,
+              "UtilityLossFromBest": 0.3685652344431709
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.067737597148602,
+              "UtilityLossFromBest": 0.4356781994317842
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        10.6,
+        9.1
+      ],
+      "ExpectedUtilityUnrounded": [
+        10.6,
+        9.1
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Settlement",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0,
+          "TransferToPlaintiff": 0.75,
+          "PlaintiffNetMonetaryPayoff": 0.6,
+          "DefendantNetMonetaryPayoff": -0.9,
+          "PlaintiffFinalWealth": 10.6,
+          "DefendantFinalWealth": 9.1,
+          "PlaintiffUtility": 10.6,
+          "DefendantUtility": 9.1,
+          "PlaintiffNetLitigationExpense": 0.15000000000000002,
+          "DefendantNetLitigationExpense": 0.15000000000000002
+        }
+      ]
+    },
+    {
+      "Name": "abandonment-deviation",
+      "Purpose": "Exit commitment deviation; subsequent plaintiff offer information set is off path, so its conditional utilities must be null.",
+      "EquilibriumProbability": 0,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 3,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 12,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1",
+          "InformationSetContents": "3,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.000008677099999,
+              "UtilityLossFromBest": 0.5034071194803875
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 53,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016992239,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.08063391228326466
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 13,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1",
+          "InformationSetContents": "3,1,1",
+          "HistoryReachProbability": 0,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.063524650786839,
+              "UtilityLossFromBest": 0.43989114579354727
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 54,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1;P Abandons: 1",
+          "InformationSetContents": "4,1,1,1",
+          "HistoryReachProbability": 0,
+          "InformationSetReachProbability": 0,
+          "OffPathInformationSet": true,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 8,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.1,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 15,
+          "InformationSetLabels": "D Liability Signal: 3;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "3,1,1,2",
+          "HistoryReachProbability": 0,
+          "InformationSetReachProbability": 0.06812942162149135,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.503415796580386,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.503415796580386,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.49093685677677,
+              "UtilityLossFromBest": 0.01247893980361603
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.478457916973152,
+              "UtilityLossFromBest": 0.024957879607233835
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.465978977169534,
+              "UtilityLossFromBest": 0.03743681941085164
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.453500037365917,
+              "UtilityLossFromBest": 0.049915759214469446
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.4410210975623,
+              "UtilityLossFromBest": 0.062394699018085475
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.428542157758683,
+              "UtilityLossFromBest": 0.07487363882170328
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.24501775998718,
+              "UtilityLossFromBest": 0.25839803659320637
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.134850562137215,
+              "UtilityLossFromBest": 0.3685652344431709
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.067737597148602,
+              "UtilityLossFromBest": 0.4356781994317842
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        9.85,
+        9.85
+      ],
+      "ExpectedUtilityUnrounded": [
+        9.85,
+        9.85
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Abandonment",
+          "CourtSignal": null,
+          "ConditionalProbability": 1,
+          "EquilibriumHistoryProbability": 0,
+          "TransferToPlaintiff": 0,
+          "PlaintiffNetMonetaryPayoff": -0.15,
+          "DefendantNetMonetaryPayoff": -0.15,
+          "PlaintiffFinalWealth": 9.85,
+          "DefendantFinalWealth": 9.85,
+          "PlaintiffUtility": 9.85,
+          "DefendantUtility": 9.85,
+          "PlaintiffNetLitigationExpense": 0.15,
+          "DefendantNetLitigationExpense": 0.15
+        }
+      ]
+    },
+    {
+      "Name": "adjacent-defendant-signal",
+      "Purpose": "Same plaintiff information sets under a different unobserved defendant signal; available for an information-set connection in the diagram.",
+      "EquilibriumProbability": 0.016902516,
+      "Steps": [
+        {
+          "Decision": "PLiabilitySignal",
+          "Label": "P Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 1,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.08045,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.1076,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.1081,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.10618,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.09768,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.08043,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "DLiabilitySignal",
+          "Label": "D Liability Signal",
+          "Player": "Chance",
+          "InformationSetNumber": null,
+          "InformationSetLabels": null,
+          "InformationSetContents": null,
+          "HistoryReachProbability": 0.1081,
+          "InformationSetReachProbability": null,
+          "OffPathInformationSet": null,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": null,
+          "SelectedAction": 4,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0.1092,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0.1402,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0.15719,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0.15636,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0.13955,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0.11239,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0.08184,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0.05391,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0.03211,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0.01725,
+              "ConditionalActingPlayerUtility": null,
+              "UtilityLossFromBest": null
+            }
+          ]
+        },
+        {
+          "Decision": "PFile",
+          "Label": "P Files",
+          "Player": "P",
+          "InformationSetNumber": 52,
+          "InformationSetLabels": "P Liability Signal: 4",
+          "InformationSetContents": "4",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.1081,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 10.098695114401455,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 10.098695114401455,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 10.0000029847,
+              "UtilityLossFromBest": 0.09869212970145469
+            }
+          ]
+        },
+        {
+          "Decision": "DAnswer",
+          "Label": "D Answers",
+          "Player": "D",
+          "InformationSetNumber": 16,
+          "InformationSetLabels": "D Liability Signal: 4;P Files: 1",
+          "InformationSetContents": "4,1",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.07906782861727661,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.393481397219071,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.393481397219071,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.0000086771,
+              "UtilityLossFromBest": 0.3934727201190711
+            }
+          ]
+        },
+        {
+          "Decision": "PAbandon",
+          "Label": "P Abandons",
+          "Player": "P",
+          "InformationSetNumber": 53,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.85500537836,
+              "UtilityLossFromBest": 0.08063391228326466
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DDefault",
+          "Label": "D Defaults",
+          "Player": "D",
+          "InformationSetNumber": 17,
+          "InformationSetLabels": "D Liability Signal: 4;P Files: 1;D Answers: 1",
+          "InformationSetContents": "4,1,1",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.07906782861727661,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.393481397219071,
+          "SelectedAction": 2,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.01845792916375,
+              "UtilityLossFromBest": 0.3750234680553213
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.393481397219071,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "POffer",
+          "Label": "P Offer",
+          "Player": "P",
+          "InformationSetNumber": 55,
+          "InformationSetLabels": "P Liability Signal: 4;P Files: 1;D Answers: 1;P Abandons: 2",
+          "InformationSetContents": "4,1,1,2",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.08882277781854757,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.935639290643264,
+          "SelectedAction": 8,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.9000046355,
+              "UtilityLossFromBest": 0.03563465514326403
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.935639290643264,
+              "UtilityLossFromBest": 0
+            }
+          ]
+        },
+        {
+          "Decision": "DOffer",
+          "Label": "D Offer",
+          "Player": "D",
+          "InformationSetNumber": 19,
+          "InformationSetLabels": "D Liability Signal: 4;P Files: 1;D Answers: 1;D Defaults: 2",
+          "InformationSetContents": "4,1,1,2",
+          "HistoryReachProbability": 0.016902516,
+          "InformationSetReachProbability": 0.07906782861727661,
+          "OffPathInformationSet": false,
+          "UniformFallbackForUnspecifiedStrategy": false,
+          "ConditionalActingPlayerUtility": 9.393481397219071,
+          "SelectedAction": 1,
+          "Actions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "ConditionalActingPlayerUtility": 9.393481397219071,
+              "UtilityLossFromBest": 0
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.38404451111106,
+              "UtilityLossFromBest": 0.009436886108010967
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.37460762500305,
+              "UtilityLossFromBest": 0.018873772216021933
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.365170738895038,
+              "UtilityLossFromBest": 0.0283106583240329
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.355733852787026,
+              "UtilityLossFromBest": 0.03774754443204564
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.346296966679015,
+              "UtilityLossFromBest": 0.04718443054005661
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.336860080571004,
+              "UtilityLossFromBest": 0.05662131664806758
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.200338648684577,
+              "UtilityLossFromBest": 0.19314274853449476
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.103841700233424,
+              "UtilityLossFromBest": 0.2896396969856472
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "ConditionalActingPlayerUtility": 9.038669733492979,
+              "UtilityLossFromBest": 0.3548116637260925
+            }
+          ]
+        }
+      ],
+      "ExpectedFinalWealth": [
+        9.95011262639648,
+        9.449887373603518
+      ],
+      "ExpectedUtilityUnrounded": [
+        9.95011262639648,
+        9.449887373603518
+      ],
+      "Outcomes": [
+        {
+          "Outcome": "Court finds not liable",
+          "CourtSignal": 1,
+          "ConditionalProbability": 0.7498873736035191,
+          "EquilibriumHistoryProbability": 0.012674983330531459,
+          "TransferToPlaintiff": 0,
+          "PlaintiffNetMonetaryPayoff": -0.3,
+          "DefendantNetMonetaryPayoff": -0.3,
+          "PlaintiffFinalWealth": 9.7,
+          "DefendantFinalWealth": 9.7,
+          "PlaintiffUtility": 9.7,
+          "DefendantUtility": 9.7,
+          "PlaintiffNetLitigationExpense": 0.3,
+          "DefendantNetLitigationExpense": 0.3
+        },
+        {
+          "Outcome": "Court finds liable",
+          "CourtSignal": 2,
+          "ConditionalProbability": 0.25011262639648096,
+          "EquilibriumHistoryProbability": 0.004227532669468541,
+          "TransferToPlaintiff": 1,
+          "PlaintiffNetMonetaryPayoff": 0.7,
+          "DefendantNetMonetaryPayoff": -1.3,
+          "PlaintiffFinalWealth": 10.7,
+          "DefendantFinalWealth": 8.7,
+          "PlaintiffUtility": 10.7,
+          "DefendantUtility": 8.7,
+          "PlaintiffNetLitigationExpense": 0.30000000000000004,
+          "DefendantNetLitigationExpense": 0.30000000000000004
+        }
+      ]
+    }
+  ]
+}

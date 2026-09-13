@@ -1,0 +1,111 @@
+{
+  "OptionSetName": "Specification-Baseline__Cost-1__Fee-American",
+  "EquilibriumFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -equ.csv",
+  "ActionReportFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -InformationSetActions.csv",
+  "EquilibriumNumber": 1,
+  "Paths": [
+    {
+      "Name": "trial",
+      "Purpose": "Main worked path: fourth plaintiff signal and third defendant signal, failed settlement, both court findings.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 2 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 8 },
+        { "Decision": "DOffer", "Action": 1 }
+      ]
+    },
+    {
+      "Name": "settlement",
+      "Purpose": "Adjacent plaintiff signal: genuine mixing at filing, followed by settlement if filed and answered.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 3 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 2 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 1 },
+        { "Decision": "DOffer", "Action": 1 }
+      ]
+    },
+    {
+      "Name": "no-filing",
+      "Purpose": "Other positive-probability action at the same mixed filing information set.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 3 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 2 }
+      ]
+    },
+    {
+      "Name": "lower-demand-deviation",
+      "Purpose": "Zero-probability low demand at the reached fourth-signal plaintiff offer information set; defendant cannot observe this deviation.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 2 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 1 },
+        { "Decision": "DOffer", "Action": 1 }
+      ]
+    },
+    {
+      "Name": "no-answer-deviation",
+      "Purpose": "Zero-probability no-answer alternative at the third-signal defendant's reached answering information set.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 2 }
+      ]
+    },
+    {
+      "Name": "higher-offer-deviation",
+      "Purpose": "Zero-probability defendant offer that would meet the main path's demand and settle.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 2 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 8 },
+        { "Decision": "DOffer", "Action": 8 }
+      ]
+    },
+    {
+      "Name": "abandonment-deviation",
+      "Purpose": "Exit commitment deviation; subsequent plaintiff offer information set is off path, so its conditional utilities must be null.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 3 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 1 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 8 },
+        { "Decision": "DOffer", "Action": 1 }
+      ]
+    },
+    {
+      "Name": "adjacent-defendant-signal",
+      "Purpose": "Same plaintiff information sets under a different unobserved defendant signal; available for an information-set connection in the diagram.",
+      "Choices": [
+        { "Decision": "PLiabilitySignal", "Action": 4 },
+        { "Decision": "DLiabilitySignal", "Action": 4 },
+        { "Decision": "PFile", "Action": 1 },
+        { "Decision": "DAnswer", "Action": 1 },
+        { "Decision": "PAbandon", "Action": 2 },
+        { "Decision": "DDefault", "Action": 2 },
+        { "Decision": "POffer", "Action": 8 },
+        { "Decision": "DOffer", "Action": 1 }
+      ]
+    }
+  ]
+}
