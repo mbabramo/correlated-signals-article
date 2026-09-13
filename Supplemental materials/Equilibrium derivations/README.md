@@ -1,5 +1,26 @@
 # Original ECTA equilibrium derivations
 
+[Play all four independent derivations](all-equilibrium-derivations.html)
+
+- [American rule, risk-neutral](risk-neutral-american-cost-1.html)
+- [British rule, risk-neutral](risk-neutral-british-cost-1.html)
+- [American rule, moderate risk aversion](risk-averse-american-cost-1.html)
+- [British rule, moderate risk aversion](risk-averse-british-cost-1.html)
+
+All four original pivot counts and all 480 saved action probabilities per case
+match exactly. The batch contains 1,826 frames, including four initial priors.
+Tracing code was checkpointed in ACESim4 commit 30554e89 before animation work.
+
+Open the self-contained HTML files in a current browser (tested in the Codex
+in-app Chromium browser). Play all runs the independent solves in sequence;
+each new case resets to its own uniform prior. The slider and Step buttons retain
+every pivot. Playback can skip unchanged probabilities. Data compression is
+lossless; no precision or steps are discarded.
+
+Blue encodes probability, orange corners positive action advantage. Hatched rows
+are actually unreached, and dots mark uniform completions. Off-path advantages
+are optional. Hover or tap for precise values; Save frame as PNG exports the grid.
+
 These are independent replays of the original ordinary-cost American/British
 equilibria under risk neutrality/moderate risk aversion. Each starts from the
 original exact seed-zero uniform prior, under fixed rules throughout. They are
@@ -8,6 +29,13 @@ not transitions between equilibria or behavioral learning paths.
 Generate from ACESim4 with:
 
     dotnet run --project LitigCharts -c Release -- equilibrium-paths --request "C:/Users/Admin/source/repos/correlated-signals-article/equilibrium-paths.request.json"
+
+To rebuild animations from these completed traces without solving again:
+
+    dotnet run --project LitigCharts -c Release -- equilibrium-paths --request "C:/Users/Admin/source/repos/correlated-signals-article/equilibrium-paths.request.json" --render-only
+
+The default command calculates and renders; --calculate-only exports just data.
+Choose a new output directory to repeat an already completed calculation batch.
 
 Every pivot is recorded in a JSONL file; JSON metadata identifies the information
 sets and actions and records validation and input hashes. Successful metadata
