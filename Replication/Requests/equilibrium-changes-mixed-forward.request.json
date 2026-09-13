@@ -1,0 +1,71 @@
+{
+  "OutputDirectory": "../../Results/Equilibrium diagnostics/Mixed tighter check",
+  "PublicationDirectory": null,
+  "Sources": [
+    {
+      "Id": "risk-neutral-american-cost-1",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-American",
+      "EquilibriumFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -equ.csv",
+      "ActionReportFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../Results/Equilibrium diagnostics/Mixing/Tighter tolerance check/risk-neutral-american-cost-1-forward-profile.json"
+    },
+    {
+      "Id": "risk-neutral-british-cost-1",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-British",
+      "EquilibriumFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-British -equ.csv",
+      "ActionReportFile": "../../Results/Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-British -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../Results/Equilibrium diagnostics/Mixing/Tighter tolerance check/risk-neutral-british-cost-1-forward-profile.json"
+    },
+    {
+      "Id": "risk-averse-american-cost-1",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-1__Fee-American",
+      "EquilibriumFile": "../../Results/Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-American -equ.csv",
+      "ActionReportFile": "../../Results/Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-American -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../Results/Equilibrium diagnostics/Mixing/Tighter tolerance check/risk-averse-american-cost-1-forward-profile.json"
+    },
+    {
+      "Id": "risk-averse-british-cost-1",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-1__Fee-British",
+      "EquilibriumFile": "../../Results/Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-British -equ.csv",
+      "ActionReportFile": "../../Results/Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-British -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../Results/Equilibrium diagnostics/Mixing/Tighter tolerance check/risk-averse-british-cost-1-forward-profile.json"
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "fee-shifting-risk-neutral-cost-1",
+      "Label": "American → British; risk neutral",
+      "Source": "risk-neutral-american-cost-1",
+      "Target": "risk-neutral-british-cost-1"
+    },
+    {
+      "Id": "fee-shifting-risk-averse-cost-1",
+      "Label": "American → British; moderate risk aversion",
+      "Source": "risk-averse-american-cost-1",
+      "Target": "risk-averse-british-cost-1"
+    },
+    {
+      "Id": "risk-aversion-american-cost-1",
+      "Label": "Risk neutral → moderate risk aversion; American rule",
+      "Source": "risk-neutral-american-cost-1",
+      "Target": "risk-averse-american-cost-1"
+    },
+    {
+      "Id": "risk-aversion-british-cost-1",
+      "Label": "Risk neutral → moderate risk aversion; British rule",
+      "Source": "risk-neutral-british-cost-1",
+      "Target": "risk-averse-british-cost-1"
+    }
+  ],
+  "Tolerances": {
+    "Numerical": 1E-07,
+    "Tie": 1E-10,
+    "NearTie": 1E-06
+  },
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}
