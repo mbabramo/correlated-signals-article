@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,longtable,array,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{4pt}
+\begin{document}{\large\bfseries Fee shifting: American to British}\par
+Both players remain risk neutral; costs unchanged at multiplier 4.\par
+{\small Changed decisions only. Original: American; target: British.}\par
+\begin{longtable}{@{}p{1.9in}rrrrrrrr@{}}
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endfirsthead
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{9}{@{}l}{\textbf{Plaintiff}}\\
+File (\%) & 0.45 & 100 & 0 & -100 & 0 & 0 & -50 & -50\\
+Commit to abandon (\%)$^{\dagger}$ & 0.65 & 62.25 & 66.28 & +4.03 & \multicolumn{4}{c}{Selection-dependent}\\
+Commit to abandon (\%)$^{\dagger}$ & 0.75 & 0 & 68.24 & +68.24 & \multicolumn{4}{c}{Selection-dependent}\\
+Demand / continue$^{\ddagger}$ & 0.55 & 0.15 & 0.05 & -0.10 & 0.00 & 0.00 & -0.10 & 0.00\\
+Demand / continue$^{\dagger\ddagger}$ & 0.75 & 0.75 & 0.95 & +0.20 & \multicolumn{4}{c}{Selection-dependent}\\
+Demand / continue$^{\dagger}$ & 0.85 & 0.75 & 0.95 & +0.20 & \multicolumn{4}{c}{Selection-dependent}\\
+Demand / continue$^{\dagger}$ & 0.95 & 0.85 & 0.95 & +0.10 & \multicolumn{4}{c}{Selection-dependent}\\
+Demand 0.05 (\%) / continue$^{\ddagger}$ & 0.65 & 0 & 100 & +100 & 0 & 0 & +100 & 0\\
+Demand 0.15 (\%) / continue$^{\ddagger}$ & 0.65 & 86.09 & 0 & -86.09 & +13.91 & 0 & -100 & 0\\
+Demand 0.75 (\%) / continue$^{\ddagger}$ & 0.65 & 13.91 & 0 & -13.91 & -13.91 & 0 & 0 & 0\\
+\multicolumn{9}{@{}l}{\textbf{Defendant}}\\
+Answer (\%)$^{\dagger*}$ & 0.35 & 98.6 & 99.87 & +1.27 & \multicolumn{4}{c}{Selection-dependent}\\
+Commit to default (\%)$^{\dagger*\ddagger}$ & 0.35 & 68.4 & 22.64 & -45.77 & \multicolumn{4}{c}{Selection-dependent}\\
+Offer / default$^{*\ddagger}$ & 0.35 & 0.15 & 0.05 & -0.10 & 0.00 & -0.067 & -0.017 & -0.017\\
+Offer / continue & 0.05 & 0.15 & 0.05 & -0.10 & -0.10 & 0.00 & 0.00 & 0.00\\
+Offer / continue$^{*}$ & 0.15 & 0.15 & 0.05 & -0.10 & -0.10 & +0.033 & -0.067 & +0.033\\
+Offer / continue$^{\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & 0.00 & 0.00 & -0.10 & 0.00\\
+Offer / continue$^{\ddagger}$ & 0.35 & 0.15 & 0.05 & -0.10 & 0.00 & 0.00 & -0.10 & 0.00\\
+\end{longtable}
+{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Four contributions sum to Change, before rounding.\par
+Probability changes are percentage points; pure demand/offer changes are fractions of damages. Mixed offers are shown as action probabilities, not averages.\par
+$\dagger$: tie-sensitive allocation. $*$: sensitive to an unvisited opponent policy. $\ddagger$: a conditional policy at an intermediate history not reached in that hybrid.\par
+Selection-dependent: the original-preserving optimal response does not reproduce the target action/mix; no four-way allocation is claimed. Undefined counterfactual: no opponent-and-chance reach.\par
+2 histories no longer reached; 1 newly reached. These have no comparable endpoint action and are omitted. Detailed diagnostics accompany the table.}\par
+\end{document}

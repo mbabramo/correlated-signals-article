@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,longtable,array,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{4pt}
+\begin{document}{\large\bfseries Preferences: risk neutral to moderately risk averse}\par
+American rule remains in force; costs unchanged at multiplier 4.\par
+{\small Changed decisions only. Original: risk neutral; target: risk averse.}\par
+\begin{longtable}{@{}p{1.9in}rrrrrrrr@{}}
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endfirsthead
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{9}{@{}l}{\textbf{Plaintiff}}\\
+File (\%) & 0.45-0.55 & 100 & 0 & -100 & -100 & 0 & 0 & 0\\
+File (\%) & 0.65 & 100 & 0 & -100 & 0 & -33.33 & -33.33 & -33.33\\
+Commit to abandon (\%)$^{\dagger}$ & 0.75 & 0 & 27.91 & +27.91 & \multicolumn{4}{c}{Selection-dependent}\\
+Commit to abandon (\%)$^{\dagger*}$ & 0.85 & 0 & 100 & +100 & 0 & +33.33 & +83.33 & -16.67\\
+Commit to abandon (\%)$^{\dagger*}$ & 0.95 & 0 & 63.79 & +63.79 & \multicolumn{4}{c}{Selection-dependent}\\
+Demand / continue$^{\ddagger}$ & 0.75 & 0.75 & 0.05 & -0.70 & -0.60 & 0.00 & -0.10 & 0.00\\
+Demand / continue$^{\dagger*\ddagger}$ & 0.95 & 0.85 & 0.65 & -0.20 & \multicolumn{4}{c}{Selection-dependent}\\
+\multicolumn{9}{@{}l}{\textbf{Defendant}}\\
+Answer (\%)$^{*}$ & 0.35 & 98.6 & 100 & +1.4 & -98.6 & +33.33 & +33.33 & +33.33\\
+Answer (\%)$^{\dagger*}$ & 0.45 & 0 & 52.31 & +52.31 & \multicolumn{4}{c}{Selection-dependent}\\
+Commit to default (\%)$^{\dagger*\ddagger}$ & 0.35 & 68.4 & 17.19 & -51.21 & \multicolumn{4}{c}{Selection-dependent}\\
+Offer / default$^{*\ddagger}$ & 0.35 & 0.15 & 0.35 & +0.20 & 0.00 & +0.133 & +0.033 & +0.033\\
+Offer / continue$^{*\ddagger}$ & 0.05 & 0.15 & 0.05 & -0.10 & 0.00 & +0.20 & -0.05 & -0.25\\
+Offer / continue$^{*\ddagger}$ & 0.15 & 0.15 & 0.05 & -0.10 & 0.00 & +0.167 & +0.017 & -0.283\\
+Offer / continue$^{*\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & +0.60 & -0.05 & -0.15 & -0.50\\
+Offer / continue$^{*\ddagger}$ & 0.35 & 0.15 & 0.05 & -0.10 & +0.70 & -0.067 & -0.167 & -0.567\\
+\end{longtable}
+{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Four contributions sum to Change, before rounding.\par
+Probability changes are percentage points; pure demand/offer changes are fractions of damages. Mixed offers are shown as action probabilities, not averages.\par
+$\dagger$: tie-sensitive allocation. $*$: sensitive to an unvisited opponent policy. $\ddagger$: a conditional policy at an intermediate history not reached in that hybrid.\par
+Selection-dependent: the original-preserving optimal response does not reproduce the target action/mix; no four-way allocation is claimed. Undefined counterfactual: no opponent-and-chance reach.\par
+8 histories no longer reached; 5 newly reached. These have no comparable endpoint action and are omitted. Detailed diagnostics accompany the table.}\par
+\end{document}
