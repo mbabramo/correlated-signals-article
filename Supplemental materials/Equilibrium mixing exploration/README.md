@@ -13,3 +13,6 @@ Forward and reverse decision-block orders restart independently from the saved o
 Adding or mixing actions can change opponent incentives, beliefs and outcomes. Every accepted full profile is rechecked, and final action values/reaches are retained. An evenly spread representative is a diagnostic convention, not an additional behavioral prediction.
 
 - [risk-neutral-american-cost-1](risk-neutral-american-cost-1.md): mixing score 0.014632 -> 0.115654; selected reverse; maximum unilateral gain 2.49999E-10.
+- [risk-neutral-british-cost-1](risk-neutral-british-cost-1.md): mixing score 0.000000 -> 0.086896; selected reverse; maximum unilateral gain 2.49996E-10.
+- [risk-averse-american-cost-1](risk-averse-american-cost-1.md): mixing score 0.000000 -> 0.000000; selected forward; maximum unilateral gain 0.
+- [risk-averse-british-cost-1](risk-averse-british-cost-1.md): mixing score 0.039877 -> 0.106854; selected reverse; maximum unilateral gain 2.55E-10.

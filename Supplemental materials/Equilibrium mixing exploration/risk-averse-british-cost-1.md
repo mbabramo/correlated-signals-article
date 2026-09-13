@@ -1,15 +1,15 @@
-# risk-neutral-american-cost-1: equilibrium-preserving mixing
+# risk-averse-british-cost-1: equilibrium-preserving mixing
 
-Source specification: `Specification-Baseline__Cost-1__Fee-American`. Original saved equilibrium retained unchanged.
+Source specification: `Specification-ModerateRiskAversion__Cost-1__Fee-British`. Original saved equilibrium retained unchanged.
 
 Mixing score is the equally weighted mean of (1 - sum of squared probabilities)/(1 - 1/action count) over source-reached information sets. Zero means pure; one means uniform over every action. This is a quadratic/Gini mixing measure, not Shannon entropy or a predicted randomization rule.
 
 | Search order | Initial score | Final score | Accepted changes | Maximum gain | Status |
 |---|---:|---:|---:|---:|---|
-| forward | 0.014632 | 0.115654 | 1 | 2.49987E-11 | Coordinate search converged within improvement tolerance |
-| reverse (selected) | 0.014632 | 0.115654 | 1 | 2.49987E-11 | Coordinate search converged within improvement tolerance |
+| forward | 0.039877 | 0.084163 | 2 | 2.49884E-10 | Coordinate search converged within improvement tolerance |
+| reverse (selected) | 0.039877 | 0.106854 | 7 | 2.55E-10 | Sweep limit reached |
 
-Selected profile's unrestricted best-response gains: P **3.5527137E-15**, D **2.499867E-11** (reported utility units). Acceptance limit: 1E-10. This checks Nash deviations at the root, not an equilibrium refinement.
+Selected profile's unrestricted best-response gains: P **2.3953817E-10**, D **2.5499958E-10** (reported utility units). Acceptance limit: 1E-09. This checks Nash deviations at the root, not an equilibrium refinement.
 
 ## Aggregate outcomes
 
@@ -17,22 +17,24 @@ Unconditional percentages, partitioning all potential disputes.
 
 | Profile | Not filed | Not answered | Settled | Trial | Exit after failed bargaining |
 |---|---:|---:|---:|---:|---:|
-| original | 19.105276 | 37.317924 | 8.344081 | 35.232720 | 0.000000 |
-| forward | 19.105276 | 37.317924 | 8.344081 | 35.232720 | 0.000000 |
-| reverse | 19.105276 | 37.317924 | 8.344081 | 35.232720 | 0.000000 |
+| original | 28.431000 | 25.539189 | 17.187622 | 2.272451 | 26.569738 |
+| forward | 28.431000 | 25.539189 | 17.187624 | 2.272451 | 26.569736 |
+| reverse | 28.431000 | 25.539189 | 17.187623 | 2.272451 | 26.569737 |
 ## Strategy changes
 
 Only changed, source-reached information sets are listed. Unvisited source policies remain frozen, including uniform loader fallbacks. Offer branches retain the player's private exit commitment.
 
 | Player | Decision | Signal | Branch | Original distribution | Selected distribution | Effective actions, original -> selected |
 |---|---|---:|---|---|---|---:|
-| P | P Offer | 0.35 | continue | 0.75: 100% | 0.45: 5.914%; 0.55: 12.741%; 0.65: 19.568%; 0.75: 26.395%; 0.85: 27.59%; 0.95: 7.791% | 1.000 -> 5.231 |
-| P | P Offer | 0.45 | continue | 0.75: 100% | 0.55: 7.384%; 0.65: 16.758%; 0.75: 26.133%; 0.85: 32.382%; 0.95: 17.343% | 1.000 -> 4.533 |
-| P | P Offer | 0.55 | continue | 0.85: 100% | 0.65: 10.77%; 0.75: 22.411%; 0.85: 35.596%; 0.95: 31.224% | 1.000 -> 3.692 |
-| P | P Offer | 0.65 | continue | 0.85: 100% | 0.65: 2.752%; 0.75: 15.796%; 0.85: 36.008%; 0.95: 45.444% | 1.000 -> 3.054 |
-| P | P Offer | 0.75 | continue | 0.95: 100% | 0.75: 9.549%; 0.85: 34.446%; 0.95: 56.005% | 1.000 -> 2.499 |
-| P | P Offer | 0.85 | continue | 0.95: 100% | 0.75: 7.176%; 0.85: 32.582%; 0.95: 60.242% | 1.000 -> 2.363 |
-| P | P Offer | 0.95 | continue | 0.95: 100% | 0.65: 0.769%; 0.75: 9.876%; 0.85: 31.492%; 0.95: 57.863% | 1.000 -> 2.577 |
+| P | P Offer | 0.65 | continue | 0.65: 100% | 0.65: 34.224%; 0.85: 31.192%; 0.95: 34.584% | 1.000 -> 2.997 |
+| P | P Offer | 0.75 | continue | 0.75: 43.081%; 0.85: 56.919% | 0.75: 47.02%; 0.85: 4.148%; 0.95: 48.832% | 1.981 -> 2.309 |
+| P | P Offer | 0.85 | continue | 0.85: 1.004%; 0.95: 98.996% | 0.85: 27.769%; 0.95: 72.231% | 1.058 -> 1.805 |
+| P | P Offer | 0.95 | continue | 0.95: 100% | 0.85: 31.043%; 0.95: 68.957% | 1.000 -> 1.858 |
+| D | D Offer | 0.05 | continue | 0.05: 100% | 0.05: 56.062%; 0.15: 30.984%; 0.25: 12.954% | 1.000 -> 2.591 |
+| D | D Offer | 0.15 | continue | 0.05: 100% | 0.05: 62.514%; 0.15: 30.317%; 0.25: 7.169% | 1.000 -> 2.327 |
+| D | D Offer | 0.25 | continue | 0.05: 100% | 0.05: 66.051%; 0.15: 29.951%; 0.25: 3.998% | 1.000 -> 2.146 |
+| D | D Offer | 0.35 | continue | 0.15: 40.367%; 0.25: 59.633% | 0.05: 65.878%; 0.15: 29.969%; 0.25: 4.153% | 1.963 -> 2.156 |
+| D | D Offer | 0.75 | exit | 0.55: 100% | 0.55: 99.999%; 0.75: 0.001% | 1.000 -> 1.000 |
 
 Effective actions = exp(Shannon entropy), a supplementary measure. Displayed shares omit probabilities below the support threshold; the JSON retains all probabilities.
 
