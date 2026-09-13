@@ -9,39 +9,63 @@
 \begin{document}{\large\bfseries Fee shifting: American to British}\par
 Both players remain moderately risk averse; costs unchanged at multiplier 1.\par
 {\small Changed decisions only. Original: American; target: British.}\par
-\begin{longtable}{@{}p{1.9in}rrrrrrrr@{}}
-\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endfirsthead
-\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endhead
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.65in}rrrrrrrrr@{}}
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit & Remaining \\\midrule\endfirsthead
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit & Remaining \\\midrule\endhead
 \bottomrule\endfoot
-\multicolumn{9}{@{}l}{\textbf{Plaintiff}}\\
-File (\%) & 0.05-0.15 & 100 & 0 & -100 & 0 & 0 & -100 & 0\\
-File (\%)$^{*}$ & 0.25 & 100 & 0 & -100 & 0 & 0 & -100 & 0\\
-Commit to abandon (\%)$^{\dagger*\ddagger}$ & 0.35 & 0 & 100 & +100 & \multicolumn{4}{c}{Selection-dependent}\\
-Commit to abandon (\%)$^{\dagger*}$ & 0.45 & 0 & 100 & +100 & 0 & -16.67 & +83.33 & +33.33\\
-Commit to abandon (\%)$^{\dagger*}$ & 0.55 & 0 & 100 & +100 & 0 & 0 & +100 & 0\\
-Commit to abandon (\%)$^{\dagger*}$ & 0.65 & 0 & 91.35 & +91.35 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand / continue$^{\dagger*\ddagger}$ & 0.65 & 0.85 & 0.65 & -0.20 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand / continue$^{\dagger*}$ & 0.95 & 0.85 & 0.95 & +0.10 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand 0.75 (\%) / continue$^{\ddagger}$ & 0.75 & 0 & 43.08 & +43.08 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand 0.85 (\%) / continue$^{\dagger*\ddagger}$ & 0.75 & 100 & 56.92 & -43.08 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand 0.85 (\%) / continue$^{\dagger*}$ & 0.85 & 100 & 1 & -99 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand 0.95 (\%) / continue$^{\dagger*}$ & 0.85 & 0 & 99 & +99 & \multicolumn{4}{c}{Selection-dependent}\\
-\multicolumn{9}{@{}l}{\textbf{Defendant}}\\
-Answer (\%)$^{\dagger*}$ & 0.75 & 100 & 19.01 & -80.99 & \multicolumn{4}{c}{Selection-dependent}\\
-Answer (\%)$^{*}$ & 0.85 & 100 & 0 & -100 & 0 & 0 & -100 & 0\\
-Answer (\%) & 0.95 & 100 & 0 & -100 & 0 & 0 & -100 & 0\\
-Commit to default (\%)$^{\dagger*}$ & 0.45 & 0 & 100 & +100 & 0 & +33.33 & +83.33 & -16.67\\
-Commit to default (\%)$^{\dagger*}$ & 0.55-0.65 & 0 & 100 & +100 & 0 & 0 & +100 & 0\\
-Commit to default (\%)$^{\dagger*\ddagger}$ & 0.75 & 0 & 100 & +100 & 0 & 0 & +100 & 0\\
-Offer / continue$^{\dagger*}$ & 0.05 & 0.15 & 0.05 & -0.10 & \multicolumn{4}{c}{Selection-dependent}\\
-Offer / continue$^{\dagger*}$ & 0.15 & 0.15 & 0.05 & -0.10 & \multicolumn{4}{c}{Selection-dependent}\\
-Offer / continue$^{\dagger*\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & \multicolumn{4}{c}{Selection-dependent}\\
-Offer 0.15 (\%) / continue$^{\dagger*\ddagger}$ & 0.35 & 100 & 40.37 & -59.63 & \multicolumn{4}{c}{Selection-dependent}\\
-Offer 0.25 (\%) / continue$^{*\ddagger}$ & 0.35 & 0 & 59.63 & +59.63 & \multicolumn{4}{c}{Selection-dependent}\\
-\end{longtable}
-{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Four contributions sum to Change, before rounding.\par
+\multicolumn{10}{@{}l}{\textbf{Plaintiff}}\\
+File (\%) & 0.05-0.15 & 100 & 0 & -100 & 0 & 0 & -100 & 0 & 0\\
+File (\%)$^{\S}$ & 0.25 & 100 & 0 & -100 & 0 & 0 & -100 & 0 & 0\\
+Commit to abandon (\%)$^{*\dagger\S\ddagger}$ & 0.35 & 0 & 100 & +100 & 0 & -33.33 & +16.67 & +16.67 & +100\\
+Commit to abandon (\%)$^{\dagger\S}$ & 0.45 & 0 & 100 & +100 & 0 & -16.67 & +83.33 & +33.33 & 0\\
+Commit to abandon (\%)$^{\dagger\S}$ & 0.55 & 0 & 100 & +100 & 0 & 0 & +100 & 0 & 0\\
+Commit to abandon (\%)$^{*\dagger\S}$ & 0.65 & 0 & 91.35 & +91.35 & +100 & -33.33 & +16.67 & -83.33 & +91.35\\
+Demand / continue$^{*\dagger\S\ddagger}$ & 0.65 & 0.85 & 0.65 & -0.20 & -0.70 & +0.017 & -0.033 & +0.717 & -0.20\\
+Demand / continue$^{*\dagger\S}$ & 0.95 & 0.85 & 0.95 & +0.10 & 0.00 & -0.033 & -0.083 & +0.117 & +0.10\\
+Demand 0.75 (\%) / continue$^{*\ddagger}$ & 0.75 & 0 & 43.08 & +43.08 & 0 & 0 & 0 & 0 & +43.08\\
+Demand 0.85 (\%) / continue$^{*\dagger\S\ddagger}$ & 0.75 & 100 & 56.92 & -43.08 & 0 & -50 & 0 & +50 & -43.08\\
+Demand 0.85 (\%) / continue$^{*\dagger\S}$ & 0.85 & 100 & 1 & -99 & 0 & +16.67 & -33.33 & +16.67 & -99\\
+Demand 0.95 (\%) / continue$^{*\dagger\S}$ & 0.85 & 0 & 99 & +99 & 0 & -16.67 & -16.67 & +33.33 & +99\\
+\multicolumn{10}{@{}l}{\textbf{Defendant}}\\
+Answer (\%)$^{*\dagger\S}$ & 0.75 & 100 & 19.01 & -80.99 & 0 & 0 & -50 & +50 & -80.99\\
+Answer (\%)$^{\S}$ & 0.85 & 100 & 0 & -100 & 0 & 0 & -100 & 0 & 0\\
+Answer (\%) & 0.95 & 100 & 0 & -100 & 0 & 0 & -100 & 0 & 0\\
+Commit to default (\%)$^{\dagger\S}$ & 0.45 & 0 & 100 & +100 & 0 & +33.33 & +83.33 & -16.67 & 0\\
+Commit to default (\%)$^{\dagger\S}$ & 0.55-0.65 & 0 & 100 & +100 & 0 & 0 & +100 & 0 & 0\\
+Commit to default (\%)$^{\dagger\S\ddagger}$ & 0.75 & 0 & 100 & +100 & 0 & 0 & +100 & 0 & 0\\
+Offer / continue$^{*\dagger\S}$ & 0.05 & 0.15 & 0.05 & -0.10 & 0.00 & +0.033 & +0.083 & -0.117 & -0.10\\
+Offer / continue$^{*\dagger\S}$ & 0.15 & 0.15 & 0.05 & -0.10 & 0.00 & +0.033 & +0.183 & -0.217 & -0.10\\
+Offer / continue$^{*\dagger\S\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & 0.00 & +0.217 & +0.167 & -0.383 & -0.10\\
+Offer 0.15 (\%) / continue$^{*\dagger\S\ddagger}$ & 0.35 & 100 & 40.37 & -59.63 & -100 & +16.67 & +16.67 & +66.67 & -59.63\\
+Offer 0.25 (\%) / continue$^{*\S\ddagger}$ & 0.35 & 0 & 59.63 & +59.63 & 0 & -33.33 & +16.67 & +16.67 & +59.63\\
+\end{longtable}}
+{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Change equals their sum plus Remaining, before rounding.\par
 Probability changes are percentage points; pure demand/offer changes are fractions of damages. Mixed offers are shown as action probabilities, not averages.\par
-$\dagger$: tie-sensitive allocation. $*$: sensitive to an unvisited opponent policy. $\ddagger$: a conditional policy at an intermediate history not reached in that hybrid.\par
-Selection-dependent: the original-preserving optimal response does not reproduce the target action/mix; no four-way allocation is claimed. Undefined counterfactual: no opponent-and-chance reach.\par
+$*$: partial, selection-dependent accounting; Remaining is the target action/mix minus the selected full-target-opponent response, not a fifth causal mechanism. $\dagger$: tie-sensitive. $\S$: sensitive to an unvisited opponent policy. $\ddagger$: conditional on an intermediate history not reached in that hybrid.\par
+Undefined counterfactual: no opponent-and-chance reach; no numerical attribution is shown. These are conditional comparisons, not observed adjustment dynamics.\par
 17 histories no longer reached; 8 newly reached. These have no comparable endpoint action and are omitted. Detailed diagnostics accompany the table.}\par
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Fee shifting: American to British; Both players remain moderately risk averse; costs 1.\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{10}{@{}l}{\textbf{Plaintiff}}\\
+Commit to abandon\newline Yes vs No$^{*\S\ddagger}$ & 0.35 & -36.9874 & 135.0281 & +172.0156 & +36.9874 & -1.0278 & +2.6689 & -1.6411 & +135.0281\\[3pt]
+Commit to abandon\newline Yes vs No$^{\S}$ & 0.65 & -43.0641 & 0 & +43.0641 & +56.4104 & +6.4392 & +2.9279 & -22.7135 & 0\\[3pt]
+Demand / continue\newline 0.65 vs 0.85$^{\S\ddagger}$ & 0.65 & -7.1562 & 0 & +7.1562 & +0.0006 & +1.7122 & +14.2622 & -8.8187 & 0\\[3pt]
+Demand / continue\newline 0.75 vs 0.85$^{\S\ddagger}$ & 0.75 & -3.8863 & 0 & +3.8863 & -0.0023 & +0.9534 & +6.0193 & -3.0842 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S}$ & 0.85 & -25.9308 & 0 & +25.9308 & -8.4095 & -4.2348 & +17.0495 & +21.5257 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S}$ & 0.95 & -19.5567 & 0 & +19.5567 & -1.0227 & -4.249 & +10.7686 & +14.0597 & 0\\[3pt]
+\multicolumn{10}{@{}l}{\textbf{Defendant}}\\
+Answer\newline No vs Yes$^{\S}$ & 0.75 & -136.6326 & 0 & +136.6326 & -0.0021 & +25.5126 & +175.4374 & -64.3153 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.05 & -144.5189 & 0 & +144.5189 & -7.5352 & -31.2732 & +83.5452 & +99.7822 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.15 & -191.6227 & 0 & +191.6227 & -62.1213 & -28.3018 & +131.0436 & +151.0023 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S\ddagger}$ & 0.25 & -251.4129 & 0 & +251.4129 & -133.5976 & -15.1576 & +186.9934 & +213.1748 & 0\\[3pt]
+Offer / continue\newline 0.25 vs 0.15$^{\S\ddagger}$ & 0.35 & -25.1261 & 0 & +25.1261 & +0.0077 & +5.2048 & +54.3693 & -34.4557 & 0\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit: marginal opponent replacements averaged over six orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all five columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
 \end{document}

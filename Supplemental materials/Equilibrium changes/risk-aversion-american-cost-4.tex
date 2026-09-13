@@ -9,31 +9,49 @@
 \begin{document}{\large\bfseries Preferences: risk neutral to moderately risk averse}\par
 American rule remains in force; costs unchanged at multiplier 4.\par
 {\small Changed decisions only. Original: risk neutral; target: risk averse.}\par
-\begin{longtable}{@{}p{1.9in}rrrrrrrr@{}}
-\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endfirsthead
-\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit \\\midrule\endhead
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.65in}rrrrrrrrr@{}}
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit & Remaining \\\midrule\endfirsthead
+\toprule Decision & Signal & Original & Target & Change & Direct & Entry & Offers & Exit & Remaining \\\midrule\endhead
 \bottomrule\endfoot
-\multicolumn{9}{@{}l}{\textbf{Plaintiff}}\\
-File (\%) & 0.45-0.55 & 100 & 0 & -100 & -100 & 0 & 0 & 0\\
-File (\%) & 0.65 & 100 & 0 & -100 & 0 & -33.33 & -33.33 & -33.33\\
-Commit to abandon (\%)$^{\dagger}$ & 0.75 & 0 & 27.91 & +27.91 & \multicolumn{4}{c}{Selection-dependent}\\
-Commit to abandon (\%)$^{\dagger*}$ & 0.85 & 0 & 100 & +100 & 0 & +33.33 & +83.33 & -16.67\\
-Commit to abandon (\%)$^{\dagger*}$ & 0.95 & 0 & 63.79 & +63.79 & \multicolumn{4}{c}{Selection-dependent}\\
-Demand / continue$^{\ddagger}$ & 0.75 & 0.75 & 0.05 & -0.70 & -0.60 & 0.00 & -0.10 & 0.00\\
-Demand / continue$^{\dagger*\ddagger}$ & 0.95 & 0.85 & 0.65 & -0.20 & \multicolumn{4}{c}{Selection-dependent}\\
-\multicolumn{9}{@{}l}{\textbf{Defendant}}\\
-Answer (\%)$^{*}$ & 0.35 & 98.6 & 100 & +1.4 & -98.6 & +33.33 & +33.33 & +33.33\\
-Answer (\%)$^{\dagger*}$ & 0.45 & 0 & 52.31 & +52.31 & \multicolumn{4}{c}{Selection-dependent}\\
-Commit to default (\%)$^{\dagger*\ddagger}$ & 0.35 & 68.4 & 17.19 & -51.21 & \multicolumn{4}{c}{Selection-dependent}\\
-Offer / default$^{*\ddagger}$ & 0.35 & 0.15 & 0.35 & +0.20 & 0.00 & +0.133 & +0.033 & +0.033\\
-Offer / continue$^{*\ddagger}$ & 0.05 & 0.15 & 0.05 & -0.10 & 0.00 & +0.20 & -0.05 & -0.25\\
-Offer / continue$^{*\ddagger}$ & 0.15 & 0.15 & 0.05 & -0.10 & 0.00 & +0.167 & +0.017 & -0.283\\
-Offer / continue$^{*\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & +0.60 & -0.05 & -0.15 & -0.50\\
-Offer / continue$^{*\ddagger}$ & 0.35 & 0.15 & 0.05 & -0.10 & +0.70 & -0.067 & -0.167 & -0.567\\
-\end{longtable}
-{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Four contributions sum to Change, before rounding.\par
+\multicolumn{10}{@{}l}{\textbf{Plaintiff}}\\
+File (\%) & 0.45-0.55 & 100 & 0 & -100 & -100 & 0 & 0 & 0 & 0\\
+File (\%) & 0.65 & 100 & 0 & -100 & 0 & -33.33 & -33.33 & -33.33 & 0\\
+Commit to abandon (\%)$^{*\dagger}$ & 0.75 & 0 & 27.91 & +27.91 & 0 & +16.67 & +16.67 & -33.33 & +27.91\\
+Commit to abandon (\%)$^{\dagger\S}$ & 0.85 & 0 & 100 & +100 & 0 & +33.33 & +83.33 & -16.67 & 0\\
+Commit to abandon (\%)$^{*\dagger\S}$ & 0.95 & 0 & 63.79 & +63.79 & 0 & -16.67 & +33.33 & -16.67 & +63.79\\
+Demand / continue$^{\ddagger}$ & 0.75 & 0.75 & 0.05 & -0.70 & -0.60 & 0.00 & -0.10 & 0.00 & 0.00\\
+Demand / continue$^{*\dagger\S\ddagger}$ & 0.95 & 0.85 & 0.65 & -0.20 & -0.70 & +0.333 & +0.233 & +0.133 & -0.20\\
+\multicolumn{10}{@{}l}{\textbf{Defendant}}\\
+Answer (\%)$^{\S}$ & 0.35 & 98.6 & 100 & +1.4 & -98.6 & +33.33 & +33.33 & +33.33 & 0\\
+Answer (\%)$^{*\dagger\S}$ & 0.45 & 0 & 52.31 & +52.31 & 0 & 0 & 0 & 0 & +52.31\\
+Commit to default (\%)$^{*\dagger\S\ddagger}$ & 0.35 & 68.4 & 17.19 & -51.21 & +31.6 & +6.13 & +6.13 & -43.87 & -51.21\\
+Offer / default$^{\S\ddagger}$ & 0.35 & 0.15 & 0.35 & +0.20 & 0.00 & +0.133 & +0.033 & +0.033 & 0.00\\
+Offer / continue$^{\S\ddagger}$ & 0.05 & 0.15 & 0.05 & -0.10 & 0.00 & +0.20 & -0.05 & -0.25 & 0.00\\
+Offer / continue$^{\S\ddagger}$ & 0.15 & 0.15 & 0.05 & -0.10 & 0.00 & +0.167 & +0.017 & -0.283 & 0.00\\
+Offer / continue$^{\S\ddagger}$ & 0.25 & 0.15 & 0.05 & -0.10 & +0.60 & -0.05 & -0.15 & -0.50 & 0.00\\
+Offer / continue$^{\S\ddagger}$ & 0.35 & 0.15 & 0.05 & -0.10 & +0.70 & -0.067 & -0.167 & -0.567 & 0.00\\
+\end{longtable}}
+{\footnotesize Direct: rule/preferences first. Entry, Offers, Exit: opponent contributions, averaged over six replacement orders. Change equals their sum plus Remaining, before rounding.\par
 Probability changes are percentage points; pure demand/offer changes are fractions of damages. Mixed offers are shown as action probabilities, not averages.\par
-$\dagger$: tie-sensitive allocation. $*$: sensitive to an unvisited opponent policy. $\ddagger$: a conditional policy at an intermediate history not reached in that hybrid.\par
-Selection-dependent: the original-preserving optimal response does not reproduce the target action/mix; no four-way allocation is claimed. Undefined counterfactual: no opponent-and-chance reach.\par
+$*$: partial, selection-dependent accounting; Remaining is the target action/mix minus the selected full-target-opponent response, not a fifth causal mechanism. $\dagger$: tie-sensitive. $\S$: sensitive to an unvisited opponent policy. $\ddagger$: conditional on an intermediate history not reached in that hybrid.\par
+Undefined counterfactual: no opponent-and-chance reach; no numerical attribution is shown. These are conditional comparisons, not observed adjustment dynamics.\par
 8 histories no longer reached; 5 newly reached. These have no comparable endpoint action and are omitted. Detailed diagnostics accompany the table.}\par
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Preferences: risk neutral to moderately risk averse; American rule remains in force; costs 4.\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{10}{@{}l}{\textbf{Plaintiff}}\\
+Commit to abandon\newline Yes vs No$^{\S}$ & 0.75 & -101.3955 & 0 & +101.3955 & +101.3955 & +1.521 & +5.6619 & -7.183 & 0\\[3pt]
+Commit to abandon\newline Yes vs No$^{\S}$ & 0.95 & -265.5405 & 0 & +265.5405 & +265.5405 & -7.4751 & +5.4772 & +1.9979 & 0\\[3pt]
+Demand / continue\newline 0.65 vs 0.85$^{\S\ddagger}$ & 0.95 & 0 & 0 & 0 & 0 & +5.8087 & +3.3524 & -9.1611 & 0\\[3pt]
+\multicolumn{10}{@{}l}{\textbf{Defendant}}\\
+Answer\newline Yes vs No$^{\S}$ & 0.45 & -233.2263 & 0 & +233.2263 & -527.5096 & -113.2472 & +545.8198 & +328.1634 & 0\\[3pt]
+Commit to default\newline No vs Yes$^{\S\ddagger}$ & 0.35 & 0 & 0 & 0 & -171.5534 & +6.0548 & -119.2586 & +284.7572 & 0\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit: marginal opponent replacements averaged over six orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all five columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
 \end{document}
