@@ -1,6 +1,6 @@
-% Input request SHA-256: 7a4b4a94e40e68d46aa96b9d657b24a5d536337164231c3970618358c922f000
-% Input request SHA-256: 443181f11a8404475f316d486941a307357b6cb24c1d1e8fb587478ff18a725a
-% Input request SHA-256: 79cff9b2330580bdba66c6aebe0f6ec89c3e4f8a98dfa96099a38898a25342dc
+% Input request SHA-256: 2dc49587b7babe2a4e42ea5c0808bfa410f765dc1a2c4e31c819059af326b68c
+% Input request SHA-256: 4e70833c16aaa0fead3f40447c9b17a5086f47dd4b6a990477a8abf7f9cb135b
+% Input request SHA-256: ce1d790f61366082209928e4588d4d6690cd5f8f8af9ec5ebf156ed4cbf46f2b
 \documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,booktabs,array,tabularx,microtype}
@@ -14,10 +14,14 @@ British rule remains in force; ordinary costs\par\medskip
 {\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.38in}>{\centering\arraybackslash}p{.54in}>{\centering\arraybackslash}p{1.07in}*{4}{>{\raggedleft\arraybackslash}p{.61in}}>{\centering\arraybackslash}X@{}}
 \toprule & & & \multicolumn{4}{c}{Contributions to change} & \\
 \cmidrule(lr){4-7} Decision & Own signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Tie/off-path\\sensitivity} \\\midrule
+\multicolumn{8}{l}{\textit{Changed actions}}\\[2pt]
 P files & 0.25 & $100\%\to 0\%$ & $-100\,\mathrm{pp}$ & $-50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & $0$ & Yes\\
 P commits to abandon & 0.45 & $0\%\to 100\%$ & $0$ & $0$ & $0$ & $+100\,\mathrm{pp}$ & Yes\\
 P commits to abandon & 0.55 & $0\%\to 100\%$ & $0$ & $0$ & $+50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & Yes\\
 D answers & 0.65 & $0\%\to 100\%$ & $0$ & $0$ & $+50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & Yes\\
-D commits to default & 0.45 & $0\%\to 100\%$ & $+100\,\mathrm{pp}$ & $+16.7\,\mathrm{pp}$ & $+16.7\,\mathrm{pp}$ & $-33.3\,\mathrm{pp}$ & Yes\\
-D commits to default & 0.55 & $0\%\to 100\%$ & $0$ & $0$ & $+50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & Yes\\
+D commits to default$^{*}$ & 0.45 & $0\%\to 100\%$ & $+100\,\mathrm{pp}$ & $+16.7\,\mathrm{pp}$ & $+16.7\,\mathrm{pp}$ & $-33.3\,\mathrm{pp}$ & Yes\\
+D commits to default$^{*}$ & 0.55 & $0\%\to 100\%$ & $0$ & $0$ & $+50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & Yes\\
+\midrule \multicolumn{8}{l}{\textit{Unchanged actions with offsetting effects}}\\[2pt]
+P files & 0.35 & $100\%\to 100\%$ & $-100\,\mathrm{pp}$ & $0$ & $+50\,\mathrm{pp}$ & $+50\,\mathrm{pp}$ & Yes\\
+D commits to default & 0.35 & $0\%\to 0\%$ & $+100\,\mathrm{pp}$ & $0$ & $0$ & $-100\,\mathrm{pp}$ & Yes\\
 \bottomrule\end{tabularx}}\end{minipage}\end{document}

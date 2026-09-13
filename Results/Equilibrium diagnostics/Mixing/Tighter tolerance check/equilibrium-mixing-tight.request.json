@@ -1,0 +1,47 @@
+{
+  "OutputDirectory": ".",
+  "Sources": [
+    {
+      "Id": "risk-neutral-american-cost-1",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-American",
+      "EquilibriumFile": "../../../Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -equ.csv",
+      "ActionReportFile": "../../../Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-American -InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Id": "risk-neutral-british-cost-1",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-British",
+      "EquilibriumFile": "../../../Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-British -equ.csv",
+      "ActionReportFile": "../../../Individual simulations/CS004 Specification-Baseline__Cost-1__Fee-British -InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Id": "risk-averse-american-cost-1",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-1__Fee-American",
+      "EquilibriumFile": "../../../Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-American -equ.csv",
+      "ActionReportFile": "../../../Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-American -InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Id": "risk-averse-british-cost-1",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-1__Fee-British",
+      "EquilibriumFile": "../../../Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-British -equ.csv",
+      "ActionReportFile": "../../../Individual simulations/CS004 Specification-ModerateRiskAversion__Cost-1__Fee-British -InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    }
+  ],
+  "Orders": [
+    "forward",
+    "reverse"
+  ],
+  "Settings": {
+    "MaxSweeps": 6,
+    "MaxCutsPerBlock": 60,
+    "GainLimit": 1E-10,
+    "ValidationTolerance": 1E-07,
+    "TieTolerance": 1E-11,
+    "ImprovementTolerance": 1E-07,
+    "SourceReachThreshold": 1E-12,
+    "SupportThreshold": 1E-06
+  }
+}
