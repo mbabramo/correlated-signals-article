@@ -1,0 +1,141 @@
+\subsection{Decomposing changes in equilibrium strategies}
+
+The analysis compares four pairs of equilibria at the ordinary cost level:
+American to British fee shifting with risk neutrality held fixed; American to
+British fee shifting with moderate risk aversion held fixed; risk neutrality to
+moderate risk aversion under the American rule; and the same preference change
+under the British rule. Both parties' preferences change in the latter two
+comparisons. The tables report strategies from the original computed equilibria,
+not the more broadly mixed profiles used in the sensitivity analysis.
+
+\paragraph{Information sets and measurement.}
+Strategies are compared at information sets reached with positive probability
+in both endpoint equilibria. Each row conditions on the acting party's own
+signal and observed history. The signal is on the common plaintiff-case-strength
+scale, so a higher signal is more favorable to the plaintiff and less favorable
+to the defendant. Offer information sets additionally distinguish the party's
+private commitment to continue or exit if bargaining fails. A commitment to
+abandon or default is not an unconditional probability of actual abandonment or
+default, because settlement can occur before the commitment takes effect.
+
+Filing, answering and exit commitments are reported as probabilities, expressed
+as percentages. Their changes and decomposed contributions are expressed in
+percentage points (pp): a change from 87.8\% to 100\% is an increase of
+12.2 percentage points, not a 12.2\% proportional increase. Pure demands and
+offers, and their decomposed contributions, are expressed as fractions of the
+normalized award. For example, a demand changing from 0.75 to 0.05 changes by
+$-0.70$. Offer amounts are used only when the endpoint strategies and the
+counterfactual strategies entering the accounting are pure. Mixed offers are
+not replaced by mean offers in these tables.
+
+\paragraph{Best-response comparisons.}
+Let $\theta_0$ and $\theta_1$ denote the original and target fee-rule or preference
+specifications, and let $\sigma^0$ and $\sigma^1$ denote their selected equilibrium
+strategy profiles. For each player, the opponent's strategy is partitioned into
+three components: entry (filing or answering), offers, and exit commitments.
+Under $\theta_1$, all eight combinations of original and target opponent
+components are constructed. Each comparison holds the opponent's complete
+hybrid strategy fixed and computes an unrestricted best response for the focal
+player, jointly reoptimizing that player's current and subsequent decisions.
+The calculation does not impose monotonicity or simulate an observed
+adjustment process.
+
+Write $z(S)$ for the reported strategy coordinate in this best response when
+the set $S$ of opponent components has been replaced by its target-equilibrium
+values. The coordinate is either the probability of the named binary action or
+the pure demand or offer amount. Write $x$ and $y$ for the corresponding original
+and target equilibrium coordinates. The direct contribution is
+\[
+  D=z(\varnothing)-x.
+\]
+For each of the six orders of replacing the three opponent components, the
+marginal change from replacing component $k$ is recorded. Its contribution is
+the average of those increments:
+\[
+  C_k=\frac{1}{6}\sum_{\pi}
+  \left[z\bigl(S_{\pi,k}\cup\{k\}\bigr)-z(S_{\pi,k})\right],
+\]
+where $S_{\pi,k}$ contains the components preceding $k$ in order $\pi$. Thus
+\[
+  y-x=D+C_{\mathrm{entry}}+C_{\mathrm{offers}}+C_{\mathrm{exit}}+R,
+  \qquad R=y-z(\{\mathrm{entry},\mathrm{offers},\mathrm{exit}\}).
+\]
+This is a direct-first accounting convention. Interactions between the change
+in rules or preferences and the opponent's adjustment enter the opponent
+contributions. These quantities are not uniquely identified causal shares.
+Individual contributions can exceed the net change or have the opposite sign
+because other contributions offset them.
+
+\paragraph{Selection of the displayed changes.}
+The displayed rows are a restricted subset of actual strategy changes. A changed
+information set qualifies for the focus criterion if, against the target
+opponent and with subsequent own decisions optimized, the original local
+strategy assigns probability mass greater than $10^{-6}$ to actions whose
+conditional utility is more than $10^{-6}$ below the best action. The utility
+threshold is in the target specification's reported utility units. This is a
+conditional action comparison, not the loss from reverting the entire strategy
+or a welfare comparison across preference specifications. In particular,
+disjoint strategy supports do not suffice: an action absent from the target
+support can nevertheless remain optimal.
+
+The criterion is evaluated for the original equilibrium profiles and for two
+tested sets of equilibrium-preserving mixed representatives. The publication
+tables retain its intersection across these three comparisons: 39 information
+sets across the four interventions, displayed in 26 grouped rows. The counts by
+intervention are 2, 11, 20 and 6 information sets. Consecutive signals are grouped
+when their original and target distributions and numerical contributions agree
+within $10^{-6}$, even if their sensitivity flags differ. ``At some signals''
+means that at least one, but not every, signal included in that grouped row has
+a tie- or off-path-sensitive allocation.
+
+The original-profile accounting has no remaining term greater than $10^{-6}$
+in the reported coordinate for these selected rows. This is verified before
+producing a layout without a Remaining column; the remainder is not allocated
+to another component. Selection for this display does not imply that other
+strategy changes are unimportant or explained. Changes involving newly reached
+or no-longer-reached histories, and redistribution among actions that remain
+optimal, are outside the restricted table.
+
+\paragraph{Equilibrium-preserving mixing checks.}
+The auxiliary mixing search increases the mean normalized quadratic mixing
+score $(1-\sum_a p_a^2)/(1-1/A)$ over information sets reached in the original
+equilibrium, where $A$ is the full number of available actions. A player's
+same-decision information sets are varied jointly. Candidate actions comprise
+current support and actions tied in conditional utility under current
+continuation play. Each proposed complete profile is checked against both
+players' unrestricted best responses; a utility tie for the acting player alone
+does not authorize adding an action to equilibrium support. Source-unvisited
+policies remain fixed.
+
+The main search admits maximum unilateral root-payoff gain of $10^{-9}$ reported
+utility units and evaluates forward and reverse decision-block orders. The
+higher-scoring verified result is selected. A second calculation uses forward
+order and a tenfold tighter gain limit; its conditional tie threshold is also
+tightened from $10^{-10}$ to $10^{-11}$. The search is local and does not certify
+a globally maximally mixed or unique equilibrium. The selected reverse-order
+search for the moderately risk-averse British case reaches the six-sweep limit.
+The intersection therefore establishes stability only across the tested
+representations. Even within that intersection, the decomposition can change
+when a different mixed representative is used.
+
+\paragraph{Ties, reach and verification.}
+Primary best responses retain and renormalize the original probability on
+actions that remain optimal within the $10^{-10}$ tie tolerance; when no such
+probability remains, the first optimal action is selected. Alternative low- and
+high-action selections test tie sensitivity. Separate checks replace opponent
+policies unvisited in their donor equilibrium with extreme low- or high-action
+completions. These are sensitivity checks, not bounds over all admissible
+completions. The sensitivity column reports whether either check changes a
+contribution in the original-profile accounting. It does not certify stability
+under all equilibrium-preserving mixtures.
+
+An intermediate best response may not actually reach an information set that is
+reached in both endpoint equilibria. Conditional continuation comparisons are
+still defined when chance-and-opponent reach is positive; the focal player's
+own prior action probabilities are omitted from that reach calculation. If
+chance-and-opponent reach is zero, no conditional allocation is imputed. The
+underlying diagnostics retain these reach distinctions. Complete best responses
+are independently replayed to check root utilities and conditional action
+values, and the saved equilibrium profiles and reports are checked against the
+initialized game. Reported table entries are rounded; accounting identities are
+verified before rounding.
