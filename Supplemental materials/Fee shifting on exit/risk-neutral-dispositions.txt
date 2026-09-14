@@ -1,0 +1,17 @@
+Risk neutrality. Risk neutrality: trial-contingent fee shifting versus reimbursement on trial and unilateral exit, including initial nonanswer. Filing, answering, and later exit remain voluntary; ten offers. Every disposition uses all potential disputes. Archived CS004 controls and new CS006EF cases are distinct source batches.
+
+Dispositions as shares of all potential disputes, with fee regimes paired within specification.
+The accompanying request specifies the selected specifications and fee-regime pairs; the JSON
+records each exact source row, including its cost multiplier and offer-grid selection.
+Categories are mutually exclusive: no filing, no answer, settlement, plaintiff abandonment, defendant
+default, plaintiff loss at trial, and plaintiff win at trial. Court results are findings, not true liability.
+Plaintiff trial wins are black and defendant trial wins white. Defendant default uses white lines
+on black; plaintiff abandonment uses black lines on white. Settlement is middle gray. Nonfiling
+uses small black dots on white; nonanswering uses small white dots on black. This styling
+groups related procedural outcomes; it does not encode true liability or outcome fidelity.
+The saved P Abandons and D Defaults columns already contain the 50/50 mutual-give-up allocation;
+the audit column is retained in JSON and is not added a second time. Each bar reconciles to one,
+and the two trial segments reconcile to Trial, within 1e-5 for source-report rounding. Values are
+not renormalized. Labels inside sufficiently wide segments are percentages rounded to one decimal;
+narrow segments remain drawn without an interior label. Conditional settlement rates are not
+represented by these bars. The JSON preserves source values, row identifiers and the source hash.

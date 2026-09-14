@@ -70,10 +70,10 @@ scenarios or additions to the six-figure online core count.
 
 | Exhibit | Proposed content | Status/source |
 |---|---|---|
-| Figure C1 | Baseline dispositions over costs 0.25, 0.5, 1, 2, 4 under both fees | Needs publication assembly: ten bars using main Figure 4's seven categories and all-potential-disputes denominator; saved numerical inputs exist |
+| Figure C1 | Baseline dispositions over costs 0.25, 0.5, 1, 2, 4 under both fees | [Assembled cost-sweep figure](<Cost comparisons/disposition.pdf>); ten bars, seven categories, all potential disputes |
 | Table C1 | Baseline, low/high noise, moderate risk aversion, low noise plus moderate risk aversion across costs/fees | Assemble 50 ten-offer cases from saved reports; include conditional settlement, the three monetary perspectives, fidelity loss and expenditures in readable panels |
 | Table C2 | All costs avoidable/sunk, mandatory entry, and mandatory entry with no later exit | Assemble 40 ten-offer cases across all costs/fees, with labeled baseline comparisons |
-| Table C3 | Information-set pressure: direct full best responses, two-step dynamics, and actual-equilibrium opponent-component substitutions | [Completed tables and data](<Information-set pressure/README.md>); eight matched fee/risk contrasts at costs 1 and 4. Select compact manuscript panels from the complete four-page-per-contrast tables |
+| Table C3 | Focused direct-first equilibrium-strategy changes and unchanged coordinates with offsetting effects | [Current methodology](<../Tables/Equilibrium strategy changes/Methodology.tex>); four ordinary-cost contrasts, checked across the original and two mixed representatives. Complete calculation outputs remain in Results/Equilibrium diagnostics |
 
 Together B3, C1, and C2 cover the 130 distinct ten-offer cases; D3 adds the four
 fifteen-offer cases. Baseline comparison rows may repeat without representing new
@@ -109,16 +109,28 @@ Link all research diagrams, raw equilibria/action reports and the [run documenta
 Do not rewrite historical manifests to describe newly regenerated files. Current
 illustrations must record their actual newer generator source state, including
 uncommitted work until committed. Damages/endogenous-disputes illustrations remain
-outside this article's submitted set. Publication table formatting, Appendix C's
-cost figure, full appendix manuscripts, and actual-size/submission-proof review
-remain to be done; the existence of source files is not completed assembly.
+outside this article's submitted set. Publication table formatting, full appendix manuscripts, and actual-size/submission-proof review
+remain to be done; Appendix C's cost figure is now assembled, and the existence of source files is not completed assembly.
 
 ## Current mechanism analysis
 
-Use a few current information-set/action reports to explain final-equilibrium filing, answering, and offer choices. Report reach, the selected and alternative actions, conditional utility differences, and any mixing. Do not interpret conditional utilities at off-path information sets.
+The current focused tables are in [Tables/Equilibrium strategy changes](<../Tables/Equilibrium strategy changes/>),
+with [methodology](<../Tables/Equilibrium strategy changes/Methodology.tex>) and calculation
+outputs in `Results/Equilibrium diagnostics`. They compare four ordinary-cost fee/risk
+interventions. The focus criterion retains 39 changed information sets in 26 grouped
+rows across the original and two equilibrium-preserving mixed representatives, plus
+eight unchanged information sets with offsetting contributions. Direct effects come
+first; opponent entry, offers, and exit contributions average all six replacement orders.
+These are diagnostics of selected equilibria, not uniquely identified causal shares
+or an observed adjustment process. The earlier Information-set pressure packets are historical.
 
-The [new pressure analysis](<Information-set pressure/README.md>) computes full best responses after a fee or symmetric-risk-aversion intervention, first holding the opponent's original strategy fixed. It then substitutes the opponent's participation, offers, exit, or all three, separately using first-round best responses and actual target-equilibrium strategies. The same four contrasts run at ordinary and fourfold costs. All focal continuation decisions are optimized; this is not subtraction of final-equilibrium CSV values.
+## Fee liability on exit
 
-The completed run contains 340 response/sensitivity calculations plus 16 original-equilibrium controls. All 3,840 source action rows were validated; the 33 targeted tests passed. No saved equilibrium or historical production manifest was changed. Counterfactual action values and beliefs are distinguished from undefined actual conditional utilities at unreached histories. Stars mark exposure to donor-unvisited opponent policies; daggers mark near-tied action values. Consult the sensitivity reports before assigning a mechanism to a component.
-
-Choose one or two participation thresholds and one offer threshold if they explain the findings clearly. These strategy adjustments are diagnostic constructions, not evidence of actual learning, unique equilibrium selection, or additive causal shares. Most detail belongs in the supplement; a compact worked example can appear in the article. See [initial interpretation notes](<Information-set pressure/interpretation-notes.md>).
+The [completed fee-trigger comparisons](<Fee shifting on exit/README.md>) add ten
+CS006EF cases using initial-nonanswer and later-exit liability jointly. Seven comparison
+diagrams, sixty individual diagrams, and four strategy contrasts are generated from
+ten new cases and twenty archived controls. All headline outcomes use potential
+disputes; conditional information-set strategies serve a different explanatory purpose.
+The extension's full strategy tables retain residuals and flags, and have not received
+the focused tables' additional mixed-representative intersection checks. The ordinary-cost
+disposition comparison is the most direct exhibit of the changed settlement/exit result.

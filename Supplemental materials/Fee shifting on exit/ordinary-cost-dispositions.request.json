@@ -1,0 +1,37 @@
+{
+  "StrategyCases": [
+    {
+      "Label": "Trial only",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-British",
+      "ActionReport": "unused-by-dispositions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Label": "Trial \u002B exit",
+      "OptionSetName": "Specification-Baseline__Cost-1__Fee-British__ExitFees-AllUnilateralExits",
+      "ActionReport": "unused-by-dispositions.csv",
+      "EquilibriumNumber": 1
+    }
+  ],
+  "NumericalResultsCsv": "matched-comparisons.csv",
+  "DispositionGroups": [
+    {
+      "Label": "Risk neutral",
+      "OptionSetNames": [
+        "Specification-Baseline__Cost-1__Fee-British",
+        "Specification-Baseline__Cost-1__Fee-British__ExitFees-AllUnilateralExits"
+      ]
+    },
+    {
+      "Label": "Risk averse",
+      "OptionSetNames": [
+        "Specification-ModerateRiskAversion__Cost-1__Fee-British",
+        "Specification-ModerateRiskAversion__Cost-1__Fee-British__ExitFees-AllUnilateralExits"
+      ]
+    }
+  ],
+  "DispositionIntroduction": "Ordinary costs (multiplier 1), with risk neutrality and symmetric CARA alpha 2. Trial \u002B exit includes fees on initial nonanswer and later unilateral exit. All bars use all potential disputes. Filing, answering and later exit remain voluntary. Trial-only controls are archived CS004 cases; the expanded trigger uses new CS006EF cases.",
+  "RegimeColumn": "Comparison Regime",
+  "SeparateExitHistories": false,
+  "AnnotateMixingProbabilities": true
+}

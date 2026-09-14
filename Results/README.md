@@ -15,6 +15,21 @@ The main plan has 134 option sets: 13 specifications times five cost levels time
 
 The preserved filename prefix `CS004` is the production run identifier, not a separate model or required folder name.
 
+## Reporting and the fee-trigger extension
+
+Use `Filter = All` for headline disposition probabilities and expected monetary
+outcomes per potential dispute. `D Answers` is the joint probability of filing
+and answering. The three truth-conditional monetary perspectives must be weighted
+by their truth-state probabilities before displaying their contributions alongside
+the unconditional Net Outcome Fidelity Loss. Conditional summaries remain useful
+for mechanism checks and comparisons with an explicitly selected empirical sample.
+
+The separate [Exit fee extension](<Exit fee extension/>) contains the ten CS006EF
+cases with reimbursement of incurred fees on trial and unilateral exit, including
+initial nonanswer. The original `CS004` results retain their trial-contingent fee
+trigger and original provenance. Matched comparative figures and data are in
+[Fee shifting on exit](<../Supplemental materials/Fee shifting on exit/>).
+
 ## Diagram organization
 
 `Individual simulations` contains six diagram families for each of the 134 cases: filing/answering, offers, light/dark cost breakdown, and light/dark stage costs. It therefore contains 804 individual PDFs and matching TeX files.

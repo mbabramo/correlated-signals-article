@@ -1,0 +1,77 @@
+Only changed decisions reached in both actual endpoint equilibria are displayed. Newly/no-longer reached histories are recorded in JSON, never assigned a fictitious endpoint strategy. Adjacent signal rows are combined only when their endpoint policies, allocations, flags, and intermediate reach patterns agree within 1e-6. Direct changes the fee rule or risk preferences first, holding the opponent's original strategy. Entry, offers, and exit then average marginal replacements across all six orders using all eight subsets. Each hybrid reoptimizes the entire focal-player strategy; this is not the fixed-current-strategy misalignment measure and not an observed adjustment process. Primary tie selection preserves original probability on optimal actions. Low/high tie alternatives and unvisited-opponent completion stresses identify sensitivity, not exhaustive bounds. When the all-target-opponent selected best response does not reproduce the actual target action or mix, all available contributions are shown with an asterisk and an explicit Remaining column. No arbitrary residual is forced into the four categories. The four contributions plus Remaining equal the observed change before display rounding. Remaining is a selection residual, not a fifth causal mechanism. Intermediate histories with positive opponent-and-chance reach have conditional continuation policies even if the response would not reach them; they carry a double dagger. Probability contributions use percentage points. Only wholly pure offer comparisons use monetary grid values; mixed comparisons use separate action probabilities. Relative-payoff supplements compare the gained-action mixture with the lost-action mixture, weighted by probability mass moved. All flagged information sets are included once. Payoff columns are 1000 times utility differences in the PDF, unscaled in JSON/text; they never mix with policy percentages or offer amounts. Payoff Direct/reopt. includes the change of rule/preferences and own-continuation optimization. Payoff Remaining retains any endpoint continuation mismatch. Undefined conditional values are never imputed as zero. Asterisks mark residuals, daggers mark tie sensitivity, section signs mark unvisited-opponent completion sensitivity, and double daggers mark unreached hybrids. Utility normalization, especially across preference regimes, affects payoff-unit accounting; these are not cross-regime welfare comparisons. This direct-first, tie-convention-conditional accounting is a selected-equilibrium diagnostic, not uniquely identified causal shares or observed dynamics.
+
+Fee liability: Trial only to Trial + exit; Both players remain risk neutral; fee multiplier 1; costs 4
+P File (%); signal 0.55: 100 -> 44.6692; direct=0, entry=-50, offers=50, exit=0; selection residual=-55.3308; tie-sensitive=True, completion-sensitive=True, undefined=False.
+P Commit to abandon (%); signal 0.55: 0 -> 100; direct=0, entry=33.3333, offers=33.3333, exit=33.3333; selection residual=0; tie-sensitive=True, completion-sensitive=True, undefined=False.
+P Commit to abandon (%); signal 0.65: 66.283 -> 0; direct=0, entry=-66.283, offers=0, exit=0; selection residual=0; tie-sensitive=True, completion-sensitive=False, undefined=False.
+P Commit to abandon (%); signal 0.75: 68.2351 -> 0; direct=-68.2351, entry=-11.3725, offers=-11.3725, exit=22.745; selection residual=0; tie-sensitive=True, completion-sensitive=False, undefined=False.
+P Demand / continue; signal 0.65: 0.05 -> 0.95; direct=0, entry=0.9, offers=0, exit=0; selection residual=0; tie-sensitive=False, completion-sensitive=True, undefined=False.
+D Answer (%); signal 0.35: 99.8666 -> 100; direct=0.133416, entry=0, offers=0, exit=0; selection residual=0; tie-sensitive=False, completion-sensitive=False, undefined=False.
+D Answer (%); signal 0.45-0.95: 0 -> 100; direct=100, entry=0, offers=0, exit=0; selection residual=0; tie-sensitive=False, completion-sensitive=False, undefined=False.
+D Commit to default (%); signal 0.35: 22.6352 -> 0; direct=-22.6352, entry=7.54507, offers=7.54507, exit=7.54507; selection residual=-22.6352; tie-sensitive=True, completion-sensitive=True, undefined=False.
+D Offer 0.05 (%) / continue; signal 0.35: 100 -> 39.5016; direct=0, entry=0, offers=0, exit=0; selection residual=-60.4984; tie-sensitive=True, completion-sensitive=True, undefined=False.
+D Offer 0.95 (%) / continue; signal 0.35: 0 -> 60.4984; direct=0, entry=0, offers=0, exit=0; selection residual=60.4984; tie-sensitive=True, completion-sensitive=True, undefined=False.
+Histories omitted because reach changes:
+  P P Offer, signal 0.55, exit 1: newly reached; no comparable original action
+  P P Offer, signal 0.55, exit 2: no longer reached; no comparable target action
+  P P Offer, signal 0.65, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.75, exit 1: no longer reached; no comparable target action
+  D D Defaults, signal 0.45, exit : newly reached; no comparable original action
+  D D Defaults, signal 0.55, exit : newly reached; no comparable original action
+  D D Defaults, signal 0.65, exit : newly reached; no comparable original action
+  D D Defaults, signal 0.75, exit : newly reached; no comparable original action
+  D D Defaults, signal 0.85, exit : newly reached; no comparable original action
+  D D Defaults, signal 0.95, exit : newly reached; no comparable original action
+  D D Offer, signal 0.35, exit 1: no longer reached; no comparable target action
+  D D Offer, signal 0.45, exit 2: newly reached; no comparable original action
+  D D Offer, signal 0.55, exit 2: newly reached; no comparable original action
+  D D Offer, signal 0.65, exit 2: newly reached; no comparable original action
+  D D Offer, signal 0.75, exit 2: newly reached; no comparable original action
+  D D Offer, signal 0.85, exit 2: newly reached; no comparable original action
+  D D Offer, signal 0.95, exit 2: newly reached; no comparable original action
+Relative-payoff gaps (unscaled utility units): gained-action mixture minus lost-action mixture.
+P P Files; signal 0.55; No vs Yes: -0.120716650363 -> 0; direct/reoptimization=-0.42363181941, entry=0.598978516068, offers=-0.180969869766, exit=0.126339823471, endpoint remainder=0; tie-sensitive=False, completion-sensitive=True; unreached coalitions=
+D D Defaults; signal 0.35; No vs Yes: -3.5527136788E-15 -> 0.373788511696; direct/reoptimization=0.317685124788, entry=-0.109718619873, offers=-0.11757411835, exit=-0.0903923865649, endpoint remainder=0.373788511696; tie-sensitive=False, completion-sensitive=True; unreached coalitions=
+D D Offer; signal 0.35; 0.95 vs 0.05: -0.277068685444 -> 1.7763568394E-15; direct/reoptimization=-0.183596161927, entry=0.136793528741, offers=0.175569448894, exit=0.148301869735, endpoint remainder=0; tie-sensitive=False, completion-sensitive=True; unreached coalitions=
+
+Fee liability: Trial only to Trial + exit; Both players remain moderately risk averse; fee multiplier 1; costs 4
+P File (%); signal 0.45: 79.7199 -> 0; direct=20.2801, entry=-73.4267, offers=26.5733, exit=26.5733; selection residual=-79.7199; tie-sensitive=True, completion-sensitive=True, undefined=False.
+P File (%); signal 0.55-0.85: 100 -> 0; direct=0, entry=-100, offers=0, exit=0; selection residual=0; tie-sensitive=False, completion-sensitive=True, undefined=False.
+P File (%); signal 0.95: 100 -> 0; direct=0, entry=-50, offers=0, exit=50; selection residual=-100; tie-sensitive=True, completion-sensitive=True, undefined=False.
+Histories omitted because reach changes:
+  P P Abandons, signal 0.45, exit : no longer reached; no comparable target action
+  P P Abandons, signal 0.55, exit : no longer reached; no comparable target action
+  P P Abandons, signal 0.65, exit : no longer reached; no comparable target action
+  P P Abandons, signal 0.75, exit : no longer reached; no comparable target action
+  P P Abandons, signal 0.85, exit : no longer reached; no comparable target action
+  P P Abandons, signal 0.95, exit : no longer reached; no comparable target action
+  P P Offer, signal 0.45, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.55, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.65, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.75, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.85, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.95, exit 1: no longer reached; no comparable target action
+  P P Offer, signal 0.95, exit 2: no longer reached; no comparable target action
+  D D Answers, signal 0.05, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.15, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.25, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.35, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.45, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.55, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.65, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.75, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.85, exit : no longer reached; no comparable target action
+  D D Answers, signal 0.95, exit : no longer reached; no comparable target action
+  D D Defaults, signal 0.05, exit : no longer reached; no comparable target action
+  D D Defaults, signal 0.15, exit : no longer reached; no comparable target action
+  D D Defaults, signal 0.25, exit : no longer reached; no comparable target action
+  D D Defaults, signal 0.35, exit : no longer reached; no comparable target action
+  D D Offer, signal 0.05, exit 1: no longer reached; no comparable target action
+  D D Offer, signal 0.05, exit 2: no longer reached; no comparable target action
+  D D Offer, signal 0.15, exit 1: no longer reached; no comparable target action
+  D D Offer, signal 0.25, exit 1: no longer reached; no comparable target action
+  D D Offer, signal 0.35, exit 1: no longer reached; no comparable target action
+Relative-payoff gaps (unscaled utility units): gained-action mixture minus lost-action mixture.
+P P Files; signal 0.45; No vs Yes: 0 -> 0.683537984177; direct/reoptimization=-0.0312471676399, entry=0.182288390406, offers=-0.121391783456, exit=-0.0296494393095, endpoint remainder=0.683537984177; tie-sensitive=False, completion-sensitive=True; unreached coalitions=
+P P Files; signal 0.95; No vs Yes: -0.0947399855305 -> 0.0650134646299; direct/reoptimization=-0.0583946206006, entry=0.234238576449, offers=-0.00931939108104, exit=-0.0717845792368, endpoint remainder=0.0650134646299; tie-sensitive=False, completion-sensitive=True; unreached coalitions=
+

@@ -8,10 +8,12 @@ Manuscript and research materials for *A Correlated Signals Computational Game T
 |---|---|
 | [Article and bibliography](Article%20and%20bibliography/) | Existing manuscript, bibliography, and saved draft. The manuscript is being revised incrementally. |
 | [Figures](Figures/) | All four selected main-article figures under descriptive, unnumbered filenames: continuous merits and party signals, worked equilibrium path, participation and offers, and disposition. Includes captions, TeX, PNG previews and source-data JSON. |
-| [Tables](Tables/) | Four main-article tables: model primitives, baseline outcomes, comparative net outcomes, and model-form/numerical sensitivity. Includes PDFs, editable TeX fragments, previews, captions, and audited source-data JSON. |
+| [Tables](Tables/) | Saved primitives, outcome, and robustness tables, plus four focused equilibrium-strategy comparisons and their methodology. The revised outline proposes a compact strategy-table selection for main Table 4, with robustness detail online. |
 | [Results](Results/) | Main summary tables, with aggregate comparisons, individual simulations, and process logs in descriptive subfolders. Covers 130 ten-offer cases and four fifteen-offer cases. |
 | [Supplemental materials/Multiple equilibria](Supplemental%20materials/Multiple%20equilibria/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
 | [Results/Run documentation](Results/Run%20documentation/) | Code versions, completed-run records, diagram inventory, and file hashes tracing the imported results to their original run. |
+| [Results/Exit fee extension](<Results/Exit fee extension/>) | Separate CS006EF results and provenance for ten cases with fees on unilateral exit. Original CS004 and CS004ME results retain their identities. |
+| [Fee shifting on exit](<Supplemental materials/Fee shifting on exit/>) | Matched comparison charts, requests, and strategy diagnostics for the changed fee trigger. |
 | [Supplemental materials](Supplemental%20materials/) | Current multiple-equilibrium output, the retained truth-conditioned signal illustration, and explanatory assets awaiting appendix revision. See its README for status. |
 
 The old `smalltree`, `bigtree`, `Supplemental materials/Robustness checks`, and old figure assets were replaced after checkpoint commit `7e92fc01e1d7ff92bf0b07dbe80ac9ff021ce7b3`. Their committed contents remain in Git history. The empty `Updated figures` directory is retired; revised figures will use `Figures`.

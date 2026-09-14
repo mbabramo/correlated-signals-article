@@ -1,0 +1,39 @@
+\documentclass[border=8pt]{standalone}
+\usepackage{pgfplots}\usetikzlibrary{calc}\usepgfplotslibrary{groupplots}\pgfplotsset{compat=1.18}
+\begin{document}\begin{tikzpicture}
+\begin{groupplot}[group style={group size=2 by 3,horizontal sep=1.5cm,vertical sep=1.85cm},
+width=7.5cm,height=5.4cm,xmode=log,log basis x=2,xtick={0.25,0.5,1,2,4},
+xticklabels={0.25,0.5,1,2,4},xlabel={Cost multiplier},tick label style={font=\small},
+label style={font=\small},title style={font=\small},ymajorgrids=true,grid style={gray!20},
+scaled y ticks=false,legend style={font=\scriptsize,draw=none,fill=white},legend pos=north west]
+\nextgroupplot[title={Real litigation expenditures}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.137941)(0.5,0.206819)(1,0.292405)(2,0.362808)(4,0.452194)};
+\addlegendentry{American}
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.123393)(0.5,0.182885)(1,0.265964)(2,0.35769)(4,0.357244)};
+\addlegendentry{Trial only}
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.123393)(0.5,0.173537)(1,0.259138)(2,0.378634)(4,0.563225)};
+\addlegendentry{Trial + exit}
+\nextgroupplot[title={Meritorious plaintiff shortfall}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.1815965)(0.5,0.200726)(1,0.2164365)(2,0.274768)(4,0.376192)};
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.169738)(0.5,0.178057)(1,0.2088645)(2,0.270629)(4,0.3857805)};
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.169738)(0.5,0.19197)(1,0.23182)(2,0.2965685)(4,0.4056845)};
+\nextgroupplot[title={Nonliable defendant burden}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.1815915)(0.5,0.189114)(1,0.22187)(2,0.2150145)(4,0.1971975)};
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.1697325)(0.5,0.18286)(1,0.1982215)(2,0.203901)(4,0.1387845)};
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.1697325)(0.5,0.161146)(1,0.1645225)(2,0.1698045)(4,0.1719355)};
+\nextgroupplot[title={Liable defendant excess burden}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.0215909)(0.5,0.03205615)(1,0.02780385)(2,0.02142965)(4,0.00927675)};
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.03205615)(0.5,0.04225245)(1,0.0474657)(2,0.04073615)(4,0.0114445)};
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.03205615)(0.5,0.04771305)(1,0.074774)(2,0.1126595)(4,0.1848785)};
+\nextgroupplot[title={Net Outcome Fidelity Loss}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.384779)(0.5,0.421895)(1,0.466111)(2,0.511212)(4,0.582664)};
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.371526)(0.5,0.403169)(1,0.454551)(2,0.515264)(4,0.536006)};
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.371526)(0.5,0.400828)(1,0.471115)(2,0.57903)(4,0.762493)};
+\nextgroupplot[title={Net transfer to plaintiff}]
+\addplot+[black,densely dotted,mark=triangle*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.499992374477)(0.5,0.499247)(1,0.53197804)(2,0.52573835)(4,0.51929264)};
+\addplot+[black,dashed,mark=square*,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.499991497618)(0.5,0.5134544)(1,0.5202872)(2,0.51609791)(4,0.441660565)};
+\addplot+[black,solid,mark=* ,mark size=1.6pt,mark options={solid,draw=black,fill=white}] coordinates {(0.25,0.499991497618)(0.5,0.481351)(1,0.46191745)(2,0.43330326)(4,0.38532921)};
+\end{groupplot}
+\node[anchor=south,font=\bfseries] at ($(group c1r1.north west)!0.5!(group c2r1.north east)$) [yshift=32pt] {Risk neutrality};
+\node[anchor=north,font=\small] at ($(group c1r3.south west)!0.5!(group c2r3.south east)$) [yshift=-35pt] {Expected damages units per potential dispute};
+\end{tikzpicture}\end{document}
