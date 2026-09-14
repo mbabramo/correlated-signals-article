@@ -1,0 +1,27 @@
+\documentclass[10pt,border=5pt,varwidth=16cm]{standalone}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,tabularx,array,microtype}
+\begin{document}\begin{minipage}{16cm}\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{}p{3cm}X@{}}
+\toprule Primitive & Core comparison \\ \midrule
+Common merits & $Q\sim U[0,1]$; $T\mid Q\sim\mathrm{Bernoulli}(Q)$; $\Pr(T=1)=0.5$ \\
+Private information & One noisy merits signal per party; 10 signal bins each \\
+Signal noise & $\sigma_P=\sigma_D=\sigma_C=0.20$ \\
+Adjudication & Two court-signal bins; fixed damages $d=1$ \\
+Initial wealth & $w_P=w_D=10$ \\
+Filing and answering & Endogenous; cost $0.15$ for each acting party \\
+Trial & Additional cost $0.15$ per party; no additional bargaining cost \\
+Exit & Parties commit before offers to continue or exit if bargaining fails \\
+Bargaining & One simultaneous round; 10 offers $0.05,0.15,\ldots,0.95$; midpoint settlement if demand $\leq$ offer \\
+Preferences & Risk neutral or symmetric CARA, $\alpha=2$ \\
+Cost comparisons & Common cost multipliers $0.25,0.5,1,2,4$ \\
+Integration & 64-point Gauss--Legendre integration over continuous merits \\
+\bottomrule\end{tabularx}\par\medskip
+\begin{tabularx}{\linewidth}{@{}Xccc@{}}
+\toprule Fee trigger & American & \shortstack{Trial\\Fee-Shifting} & \shortstack{Complete\\Fee-Shifting} \\ \midrule
+After trial & Own costs & Loser pays & Loser pays \\
+Initial nonanswer & Own costs & Own costs & D pays P's fees \\
+Later P abandonment & Own costs & Own costs & P pays D's fees \\
+Later D default & Own costs & Own costs & D pays P's fees \\
+Settlement & Own costs & Own costs & Own costs \\
+\bottomrule\end{tabularx}
+\end{minipage}\end{document}

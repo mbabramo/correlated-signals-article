@@ -2,12 +2,12 @@
 
 This directory replaces the previous `Robustness checks` material with the completed clean production output at numerical commit `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`. The preserved filename prefix `CS004ME` is the solver's identifier for this multiple-equilibrium run.
 
-Both cases use the principal baseline, cost multiplier 1, ten offers, ten party signals, and two court signals. One case uses the American fee rule and the other the British rule.
+Both cases use the principal baseline, cost multiplier 1, ten offers, ten party signals, and two court signals. One case uses the American fee rule and the other Trial Fee-Shifting (trial only). Complete Fee-Shifting was not tested in this separate study.
 
 | Fee rule | Requested priors | Attempted solves | Inexact attempts | Exact attempts | Verified recoveries | Distinct retained profiles |
 |---|---:|---:|---:|---:|---:|---:|
 | American | 50 | 99 | 49 | 50 | 50 | 21 |
-| British | 50 | 99 | 49 | 50 | 50 | 11 |
+| Trial Fee-Shifting | 50 | 99 | 49 | 50 | 50 | 11 |
 
 ## Reading order
 
@@ -23,4 +23,4 @@ The retained profiles have identical headline lifecycle and monetary outcomes at
 
 Use the current range/outcome tables to prepare the appendix exhibits. The older small-tree coefficient-of-variation and cross-tree correlation figures were removed rather than reused for this different design.
 
-The unchanged original suite manifest and diagram inventory, and the source-to-repository hash mapping, are in `../../Results/Run documentation`.
+The local `CS004ME run manifest.json` preserves the original production/build provenance. This completed separate workflow was retained during the September 14 routine-study rebuild. To run a new multiple-start study intentionally, use `--plan multiple-equilibria`; it is not part of the default retained suite.

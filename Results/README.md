@@ -1,47 +1,77 @@
-# Current production results
+# Correlated-signals article results
 
-This folder holds the main clean production output. The multiple-equilibrium output is in [Supplemental materials/Multiple equilibria](../Supplemental%20materials/Multiple%20equilibria/). There is no additional coded-name folder around the main results.
+The routine study has 124 cases: 114 CS004 cases plus ten CS006EF Complete
+Fee-Shifting cases. The baseline crosses American, Trial Fee-Shifting and
+Complete Fee-Shifting with risk neutrality and symmetric CARA alpha 2, at costs
+0.25, 0.5, 1, 2 and 4. Mandatory participation cases are excluded. Multiple-start
+equilibrium analysis remains a separate `--plan multiple-equilibria` workflow.
 
-The main plan has 134 option sets: 13 specifications times five cost levels times two fee rules, plus four fifteen-offer sensitivity cases at cost multiplier 1. The fifteen-offer cases cover the baseline and moderate symmetric risk aversion under American and British rules, with signals held fixed.
+From a committed source tree, run:
 
-## Files to start with
+```powershell
+.\scripts\Rebuild-ArticleResults.ps1
+```
 
-- `CS004 numerical results.csv`: aggregate report, including specification metadata, filters, participation, offers, dispositions, expenditures, and net-outcome measures.
-- `CS004 Combined costbreakdown.csv`: combined cost-breakdown data.
-- `Run documentation/CS004 run manifest.json`: plan definition, source and binary versions, validation status, and reused fifteen-offer equilibrium hashes.
-- `Individual simulations/*-InformationSetActions.csv`: information-set reach, off-path status, equilibrium action probabilities, conditional utilities, and losses relative to the best action.
-- `Individual simulations/*-equ.csv`, individual numerical CSVs, `.efg` files, and task logs: underlying strategies, reports, games, and solver diagnostics.
-- `Process Logs`: worker logs from the coordinated production run.
+This runs the retained production suite, aggregates reports, then generates all
+figures and tables. It uses all processors by default; `-Processors N` limits it.
+Saved equilibrium profiles are revalidated against the current game, and reports
+are regenerated. A failed equilibrium validation stops the run. A missing
+profile is solved normally. Source/build manifests prevent mixing incompatible
+production runs. Do not bypass these checks for final results.
 
-The preserved filename prefix `CS004` is the production run identifier, not a separate model or required folder name.
+For a clean report rebuild, first commit and use `Prepare-ArticleRebuild.ps1`
+with the directories holding the 124 retained `CS004`/`CS006EF` equilibrium files.
+It stages and hashes those profiles, clears only this repository's ReportResults,
+then seeds `Run records/Retained study` with exactly 124 equilibrium files.
+Preserve the returned provenance record with the final run records. Separate
+analyses and their exact source profiles belong in the article's Supplemental
+materials and must not be replaced with profiles from a report rebuild.
 
-## Reporting and the fee-trigger extension
+To regenerate diagrams from completed raw reports without running production:
 
-Use `Filter = All` for headline disposition probabilities and expected monetary
-outcomes per potential dispute. `D Answers` is the joint probability of filing
-and answering. The three truth-conditional monetary perspectives must be weighted
-by their truth-state probabilities before displaying their contributions alongside
-the unconditional Net Outcome Fidelity Loss. Conditional summaries remain useful
-for mechanism checks and comparisons with an explicitly selected empirical sample.
+```powershell
+.\scripts\Rebuild-ArticleResults.ps1 -DiagramsOnly
+dotnet run --project LitigCharts -c Release -- diagrams results --config ReportResults/article-diagrams.json --jobs 32
+```
 
-The separate [Exit fee extension](<Exit fee extension/>) contains the ten CS006EF
-cases with reimbursement of incurred fees on trial and unilateral exit, including
-initial nonanswer. The original `CS004` results retain their trial-contingent fee
-trigger and original provenance. Matched comparative figures and data are in
-[Fee shifting on exit](<../Supplemental materials/Fee shifting on exit/>).
+`-List` / `--list` validates the collection without writing diagram files.
+`-SourcesOnly` / `--sources-only` writes editable sources and data. The direct
+diagram command also supports `--compile-only` and `--output-root`.
 
-## Diagram organization
+## Organization
 
-`Individual simulations` contains six diagram families for each of the 134 cases: filing/answering, offers, light/dark cost breakdown, and light/dark stage costs. It therefore contains 804 individual PDFs and matching TeX files.
+- `Aggregated Data/<Specification>/<Risk Neutral|Risk Averse|Risk Comparison>`
+  contains related figures and tables together, with one file per cost. A Risk
+  Comparison folder exists only when both preferences are available. Baseline,
+  Low noise and Offer-grid sensitivity pair their RN/RA cases. Other retained
+  extensions currently have RN results only.
+- `Individual simulations/<Specification>/<Risk>/<Fee rule>` contains each
+  case's six report diagrams and its source records.
+- `Sources` below each display folder contains standalone TeX and CSV/JSON data.
+  PDF/PNG files sit directly in the corresponding display folder. Cost multipliers
+  appear in filenames, not in the artwork.
+- `Run records/Retained study` retains raw worker reports, combined data,
+  coordinator state, logs and provenance. Case folders expose convenient copies
+  of individual inputs with short cost-based names; numerical source records
+  remain identifiable by full option-set name in the batch records.
+- `Run records/diagram-inventory.json` records the generated collection.
 
-`Aggregated Data` contains 338 aggregate PDFs and matching TeX sources. `Single Row` compares cases at the principal cost multiplier, 1. `All Rows` shows the five cost levels. There are 14 single-row variations and 12 all-rows variations; the two fifteen-offer comparisons have no full cost sweep.
+There are 937 routine exhibits: 744 individual diagrams, 68 welfare tables,
+68 disposition charts and 57 four-panel strategy figures. The latter show
+separate offer strips for each available fee rule and preserve continue/exit
+histories and mixing probabilities. No conditional mean-offer substitution is
+used. All welfare measures and disposition shares average over potential disputes.
 
-The literal `Risk Neutral` grouping directory does not mean that every comparison panel is risk neutral. Read the panel labels and specification metadata, especially in the moderate-risk-aversion comparisons.
+The five welfare columns are the three population-weighted net monetary burdens,
+gross outcome error before legal costs and separate fee transfers, and real
+expenditures. These are distinct measures, not additive components of one index.
+Definitions and calculation checks accompany the aggregated data.
 
-The standard `Accuracy and Expenditures` charts contain two ex ante monetary measures and expenditures. The numerical report additionally contains the three conditional perspectives and Net Outcome Fidelity Loss; their publication display must still be prepared. Stage-cost labels also require review.
+Supplemental materials is reserved for separate solution-path, game-tree,
+liability-signal, multiple-equilibrium and strategy-change analyses. Standard
+parameter variations remain in Results. There is no archive directory.
 
-## Run documentation
-
-See [Run documentation](Run%20documentation/) for the original suite manifest and diagram inventory, plus `article import manifest.json`. These records say which code produced the results, which plans completed, and whether any file has changed. The import manifest records every source path, current article-repository path, byte count, and SHA-256 hash, and all excluded files with reasons.
-
-The model repository's source run was preserved. LaTeX `.aux`/`.log` files and completed coordinator state were not imported; solver and worker `.txt` logs were retained. The three generic one-time signal illustrations were excluded because they do not describe the revised principal model.
+After validating the complete collection, use the article repository's
+`scripts/Import-ArticleResults.ps1`, then `scripts/assemble_manuscript_exhibits.py`
+to produce the numbered four main figures and three main tables. Git history
+retains superseded material; no push is part of this workflow.

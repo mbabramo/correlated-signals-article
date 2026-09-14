@@ -1,48 +1,26 @@
-# Correlated Signals Article
+# Correlated-signals litigation article
 
-Manuscript and research materials for *A Correlated Signals Computational Game Theory Model of Litigation Bargaining*.
+The September 14 rebuild contains 124 retained cases. Baseline crosses **American, Trial Fee-Shifting, Complete Fee-Shifting** with **risk neutrality and symmetric CARA alpha 2** at costs **0.25, 0.5, 1, 2, 4**. The other 94 cases cover the retained information, cost-timing and offer-grid comparisons. All 124 saved equilibria were revalidated and reports regenerated; substantive results match their prior reports. No fresh equilibrium solve was needed.
 
-## Current repository layout
+## Reading the collection
 
-| Directory | Contents |
-|---|---|
-| [Article and bibliography](Article%20and%20bibliography/) | Existing manuscript, bibliography, and saved draft. The manuscript is being revised incrementally. |
-| [Figures](Figures/) | All four selected main-article figures under descriptive, unnumbered filenames: continuous merits and party signals, worked equilibrium path, participation and offers, and disposition. Includes captions, TeX, PNG previews and source-data JSON. |
-| [Tables](Tables/) | Saved primitives, outcome, and robustness tables, plus four focused equilibrium-strategy comparisons and their methodology. The revised outline proposes a compact strategy-table selection for main Table 4, with robustness detail online. |
-| [Results](Results/) | Main summary tables, with aggregate comparisons, individual simulations, and process logs in descriptive subfolders. Covers 130 ten-offer cases and four fifteen-offer cases. |
-| [Supplemental materials/Multiple equilibria](Supplemental%20materials/Multiple%20equilibria/) | Current multiple-equilibrium exercise: 50 verified recoveries per fee rule and 21 American/11 British distinct retained profiles. |
-| [Results/Run documentation](Results/Run%20documentation/) | Code versions, completed-run records, diagram inventory, and file hashes tracing the imported results to their original run. |
-| [Results/Exit fee extension](<Results/Exit fee extension/>) | Separate CS006EF results and provenance for ten cases with fees on unilateral exit. Original CS004 and CS004ME results retain their identities. |
-| [Fee shifting on exit](<Supplemental materials/Fee shifting on exit/>) | Matched comparison charts, requests, and strategy diagnostics for the changed fee trigger. |
-| [Supplemental materials](Supplemental%20materials/) | Current multiple-equilibrium output, the retained truth-conditioned signal illustration, and explanatory assets awaiting appendix revision. See its README for status. |
+- [Figures](Figures/README.md): four numbered main figures, including the three-rule strategy figure and six-case dispositions.
+- [Tables](Tables/README.md): three numbered main tables: model primitives, welfare outcomes and selected strategy mechanisms.
+- [Results](Results/README.md): the full routine study. Figures and tables share `Aggregated Data/<Specification>/<Risk Neutral|Risk Averse|Risk Comparison>`. Each cost has separate welfare and disposition files. PDF/PNG sit in the display folder; TeX/CSV/JSON sit in its `Sources` folder.
+- [Supplemental materials](<Supplemental materials/README.md>): separate solution-path, game-tree, signal, multiple-equilibrium and strategy-change workflows. Ordinary parameter variations remain in Results.
+- [Main exhibit manifest](manuscript-exhibits.json): exact canonical-source and numbered-output hashes, including caption companions.
+- [Verification record](<Results/Run records/final-verification.json>): coverage, source/output hashes and validation of the relocated collection.
 
-The old `smalltree`, `bigtree`, `Supplemental materials/Robustness checks`, and old figure assets were replaced after checkpoint commit `7e92fc01e1d7ff92bf0b07dbe80ac9ff021ce7b3`. Their committed contents remain in Git history. The empty `Updated figures` directory is retired; revised figures will use `Figures`.
+There are 937 routine exhibits: 744 individual diagrams, 57 strategy figures, 68 welfare tables and 68 disposition charts. The 68 table/chart pairs include separate RN and RA views plus combined views where both are available. All headline welfare and disposition values use the population of potential disputes, including nonfiling. The five welfare measures are distinct, not an additive index.
 
-The current manuscript still refers to removed figures. Its source and saved PDF were preserved, but rebuilding the source requires replacing those references as the revised figures and sections are prepared.
+## Regeneration
 
-## Production source
+Run `scripts/Rebuild-ArticleResults.ps1` **from the ACESim4 repository**. It produces the retained suite and diagrams, using all available processors by default. `-DiagramsOnly` uses completed reports. A clean rebuild begins with the code repository's `scripts/Prepare-ArticleRebuild.ps1`, which preserves the 124 required profiles before clearing ReportResults. See [the workflow](Results/README.md) for exact behavior and validation.
 
-- Model and solver repository: `ACESim4`.
-- Numerical production commit: `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`.
-- Diagram-generator commit: `a991f31fa355d788981bf399251123c17f8ebc89`.
-- Original run directory: `ReportResults/Production Runs/ALER Production 31d0f1783643` in the model repository.
-- Both plans completed aggregation and required artifact/accounting validation.
-- The article import verified 3,983 files byte-for-byte, including 1,358 applicable PDFs and 166 information-set/action reports.
+After production and diagram verification, run this repository's `scripts/Import-ArticleResults.ps1`, followed by `python scripts/assemble_manuscript_exhibits.py`. Import replaces Results and clears Figures/Tables; assembly repopulates the numbered main exhibits and their source/caption companions. `python scripts/verify_article_results.py` checks the imported collection. Existing separate supplemental calculations are retained, with exact original inputs and live requests that use the new paths.
 
-The imported files preserve their original names and bytes. The file prefixes `CS004` and `CS004ME` identify the main production run and the multiple-equilibrium run; folder names describe their contents in ordinary language. Original manifest paths describe the source run; use `Results/Run documentation/article import manifest.json` to resolve their current locations.
+The original labels in option-set names are unchanged: CS004 `Fee-British` means Trial Fee-Shifting; CS006EF `ExitFees-AllUnilateralExits` means Complete Fee-Shifting. Initial nonanswer and later unilateral exit both trigger the latter rule. There is no separate exit-extension results folder. Mandatory participation/no-exit cases are removed from the routine study and active article outputs.
 
-Full solver reproduction commands, runtime information, plan fingerprints, executable hashes, and reused-equilibrium hashes are retained in the production manifests. The coordinated run used 16 workers. The suite's stored command uses `--processors all`; substitute `--processors 16` to reproduce the resource limit used for this run.
+The authoritative revision plan is `G:/My Drive/Articles, books in progress/Machine learning model of litigation/Correlated signals revision/ALER_revision_outline_final.md`. The numbered standalone main exhibits are ready for insertion; the article manuscript, numbered online appendix and journal submission proof still require revision. The existing manuscript is the earlier draft and has not been rewritten by this results task.
 
-## Reading the results
-
-Start with `Results/CS004 numerical results.csv`, `Supplemental materials/Multiple equilibria/CS004ME equilibrium outcomes.csv`, and `Supplemental materials/Multiple equilibria/CS004ME equilibrium ranges.csv`.
-
-The imported diagrams are research outputs, not automatically publication exhibits. Generic one-time signal illustrations were excluded from the results import. The signal family has since been regenerated as standalone color/grayscale relationships. All four selected main-article diagrams are now collected in Figures under descriptive, unnumbered filenames, with short labels, separate captions and exact source-data JSON. The four main tables, including the three-perspective net-outcome comparison, are assembled in Tables. Appendix-only illustrations and alternative renderings remain in Supplemental materials. Manuscript integration, appendix-table assembly, and submission-proof review remain to be completed. See Figures/README.md and article-diagrams.json for the diagram workflow, and Tables/README.md and publication-tables.json for the saved-data C# table command.
-
-## Windows paths
-
-The preserved source filenames are long. Enable Windows long-path support if needed and configure Git in this checkout:
-
-```powershell
-git config core.longpaths true
-```
+Checkpoint commits preserve superseded files; no archive directory is used. Numerical production ran from clean source `ca50fe16c1ca683209db14bdcd3a177ad2c84c4f`. Source/build manifests, reused-profile hashes and verification records are in Results/Run records. No push is included in this workflow.

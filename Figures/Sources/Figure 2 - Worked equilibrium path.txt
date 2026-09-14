@@ -1,0 +1,131 @@
+WORKED EQUILIBRIUM PATH: READING THE FIGURE
+
+Specification: baseline continuous merits, American rule, cost multiplier 1,
+ten private signal bins per party, ten offers, and two court findings.
+The figure uses equilibrium 1 in the saved CS004 production results. No new
+equilibrium was solved. The selected paths and the two source-file SHA256
+hashes are in worked equilibrium paths.json; the editable path specification
+is worked equilibrium paths.request.json.
+
+The figure has one main trial path and a neighboring settlement/no-filing
+branch. Additional extracted histories supply selected deviations and an
+abbreviated neighboring defendant signal, not additional full diagrams.
+This is a mechanism illustration, not a claim that either path represents
+the population or that the selected equilibrium is unique.
+
+NOTATION
+
+Squares marked C are chance nodes. Circles marked P or D are player decision
+nodes. Subscripts reproduce the zero-based information-set IDs in the action
+report. Repeated labels and dotted connections denote the SAME information
+set, including when the selected history has zero equilibrium probability.
+The displayed connections are portions of full information sets, which also
+contain omitted histories. In particular, drawing one offer first does not
+make it observable to the other player. Exit commitments are also simultaneous
+and take effect only if the offers fail to settle.
+
+Solid branches are actions or chance events with positive probability along
+the selected histories; thicker branches emphasize the main path. Dashed
+branches leave player information sets through zero-probability actions.
+A solid continuation after a dashed deviation does not turn the complete
+deviation history into a positive-probability history. Dotted lines connect
+information sets and are not branches. Ellipses omit alternatives or their
+continuations; no probabilities are renormalized over what is drawn.
+
+A and B match the entry histories to the next strip. T and the return arrow
+carry failed settlement to the explicit court lottery. These are layout
+continuations, not additional decisions or information sets.
+
+p is the conditional probability of the branch. Player probabilities equal
+to one are left unlabeled. Chance probabilities are conditional on the full
+history up to the chance node: for example, the distribution of D's signal
+depends on P's signal. This does not mean that P observes D's signal.
+Signal labels .25 and .35 denote the third and fourth bin midpoints, not
+exact continuous signal realizations. Continuous merits Q remain integrated
+out; Q is not replaced by a discrete state, and a court finding is not true
+liability T.
+
+U_P or U_D is the acting player's expected utility from taking that action,
+conditional on the player's information set, with the saved strategy profile
+used thereafter. It does NOT condition on both displayed private signals.
+For this risk-neutral specification, utility is final wealth, with initial
+wealth 10 for each player. Thus U=10 is approximately zero expected change
+in wealth. The equilibrium solver rounds payoffs and chance probabilities;
+the extractor reproduces that numerical convention for action utilities.
+Shown probabilities and action utilities are rounded to three decimal places.
+
+Delta w pairs are (plaintiff net monetary payoff, defendant net monetary
+payoff): changes in wealth after litigation expenses, in damages units.
+They are not final wealth, information-set expected utility, or the article's
+net-outcome-fidelity measure. Terminal payoffs use unrounded game accounting
+and are shown to two decimal places. At trial each party incurs .15 before
+bargaining plus .15 at trial. Settlement avoids the latter .15. There is no
+fee shifting in this specification.
+
+THE SELECTED PATHS
+
+Main path: P's signal is .35 and D's is .25. P files, D answers, neither
+commits to exit after failed settlement, P demands .75, and D offers .05.
+The offers fail to settle. Conditional on these signals, the court finds
+liable with probability 0.1866220259883316 and not liable with probability
+0.8133779740116683. The net monetary payoffs are respectively (.70, -1.30)
+and (-.30, -.30). Before the court draw this history has equilibrium
+probability 0.016992239 (approximately 1.699% of initial disputes).
+
+Neighboring path: P's signal is .25 and D's is .25. At P's filing information
+set P48, P genuinely mixes: filing probability 0.8782938743410401 and
+nonfiling probability 0.12170612565895991. Both actions have reported
+conditional utility 10.0000029847. These are probabilities WITHIN that one
+information set, not averages across information sets. If P files and D
+answers, both offer .05 and settle, yielding (-.10, -.20). The selected
+settlement history has equilibrium probability 0.017003593221491344
+(approximately 1.700%); the selected no-filing history, including the same
+unobserved D signal, has probability 0.0023562061785086567.
+
+The displayed .75 demand is the action selected in this saved equilibrium,
+not a uniquely optimal demand. In this profile, all demands above .05 fail
+to meet the answering defendants' .05 offers, and multiple such demands have
+equal conditional utility. The .05 demand deviation is retained in the extracted
+data but omitted from the diagram to reduce clutter. The diagram does not
+claim that .75 is better than every omitted demand. This is one
+reason not to interpret the illustration as establishing uniqueness.
+
+DATA AND VALIDATION
+
+The extractor reconstructs the production specification, initializes its
+tree, loads the saved profile, and checks all 480 action-report rows against
+the existing report. A row is one action at one information set, NOT one
+path. This whole-game consistency check verifies information-set identities,
+probabilities, conditional utilities and off-path status before extracting
+the small selection used here. It is not a new equilibrium-existence or
+uniqueness test.
+
+For every visited information set, the JSON retains all available actions,
+including utilities not printed in this deliberately selective figure. It
+distinguishes history reach from information-set reach, flags uniform
+fallbacks for all-zero stored strategies, and leaves conditional utilities
+null at off-path information sets. Terminal lotteries are obtained by
+deterministic replay, without changing the profile used to evaluate actions.
+
+REGENERATION
+
+From ACESim4 (one command):
+  dotnet run --project LitigCharts -c Release -- diagrams worked-path --config "<article repository>/article-diagrams.json"
+
+The C# command extracts worked equilibrium paths.json, validates the connections
+and branch assumptions, and generates self-contained worked equilibrium path.tex,
+then compiles its PDF and PNG. No separate values.tex or template is needed.
+
+Edit the request JSON to change the selected histories. The hand-arranged geometry
+lives in LitigCharts/WorkedPathDiagram.cs; numerical bindings and their checks live
+in LitigCharts/ArticleWorkedPathLatexData.cs. Edit those C# classes to change the
+presentation, not this folder's generated .tex. This is an article-specific
+drawing, not a general-purpose tree-layout feature.
+
+Use --sources-only to omit compilation, --compile-only to compile existing .tex
+without extraction, and --output-root to put generated files in a review folder.
+Use the worked-path-data target for extraction alone. See LitigCharts/README.md
+in ACESim4 for all targets. No equilibrium solve or production-setting edit occurs.
+
+If changing the underlying saved profile, also review the numerical example
+in this hand-written explanation; the JSON and LaTeX regenerate automatically.
