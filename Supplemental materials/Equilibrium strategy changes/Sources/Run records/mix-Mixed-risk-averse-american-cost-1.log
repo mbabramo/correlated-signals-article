@@ -1,0 +1,26 @@
+Initialize and validate risk-averse-american-cost-1
+Using SequenceForm
+Game: LitigationGame: Specification-ModerateRiskAversion__Cost-1__Fee-American
+CollapseChanceDecisions True
+NumOffers 10   
+NumPotentialBargainingRounds 1  BargainingRoundsSimultaneous True SimultaneousOffersUltimatelyRevealed True 
+NumLiabilityStrengthPoints 2 NumLiabilitySignals 10 PLiabilityNoiseStdev 0.2 DLiabilityNoiseStdev 0.2 CourtLiabilityNoiseStdev 0.2 
+NumDamagesStrengthPoints 1 NumDamagesSignals 1 PDamagesNoiseStdev 0.1 DDamagesNoiseStdev 0.1 CourtDamagesNoiseStdev 0.15 
+SkipFileAndAnswerDecisions False AllowAbandonAndDefaults True PredeterminedAbandonAndDefaults True IncludeAgreementToBargainDecisions False DeltaOffersOptions N/A 
+CostsMultiplier 1 PTrialCosts 0.15 DTrialCosts 0.15 PFilingCost 0.15 DAnswerCost 0.15 PerPartyCostsLeadingUpToBargainingRound 0 
+LoserPays True Multiple 0 AfterAbandonment False Rule68 False Margin False (0.7)
+PInitialWealth 10 DInitialWealth 10 
+DamagesMin 0 DamagesMax 1 DamagesMultiplier 1
+RegretAversion 0 
+PUtilityCalculator CARA Alpha=2 DUtilityCalculator CARA Alpha=2 
+LitigGameDisputeGenerator LitigGameUniformQualityDisputeGenerator QualityDistribution=Uniform(0,1);TruthGivenQuality=Bernoulli(q);GaussLegendreOrder=64
+WarmStartOptions NoWarmStart for  iterations
+Initializing all game paths...
+... Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211 Initialization milliseconds 1516
+Prepping accelerated best response...
+... 329 milliseconds. Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211
+Calculating min-max...
+... complete 128 milliseconds
+forward: sweep 1 accepted 0 blocks; score 0.000000
+reverse: sweep 1 accepted 0 blocks; score 0.000000
+Completed risk-averse-american-cost-1: forward; score 0.000000; maximum gain 0

@@ -1,7 +1,16 @@
 # Equilibrium solution paths
 
-This separate workflow contains the interactive HTML paths and JSON/JSONL records for the four ordinary-cost American/Trial Fee-Shifting RN/RA reference cases. `all-equilibrium-solution-paths.html` is the combined viewer. These paths describe computation, not an observed adjustment process in litigation.
+The completed collection reproduces 6 ordinary-cost original exact solves: every core fee rule crossed with every available risk level. These are numerical solver paths from the uniform prior, not transitions between fee regimes or models of how litigants learn an equilibrium.
 
-`equilibrium-paths.request.json` is the live regeneration request; `equilibrium-paths.recorded-request.json` preserves the original request. The manifest identifies the calculation sources and outputs. Original solve logs are retained under `Sources/Original solve logs`, and the live request references the preserved strategy-calculation inputs. These analyses were retained and rebased during the results cleanup; they were not recalculated in the 124-case report rebuild.
+Each replay must match its original log's pivot count and every saved final action probability (tolerance 1e-10), with final exploitability at most 1e-7. Sources/Original solve logs preserves original single-prior logs; cached-equilibrium validation logs cannot substitute for them. Sources/Requests and Sources/Traces contain reproducible requests, frame streams and fingerprinted verification metadata. Sources/Run records holds replay process logs.
 
-This workflow is separate from the game-tree worked path and the routine parameter comparisons. Consult ACESim4's equilibrium-path command and the live request before launching an intentional recalculation.
+All six replays have verified. all-equilibrium-solution-paths.html combines them, and each scenario also has an individual HTML viewer. equilibrium-paths-collection-manifest.json records completed collection inputs. The shared supplemental-plan.json lists requested jobs; it does not assert that pending traces have completed.
+
+The generalized supplemental rebuild performs these replays and builds the collection automatically. Its path cache reuses completed traces only after checking their request, input, frame and assembly hashes. A separate multiple-start study is in Multiple equilibria.
+
+All original pivot counts and saved action probabilities matched. The combined viewer uses distinct American, Trial Fee-Shifting and Complete Fee-Shifting labels within each risk preference; playback, stepping and equilibrium endpoints were checked in a browser. Sources/path-verification.json records numerical verification and visual review.
+
+| Risk | American pivots | Trial Fee-Shifting pivots | Complete Fee-Shifting pivots |
+|---|---:|---:|---:|
+| Risk Neutral | 209 | 235 | 211 |
+| Risk Averse | 403 | 975 | 1871 |

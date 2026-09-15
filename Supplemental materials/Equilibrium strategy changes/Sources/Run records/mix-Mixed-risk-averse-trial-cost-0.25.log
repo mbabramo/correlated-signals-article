@@ -1,0 +1,59 @@
+Initialize and validate risk-averse-trial-cost-0.25
+Using SequenceForm
+Game: LitigationGame: Specification-ModerateRiskAversion__Cost-0.25__Fee-British
+CollapseChanceDecisions True
+NumOffers 10   
+NumPotentialBargainingRounds 1  BargainingRoundsSimultaneous True SimultaneousOffersUltimatelyRevealed True 
+NumLiabilityStrengthPoints 2 NumLiabilitySignals 10 PLiabilityNoiseStdev 0.2 DLiabilityNoiseStdev 0.2 CourtLiabilityNoiseStdev 0.2 
+NumDamagesStrengthPoints 1 NumDamagesSignals 1 PDamagesNoiseStdev 0.1 DDamagesNoiseStdev 0.1 CourtDamagesNoiseStdev 0.15 
+SkipFileAndAnswerDecisions False AllowAbandonAndDefaults True PredeterminedAbandonAndDefaults True IncludeAgreementToBargainDecisions False DeltaOffersOptions N/A 
+CostsMultiplier 0.25 PTrialCosts 0.15 DTrialCosts 0.15 PFilingCost 0.15 DAnswerCost 0.15 PerPartyCostsLeadingUpToBargainingRound 0 
+LoserPays True Multiple 1 AfterAbandonment False Rule68 False Margin False (0.7)
+PInitialWealth 10 DInitialWealth 10 
+DamagesMin 0 DamagesMax 1 DamagesMultiplier 1
+RegretAversion 0 
+PUtilityCalculator CARA Alpha=2 DUtilityCalculator CARA Alpha=2 
+LitigGameDisputeGenerator LitigGameUniformQualityDisputeGenerator QualityDistribution=Uniform(0,1);TruthGivenQuality=Bernoulli(q);GaussLegendreOrder=64
+WarmStartOptions NoWarmStart for  iterations
+Initializing all game paths...
+... Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211 Initialization milliseconds 1646
+Prepping accelerated best response...
+... 294 milliseconds. Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211
+Calculating min-max...
+... complete 132 milliseconds
+  forward sweep 1: D Offer, 2 information sets jointly; score 0.026802; max gain 2.5E-10
+forward: sweep 1 accepted 1 blocks; score 0.026802
+  forward sweep 2: D Defaults, 1 information sets jointly; score 0.026802; max gain 2.5E-10
+  forward sweep 2: D Offer, 2 information sets jointly; score 0.026803; max gain 2.5E-10
+forward: sweep 2 accepted 2 blocks; score 0.026803
+  forward sweep 3: D Defaults, 1 information sets jointly; score 0.026803; max gain 2.5E-10
+  forward sweep 3: D Offer, 2 information sets jointly; score 0.026804; max gain 2.5E-10
+forward: sweep 3 accepted 2 blocks; score 0.026804
+  forward sweep 4: D Defaults, 1 information sets jointly; score 0.026804; max gain 2.5E-10
+  forward sweep 4: D Offer, 2 information sets jointly; score 0.026804; max gain 2.5E-10
+forward: sweep 4 accepted 2 blocks; score 0.026804
+  forward sweep 5: D Defaults, 1 information sets jointly; score 0.026804; max gain 2.5E-10
+  forward sweep 5: D Offer, 2 information sets jointly; score 0.026805; max gain 2.5E-10
+forward: sweep 5 accepted 2 blocks; score 0.026805
+  forward sweep 6: D Defaults, 1 information sets jointly; score 0.026805; max gain 2.5E-10
+  forward sweep 6: D Offer, 2 information sets jointly; score 0.026806; max gain 2.5E-10
+forward: sweep 6 accepted 2 blocks; score 0.026806
+  reverse sweep 1: D Offer, 2 information sets jointly; score 0.026802; max gain 2.5E-10
+  reverse sweep 1: D Defaults, 1 information sets jointly; score 0.026802; max gain 2.5E-10
+reverse: sweep 1 accepted 2 blocks; score 0.026802
+  reverse sweep 2: D Offer, 2 information sets jointly; score 0.026803; max gain 2.5E-10
+  reverse sweep 2: D Defaults, 1 information sets jointly; score 0.026803; max gain 2.5E-10
+reverse: sweep 2 accepted 2 blocks; score 0.026803
+  reverse sweep 3: D Offer, 2 information sets jointly; score 0.026804; max gain 2.5E-10
+  reverse sweep 3: D Defaults, 1 information sets jointly; score 0.026804; max gain 2.5E-10
+reverse: sweep 3 accepted 2 blocks; score 0.026804
+  reverse sweep 4: D Offer, 2 information sets jointly; score 0.026804; max gain 2.5E-10
+  reverse sweep 4: D Defaults, 1 information sets jointly; score 0.026804; max gain 2.5E-10
+reverse: sweep 4 accepted 2 blocks; score 0.026804
+  reverse sweep 5: D Offer, 2 information sets jointly; score 0.026805; max gain 2.5E-10
+  reverse sweep 5: D Defaults, 1 information sets jointly; score 0.026805; max gain 2.5E-10
+reverse: sweep 5 accepted 2 blocks; score 0.026805
+  reverse sweep 6: D Offer, 2 information sets jointly; score 0.026806; max gain 2.5E-10
+  reverse sweep 6: D Defaults, 1 information sets jointly; score 0.026806; max gain 2.5E-10
+reverse: sweep 6 accepted 2 blocks; score 0.026806
+Completed risk-averse-trial-cost-0.25: reverse; score 0.026806; maximum gain 2.50111E-10

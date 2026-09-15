@@ -1,0 +1,56 @@
+Using SequenceForm
+Game: LitigationGame: Specification-ModerateRiskAversion__Cost-1__Fee-British
+CollapseChanceDecisions True
+NumOffers 10   
+NumPotentialBargainingRounds 1  BargainingRoundsSimultaneous True SimultaneousOffersUltimatelyRevealed True 
+NumLiabilityStrengthPoints 2 NumLiabilitySignals 10 PLiabilityNoiseStdev 0.2 DLiabilityNoiseStdev 0.2 CourtLiabilityNoiseStdev 0.2 
+NumDamagesStrengthPoints 1 NumDamagesSignals 1 PDamagesNoiseStdev 0.1 DDamagesNoiseStdev 0.1 CourtDamagesNoiseStdev 0.15 
+SkipFileAndAnswerDecisions False AllowAbandonAndDefaults True PredeterminedAbandonAndDefaults True IncludeAgreementToBargainDecisions False DeltaOffersOptions N/A 
+CostsMultiplier 1 PTrialCosts 0.15 DTrialCosts 0.15 PFilingCost 0.15 DAnswerCost 0.15 PerPartyCostsLeadingUpToBargainingRound 0 
+LoserPays True Multiple 1 AfterAbandonment False Rule68 False Margin False (0.7)
+PInitialWealth 10 DInitialWealth 10 
+DamagesMin 0 DamagesMax 1 DamagesMultiplier 1
+RegretAversion 0 
+PUtilityCalculator CARA Alpha=2 DUtilityCalculator CARA Alpha=2 
+LitigGameDisputeGenerator LitigGameUniformQualityDisputeGenerator QualityDistribution=Uniform(0,1);TruthGivenQuality=Bernoulli(q);GaussLegendreOrder=64
+WarmStartOptions NoWarmStart for  iterations
+Initializing all game paths...
+... Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211 Initialization milliseconds 1281
+Prepping accelerated best response...
+... 409 milliseconds. Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211
+Calculating min-max...
+... complete 135 milliseconds
+Replay risk-averse-trial-cost-1: exact uniform prior, 480 validated actions; expect 975 pivots.
+
+Game tree has 45211 nodes, of which 40200 are terminal nodes.
+    Player 0 has 111 information sets, 210 moves in total
+    Player 1 has  40 information sets, 240 moves in total
+    Player 2 has  40 information sets, 240 moves in total
+Sequence form LCP dimension is 564
+    Player 1 has 241 sequences, subject to  41 constraints
+    Player 2 has 241 sequences, subject to  41 constraints
+Prior 1 of 1
+  Pivot 50/975: z0=1, epsilon=0.2218, flow residual=2.78E-17 (31.7s)
+... 100 steps (73973 ms) ...  Pivot 100/975: z0=1, epsilon=0.2218, flow residual=2.78E-17 (77.9s)
+  Pivot 150/975: z0=1, epsilon=0.2218, flow residual=2.78E-17 (145.5s)
+... 200 steps (307572 ms) ...  Pivot 200/975: z0=0.8603, epsilon=0.2111, flow residual=1.11E-16 (315.2s)
+  Pivot 250/975: z0=0.8353, epsilon=0.2026, flow residual=5.55E-17 (537.3s)
+... 300 steps (752901 ms) ...  Pivot 300/975: z0=0.8412, epsilon=0.2027, flow residual=1.67E-16 (761.8s)
+  Pivot 350/975: z0=0.8599, epsilon=0.2103, flow residual=5.55E-17 (1023.6s)
+... 400 steps (1180480 ms) ...  Pivot 400/975: z0=0.8234, epsilon=0.2078, flow residual=1.11E-16 (1186.6s)
+  Pivot 450/975: z0=0.8546, epsilon=0.202, flow residual=1.11E-16 (1400.6s)
+... 500 steps (1612766 ms) ...  Pivot 500/975: z0=0.8252, epsilon=0.2029, flow residual=1.11E-16 (1620.0s)
+  Pivot 550/975: z0=0.8558, epsilon=0.2023, flow residual=1.11E-16 (1853.0s)
+... 600 steps (2050646 ms) ...  Pivot 600/975: z0=0.8234, epsilon=0.2063, flow residual=1.11E-16 (2057.3s)
+  Pivot 650/975: z0=0.8561, epsilon=0.2026, flow residual=1.11E-16 (2250.9s)
+... 700 steps (2449586 ms) ...  Pivot 700/975: z0=0.8462, epsilon=0.2036, flow residual=1.11E-16 (2458.0s)
+  Pivot 750/975: z0=0.8483, epsilon=0.2031, flow residual=1.11E-16 (2676.6s)
+... 800 steps (2875246 ms) ...  Pivot 800/975: z0=0.8393, epsilon=0.2014, flow residual=1.11E-16 (2882.1s)
+  Pivot 850/975: z0=0.7622, epsilon=0.1923, flow residual=1.11E-16 (3068.6s)
+... 900 steps (3256711 ms) ...  Pivot 900/975: z0=0.4984, epsilon=0.1496, flow residual=3.33E-16 (3264.0s)
+  Pivot 950/975: z0=0.1821, epsilon=0.06193, flow residual=5.55E-16 (3448.9s)
+  Pivot 975/975: z0=0, epsilon=1.137E-13, flow residual=0 (3538.4s)
+Complete after 975 pivoting steps
+Equilibrium 1
+Elapsed milliseconds prior 1: 3537895
+Verified original endpoint and 975 pivots; 976 frames; max saved probability difference 2.776E-17.

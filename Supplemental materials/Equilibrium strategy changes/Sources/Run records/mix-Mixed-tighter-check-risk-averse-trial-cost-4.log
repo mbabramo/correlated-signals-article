@@ -1,0 +1,28 @@
+Initialize and validate risk-averse-trial-cost-4
+Using SequenceForm
+Game: LitigationGame: Specification-ModerateRiskAversion__Cost-4__Fee-British
+CollapseChanceDecisions True
+NumOffers 10   
+NumPotentialBargainingRounds 1  BargainingRoundsSimultaneous True SimultaneousOffersUltimatelyRevealed True 
+NumLiabilityStrengthPoints 2 NumLiabilitySignals 10 PLiabilityNoiseStdev 0.2 DLiabilityNoiseStdev 0.2 CourtLiabilityNoiseStdev 0.2 
+NumDamagesStrengthPoints 1 NumDamagesSignals 1 PDamagesNoiseStdev 0.1 DDamagesNoiseStdev 0.1 CourtDamagesNoiseStdev 0.15 
+SkipFileAndAnswerDecisions False AllowAbandonAndDefaults True PredeterminedAbandonAndDefaults True IncludeAgreementToBargainDecisions False DeltaOffersOptions N/A 
+CostsMultiplier 4 PTrialCosts 0.15 DTrialCosts 0.15 PFilingCost 0.15 DAnswerCost 0.15 PerPartyCostsLeadingUpToBargainingRound 0 
+LoserPays True Multiple 1 AfterAbandonment False Rule68 False Margin False (0.7)
+PInitialWealth 10 DInitialWealth 10 
+DamagesMin 0 DamagesMax 1 DamagesMultiplier 1
+RegretAversion 0 
+PUtilityCalculator CARA Alpha=2 DUtilityCalculator CARA Alpha=2 
+LitigGameDisputeGenerator LitigGameUniformQualityDisputeGenerator QualityDistribution=Uniform(0,1);TruthGivenQuality=Bernoulli(q);GaussLegendreOrder=64
+WarmStartOptions NoWarmStart for  iterations
+Initializing all game paths...
+... Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211 Initialization milliseconds 1395
+Prepping accelerated best response...
+... 322 milliseconds. Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211
+Calculating min-max...
+... complete 164 milliseconds
+  forward sweep 1: P Offer, 1 information sets jointly; score 0.078052; max gain 0
+  forward sweep 1: D Offer, 1 information sets jointly; score 0.095689; max gain 0
+forward: sweep 1 accepted 2 blocks; score 0.095689
+forward: sweep 2 accepted 0 blocks; score 0.095689
+Completed risk-averse-trial-cost-4: forward; score 0.095689; maximum gain 0
