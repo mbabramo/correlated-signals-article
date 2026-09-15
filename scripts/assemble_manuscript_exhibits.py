@@ -74,8 +74,8 @@ Settlement & Own costs & Own costs & Own costs \\
 
 def mechanisms():
     provenance=[]
-    def published(contrast,decision,signal):
-        p=MECHANISMS/'Published source tables/Sources'/(contrast+'.tex')
+    def comparison_row(contrast,decision,signal):
+        p=MECHANISMS/'Tables/Sources'/(contrast+'.tex')
         data=read(p.with_suffix('.json'))
         if data['Contrast']['Id']!=contrast:raise ValueError('Mismatched directed comparison')
         for source in data['Inputs']:
@@ -89,17 +89,17 @@ def mechanisms():
         return lines[0]
     panels=[
         ('American to Trial Fee-Shifting; risk neutral',[
-            published('american-to-trial-risk-neutral-cost-1','P files','0.25')]),
+            comparison_row('american-to-trial-risk-neutral-cost-1','P files','0.25')]),
         ('Trial to Complete Fee-Shifting; risk neutral',[
-            published('trial-to-complete-risk-neutral-cost-1','D answers','0.65--0.95'),
-            published('trial-to-complete-risk-neutral-cost-1','P files','0.25')]),
+            comparison_row('trial-to-complete-risk-neutral-cost-1','D answers','0.65--0.95'),
+            comparison_row('trial-to-complete-risk-neutral-cost-1','P files','0.25')]),
         ('Trial to Complete Fee-Shifting; risk averse',[
-            published('trial-to-complete-risk-averse-cost-1','D answers','0.75')]),
+            comparison_row('trial-to-complete-risk-averse-cost-1','D answers','0.75')]),
         ('American to Complete Fee-Shifting; risk neutral',[
-            published('american-to-complete-risk-neutral-cost-1','P files','0.25')]),
+            comparison_row('american-to-complete-risk-neutral-cost-1','P files','0.25')]),
         ('Risk neutral to risk averse; American',[
-            published('risk-neutral-to-risk-averse-american-cost-1','P files','0.25'),
-            published('risk-neutral-to-risk-averse-american-cost-1','P files','0.35')])]
+            comparison_row('risk-neutral-to-risk-averse-american-cost-1','P files','0.25'),
+            comparison_row('risk-neutral-to-risk-averse-american-cost-1','P files','0.35')])]
     body=r'''\begin{tabularx}{\linewidth}{@{}lcc*{5}{>{\centering\arraybackslash}X}c@{}}
 \toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Residual & Sensitive \\'''
     for label,rows in panels:

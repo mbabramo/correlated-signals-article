@@ -17,7 +17,7 @@ MECHANISMS = SUPP / 'Equilibrium strategy changes'
 RECORD = MECHANISMS / 'Sources/relocation.json'
 RENAMES = {
     ROOT / 'Results/Equilibrium diagnostics': MECHANISMS / 'Calculations',
-    ROOT / 'Tables/Equilibrium strategy changes': MECHANISMS / 'Published source tables',
+    ROOT / 'Tables/Equilibrium strategy changes': MECHANISMS / 'Tables',
     SUPP / 'Fee shifting on exit/Equilibrium strategy changes': MECHANISMS / 'Fee trigger comparison',
 }
 

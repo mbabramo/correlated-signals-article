@@ -40,7 +40,7 @@ if (Test-Path -LiteralPath (Join-Path $article 'Results\Equilibrium diagnostics'
     & $Python (Join-Path $PSScriptRoot 'relocate_supplemental.py') capture
     if ($LASTEXITCODE -ne 0) { throw 'Failed to preserve separate analysis inputs.' }
     Move-ArticleFolder 'Results\Equilibrium diagnostics' 'Supplemental materials\Equilibrium strategy changes\Calculations'
-    Move-ArticleFolder 'Tables\Equilibrium strategy changes' 'Supplemental materials\Equilibrium strategy changes\Published source tables'
+    Move-ArticleFolder 'Tables\Equilibrium strategy changes' 'Supplemental materials\Equilibrium strategy changes\Tables'
     Move-ArticleFolder 'Supplemental materials\Fee shifting on exit\Equilibrium strategy changes' 'Supplemental materials\Equilibrium strategy changes\Fee trigger comparison'
 }
 & $Python (Join-Path $PSScriptRoot 'relocate_supplemental.py') rebase
