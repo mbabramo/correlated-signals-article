@@ -1,0 +1,153 @@
+{
+  "Contrast": {
+    "Id": "trial-to-american-risk-neutral-cost-0.25",
+    "Label": "trial-to-american-risk-neutral-cost-0.25",
+    "Source": "risk-neutral-trial-cost-0.25",
+    "Target": "risk-neutral-american-cost-0.25"
+  },
+  "SourceOptionSet": "Specification-Baseline__Cost-0.25__Fee-British",
+  "TargetOptionSet": "Specification-Baseline__Cost-0.25__Fee-American",
+  "SelectedRows": [
+    {
+      "Key": "0/14/5:2;9:1;10:1;20:2",
+      "Player": 0,
+      "Decision": "P Offer",
+      "Signal": 2,
+      "SignalValue": 0.15,
+      "ExitCommitment": 2,
+      "Metric": "offer amount",
+      "Action": null,
+      "ActionLabels": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "OriginalPolicy": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "TargetPolicy": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "Allocation": {
+        "Original": 0.05,
+        "Target": 0.95,
+        "Direct": 0.8999999999999999,
+        "Entry": 0,
+        "Offers": 0,
+        "Exit": 0,
+        "SelectionResidual": 0,
+        "Change": 0.8999999999999999,
+        "Explained": 0.8999999999999999
+      },
+      "EndpointSelection": false,
+      "TieSensitive": false,
+      "CompletionSensitive": false,
+      "CounterfactualUndefined": false,
+      "MaximumSensitivity": 0,
+      "UnreachedCoalitions": []
+    },
+    {
+      "Key": "1/15/6:9;9:1;10:1;21:2",
+      "Player": 1,
+      "Decision": "D Offer",
+      "Signal": 9,
+      "SignalValue": 0.85,
+      "ExitCommitment": 2,
+      "Metric": "offer amount",
+      "Action": null,
+      "ActionLabels": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "OriginalPolicy": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "TargetPolicy": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Allocation": {
+        "Original": 0.95,
+        "Target": 0.05,
+        "Direct": -0.8999999999999999,
+        "Entry": 0,
+        "Offers": 0,
+        "Exit": 0,
+        "SelectionResidual": 0,
+        "Change": -0.8999999999999999,
+        "Explained": -0.8999999999999999
+      },
+      "EndpointSelection": false,
+      "TieSensitive": false,
+      "CompletionSensitive": false,
+      "CounterfactualUndefined": false,
+      "MaximumSensitivity": 0,
+      "UnreachedCoalitions": []
+    }
+  ],
+  "Inputs": [
+    {
+      "Path": "C:\\Users\\Admin\\source\\repos\\correlated-signals-article\\Supplemental materials\\Equilibrium strategy changes\\Calculations\\Original\\cost-0.25\\trial-to-american-risk-neutral-cost-0.25\\equilibrium-changes.request.json",
+      "Sha256": "c9db2828d7a789b5bcc46140bf2da3cff25c5e260b4da1ca6620b4ee671397c4"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\source\\repos\\correlated-signals-article\\Supplemental materials\\Equilibrium strategy changes\\Calculations\\Mixed\\cost-0.25\\trial-to-american-risk-neutral-cost-0.25\\equilibrium-changes.request.json",
+      "Sha256": "27fc04d17fe9a6ed75a1525be02ce5b929f56bf3e7cc75794e15c8bab61b8c0e"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\source\\repos\\correlated-signals-article\\Supplemental materials\\Equilibrium strategy changes\\Calculations\\Mixed tighter check\\cost-0.25\\trial-to-american-risk-neutral-cost-0.25\\equilibrium-changes.request.json",
+      "Sha256": "3ea153e949a55d7a19d8fd955fe34619918fb18d721ae2e990e63010d8f67467"
+    }
+  ],
+  "Caption": "Selected strategy coordinates supported by the focus or offsetting-effect checks in the original, mixed and tighter mixed representations. Endpoints are local policies at the indicated own-signal information set; offers retain the player\u0027s private exit commitment. Probability contributions use percentage points; pure offer amounts use damages units. Direct changes the primitive first with the original opponent fixed. Opponent contributions average all six replacement orders. Remaining is the endpoint-selection residual, not an additional mechanism. Undefined conditional comparisons are shown as dashes. Sensitivity flags ties or donor-unvisited completions; an asterisk marks an unreached intermediate response. Empty tables mean that no rows satisfy this selection, not that all equilibrium strategies are identical. Full original and hybrid policies, reach and excluded histories remain in the calculation JSON. This accounting is not uniquely identified causation or an observed adjustment process."
+}

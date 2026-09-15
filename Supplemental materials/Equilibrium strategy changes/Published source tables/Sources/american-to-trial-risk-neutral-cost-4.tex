@@ -1,0 +1,22 @@
+% Input request SHA-256: 7840ac84d728304e08c7bfdddadabc179f4277f4d7d595049c0df619d9306591
+% Input request SHA-256: 78a575ac7b13088a1ad057920516f7bd79a14c9569b5473b95ddeb4527903e79
+% Input request SHA-256: 3a13b530c3e70c60fd149e09a3e8100ae2bbb6a2db12739dc8ee9aef834568ce
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+P files & 0.45 & $100\%\to 0\%$ & $0$ & $0$ & $-50$ & $-50$ & $0$ & No\\
+P demand, continue$^{*}$ & 0.55 & $0.15\to 0.05$ & $0.00$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+P demand, continue 0.05$^{*}$ & 0.65 & $0\%\to 100\%$ & $0$ & $0$ & $+100$ & $0$ & $0$ & No\\
+P demand, continue 0.15$^{*}$ & 0.65 & $86.1\%\to 0\%$ & $+13.9$ & $0$ & $-100$ & $0$ & $0$ & No\\
+P demand, continue 0.75$^{*}$ & 0.65 & $13.9\%\to 0\%$ & $-13.9$ & $0$ & $0$ & $0$ & $0$ & No\\
+D offer, continue & 0.05 & $0.15\to 0.05$ & $-0.10$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & No\\
+D offer, continue & 0.15 & $0.15\to 0.05$ & $-0.10$ & $+0.033$ & $-0.067$ & $+0.033$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.25 & $0.15\to 0.05$ & $0.00$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+D offer, continue$^{*}$ & 0.35 & $0.15\to 0.05$ & $0.00$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

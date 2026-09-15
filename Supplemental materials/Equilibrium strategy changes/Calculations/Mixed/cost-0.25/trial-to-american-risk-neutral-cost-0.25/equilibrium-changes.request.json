@@ -1,0 +1,31 @@
+{
+  "OutputDirectory": ".",
+  "Sources": [
+    {
+      "Id": "risk-neutral-trial-cost-0.25",
+      "OptionSetName": "Specification-Baseline__Cost-0.25__Fee-British",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-neutral-trial-cost-0.25-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-neutral-trial-cost-0.25-InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../../Mixing/Mixed/risk-neutral-trial-cost-0.25/risk-neutral-trial-cost-0.25-profile.json"
+    },
+    {
+      "Id": "risk-neutral-american-cost-0.25",
+      "OptionSetName": "Specification-Baseline__Cost-0.25__Fee-American",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-neutral-american-cost-0.25-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-neutral-american-cost-0.25-InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../../Mixing/Mixed/risk-neutral-american-cost-0.25/risk-neutral-american-cost-0.25-profile.json"
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "trial-to-american-risk-neutral-cost-0.25",
+      "Label": "trial-to-american-risk-neutral-cost-0.25",
+      "Source": "risk-neutral-trial-cost-0.25",
+      "Target": "risk-neutral-american-cost-0.25"
+    }
+  ],
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}

@@ -1,0 +1,21 @@
+% Input request SHA-256: 387cd757c9a252ec502ef974aba681715d9cf584cd2904ecfc25ccf9cc2ec387
+% Input request SHA-256: 27dbf8e511329bb32ddd8852358529540f94036e016c70959507568fdc86fca3
+% Input request SHA-256: add93f91bab366c07cad4884b5b1fbad65cbd78b31d07bce08aeb1b48ce750d6
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+\multicolumn{9}{l}{\textit{Changed actions}}\\[2pt]
+P files & 0.55 & $4.7\%\to 100\%$ & $+95.3$ & $0$ & $0$ & $0$ & $0$ & No\\
+P commits to abandon & 0.75--0.85 & $100\%\to 0\%$ & $-100$ & $0$ & $0$ & $0$ & $0$ & No\\
+P demand, continue & 0.55--0.65 & $0.05\to 0.95$ & $+0.90$ & $0.00$ & $0.00$ & $0.00$ & $0.00$ & No\\
+\midrule \multicolumn{9}{l}{\textit{Unchanged actions with offsetting effects}}\\[2pt]
+D offer, continue$^{*}$ & 0.55 & $0.95\to 0.95$ & $-0.90$ & $-0.10$ & $+0.20$ & $+0.80$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.65 & $0.95\to 0.95$ & $-0.90$ & $0.00$ & $0.00$ & $+0.90$ & $0.00$ & Yes\\
+D offer, continue & 0.75--0.95 & $0.95\to 0.95$ & $-0.90$ & $0.00$ & $0.00$ & $+0.90$ & $0.00$ & Yes\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

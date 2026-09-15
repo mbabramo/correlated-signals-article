@@ -1,0 +1,19 @@
+% Input request SHA-256: e7fe72745b1cd388dc80a2a86c2dfe3f183020bab64842ff3db32e5bc6027204
+% Input request SHA-256: 790ae742dc25644284aebcdc9c5a59fc117319b52032c5a0320af3f9a1a503df
+% Input request SHA-256: c3ced7f93dcceac8e3fcfd96ef5aafb325d0536b92a55f9a000076722230234f
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+\multicolumn{9}{l}{\textit{Changed actions}}\\[2pt]
+P files & 0.75--0.95 & $0\%\to 100\%$ & $+100$ & $+50$ & $0$ & $-50$ & $0$ & Yes\\
+\midrule \multicolumn{9}{l}{\textit{Unchanged actions with offsetting effects}}\\[2pt]
+P files & 0.05 & $0\%\to 0\%$ & $+100$ & $0$ & $-50$ & $-50$ & $0$ & Yes\\
+P files & 0.15--0.55 & $0\%\to 0\%$ & $+100$ & $+16.7$ & $-83.3$ & $-33.3$ & $0$ & Yes\\
+P files & 0.65 & $0\%\to 0\%$ & $+100$ & $+33.3$ & $-66.7$ & $-66.7$ & $0$ & Yes\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

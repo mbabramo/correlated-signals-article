@@ -1,0 +1,19 @@
+% Input request SHA-256: ec2a1fae84e8df6e5b7316544453649f3cb0acff36f701e43595849dbd734638
+% Input request SHA-256: f2a4914d4709acf718ae8273c9fc1883cb79fc45cba9e789a14e9f11672a2c70
+% Input request SHA-256: 1b66f4027da78571dbf09b99253d1937c238d00297725462d14e320c59d08ba2
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+P files & 0.35 & $100\%\to 0\%$ & $0$ & $-100$ & $0$ & $0$ & $0$ & No\\
+P commits to abandon & 0.55 & $31.6\%\to 0\%$ & $-31.6$ & $-15.8$ & $0$ & $+15.8$ & $0$ & Yes\\
+P demand, exit$^{*}$ & 0.45 & $0.55\to 0.95$ & $-0.50$ & $+0.30$ & $+0.30$ & $+0.30$ & $0.00$ & Yes\\
+P demand, continue & 0.55 & $0.85\to 0.95$ & $0.00$ & $+0.467$ & $+0.067$ & $-0.433$ & $0.00$ & Yes\\
+D answers & 0.55 & $28.5\%\to 100\%$ & $+71.5$ & $0$ & $0$ & $0$ & $0$ & No\\
+D answers & 0.65--0.95 & $0\%\to 100\%$ & $+100$ & $0$ & $0$ & $0$ & $0$ & No\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

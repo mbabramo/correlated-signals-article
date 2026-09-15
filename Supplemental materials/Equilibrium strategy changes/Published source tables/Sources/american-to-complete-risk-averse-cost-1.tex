@@ -1,0 +1,25 @@
+% Input request SHA-256: b4ed3cfa0942e739aecd2db27e78869c2fd7b5564766358e51deaccd5db4b653
+% Input request SHA-256: 414fb1e8c0ce833b48c4c16e47c1715b3ae0d3ee20162601d0d0e4a76b1a2e6f
+% Input request SHA-256: 87305813dd3799a63637a35f4e840adca08a48a1294918a916e192a3a2c9e855
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+P files & 0.05--0.25 & $100\%\to 0\%$ & $0$ & $0$ & $-100$ & $0$ & $0$ & No\\
+P demand, continue & 0.35--0.45 & $0.15\to 0.05$ & $0.00$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+P demand, continue & 0.55 & $0.85\to 0.05$ & $-0.70$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+P demand, continue$^{*}$ & 0.65 & $0.85\to 0.95$ & $-0.70$ & $0.00$ & $+0.80$ & $0.00$ & $0.00$ & No\\
+P demand, continue & 0.75--0.95 & $0.85\to 0.95$ & $0.00$ & $0.00$ & $+0.10$ & $0.00$ & $0.00$ & No\\
+D offer, continue & 0.05--0.15 & $0.15\to 0.05$ & $0.00$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & No\\
+D offer, continue & 0.25 & $0.15\to 0.05$ & $0.00$ & $+0.217$ & $-0.183$ & $-0.133$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.35 & $0.15\to 0.05$ & $+0.70$ & $+0.233$ & $-0.467$ & $-0.567$ & $0.00$ & Yes\\
+D offer, continue 0.05 & 0.45 & $0\%\to 31.1\%$ & $0$ & $0$ & $+50$ & $+50$ & $-68.9$ & Yes\\
+D offer, continue 0.15 & 0.45 & $100\%\to 0\%$ & $-100$ & $0$ & $0$ & $0$ & $0$ & No\\
+D offer, continue 0.95 & 0.45 & $0\%\to 68.9\%$ & $0$ & $0$ & $+50$ & $-50$ & $+68.9$ & Yes\\
+D offer, continue & 0.55--0.95 & $0.85\to 0.95$ & $0.00$ & $0.00$ & $+0.10$ & $0.00$ & $0.00$ & No\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

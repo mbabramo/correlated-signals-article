@@ -74,45 +74,32 @@ Settlement & Own costs & Own costs & Own costs \\
 
 def mechanisms():
     provenance=[]
-    def published(filename,decision,signal):
-        p=MECHANISMS/'Published source tables'/filename
+    def published(contrast,decision,signal):
+        p=MECHANISMS/'Published source tables/Sources'/(contrast+'.tex')
+        data=read(p.with_suffix('.json'))
+        if data['Contrast']['Id']!=contrast:raise ValueError('Mismatched directed comparison')
+        for source in data['Inputs']:
+            if sha(Path(source['Path'])).lower()!=source['Sha256'].lower():raise ValueError('Changed calculation request')
         lines=[x for x in p.read_text(encoding='utf-8-sig').splitlines() if x.startswith(decision+' & '+signal+' & ')]
-        if len(lines)!=1:raise ValueError((filename,decision,signal,len(lines)))
-        cells=lines[0].removesuffix('\\\\').split(' & ')
-        cells.insert(-1,'$0$')
+        if len(lines)!=1:raise ValueError((contrast,decision,signal,len(lines)))
         provenance.append({'Path':str(p.relative_to(ROOT)),'Sha256':sha(p),'SelectedLine':lines[0],
-                           'Residual':'Zero required by the publication selector; unchanged actions are selected by offsetting-effect checks.'})
-        return ' & '.join(cells)+r'\\'
-    def trigger(filename,decision,signals):
-        p=MECHANISMS/'Fee trigger comparison'/filename;j=read(p)
-        rows=[x for x in j['Changes'] if x['Decision']==decision and x['Signal'] in signals]
-        if len(rows)!=len(signals):raise ValueError((filename,decision,signals))
-        a=rows[0]['Allocation']
-        for row in rows:
-            if row['CounterfactualUndefined']:raise ValueError('Undefined comparison')
-            if any(abs(row['Allocation'][k]-a[k])>1e-7 for k in a):raise ValueError('Cannot group different allocations')
-            if abs(a['Change']-sum(a[k] for k in ['Direct','Entry','Offers','Exit','SelectionResidual']))>1e-7:raise ValueError('Accounting residual')
-        def number(x):return '0' if abs(x)<.00001 else f'{x:+.1f}'.rstrip('0').rstrip('.')
-        signal=f'{rows[0]["SignalValue"]:.2f}'+(f'--{rows[-1]["SignalValue"]:.2f}' if len(rows)>1 else '')
-        sensitivity='Yes' if any(x['TieSensitive'] or x['CompletionSensitive'] for x in rows) else 'No'
-        cells=['P files' if decision=='P Files' else 'D answers',signal,
-               f'${a["Original"]:.1f}\\%\\to {a["Target"]:.1f}\\%$']
-        cells += ['$'+number(a[k])+'$' for k in ['Direct','Entry','Offers','Exit','SelectionResidual']]
-        cells += [sensitivity]
-        provenance.append({'Path':str(p.relative_to(ROOT)),'Sha256':sha(p),'Rows':rows})
-        return ' & '.join(cells)+r'\\'
+                           'DataPath':str(p.with_suffix('.json').relative_to(ROOT)),
+                           'DataSha256':sha(p.with_suffix('.json')),
+                           'Validation':'Common focus or offsetting-effect selection in original, mixed and tighter mixed representations; residual retained.'})
+        return lines[0]
     panels=[
         ('American to Trial Fee-Shifting; risk neutral',[
-            published('American to British - risk neutral.tex','P files','0.25')]),
+            published('american-to-trial-risk-neutral-cost-1','P files','0.25')]),
         ('Trial to Complete Fee-Shifting; risk neutral',[
-            trigger('exit-fees-risk-neutral-cost-1.json','D Answers',[7,8,9,10]),
-            trigger('exit-fees-risk-neutral-cost-1.json','P Files',[3]),
-            trigger('exit-fees-risk-neutral-cost-1.json','P Files',[4])]),
+            published('trial-to-complete-risk-neutral-cost-1','D answers','0.65--0.95'),
+            published('trial-to-complete-risk-neutral-cost-1','P files','0.25')]),
         ('Trial to Complete Fee-Shifting; risk averse',[
-            trigger('exit-fees-moderate-risk-aversion-cost-1.json','D Answers',[8])]),
+            published('trial-to-complete-risk-averse-cost-1','D answers','0.75')]),
+        ('American to Complete Fee-Shifting; risk neutral',[
+            published('american-to-complete-risk-neutral-cost-1','P files','0.25')]),
         ('Risk neutral to risk averse; American',[
-            published('Risk neutral to risk averse - American rule.tex','P files','0.25'),
-            published('Risk neutral to risk averse - American rule.tex','P files','0.35')])]
+            published('risk-neutral-to-risk-averse-american-cost-1','P files','0.25'),
+            published('risk-neutral-to-risk-averse-american-cost-1','P files','0.35')])]
     body=r'''\begin{tabularx}{\linewidth}{@{}lcc*{5}{>{\centering\arraybackslash}X}c@{}}
 \toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Residual & Sensitive \\'''
     for label,rows in panels:
@@ -127,8 +114,9 @@ def mechanisms():
              'Opponent entry, offers and exit average marginal contributions over all six replacement orders. Residual is retained explicitly. '
              'The last row shows an unchanged filing policy with offsetting direct and opponent effects. These are counterfactual decompositions of selected '
              'equilibria, not observed adjustment paths or identified causal effects. Sensitive flags recorded tie or off-path completion sensitivity. '
-             'Original fee/risk rows survived the saved original, mixed and tighter mixed checks; trigger rows have the checks recorded in their separate '
-             'fee-trigger calculation packet, not the full three-representation validation. Full policies, reach, unrounded allocations and provenance are in JSON.')
+             'Every selected coordinate satisfies the common focus or offsetting-effect checks in the original, mixed and tighter mixed representations. '
+             'Displayed allocations are from the original representation; passing the common selection is not a claim that every numerical contribution is invariant. '
+             'Full policies, reach, unrounded allocations and provenance for all 90 directed core comparisons are in the supplemental JSON.')
     write(source.with_suffix('.txt'),caption+'\n')
     write(source.with_suffix('.json'),json.dumps({'Caption':caption,'SelectedSources':provenance},indent=2)+'\n')
     compile_tex(source)

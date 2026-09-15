@@ -2,13 +2,15 @@
 
 This folder is reserved for analyses or illustrations generated separately from the routine parameter study. Placement here does not determine whether a particular exhibit appears in the main text or an online appendix. Standard parameter variation belongs in Results.
 
+The directed-comparison expansion is complete: 90 original/mixed/tighter-checked tables cover all six fee transitions within each risk preference and both risk directions within every fee rule, across five costs. The comparison audit verifies 6,520 printed numeric entries and 2,760 fingerprints; all 90 tables and revised main Table 3 were visually reviewed. The two remaining exact path replays and the six-case fifty-start search are still running. Their old reference outputs will be replaced only after the new records verify. See expansion-status.json and each workflow's completion manifests.
+
 | Folder | Contents and role |
 |---|---|
 | [Equilibrium solution paths](<Equilibrium solution paths/README.md>) | Separate trajectory/replay calculations, original solve logs, and interactive path diagrams |
 | [Game tree diagrams](<Game tree diagrams/README.md>) | Reduced structural trees, worked saved-equilibrium path, and the primitives/fee-trigger table |
 | [Liability signals diagrams](<Liability signals diagrams/README.md>) | Separate signal-architecture probability illustrations and their data |
-| [Multiple equilibria](<Multiple equilibria/README.md>) | The completed multiple-start study, recovery/dispersion records and associated diagrams |
-| [Equilibrium strategy changes](<Equilibrium strategy changes/README.md>) | Counterfactual best-response calculations, mixing checks, fee-trigger comparisons and the selected main strategy table |
+| [Multiple equilibria](<Multiple equilibria/README.md>) | Six-case multiple-start study, recovery/dispersion records and associated diagrams; expansion running |
+| [Equilibrium strategy changes](<Equilibrium strategy changes/README.md>) | All 90 directed fee/risk comparisons, mixing checks and the selected main strategy table |
 
 Participation restrictions, Cost comparisons, Risk aversion and Fee shifting on exit are no longer separate folders. Complete Fee-Shifting is in Results/Aggregated Data/Baseline. Cost, noise, preference and grid comparisons share the ordinary Results structure and exhibit formats. Multiple equilibria remains a separate production plan rather than part of the default retained-study run.
 

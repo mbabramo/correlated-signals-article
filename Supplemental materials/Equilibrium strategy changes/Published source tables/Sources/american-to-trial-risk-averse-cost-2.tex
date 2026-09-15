@@ -1,0 +1,31 @@
+% Input request SHA-256: 0ac4c182d99593f285b915d17b3ff72b9bec427d0fb7d6248462bf840ca52e7c
+% Input request SHA-256: d43852930126fab19c7c257eb2f60e11bdd673e8d8777cadefb6d1725e795ce5
+% Input request SHA-256: fb678f328fe4672a59c3df29983fb4cce7ea4a2b6f31ec837e86ffa3e750649b
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+\multicolumn{9}{l}{\textit{Changed actions}}\\[2pt]
+P files & 0.35 & $0\%\to 100\%$ & $0$ & $0$ & $+50$ & $+50$ & $0$ & Yes\\
+P commits to abandon$^{*}$ & 0.45 & $0\%\to 100\%$ & $0$ & $+33.3$ & $+33.3$ & $+33.3$ & $0$ & Yes\\
+P commits to abandon & 0.55 & $13.7\%\to 100\%$ & $+86.3$ & $0$ & $0$ & $0$ & $0$ & Yes\\
+P commits to abandon & 0.65 & $59.9\%\to 100\%$ & $+40.1$ & $0$ & $0$ & $0$ & $0$ & Yes\\
+P demand, exit & 0.55 & $0.85\to 0.45$ & $0.00$ & $-0.15$ & $-0.25$ & $0.00$ & $0.00$ & Yes\\
+P demand, exit 0.45 & 0.65 & $0\%\to 100\%$ & $0$ & $0$ & $0$ & $+100$ & $0$ & Yes\\
+P demand, exit 0.75 & 0.65 & $81\%\to 0\%$ & $0$ & $-27$ & $-27$ & $-27$ & $0$ & Yes\\
+P demand, exit 0.85 & 0.65 & $19\%\to 0\%$ & $0$ & $-6.3$ & $-6.3$ & $-6.3$ & $0$ & Yes\\
+D answers & 0.45 & $58\%\to 100\%$ & $-58$ & $+33.3$ & $+33.3$ & $+33.3$ & $0$ & Yes\\
+D commits to default$^{*}$ & 0.25 & $0\%\to 100\%$ & $+100$ & $-16.7$ & $+33.3$ & $-16.7$ & $0$ & Yes\\
+D commits to default$^{*}$ & 0.35 & $3.6\%\to 100\%$ & $+96.4$ & $0$ & $0$ & $0$ & $0$ & Yes\\
+D offer, exit$^{*}$ & 0.35 & $0.05\to 0.45$ & $0.00$ & $+0.133$ & $+0.233$ & $+0.033$ & $0.00$ & Yes\\
+D offer, exit$^{*}$ & 0.45 & $0.05\to 0.45$ & $+0.80$ & $-0.017$ & $-0.067$ & $-0.317$ & $0.00$ & Yes\\
+\midrule \multicolumn{9}{l}{\textit{Unchanged actions with offsetting effects}}\\[2pt]
+P commits to abandon & 0.85--0.95 & $0\%\to 0\%$ & $+100$ & $0$ & $0$ & $-100$ & $0$ & Yes\\
+D commits to default & 0.05 & $0\%\to 0\%$ & $+100$ & $-33.3$ & $+16.7$ & $-83.3$ & $0$ & Yes\\
+D commits to default$^{*}$ & 0.15 & $0\%\to 0\%$ & $+100$ & $-33.3$ & $+16.7$ & $-83.3$ & $0$ & Yes\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

@@ -1,0 +1,29 @@
+{
+  "OutputDirectory": ".",
+  "Sources": [
+    {
+      "Id": "risk-averse-american-cost-2",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-2__Fee-American",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-averse-american-cost-2-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-averse-american-cost-2-InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Id": "risk-averse-trial-cost-2",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-2__Fee-British",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-averse-trial-cost-2-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-averse-trial-cost-2-InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "american-to-trial-risk-averse-cost-2",
+      "Label": "american-to-trial-risk-averse-cost-2",
+      "Source": "risk-averse-american-cost-2",
+      "Target": "risk-averse-trial-cost-2"
+    }
+  ],
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}

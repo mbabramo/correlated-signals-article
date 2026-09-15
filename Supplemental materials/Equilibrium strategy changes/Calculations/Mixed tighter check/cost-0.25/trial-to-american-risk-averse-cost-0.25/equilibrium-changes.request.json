@@ -1,0 +1,31 @@
+{
+  "OutputDirectory": ".",
+  "Sources": [
+    {
+      "Id": "risk-averse-trial-cost-0.25",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-0.25__Fee-British",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-averse-trial-cost-0.25-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-averse-trial-cost-0.25-InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../../Mixing/Mixed tighter check/risk-averse-trial-cost-0.25/risk-averse-trial-cost-0.25-profile.json"
+    },
+    {
+      "Id": "risk-averse-american-cost-0.25",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-0.25__Fee-American",
+      "EquilibriumFile": "../../../../Sources/Profiles/risk-averse-american-cost-0.25-equ.csv",
+      "ActionReportFile": "../../../../Sources/Profiles/risk-averse-american-cost-0.25-InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "ProfileFile": "../../../Mixing/Mixed tighter check/risk-averse-american-cost-0.25/risk-averse-american-cost-0.25-profile.json"
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "trial-to-american-risk-averse-cost-0.25",
+      "Label": "trial-to-american-risk-averse-cost-0.25",
+      "Source": "risk-averse-trial-cost-0.25",
+      "Target": "risk-averse-american-cost-0.25"
+    }
+  ],
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}

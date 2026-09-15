@@ -1,0 +1,30 @@
+% Input request SHA-256: 14424b81589f9d773e854bc068d1e7530e7901b2f0d6a93b0cb6f296e87a8202
+% Input request SHA-256: aee31de840308555cb85c3d548378cb892b0bfa8ec5dc6b2d677c568217927da
+% Input request SHA-256: c68fc57322960e95fec7e94c832f56f858b4ea86df349434b58ec63e260cbd56
+\documentclass[10pt,border=8pt,varwidth=7.5in]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,tabularx,microtype}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{document}
+\begin{minipage}{7.5in}{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{5}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & Remaining & Sensitive \\\midrule
+\multicolumn{9}{l}{\textit{Changed actions}}\\[2pt]
+P files & 0.05--0.15 & $0\%\to 100\%$ & $0$ & $0$ & $+100$ & $0$ & $0$ & No\\
+P files & 0.25 & $87.8\%\to 100\%$ & $-87.8$ & $0$ & $+100$ & $0$ & $0$ & No\\
+P demand, continue$^{*}$ & 0.25 & $0.05\to 0.15$ & $0.00$ & $0.00$ & $+0.10$ & $0.00$ & $0.00$ & No\\
+P demand, continue$^{*}$ & 0.35 & $0.75\to 0.15$ & $-0.70$ & $0.00$ & $+0.10$ & $0.00$ & $0.00$ & No\\
+P demand, continue$^{*}$ & 0.45 & $0.75\to 0.15$ & $-0.70$ & $+0.317$ & $-0.183$ & $-0.033$ & $0.00$ & Yes\\
+P demand, continue & 0.75--0.85 & $0.95\to 0.85$ & $0.00$ & $-0.067$ & $-0.017$ & $-0.017$ & $0.00$ & Yes\\
+P demand, continue & 0.95 & $0.95\to 0.85$ & $0.00$ & $-0.017$ & $-0.067$ & $-0.017$ & $0.00$ & Yes\\
+D answers & 0.65 & $8.3\%\to 100\%$ & $-8.3$ & $0$ & $+100$ & $0$ & $0$ & No\\
+D answers & 0.75--0.95 & $0\%\to 100\%$ & $0$ & $0$ & $+100$ & $0$ & $0$ & No\\
+D offer, continue & 0.05--0.15 & $0.05\to 0.15$ & $0.00$ & $0.00$ & $+0.10$ & $0.00$ & $0.00$ & No\\
+D offer, continue & 0.25--0.45 & $0.05\to 0.15$ & $0.00$ & $+0.017$ & $+0.067$ & $+0.017$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.55--0.65 & $0.05\to 0.85$ & $+0.90$ & $0.00$ & $-0.10$ & $0.00$ & $0.00$ & At some signals\\
+\midrule \multicolumn{9}{l}{\textit{Unchanged actions with offsetting effects}}\\[2pt]
+P files & 0.35 & $100\%\to 100\%$ & $-100$ & $0$ & $+100$ & $0$ & $0$ & No\\
+D answers & 0.55 & $100\%\to 100\%$ & $-100$ & $0$ & $+100$ & $0$ & $0$ & Yes\\
+D commits to default$^{*}$ & 0.55 & $0\%\to 0\%$ & $+100$ & $0$ & $-100$ & $0$ & $0$ & Yes\\
+\bottomrule\end{tabularx}}\end{minipage}\end{document}

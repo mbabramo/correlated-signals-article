@@ -71,9 +71,15 @@ def verify(compare=None):
     supp=ROOT/'Supplemental materials'
     expected={'Equilibrium solution paths','Equilibrium strategy changes','Game tree diagrams','Liability signals diagrams','Multiple equilibria'}
     assert {p.name for p in supp.iterdir() if p.is_dir()}==expected
-    relocation=read(supp/'Equilibrium strategy changes/Sources/relocation.json')
-    assert relocation['Completed']
-    for f in relocation['PreservedInputs']:check_fingerprint(f)
+    retained_profiles=read(supp/'Equilibrium strategy changes/Sources/profile-provenance.json')
+    for f in fingerprints(retained_profiles):check_fingerprint(f)
+    supplemental=read(supp/'Equilibrium strategy changes/Sources/supplemental-verification.json')
+    assert supplemental['Scope']=='complete supplemental expansion'
+    assert supplemental['DirectedContrasts']==90 and len(supplemental['Paths'])==6
+    assert supplemental['MultipleEquilibria']['OptionSetCount']==6
+    for filename in ['Equilibrium solution paths/equilibrium-paths-collection-manifest.json',
+                     'Multiple equilibria/multiple-equilibria-exhibits.json']:
+        for f in fingerprints(read(supp/filename)):check_fingerprint(f)
     supplemental_checks=0
     for p in supp.rglob('equilibrium-changes-manifest.json'):
         j=read(p);assert j['Schema']=='2'
@@ -83,7 +89,7 @@ def verify(compare=None):
         for filename in j['OutputJsonFiles']:
             out=read(Path(filename));assert out['Schema']=='2' and out['Changes'] is not None
     # Resolve only live request input fields; recorded requests retain historical paths.
-    fields={'EquilibriumFile','ActionReportFile','SourceRequest','OriginalLog','InputFile',
+    fields={'EquilibriumFile','ActionReportFile','ProfileFile','SourceRequest','OriginalLog','InputFile',
             'NumericalResultsCsv','BaselineNumericalCsv','ExtensionNumericalCsv','IndividualDirectory'}
     def input_paths(j,parent):
         if isinstance(j,dict):
@@ -102,12 +108,13 @@ def verify(compare=None):
         assert not any('Mandatory' in x for x in j['OptionSetNames'])
         batches.append({'Batch':name,'Cases':count,'Reused':len(j['ReusedEquilibria']),'ProductionCommit':j['GitCommit']})
     summary={'RoutineExhibits':len(artifacts),'Kinds':dict(kinds),'WelfareNumericCellsVerified':numeric,
-             'MainFigures':4,'MainTables':3,'PreservedSupplementalInputs':len({f['Path'] for f in relocation['PreservedInputs']}),
+             'MainFigures':4,'MainTables':3,'PreservedSupplementalInputs':len({f['Path'] for f in fingerprints(retained_profiles)}),
              'SupplementalFingerprintsVerified':supplemental_checks,'LiveSupplementalRequestsChecked':len(requests),
              'Batches':batches,'Errors':[],
              'VisualReview':'All 193 aggregate exhibits and all seven main exhibits inspected; representative individual charts inspected. Journal manuscript/proof integration is pending.',
              'CleanRegeneration':'937 TeX sources matched across two complete generations from empty generated folders. A later targeted regeneration removed legacy titles from individual diagrams; this record hashes the final outputs.',
-             'Scope':'Separate supplemental analyses were preserved and rebased, not recalculated. Further offer-support, Complete Fee-Shifting grid/multiple-start extensions remain pending.'}
+             'SupplementalExpansion':supplemental,
+             'Scope':'All 90 directed comparisons, mixing checks, six original exact paths and six-case multiple-start exhibits are included. Broader offer support and Complete Fee-Shifting finer-grid checks remain pending.'}
     write(RESULTS/'Run records/final-verification.json',summary)
     write(RESULTS/'Run records/final-artifact-hashes.json',artifacts)
     print(json.dumps(summary,indent=2))
