@@ -17,7 +17,7 @@ Start with the [table index](#table-index) below. Read [Methodology and Explanat
 | [Sources/Profiles](Sources/Profiles) | Frozen equilibrium and action-report inputs used by the comparisons and solution-path verification. These preserve the exact input bytes independently of later report regeneration. |
 | [Sources/Process Logs](<Sources/Process Logs>) | Execution logs and process records for these calculations and tables. |
 
-Table 3 in the article's top-level Tables folder draws selected rows from this collection. Inclusion here does not imply inclusion in the article or online appendix. The table PDFs have no captions embedded in the artwork; their filenames and this index identify the comparison and cost. The shared methodology supplies the explanation for all tables.
+The [manuscript strategy table](Tables/manuscript-strategy-mechanisms.pdf) includes every qualifying row for seven ordinary-cost comparisons: American to Trial and Trial to Complete under RN, the same two fee changes under RA, then RN to RA within American, Trial and Complete. The same selection function produces these panels and the individual tables; there is no additional illustrative-row filter. Its caption is in Sources/manuscript-strategy-mechanisms-caption.txt. The first PNG shows page one; additional page PNGs have numbered suffixes. The table PDFs have no captions embedded in the artwork; filenames and this index identify the comparison and cost. The shared methodology supplies the explanation for all tables.
 
 ## Table index
 
