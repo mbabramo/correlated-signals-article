@@ -19,7 +19,7 @@ Risk averse denotes symmetric CARA alpha 2 unless a different alpha is explicitl
 All displayed measures and disposition shares average over all potential disputes, including unfiled disputes.
 The three net monetary measures are prior-weighted meritorious-plaintiff recovery shortfall,
 nonliable-defendant burden, and liable-defendant excess burden above deserved damages. They include legal costs and fee transfers.
-Total expenditures count real resource costs and exclude transfers. Values are in damages units and shown to four decimals.
+Total expenditures count real resource costs and exclude transfers. Values are in damages units and shown to three decimals.
 
 Gross outcome error is E[|R-T|], averaged over all potential disputes. R is the base payment before legal costs and separately awarded fee transfers; T is true liability and damages equal one. Since payments lie in [0,1], error equals pi(1-E[R|T=1])+(1-pi)E[R|T=0]. Conditional means are intermediate calculations, not conditional headline outcomes. The configured truth prior is also used for the three net-burden contributions. Source reports are rounded. Fee rules still affect error through equilibrium behavior. The five measures are distinct, not additive welfare components.
 
