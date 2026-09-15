@@ -1,5 +1,14 @@
 # Correlated-signals article results
 
+> **Expansion pending (September 15, 2026).** This directory contains the verified
+> 124-case collection described below. The routine generator now requires 276 cases:
+> all three fee rules and both risk settings for every retained transformation.
+> An isolated rebuild is reusing these 124 profiles and solving 152 additional cases.
+> The expanded figures and tables will replace this collection after verification.
+> Complete Fee-Shifting and risk-averse coverage in the existing extension folders
+> is incomplete; their absence is not evidence of a zero effect. The separate
+> multiple-equilibrium searches are stopped.
+
 The routine study has 124 cases: 114 CS004 cases plus ten CS006EF Complete
 Fee-Shifting cases. The baseline crosses American, Trial Fee-Shifting and
 Complete Fee-Shifting with risk neutrality and symmetric CARA alpha 2, at costs
