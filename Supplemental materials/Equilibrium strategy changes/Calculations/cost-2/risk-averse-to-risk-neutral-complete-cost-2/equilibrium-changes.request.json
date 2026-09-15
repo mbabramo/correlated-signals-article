@@ -1,0 +1,29 @@
+{
+  "OutputDirectory": ".",
+  "Sources": [
+    {
+      "Id": "risk-averse-complete-cost-2",
+      "OptionSetName": "Specification-ModerateRiskAversion__Cost-2__Fee-British__ExitFees-AllUnilateralExits",
+      "EquilibriumFile": "../../../Sources/Profiles/risk-averse-complete-cost-2-equ.csv",
+      "ActionReportFile": "../../../Sources/Profiles/risk-averse-complete-cost-2-InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    },
+    {
+      "Id": "risk-neutral-complete-cost-2",
+      "OptionSetName": "Specification-Baseline__Cost-2__Fee-British__ExitFees-AllUnilateralExits",
+      "EquilibriumFile": "../../../Sources/Profiles/risk-neutral-complete-cost-2-equ.csv",
+      "ActionReportFile": "../../../Sources/Profiles/risk-neutral-complete-cost-2-InformationSetActions.csv",
+      "EquilibriumNumber": 1
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "risk-averse-to-risk-neutral-complete-cost-2",
+      "Label": "risk-averse-to-risk-neutral-complete-cost-2",
+      "Source": "risk-averse-complete-cost-2",
+      "Target": "risk-neutral-complete-cost-2"
+    }
+  ],
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}

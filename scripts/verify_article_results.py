@@ -114,7 +114,7 @@ def verify(compare=None):
              'VisualReview':'All 193 aggregate exhibits and all seven main exhibits inspected; representative individual charts inspected. Journal manuscript/proof integration is pending.',
              'CleanRegeneration':'937 TeX sources matched across two complete generations from empty generated folders. A later targeted regeneration removed legacy titles from individual diagrams; this record hashes the final outputs.',
              'SupplementalExpansion':supplemental,
-             'Scope':'All 90 directed comparisons, mixing checks, six original exact paths and six-case multiple-start exhibits are included. Broader offer support and Complete Fee-Shifting finer-grid checks remain pending.'}
+             'Scope':'Separate workflows cover 90 saved-equilibrium directed comparisons, six original exact paths and the six-case multiple-start study; their own manifests establish completion. Broader offer support and Complete Fee-Shifting finer-grid checks remain pending.'}
     write(RESULTS/'Run records/final-verification.json',summary)
     write(RESULTS/'Run records/final-artifact-hashes.json',artifacts)
     print(json.dumps(summary,indent=2))

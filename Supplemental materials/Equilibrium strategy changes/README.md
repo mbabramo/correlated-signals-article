@@ -4,7 +4,7 @@ These tables examine how equilibrium litigation strategies change when the fee r
 
 The collection contains 90 directed comparisons across 30 equilibrium profiles. It covers American, Trial Fee-Shifting and Complete Fee-Shifting at cost multipliers 0.25, 0.5, 1, 2, 4. RN means risk neutral; RA means both parties have CARA risk aversion with coefficient 2. Other available coefficients are labeled explicitly. Each fee change is evaluated in both directions within each risk level, and each risk change in both directions within each fee rule. Costs are held fixed; a risk comparison changes both parties' preferences together.
 
-Start with the [table index](#table-index) below. Read [Methodology and Explanation](<Methodology and Explanation.md>) for the column definitions, row-selection criteria, calculation types and limitations. The decompositions describe selected equilibria; their contributions are not uniquely identified causal effects or observed paths of adjustment.
+Start with the [table index](#table-index) below. Read [Methodology and Explanation](<Methodology and Explanation.md>) for the column definitions, row-selection criteria and limitations. The tables use the same saved equilibria as the strategy figures and outcome reports. Their contributions are not uniquely identified causal effects or observed paths of adjustment.
 
 ## Folder guide
 
@@ -12,7 +12,7 @@ Start with the [table index](#table-index) below. Read [Methodology and Explanat
 |---|---|
 | [Tables](Tables) | One PDF and PNG per directed comparison and cost. These are a collection of candidate rows and panels for manuscript selection. |
 | [Tables/Sources](Tables/Sources) | C#-generated TeX and JSON for each table. The JSON contains selected values, scenario identifiers and input fingerprints. |
-| [Calculations](Calculations) | Full comparisons using original profiles, mixed profiles and a tighter mixing check; the Mixing subfolder holds the searches that produce the alternative profiles. |
+| [Calculations](Calculations) | Full comparisons of the saved equilibrium profiles, arranged by cost and directed contrast, with counterfactual best responses, tie/completion checks and residuals. |
 | [Sources/Profiles](Sources/Profiles) | Frozen equilibrium and action-report inputs used by the comparisons and solution-path verification. These preserve the exact input bytes independently of later report regeneration. |
 | [Sources/Process Logs](<Sources/Process Logs>) | Execution logs and process records for these calculations and tables. |
 

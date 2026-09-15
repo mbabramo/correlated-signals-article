@@ -80,13 +80,32 @@ def mechanisms():
         if data['Contrast']['Id']!=contrast:raise ValueError('Mismatched directed comparison')
         for source in data['Inputs']:
             if sha(Path(source['Path'])).lower()!=source['Sha256'].lower():raise ValueError('Changed calculation request')
-        lines=[x for x in p.read_text(encoding='utf-8-sig').splitlines() if x.startswith(decision+' & '+signal+' & ')]
-        if len(lines)!=1:raise ValueError((contrast,decision,signal,len(lines)))
-        provenance.append({'Path':str(p.relative_to(ROOT)),'Sha256':sha(p),'SelectedLine':lines[0],
+        limits=[float(x) for x in signal.split('--')];low,high=limits[0],limits[-1]
+        rows=[r for r in data['SelectedRows'] if r['Decision'].lower()==decision.lower()
+              and low-1e-8<=r['SignalValue']<=high+1e-8]
+        if not rows or any(r['Metric']!='decision probability' or r['CounterfactualUndefined'] for r in rows):
+            raise ValueError((contrast,decision,signal,'Missing defined binary-policy selection'))
+        if abs(min(r['SignalValue'] for r in rows)-low)>1e-8 or abs(max(r['SignalValue'] for r in rows)-high)>1e-8:
+            raise ValueError('Incomplete selected signal range')
+        a=rows[0]['Allocation'];columns=['Original','Target','Direct','Entry','Offers','Exit','SelectionResidual']
+        if any(abs(r['Allocation'][k]-a[k])>1e-6 for r in rows for k in columns):
+            raise ValueError('Selected signals do not share the same numerical row')
+        if any(r['UnreachedCoalitions']!=rows[0]['UnreachedCoalitions'] for r in rows):
+            raise ValueError('Selected signals have different intermediate reach patterns')
+        def number(v,signed=False):
+            if abs(v)<.05:v=0
+            return ('+' if signed and v>0 else '')+f'{v:.1f}'.rstrip('0').rstrip('.')
+        label=decision+(r'$^{*}$' if rows[0]['UnreachedCoalitions'] else '')
+        endpoints='$'+number(a['Original'])+r'\%\to '+number(a['Target'])+r'\%$'
+        flags=sum(r['TieSensitive'] or r['CompletionSensitive'] for r in rows)
+        sensitive='No' if flags==0 else 'Yes' if flags==len(rows) else 'At some signals'
+        line=' & '.join([label,signal,endpoints]+['$'+number(a[k],True)+'$' for k in columns[2:]]+[sensitive])+r'\\'
+        provenance.append({'Path':str(p.relative_to(ROOT)),'Sha256':sha(p),'SelectedLine':line,
                            'DataPath':str(p.with_suffix('.json').relative_to(ROOT)),
                            'DataSha256':sha(p.with_suffix('.json')),
-                           'Validation':'Common focus or offsetting-effect selection in original, mixed and tighter mixed representations; residual retained.'})
-        return lines[0]
+                           'SelectedCoordinates':[{'Key':r['Key'],'Action':r['Action']} for r in rows],
+                           'Validation':'Strict conditional action-loss or offsetting-effect selection in the saved equilibria; residual and sensitivity retained.'})
+        return line
     panels=[
         ('American to Trial Fee-Shifting; risk neutral',[
             comparison_row('american-to-trial-risk-neutral-cost-1','P files','0.25')]),
@@ -114,8 +133,8 @@ def mechanisms():
              'Opponent entry, offers and exit average marginal contributions over all six replacement orders. Residual is retained explicitly. '
              'The last row shows an unchanged filing policy with offsetting direct and opponent effects. These are counterfactual decompositions of selected '
              'equilibria, not observed adjustment paths or identified causal effects. Sensitive flags recorded tie or off-path completion sensitivity. '
-             'Every selected coordinate satisfies the common focus or offsetting-effect checks in the original, mixed and tighter mixed representations. '
-             'Displayed allocations are from the original representation; passing the common selection is not a claim that every numerical contribution is invariant. '
+             'Every selected coordinate satisfies the strict conditional action-loss or offsetting-effect criterion in the saved equilibrium profiles. '
+             'Tie and off-path completion sensitivity checks and endpoint residuals remain explicit; the decomposition need not be invariant across other equilibria. '
              'Full policies, reach, unrounded allocations and provenance for all 90 directed core comparisons are in the supplemental JSON.')
     write(source.with_suffix('.txt'),caption+'\n')
     write(source.with_suffix('.json'),json.dumps({'Caption':caption,'SelectedSources':provenance},indent=2)+'\n')
