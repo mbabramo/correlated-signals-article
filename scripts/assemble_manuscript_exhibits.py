@@ -21,6 +21,15 @@ def wrapper(body,width='16cm'):
             r'\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,tabularx,array,microtype}'+'\n'+
             r'\begin{document}\begin{minipage}{'+width+r'}\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.2}'+'\n'+
             body+'\n'+r'\end{minipage}\end{document}'+'\n')
+def artifact_path(source,extension):
+    if source.parent==MECHANISMS/'Sources/Tex':
+        directory=(MECHANISMS/'Tables' if extension in ['.pdf','.png'] else
+                   MECHANISMS/'Sources/Json' if extension=='.json' else
+                   MECHANISMS/'Sources' if extension=='.txt' else source.parent)
+        return directory/(source.stem+extension)
+    return (source.parent.parent/(source.stem+extension)
+            if source.parent.name=='Sources' and extension in ['.pdf','.png'] else source.with_suffix(extension))
+
 def compile_tex(path):
     with tempfile.TemporaryDirectory(prefix='acesim-main-') as tmp:
         for _ in range(2):
@@ -29,8 +38,9 @@ def compile_tex(path):
             if result.returncode:raise RuntimeError(result.stdout.decode(errors='replace')[-3500:])
         pdf=Path(tmp)/'exhibit.pdf'
         subprocess.run(['pdftoppm','-png','-singlefile','-r','150',str(pdf),str(Path(tmp)/'exhibit')],check=True,capture_output=True)
-        destination=path.parent.parent if path.parent.name=='Sources' else path.parent
-        for ext in ['.pdf','.png']:shutil.copy2(Path(tmp)/('exhibit'+ext),destination/(path.stem+ext))
+        for ext in ['.pdf','.png']:
+            destination=artifact_path(path,ext);destination.parent.mkdir(parents=True,exist_ok=True)
+            shutil.copy2(Path(tmp)/('exhibit'+ext),destination)
 
 def primitives():
     source=SUPP/'Game tree diagrams/Sources/model-primitives.tex'
@@ -75,8 +85,9 @@ Settlement & Own costs & Own costs & Own costs \\
 def mechanisms():
     provenance=[]
     def comparison_row(contrast,decision,signal):
-        p=MECHANISMS/'Tables/Sources'/(contrast+'.tex')
-        data=read(p.with_suffix('.json'))
+        p=MECHANISMS/'Sources/Tex'/(contrast+'.tex')
+        data_path=MECHANISMS/'Sources/Json'/(contrast+'.json')
+        data=read(data_path)
         if data['Contrast']['Id']!=contrast:raise ValueError('Mismatched directed comparison')
         for source in data['Inputs']:
             if sha(Path(source['Path'])).lower()!=source['Sha256'].lower():raise ValueError('Changed calculation request')
@@ -101,8 +112,8 @@ def mechanisms():
         sensitive='No' if flags==0 else 'Yes' if flags==len(rows) else 'At some signals'
         line=' & '.join([label,signal,endpoints]+['$'+number(a[k],True)+'$' for k in columns[2:]]+[sensitive])+r'\\'
         provenance.append({'Path':str(p.relative_to(ROOT)),'Sha256':sha(p),'SelectedLine':line,
-                           'DataPath':str(p.with_suffix('.json').relative_to(ROOT)),
-                           'DataSha256':sha(p.with_suffix('.json')),
+                           'DataPath':str(data_path.relative_to(ROOT)),
+                           'DataSha256':sha(data_path),
                            'SelectedCoordinates':[{'Key':r['Key'],'Action':r['Action']} for r in rows],
                            'Validation':'Strict conditional action-loss or offsetting-effect selection in the saved equilibria; residual and sensitivity retained.'})
         return line
@@ -124,7 +135,7 @@ def mechanisms():
     for label,rows in panels:
         body+='\n'+r'\midrule\multicolumn{9}{@{}l}{\textit{'+label+r'}}\\[2pt]'+'\n'+'\n'.join(rows)
     body+='\n'+r'\bottomrule\end{tabularx}'
-    source=MECHANISMS/'Sources/selected-strategy-mechanisms.tex'
+    source=MECHANISMS/'Sources/Tex/selected-strategy-mechanisms.tex'
     # Use one common percentage-point notation in the caption and keep numeric columns compact.
     body=body.replace(r'\,\mathrm{pp}','')
     write(source,wrapper(body,'18cm'))
@@ -136,8 +147,8 @@ def mechanisms():
              'Every selected coordinate satisfies the strict conditional action-loss or offsetting-effect criterion in the saved equilibrium profiles. '
              'Tie and off-path completion sensitivity checks and endpoint residuals remain explicit; the decomposition need not be invariant across other equilibria. '
              'Full policies, reach, unrounded allocations and provenance for all 90 directed core comparisons are in the supplemental JSON.')
-    write(source.with_suffix('.txt'),caption+'\n')
-    write(source.with_suffix('.json'),json.dumps({'Caption':caption,'SelectedSources':provenance},indent=2)+'\n')
+    write(artifact_path(source,'.txt'),caption+'\n')
+    write(artifact_path(source,'.json'),json.dumps({'Caption':caption,'SelectedSources':provenance},indent=2)+'\n')
     compile_tex(source)
     return source
 
@@ -155,7 +166,7 @@ def assemble():
     for folder,stem,source in specs:
         output=ROOT/folder
         for ext in ['.pdf','.png','.tex','.json','.txt']:
-            origin=(source.parent.parent/(source.stem+ext) if source.parent.name=='Sources' and ext in ['.pdf','.png'] else source.with_suffix(ext))
+            origin=artifact_path(source,ext)
             if stem.startswith('Figure 2') and ext=='.json':
                 origin=SUPP/'Game tree diagrams/worked equilibrium paths.json'
             if not origin.exists():continue
@@ -189,7 +200,7 @@ def assemble():
             '| Exhibit | Canonical source |','|---|---|']
         for selected_folder,stem,source in specs:
             if selected_folder!=folder:continue
-            canonical=(source.parent.parent/(source.stem+'.pdf') if source.parent.name=='Sources' else source.with_suffix('.pdf'))
+            canonical=artifact_path(source,'.pdf')
             lines.append(f'| [{stem}](<{stem}.pdf>) | [{canonical.stem}](<../{canonical.relative_to(ROOT).as_posix()}>) |')
         lines+=['','Regenerate with `python scripts/assemble_manuscript_exhibits.py` from the article repository. The script uses saved results and separate diagnostic calculations; it does not determine equilibria. `manuscript-exhibits.json` records the source/output hashes. After importing a new Results collection, rerun assembly to refresh these copies.','',
             'The revision plan retains four main figures and three main tables. Numbered online appendices, manuscript insertion and submission-proof review remain separate writing and packaging work.']

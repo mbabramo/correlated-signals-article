@@ -11,8 +11,9 @@ Start with the [table index](#table-index) below. Read [Methodology and Explanat
 | Folder | Contents |
 |---|---|
 | [Tables](Tables) | One PDF and PNG per directed comparison and cost. These are a collection of candidate rows and panels for manuscript selection. |
-| [Tables/Sources](Tables/Sources) | C#-generated TeX and JSON for each table. The JSON contains selected values, scenario identifiers and input fingerprints. |
-| [Calculations](Calculations) | Full comparisons of the saved equilibrium profiles, arranged by cost and directed contrast, with counterfactual best responses, tie/completion checks and residuals. |
+| [Sources/Tex](Sources/Tex) | C#-generated editable table layouts. |
+| [Sources/Json](Sources/Json) | Selected table values, scenario identifiers and input fingerprints. Filenames match the TeX, PDF and PNG files. |
+| [Data](Data) | Complete numerical results arranged by cost and directed contrast, including counterfactual best responses, tie/completion checks and residuals, with requests and provenance records. |
 | [Sources/Profiles](Sources/Profiles) | Frozen equilibrium and action-report inputs used by the comparisons and solution-path verification. These preserve the exact input bytes independently of later report regeneration. |
 | [Sources/Process Logs](<Sources/Process Logs>) | Execution logs and process records for these calculations and tables. |
 
