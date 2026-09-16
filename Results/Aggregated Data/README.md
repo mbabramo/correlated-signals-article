@@ -1,6 +1,6 @@
 # Welfare outcomes and dispositions
 
-124 saved cases; 68 specification/cost/risk views, each with a separate welfare-outcomes table and disposition chart.
+276 saved cases; 138 specification/cost/risk views, each with a separate welfare-outcomes table and disposition chart.
 Baseline contains the three fee rules crossed with risk neutrality/risk aversion. Each available risk has its own folder; Risk Comparison combines preferences. Figures and tables share these folders, one pair per cost. Sources contains editable TeX and exact data; PDF/PNG sit directly in the risk folder.
 Extensions receive exactly the same formats for their available cases. Absence of complete fee-shifting results
 in an extension is not imputed; the inventory below records coverage. Generating a saved extension does not
@@ -49,49 +49,49 @@ Changing any primitive beyond preferences/fee rule within a group is rejected ra
 
 | Family | Cost | Cases | Available fee rules |
 |---|---:|---:|---|
-| all-costs-avoidable | 0.25 | 2 | American, Trial Fee-Shifting |
-| all-costs-avoidable | 0.5 | 2 | American, Trial Fee-Shifting |
-| all-costs-avoidable | 1 | 2 | American, Trial Fee-Shifting |
-| all-costs-avoidable | 2 | 2 | American, Trial Fee-Shifting |
-| all-costs-avoidable | 4 | 2 | American, Trial Fee-Shifting |
-| all-costs-sunk | 0.25 | 2 | American, Trial Fee-Shifting |
-| all-costs-sunk | 0.5 | 2 | American, Trial Fee-Shifting |
-| all-costs-sunk | 1 | 2 | American, Trial Fee-Shifting |
-| all-costs-sunk | 2 | 2 | American, Trial Fee-Shifting |
-| all-costs-sunk | 4 | 2 | American, Trial Fee-Shifting |
+| all-costs-avoidable | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-avoidable | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-avoidable | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-avoidable | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-avoidable | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-sunk | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-sunk | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-sunk | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-sunk | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| all-costs-sunk | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
 | baseline | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
 | baseline | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
 | baseline | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
 | baseline | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
 | baseline | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
-| baseline-offers-15 | 1 | 4 | American, Trial Fee-Shifting |
-| center-weighted-continuous-merits | 0.25 | 2 | American, Trial Fee-Shifting |
-| center-weighted-continuous-merits | 0.5 | 2 | American, Trial Fee-Shifting |
-| center-weighted-continuous-merits | 1 | 2 | American, Trial Fee-Shifting |
-| center-weighted-continuous-merits | 2 | 2 | American, Trial Fee-Shifting |
-| center-weighted-continuous-merits | 4 | 2 | American, Trial Fee-Shifting |
-| direct-binary-state-signals | 0.25 | 2 | American, Trial Fee-Shifting |
-| direct-binary-state-signals | 0.5 | 2 | American, Trial Fee-Shifting |
-| direct-binary-state-signals | 1 | 2 | American, Trial Fee-Shifting |
-| direct-binary-state-signals | 2 | 2 | American, Trial Fee-Shifting |
-| direct-binary-state-signals | 4 | 2 | American, Trial Fee-Shifting |
-| high-noise | 0.25 | 2 | American, Trial Fee-Shifting |
-| high-noise | 0.5 | 2 | American, Trial Fee-Shifting |
-| high-noise | 1 | 2 | American, Trial Fee-Shifting |
-| high-noise | 2 | 2 | American, Trial Fee-Shifting |
-| high-noise | 4 | 2 | American, Trial Fee-Shifting |
-| low-noise | 0.25 | 4 | American, Trial Fee-Shifting |
-| low-noise | 0.5 | 4 | American, Trial Fee-Shifting |
-| low-noise | 1 | 4 | American, Trial Fee-Shifting |
-| low-noise | 2 | 4 | American, Trial Fee-Shifting |
-| low-noise | 4 | 4 | American, Trial Fee-Shifting |
-| polarized-continuous-merits | 0.25 | 2 | American, Trial Fee-Shifting |
-| polarized-continuous-merits | 0.5 | 2 | American, Trial Fee-Shifting |
-| polarized-continuous-merits | 1 | 2 | American, Trial Fee-Shifting |
-| polarized-continuous-merits | 2 | 2 | American, Trial Fee-Shifting |
-| polarized-continuous-merits | 4 | 2 | American, Trial Fee-Shifting |
-| truth-conditioned-latent-merits | 0.25 | 2 | American, Trial Fee-Shifting |
-| truth-conditioned-latent-merits | 0.5 | 2 | American, Trial Fee-Shifting |
-| truth-conditioned-latent-merits | 1 | 2 | American, Trial Fee-Shifting |
-| truth-conditioned-latent-merits | 2 | 2 | American, Trial Fee-Shifting |
-| truth-conditioned-latent-merits | 4 | 2 | American, Trial Fee-Shifting |
+| baseline-offers-15 | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| center-weighted-continuous-merits | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| center-weighted-continuous-merits | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| center-weighted-continuous-merits | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| center-weighted-continuous-merits | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| center-weighted-continuous-merits | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| direct-binary-state-signals | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| direct-binary-state-signals | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| direct-binary-state-signals | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| direct-binary-state-signals | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| direct-binary-state-signals | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| high-noise | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| high-noise | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| high-noise | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| high-noise | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| high-noise | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| low-noise | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| low-noise | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| low-noise | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| low-noise | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| low-noise | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| polarized-continuous-merits | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| polarized-continuous-merits | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| polarized-continuous-merits | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| polarized-continuous-merits | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| polarized-continuous-merits | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| truth-conditioned-latent-merits | 0.25 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| truth-conditioned-latent-merits | 0.5 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| truth-conditioned-latent-merits | 1 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| truth-conditioned-latent-merits | 2 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |
+| truth-conditioned-latent-merits | 4 | 6 | American, Trial Fee-Shifting, Complete Fee-Shifting |

@@ -1,5 +1,7 @@
 # Multiple-equilibrium robustness
 
+The completed two-case reference study below is retained while a fresh six-case, fifty-start study is prepared for all three fee rules under RN and RA. The earlier expansion was stopped after a solver fallback failure. The repaired search starts from a fresh committed source and output directory after the verified routine-results commit; these reference files do not represent that new run.
+
 This directory replaces the previous `Robustness checks` material with the completed clean production output at numerical commit `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`. The preserved filename prefix `CS004ME` is the solver's identifier for this multiple-equilibrium run.
 
 Both cases use the principal baseline, cost multiplier 1, ten offers, ten party signals, and two court signals. One case uses the American fee rule and the other Trial Fee-Shifting (trial only). Complete Fee-Shifting was not tested in this separate study.

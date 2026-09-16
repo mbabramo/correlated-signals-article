@@ -1,0 +1,62 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns, positioning}
+\usetikzlibrary{shapes.misc}
+\usepackage[outline]{contour}
+\contourlength{1.5pt} 
+
+
+\begin{document}
+\begin{tikzpicture}
+\draw[pattern=north east lines, pattern color=blue!30,draw=black,very thin] (7.5,2.5) rectangle (12.689,4.3);
+\draw[pattern=north east lines, pattern color=blue!30,draw=black,very thin] (12.689,2.5) rectangle (13.5,4.3);
+\draw[pattern=dots,  pattern color=blue!60,draw=black,very thin] (12.689,4.3) rectangle (13.5,6.1);
+\draw[pattern=north east lines, pattern color=blue!30,draw=black,very thin] (13.5,2.5) rectangle (13.5,4.3);
+\draw[pattern=dots,  pattern color=blue!60,draw=black,very thin] (13.5,4.3) rectangle (13.5,6.1);
+\draw[pattern=grid,            pattern color=red!70!black,draw=black,very thin] (13.5,6.1) rectangle (13.5,9.7);
+\draw[black,very thin] (1.5,2.5) -- (1.5,14.5);
+\node[font=\small,rotate=90,text=black, anchor=center] at (1.1, 9.1391) {Cost};
+\draw[black,very thin] (1.45,2.5) -- (1.55,2.5);
+\node[font=\small,text=black, anchor=east] at (1.45, 2.5) {0};
+\draw[black,very thin] (1.45,5.1556) -- (1.55,5.1556);
+\node[font=\small,text=black, anchor=east] at (1.45, 5.1556) {1};
+\draw[black,very thin] (1.45,7.8113) -- (1.55,7.8113);
+\node[font=\small,text=black, anchor=east] at (1.45, 7.8113) {2};
+\draw[black,very thin] (1.45,10.467) -- (1.55,10.467);
+\node[font=\small,text=black, anchor=east] at (1.45, 10.467) {3};
+\draw[black,very thin] (1.45,13.123) -- (1.55,13.123);
+\node[font=\small,text=black, anchor=east] at (1.45, 13.123) {4};
+
+\draw[black,dotted,very thin] (7.5,2.86) -- (7.5,14.14);
+\draw[black,very thin] (13.5,2.5) -- (13.5,14.5);
+\draw[black,very thin] (13.45,2.5) -- (13.55,2.5);
+\node[font=\small,text=black, anchor=west] at (13.45, 2.5) {0};
+\draw[black,very thin] (13.45,5.5) -- (13.55,5.5);
+\node[font=\small,text=black, anchor=west] at (13.45, 5.5) {1};
+\draw[black,very thin] (13.45,8.5) -- (13.55,8.5);
+\node[font=\small,text=black, anchor=west] at (13.45, 8.5) {2};
+\draw[black,very thin] (13.45,11.5) -- (13.55,11.5);
+\node[font=\small,text=black, anchor=west] at (13.45, 11.5) {3};
+\draw[black,very thin] (13.45,14.5) -- (13.55,14.5);
+\node[font=\small,text=black, anchor=west] at (13.45, 14.5) {4};
+
+\draw[black,very thin] (1.5,2.5) -- (13.5,2.5);
+\draw[black,very thin] (1.5,2.45) -- (1.5,2.55);
+\node[font=\small,text=black, anchor=north] at (1.5, 2.45) {0\%};
+\draw[black,very thin] (13.5,2.45) -- (13.5,2.55);
+\node[font=\small,text=black, anchor=north] at (13.5, 2.45) {100\%};
+
+\node[font=\small,text=black,anchor=south] at (4.5, 1.9) {No\ Dispute\ (47\%)};
+\node[font=\small,text=black,anchor=south] at (10.5, 1.9) {Dispute\ (53\%)};
+\draw (7.5,2.5) node (B) {};
+\begin{scope}[align=center]
+\matrix[scale=0.5,draw=black,below=0.5cm of B,nodes={draw},column sep=0.1cm]{
+\node[rectangle,draw,minimum width=0.5cm,minimum height=0.5cm,pattern=north east lines, pattern color=blue!30]{}; & \node[draw=none,font=\small,text=black]{File}; &
+\node[rectangle,draw,minimum width=0.5cm,minimum height=0.5cm,pattern=dots,  pattern color=blue!60]{}; & \node[draw=none,font=\small,text=black]{Answer}; &
+\node[rectangle,draw,minimum width=0.5cm,minimum height=0.5cm,pattern=grid,            pattern color=red!70!black]{}; & \node[draw=none,font=\small,text=black]{Trial}; \\\\
+};\end{scope}
+
+\end{tikzpicture}
+\end{document}

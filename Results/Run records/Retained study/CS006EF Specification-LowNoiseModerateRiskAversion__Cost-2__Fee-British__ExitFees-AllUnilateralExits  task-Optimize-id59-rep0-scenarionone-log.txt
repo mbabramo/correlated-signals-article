@@ -1,0 +1,63 @@
+Completed task Optimize (ID 51) time 9/15/2026 5:46:47 PM total seconds 203
+
+Percentage Complete 30.43% of 92; pending 32; failed 0; unstarted 32
+Updated status (total 15 milliseconds)
+Task to do: Optimize ID 59 Repetition 0 Started:2026-09-15T21:46:47.0556348Z Complete:False Failed:False
+Beginning task Optimize (ID 59) time 9/15/2026 5:46:47 PM
+Using SequenceForm
+Game: LitigationGame: Specification-LowNoiseModerateRiskAversion__Cost-2__Fee-British__ExitFees-AllUnilateralExits
+CollapseChanceDecisions True
+NumOffers 10   
+NumPotentialBargainingRounds 1  BargainingRoundsSimultaneous True SimultaneousOffersUltimatelyRevealed True 
+NumLiabilityStrengthPoints 2 NumLiabilitySignals 10 PLiabilityNoiseStdev 0.1 DLiabilityNoiseStdev 0.1 CourtLiabilityNoiseStdev 0.1 
+NumDamagesStrengthPoints 1 NumDamagesSignals 1 PDamagesNoiseStdev 0.1 DDamagesNoiseStdev 0.1 CourtDamagesNoiseStdev 0.15 
+SkipFileAndAnswerDecisions False AllowAbandonAndDefaults True PredeterminedAbandonAndDefaults True IncludeAgreementToBargainDecisions False DeltaOffersOptions N/A 
+CostsMultiplier 2 PTrialCosts 0.15 DTrialCosts 0.15 PFilingCost 0.15 DAnswerCost 0.15 PerPartyCostsLeadingUpToBargainingRound 0 
+LoserPays True Multiple 1 AfterAbandonment True Rule68 False Margin False (0.7)
+PInitialWealth 10 DInitialWealth 10 
+DamagesMin 0 DamagesMax 1 DamagesMultiplier 1
+RegretAversion 0 
+PUtilityCalculator CARA Alpha=2 DUtilityCalculator CARA Alpha=2 
+LitigGameDisputeGenerator LitigGameUniformQualityDisputeGenerator QualityDistribution=Uniform(0,1);TruthGivenQuality=Bernoulli(q);GaussLegendreOrder=64
+WarmStartOptions NoWarmStart for  iterations
+Initializing all game paths...
+... Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211 Initialization milliseconds 1971
+Prepping accelerated best response...
+... 240 milliseconds. Chance nodes 111 decision nodes 4900 (80 information sets) final nodes 40200 total nodes 45211
+Calculating min-max...
+... complete 200 milliseconds
+Option set Specification-LowNoiseModerateRiskAversion__Cost-2__Fee-British__ExitFees-AllUnilateralExits
+Using exact arithmetic for initial prior
+
+Game tree has 40691 nodes, of which 36180 are terminal nodes.
+    Player 0 has 101 information sets, 200 moves in total
+    Player 1 has  40 information sets, 240 moves in total
+    Player 2 has  40 information sets, 240 moves in total
+Sequence form LCP dimension is 564
+    Player 1 has 241 sequences, subject to  41 constraints
+    Player 2 has 241 sequences, subject to  41 constraints
+Prior 1 of 1
+... 100 steps (59098 ms) ...... 200 steps (262864 ms) ...... 300 steps (658460 ms) ...... 400 steps (1093416 ms) ...... 500 steps (1481293 ms) ...... 600 steps (1821540 ms) ...... 700 steps (2136731 ms) ...... 800 steps (2403662 ms) ...... 900 steps (2711406 ms) ...... 1000 steps (2962247 ms) ...... 1100 steps (3209083 ms) ...Complete after 1131 pivoting steps
+Equilibrium 1
+Equilibrium behavior strategies player 1, 2:
+0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,254006720334/1102500193795,848493473461/1102500193795,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,81625490/408593479,0,0,0,0,0,0,0,0,326967989/408593479,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Elapsed milliseconds prior 1: 3285022
+Changed to original form:
+0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,254006720334/1102500193795,848493473461/1102500193795,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,81625490/408593479,0,0,0,0,0,0,0,0,326967989/408593479,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Perfect equilibrium confirmed 191 ms
+Verified recoveries: 1; requested: 1; distinct profiles: 1.
+
+Specification-LowNoiseModerateRiskAversion__Cost-2__Fee-British__ExitFees-AllUnilateralExits
+Result using all paths playing CurrentProbability
+Best iteration 1000 best exploitability 5.684341886080802E-14
+Scenario index 0 Name: Option set Specification-LowNoiseModerateRiskAversion__Cost-2__Fee-British__ExitFees-AllUnilateralExits
+Avg BR: 5.684341886080802E-14 Perturbed refinement: 7.37E-09 Custom: 0.5, 0.5, 0.0017, 0
+U(P0): 1000.0524420930983 BR score 1000.0524502544461 BRimp: 3.41E-13
+U(P1): 999.0762033826497 BR score 999.0762602159253 BRimp: -2.27E-13
+Total best response calculation time: 16 milliseconds
+
+
+Elapsed milliseconds report for eq 1 of 1: 114
+Writing report to blob
+Report written to blob

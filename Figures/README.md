@@ -9,6 +9,6 @@ PDF and PNG files are ready for manuscript insertion. Sources contains standalon
 | [Figure 3 - Participation and offers](<Figure 3 - Participation and offers.pdf>) | [cost-1-participation-and-offers](<../Results/Aggregated Data/Baseline/Risk Neutral/cost-1-participation-and-offers.pdf>) |
 | [Figure 4 - Dispositions](<Figure 4 - Dispositions.pdf>) | [cost-1-dispositions](<../Results/Aggregated Data/Baseline/Risk Comparison/cost-1-dispositions.pdf>) |
 
-Regenerate with `python scripts/assemble_manuscript_exhibits.py` from the article repository. The script uses saved results and separate diagnostic calculations; it does not determine equilibria. `manuscript-exhibits.json` records the source/output hashes. After importing a new Results collection, rerun assembly to refresh these copies.
+After generating the routine collection, run `scripts/Publish-ArticleResults.ps1` from ACESim4 with the completed Results source and this article directory. It verifies and imports the collection, refreshes Figures 3 and 4, and preserves Figures 1 and 2 from their separate supplemental workflows. `manuscript-exhibits.json` records source/output hashes and caption companions. Publishing saved results does not determine equilibria.
 
 The revision plan retains four main figures and three main tables. Numbered online appendices, manuscript insertion and submission-proof review remain separate writing and packaging work.
