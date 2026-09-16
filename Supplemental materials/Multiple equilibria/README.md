@@ -1,6 +1,6 @@
 # Multiple-equilibrium robustness
 
-The completed two-case reference study below is retained while a fresh six-case, fifty-start study is prepared for all three fee rules under RN and RA. The earlier expansion was stopped after a solver fallback failure. The repaired search starts from a fresh committed source and output directory after the verified routine-results commit; these reference files do not represent that new run.
+The completed two-case reference study below is retained while a fresh six-case, fifty-start study runs for all three fee rules under RN and RA. The earlier expansion was stopped after a solver fallback failure. The repaired search started on September 16, 2026, at 07:07 UTC from clean source `28566ab3` and a fresh output directory, after routine-results commit `7ae3f65f8`. All six cases started successfully; these reference files do not represent that new run. New output will replace this reference collection after numerical and visual verification.
 
 This directory replaces the previous `Robustness checks` material with the completed clean production output at numerical commit `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`. The preserved filename prefix `CS004ME` is the solver's identifier for this multiple-equilibrium run.
 
