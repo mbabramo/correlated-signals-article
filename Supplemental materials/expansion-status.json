@@ -1,18 +1,15 @@
 {
   "InitializationsPerCase": 50,
-  "Pending": [
-    "Complete six-case multiple-start production and exhibit rendering",
-    "Multiple-equilibrium cleanup, numerical and visual verification, final plan conclusions and commit"
-  ],
+  "Pending": [],
   "ExactPathsVerified": 6,
   "MultipleStartCasesRequested": 6,
   "ExactPathsRequested": 6,
   "PrintedNumericEntriesVerified": 6701,
   "DirectedComparisons": 90,
-  "UpdatedUtc": "2026-09-16T07:11:25.867102+00:00",
-  "Status": "Fresh six-case multiple-start production running",
+  "UpdatedUtc": "2026-09-17T10:09:21.225824+00:00",
+  "Status": "Complete: routine results, strategy comparisons, exact paths and six-case multiple-start study verified",
   "DiagnosticJobsVerified": 187,
-  "MultipleStartStatus": "Started 2026-09-16 at 07:07 UTC from clean source 28566ab3; all six cases started, zero failures at launch. Each case requests 50 initializations. Existing two-case reference outputs await replacement after new-run verification.",
+  "MultipleStartStatus": "All six fifty-initialization searches completed September 17, 2026. Verified 268 recoveries and 85 distinct profiles, rendered 517 exhibits and replaced the earlier two-case reference collection. The original aggregation failure and its reporting-only repair are documented in Multiple equilibria/Sources/reporting-repair.json; no searches were repeated.",
   "StrategyProfiles": "Saved equilibria used by routine strategy and welfare exhibits",
   "AuxiliaryMixingEnabled": false,
   "StrategyTableDisplayedRows": 799,
@@ -21,5 +18,76 @@
   "RoutineExhibitsVerified": 2024,
   "MultipleStartSourceCommit": "28566ab30a657369aa95d4e767107e0889b4696d",
   "MultipleStartStartedUtc": "2026-09-16T07:06:52.2706973Z",
-  "RoutineArticleCommit": "7ae3f65f8fc3ccb9dbf9c40ac2ed84590adb3516"
+  "RoutineArticleCommit": "7ae3f65f8fc3ccb9dbf9c40ac2ed84590adb3516",
+  "MultipleStartCompletedUtc": "2026-09-17T09:46:10.4029406Z",
+  "MultipleStartCasesVerified": 6,
+  "MultipleStartVerifiedRecoveries": 268,
+  "MultipleStartDistinctProfiles": 85,
+  "MultipleStartExhibitsVerified": 517,
+  "MultipleStartMaximumBestResponseGain": 3.410605131648481e-13,
+  "MultipleStartReportingCommit": "d009c6012b6aa77c283c8887d81ee7c84057627f",
+  "MultipleStartCases": [
+    {
+      "OptionSet": "Specification-Baseline__Cost-1__Fee-American__Starts-50",
+      "Risk": "Risk Neutral",
+      "FeeRule": "American",
+      "Requested": 50,
+      "Attempts": 99,
+      "Recoveries": 50,
+      "Profiles": 21,
+      "ExactCutoffs": 0
+    },
+    {
+      "OptionSet": "Specification-ModerateRiskAversion__Cost-1__Fee-American__Starts-50",
+      "Risk": "Moderately Risk Averse",
+      "FeeRule": "American",
+      "Requested": 50,
+      "Attempts": 99,
+      "Recoveries": 33,
+      "Profiles": 12,
+      "ExactCutoffs": 17
+    },
+    {
+      "OptionSet": "Specification-Baseline__Cost-1__Fee-British__ExitFees-AllUnilateralExits__Starts-50",
+      "Risk": "Risk Neutral",
+      "FeeRule": "Complete Fee-Shifting",
+      "Requested": 50,
+      "Attempts": 91,
+      "Recoveries": 50,
+      "Profiles": 15,
+      "ExactCutoffs": 0
+    },
+    {
+      "OptionSet": "Specification-Baseline__Cost-1__Fee-British__Starts-50",
+      "Risk": "Risk Neutral",
+      "FeeRule": "Trial Fee-Shifting",
+      "Requested": 50,
+      "Attempts": 99,
+      "Recoveries": 50,
+      "Profiles": 11,
+      "ExactCutoffs": 0
+    },
+    {
+      "OptionSet": "Specification-ModerateRiskAversion__Cost-1__Fee-British__ExitFees-AllUnilateralExits__Starts-50",
+      "Risk": "Moderately Risk Averse",
+      "FeeRule": "Complete Fee-Shifting",
+      "Requested": 50,
+      "Attempts": 99,
+      "Recoveries": 35,
+      "Profiles": 7,
+      "ExactCutoffs": 15
+    },
+    {
+      "OptionSet": "Specification-ModerateRiskAversion__Cost-1__Fee-British__Starts-50",
+      "Risk": "Moderately Risk Averse",
+      "FeeRule": "Trial Fee-Shifting",
+      "Requested": 50,
+      "Attempts": 99,
+      "Recoveries": 50,
+      "Profiles": 19,
+      "ExactCutoffs": 0
+    }
+  ],
+  "MultipleStartInterpretation": "Risk-neutral welfare and disposition outcomes are invariant at source-report precision within each fee rule across recovered profiles. Risk-averse outcomes vary substantially; main-text risk-aversion claims require equilibrium-selection qualifications. See Multiple equilibria/Findings.md and the revision plan.",
+  "DraftingRemaining": "Assemble the planned appendix manuscript and incorporate the documented equilibrium-selection qualifications into the article prose."
 }

@@ -1,0 +1,15 @@
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array}
+\begin{document}
+\begin{tabular}{llrrrrrr}
+\toprule Risk & Fee rule & Priors & Attempts & \shortstack{Exact\\attempts} & Recoveries & Profiles & \shortstack{Maximum\\gain} \\
+\midrule
+Risk Neutral & American & 50 & 99 & 50 & 50 & 21 & 8.88E-15 \\
+Risk Neutral & Trial Fee-Shifting & 50 & 99 & 50 & 50 & 11 & 5.33E-15 \\
+Risk Neutral & Complete Fee-Shifting & 50 & 91 & 42 & 50 & 15 & 5.33E-15 \\
+Risk Averse & American & 50 & 99 & 50 & 33 & 12 & 3.41E-13 \\
+Risk Averse & Trial Fee-Shifting & 50 & 99 & 50 & 50 & 19 & 3.41E-13 \\
+Risk Averse & Complete Fee-Shifting & 50 & 99 & 50 & 35 & 7 & 2.27E-13 \\
+\bottomrule\end{tabular}
+
+\end{document}

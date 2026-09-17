@@ -1,0 +1,12 @@
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array}
+\begin{document}
+\begin{tabular}{llccccccc}
+\toprule Risk & Fee rule & \shortstack{No\\filing} & \shortstack{No\\answer} & Settlement & Abandonment & Default & \shortstack{Trial\\P loses} & \shortstack{Trial\\P wins} \\
+\midrule
+Risk Neutral & American & 0.1911--0.1911 & 0.3732--0.3732 & 0.0834--0.0834 & 0.0000--0.0000 & 0.0000--0.0000 & 0.1977--0.1977 & 0.1546--0.1546 \\
+Risk Neutral & Trial Fee-Shifting & 0.1781--0.1781 & 0.3831--0.3831 & 0.1826--0.1826 & 0.0000--0.0000 & 0.0000--0.0000 & 0.1281--0.1281 & 0.1281--0.1281 \\
+Risk Neutral & Complete Fee-Shifting & 0.3924--0.3924 & 0.0000--0.0000 & 0.3514--0.3514 & 0.0000--0.0000 & 0.0000--0.0000 & 0.1281--0.1281 & 0.1281--0.1281 \\
+\bottomrule\end{tabular}
+
+\end{document}

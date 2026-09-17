@@ -1,28 +1,15 @@
-# Multiple-equilibrium robustness
+# Multiple equilibria
 
-The completed two-case reference study below is retained while a fresh six-case, fifty-start study runs for all three fee rules under RN and RA. The earlier expansion was stopped after a solver fallback failure. The repaired search started on September 16, 2026, at 07:07 UTC from clean source `28566ab3` and a fresh output directory, after routine-results commit `7ae3f65f8`. All six cases started successfully; these reference files do not represent that new run. New output will replace this reference collection after numerical and visual verification.
+Six ordinary-cost scenarios cross three fee rules with risk neutrality and symmetric CARA alpha 2. 85 distinct profiles were recovered from 50 initializations per case.
 
-This directory replaces the previous `Robustness checks` material with the completed clean production output at numerical commit `31d0f17836435a2b1a7cc3fc52a6dfcec0db3565`. The preserved filename prefix `CS004ME` is the solver's identifier for this multiple-equilibrium run.
+Risk Comparison and each risk folder contain separate welfare-range and disposition-range tables; recovery diagnostics are in Risk Comparison. Individual simulations contains each equilibrium's generated figures, grouped by risk and fee rule. Sources contains exact data, editable TeX and captions. The production manifest identifies the solving build; the exhibit inventory separately records reporting inputs and output hashes.
 
-Both cases use the principal baseline, cost multiplier 1, ten offers, ten party signals, and two court signals. One case uses the American fee rule and the other Trial Fee-Shifting (trial only). Complete Fee-Shifting was not tested in this separate study.
+Ranges across distinct recovered equilibrium strategy profiles; each profile receives equal weight. Recovery frequencies describe numerical searches, not behavioral equilibrium selection. Each scenario requests fifty starts; failed attempts can leave fewer verified recoveries. These ranges are not confidence intervals or guarantees that every equilibrium has been found. Cost multiplier is 1. Gross outcome error is E[|R-T|], averaged over all potential disputes. R is the base payment before legal costs and separately awarded fee transfers; T is true liability and damages equal one. Since payments lie in [0,1], error equals pi(1-E[R|T=1])+(1-pi)E[R|T=0]. Conditional means are intermediate calculations, not conditional headline outcomes. The configured truth prior is also used for the three net-burden contributions. Source reports are rounded. Fee rules still affect error through equilibrium behavior. The five measures are distinct, not additive welfare components.
 
-| Fee rule | Requested priors | Attempted solves | Inexact attempts | Exact attempts | Verified recoveries | Distinct retained profiles |
-|---|---:|---:|---:|---:|---:|---:|
-| American | 50 | 99 | 49 | 50 | 50 | 21 |
-| Trial Fee-Shifting | 50 | 99 | 49 | 50 | 50 | 11 |
+Additional approximate attempts are capped at 500 pivots and additional exact attempts at 1,000; the initial exact solve is uncapped. A cutoff ends that attempt; failed exact attempts are not replaced with additional starts. Read the actual recovery totals and the saved solve logs together.
 
-## Reading order
+Sources/strategy-verification.json records a fresh best-response check for every saved profile and reproduction of its action report. The recovery table uses these current-profile gains. The original report statistic is retained separately because older reporting builds measured the running average of profiles instead.
 
-1. `CS004ME equilibrium ranges.csv`: outcome minima, means, maxima, ranges, standard deviations, and coefficients of variation by fee regime.
-2. `CS004ME equilibrium outcomes.csv`: one row for each retained profile, with recoveries, verification, exploitability, participation, bargaining, disposition, expenditure, and monetary-outcome measures.
-3. `*-EquilibriumRecoveries.csv`: recovery counts, verification status, and exact normalized-vector distinctness information.
-4. `*-Eq*-InformationSetActions.csv`: every action's equilibrium probability, reach/off-path status, conditional utility, and loss relative to the best action, for each retained equilibrium.
-5. `CS004ME run manifest.json`, `.efg`, equilibrium files, task logs, and `Process Logs`: reproduction and solver details.
+The legacy truth-specific burden columns in the full CSV remain conditional diagnostics. The five headline columns and all displayed disposition shares are population averages. Conditional offer means describe reached bargaining decisions. Distinctness follows the production recovery catalog; behavioral/outcome differences must be assessed separately.
 
-There are 32 retained profiles and 32 action-value reports. The 216 PDF/TeX pairs comprise six diagram families for those profiles and the additional Avg/Corr diagnostics. The main production output is in `../../Results`.
-
-The retained profiles have identical headline lifecycle and monetary outcomes at reported precision, with meaningful variation principally in plaintiff mean demands. Tiny nonzero standard deviations at floating-point precision should not be described as substantive dispersion. Recovery shares are computational diagnostics, not behavioral equilibrium-selection probabilities; the exercise does not enumerate all equilibria or establish uniqueness.
-
-Use the current range/outcome tables to prepare the appendix exhibits. The older small-tree coefficient-of-variation and cross-tree correlation figures were removed rather than reused for this different design.
-
-The local `CS004ME run manifest.json` preserves the original production/build provenance. This completed separate workflow was retained during the September 14 routine-study rebuild. To run a new multiple-start study intentionally, use `--plan multiple-equilibria`; it is not part of the default retained suite.
+Regenerate with `LitigCharts multiple-equilibria-report --input <completed production directory> --output <this folder> --jobs 32`. The supplemental rebuild script runs this automatically after multiple-start aggregation.
