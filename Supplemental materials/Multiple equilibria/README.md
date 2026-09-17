@@ -2,6 +2,8 @@
 
 Six ordinary-cost scenarios cross three fee rules with risk neutrality and symmetric CARA alpha 2. 85 distinct profiles were recovered from 50 initializations per case.
 
+See [Findings.md](Findings.md) for the substantive conclusions, including universal answering in all 22 recovered Complete Fee-Shifting profiles and the variation in risk-averse outcomes. [Sources/answering-verification.json](Sources/answering-verification.json) records the direct checks at all defendant signals; [Sources/verify_answering.py](Sources/verify_answering.py) reproduces them from the saved action reports.
+
 Risk Comparison and each risk folder contain separate welfare-range and disposition-range tables; recovery diagnostics are in Risk Comparison. Individual simulations contains each equilibrium's generated figures, grouped by risk and fee rule. Sources contains exact data, editable TeX and captions. The production manifest identifies the solving build; the exhibit inventory separately records reporting inputs and output hashes.
 
 Individual diagrams are regenerated from each saved profile separately, and each replay is checked against the original numeric outcome report. Sources/Replayed reports contains these checks' report inputs. Original production TeX is preserved as historical source material; older builds pooled preceding profiles' paths in individual diagrams, so those raw TeX files must not be used as individual-equilibrium exhibits.

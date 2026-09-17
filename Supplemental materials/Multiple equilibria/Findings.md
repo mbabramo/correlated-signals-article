@@ -13,6 +13,27 @@ The ordinary-cost study completed fifty requested initializations for each fee/r
 
 All 85 saved profiles passed a fresh best-response check, with a maximum computed gain of 3.41 × 10⁻¹³. This floating-point audit is separate from the solver's original numerical method. It also reproduced 40,800 saved action-report rows. The seven tables and 510 individual figures are indexed in multiple-equilibria-exhibits.json. Recovery frequencies are numerical search diagnostics, not estimates of equilibrium-selection probabilities, and the search does not enumerate all equilibria.
 
+## Fee-shifting triggers and the decision to answer
+
+**Complete Fee-Shifting produces universal answering in all 22 recovered profiles: 15 risk-neutral and seven risk-averse.** The direct check covers all ten defendant signals in each profile, or 220 answering information sets. At each, the defendant answers with probability one. The unconditional nonanswer share is zero throughout. These results use ordinary costs (multiplier 1), ten offers and the baseline information structure; the two preference settings are risk neutrality and symmetric CARA alpha 2.
+
+| Risk | Fee rule | Profiles with universal answering | Unconditional nonanswer share |
+|---|---|---:|---:|
+| Neutral | Trial Fee-Shifting | 0 of 11 | 38.3% |
+| Neutral | Complete Fee-Shifting | 15 of 15 | 0% |
+| Averse | Trial Fee-Shifting | 1 of 19 | 0–35.9% |
+| Averse | Complete Fee-Shifting | 7 of 7 | 0% |
+
+Universal answering describes the defendant's strategy when a suit is filed. It does not imply universal filing or that all potential disputes reach the answer stage. Under Complete Fee-Shifting, the unconditional answering share equals the filing share. Universal answering is also possible under other rules: risk-averse Trial profile 16 and seven risk-averse American profiles exhibit it. The multiple-start result establishes its persistence across every recovered Complete Fee-Shifting profile, including substantially different bargaining and filing arrangements.
+
+This strengthens the article's central contribution concerning the dispositions that trigger fee shifting. Under Complete Fee-Shifting, a defendant who does not answer pays damages and the plaintiff's filing costs. Trial Fee-Shifting does not impose that fee transfer upon nonanswer. Making immediate concession more costly can increase the incentive to answer even when the defendant has a weak case. The equilibrium strategy-change analysis identifies this mechanism in the selected comparisons; the multiple-start study establishes the robustness of the resulting answering behavior across the recovered profiles. The multiple-start records alone do not decompose the cause of every profile's strategy.
+
+The answering result and the variation in subsequent outcomes should be presented together. The risk-neutral fee-rule comparison retains its welfare and disposition results across the recovered profiles. With risk aversion, the exact filing response and the incidence of gains and losses depend on the selected equilibrium, even though defendants continue to answer throughout the Complete Fee-Shifting sample. The central legal claim concerns how extending fee shifting to nonanswer changes the incentive to participate in litigation; it does not require a uniform welfare ranking across every equilibrium.
+
+The direct checks, profile identities, nonanswer shares and source hashes are recorded in [Sources/answering-verification.json](Sources/answering-verification.json). Run [Sources/verify_answering.py](Sources/verify_answering.py) to reproduce them. This finding is restricted to the recovered baseline-cost profiles and does not establish uniqueness, exhaustiveness, or the same behavior at every cost and information specification.
+
+## Outcome robustness and exhibit use
+
 Across the recovered risk-neutral profiles, all five headline welfare measures and all seven disposition shares are invariant at source-report precision within each fee rule. Strategies nevertheless differ, including conditional offer means. Thus the risk-neutral comparison of welfare and dispositions survives this check; it does not establish that every strategic mechanism is identical across profiles.
 
 Risk-averse profiles have substantial outcome variation. Unconditional settlement ranges from 0.138330 to 0.927347 under American, 0.141728 to 0.485777 under Trial Fee-Shifting, and 0.638363 to 0.958995 under Complete Fee-Shifting. Every recovered risk-averse Complete Fee-Shifting profile therefore has more settlement than every recovered risk-averse Trial Fee-Shifting profile. Other welfare rankings overlap and should not be generalized from the selected main-text equilibria.
