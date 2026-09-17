@@ -93,6 +93,20 @@ def verify(root):
             expected={'Minimum':min(v),'Maximum':max(v),'Range':max(v)-min(v),'Mean':mean,'Standard Deviation':sd}
             for prefix,value in expected.items():near(n(r,prefix+' '+metric),value);range_cells+=1
     table_numbers=0
+    filing_chart_entries=0
+    for p in audit['Profiles']:
+        if 'ReplayReport' not in p:
+            continue
+        action_rows=list(csv.DictReader(local(p['ActionReport']).open(encoding='utf-8-sig')))
+        filing=[a for a in action_rows if a['Decision']=='P Files' and a['Action Label']=='Yes']
+        filing.sort(key=lambda a:int(re.search(r'Liability Signal: (\d+)',a['Information Set Labels'])[1]))
+        tex=local(next(s for s in p['DiagramSources'] if '-fileans-' in s)).read_text(encoding='utf-8-sig')
+        shown=[float(s) for s in re.findall(r'node\[midway\] \{([\d.]+)\\%\}',tex)][:20]
+        expected=[100*float(a['Equilibrium Action Probability']) for a in filing]
+        expected += [100-v for v in expected]
+        assert len(shown)==len(expected)==20,p['OptionSet']
+        assert all(abs(a-b)<=.500001 for a,b in zip(shown,expected)),(p['OptionSet'],p['Equilibrium'],shown,expected)
+        filing_chart_entries += len(shown)
     def numbers(s):
         s=s.replace('\u2212','-').replace('\u2013',' ').replace('--',' ')
         s=re.sub(r'(?<=\d)\s*\.\s*(?=\d)','.',s)
@@ -114,6 +128,8 @@ def verify(root):
         TotalRecoveries=sum(c['Recoveries'] for c in cases),DistinctProfiles=len(outcomes),
         ActionRowsReproduced=sum(p['ActionRows'] for p in audit['Profiles']),MaximumBestResponseGain=max(p['MaximumGain'] for p in audit['Profiles']),
         NumericOutcomeCells=cells,RangeCells=range_cells,TableNumericEntries=table_numbers,
+        ReplayedOutcomeCells=sum(p.get('ReproducedOutcomeCells',0) for p in audit['Profiles']),
+        FilingDiagramPercentagesVerified=filing_chart_entries,
         Exhibits=len(inventory['Artifacts']),Fingerprints=len(checked),
         NumericalSourceCommit=manifest['GitCommit'],SourceRoot=str(original),VerifiedRoot=str(root),
         Scope='Saved-profile audit, source-derived welfare and dispositions, dispersion statistics, rendered table values, PDF/PNG completeness and SHA256 provenance. Visual review recorded separately.')
