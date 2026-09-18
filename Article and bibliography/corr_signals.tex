@@ -41,7 +41,7 @@ backend=bibtex]{biblatex}
 
 \begin{abstract}
 \begin{nohyphen}
-A linear programming algorithm solves extensive-form game trees representing litigation games in which parties receive correlated quality signals. Model permutations allow for asymmetric two-sided information, risk aversion, costs, and information quality, while providing litigants with file, answer, offer, and quit decisions. This allows examination of interactions among different game features and parameters. With baseline parameters, including risk neutrality, the parties are strikingly aggressive in their settlement demands, and settlement is relatively rare. The effects of fee shifting depend markedly on whether fee shifting is triggered only at trial or also by nonanswer or pretrial withdrawal.
+A linear programming algorithm solves extensive-form game trees representing litigation games in which parties receive correlated quality signals. Litigants make file, answer, offer, and quit decisions. The model allows examination of interactions among different game features and parameters. With baseline parameters, including risk neutrality, the parties are strikingly aggressive in their settlement demands, and settlement is  rare. The effects of fee shifting depend markedly on whether fee shifting is triggered only at trial or also by nonanswer or pretrial withdrawal.
 \end{nohyphen}
 \end{abstract}
 
@@ -57,27 +57,51 @@ Only one pair of articles allows the plaintiff and defendant to estimate the qua
 
 These papers represent significant advances in the realism of litigation models. But they have limitations that make it difficult to assess how correlated signals would impact issues other than the selection of cases for litigation. First, even in the more recent paper, the litigation quality is constrained to a range where each party has a credible threat to take the case to trial (pp. 392-93). In effect, the plaintiff always files, the defendant always answers, and neither party ever quits before trial. Yet we have known since Shavell (1982) \cite{shavell} and P'ng (1983) \cite{png} about the importance of filing and answer decisions and since Huang (2004) \cite{huang} about the strategic importance of the plaintiff's option to abandon a suit. Second, the entire cost of litigation is thus borne all at once, rather than sequentially. Yet expenditures on litigation are dispensed over time. Third, although case quality varies, there is a simple cutoff, above which the plaintiff has a high fixed probability of winning and below which the probability is fixed at a low value. More realistically, the probability of winning may be close to 50\% in some cases and a range of high or low values in others.
 
-In this article, I relax these assumptions through use of a computational model that identifies Nash equilibria in large extensive form game trees, applying the linear programming algorithm identified in von Stengel, van den Elzen, and Talman (2002) \cite{vonstengelvandenelzentalman}. Abramowicz (2025) applies this algorithm to model settlement bargaining but does not consider correlated signals of litigation quality. Rather, that article seeks to establish a proof of concept for computational (or algorithmic) game theory modeling by using a setup similar to that of Dari-Mattiacci and Saraceno, in which the parties have independent signals that aggregate to determine case quality. The ten-offer specifications in the present article have 45,211 nodes, while the fifteen-offer extension has 97,211 nodes.
+In this article, I relax these assumptions through use of a computational model that identifies Nash equilibria in large extensive form game trees, applying the linear programming algorithm identified in von Stengel, van den Elzen, and Talman (2002) \cite{vonstengelvandenelzentalman}. Abramowicz (2025) applies this algorithm to model settlement bargaining with game trees of up to 16,111 nodes but does not consider correlated signals of litigation quality. Rather, that article seeks to establish a proof of concept for computational (or algorithmic) game theory modeling by using a setup similar to that of Dari-Mattiacci and Saraceno, in which the parties have independent signals that aggregate to determine case quality. The ten-offer specifications in the present article have 45,211 nodes, while the fifteen-offer extension has 97,211 nodes.
 
-Despite this greater complexity, the solutions identified in this article remain perfect Bayesian Nash equilibria. That is, the plaintiff and defendant each assign a mixed strategy to each information set, and each player's mixed strategy is a best response for each player given that player's information. That is, neither player could improve its strategy even by a small $\epsilon$ by changing its strategy, holding the other player's strategy constant, in the modeled game. Perfection guarantees that a player's choices remain optimal if a decision is actually reached, even at decision points that are not reached in equilibrium, given beliefs satisfying the equilibrium's consistency requirements. The mixed strategies are exact rational numbers, although the payoffs are rounded before the game is solved. 
+Despite this greater complexity, the solutions identified in this article remain perfect Bayesian Nash equilibria. That is, the plaintiff and defendant each assign a mixed strategy to each information set, and each player's mixed strategy is a best response for each player given that player's information. That is, neither player could improve its strategy even by a small $\epsilon$ by changing its strategy, holding the other player's strategy constant, in the modeled game. Perfection guarantees that a player's choices remain optimal if a decision is actually reached, even at decision points that are not reached in equilibrium, given beliefs satisfying the equilibrium's consistency requirements. The mixed strategies are exact rational numbers, though payoffs are rounded to the nearest $10^{-5}$ of the potential judgment to speed calculation. 
 
-The algorithmic game theory model thus follows in the Bayesian tradition of recent settlement bargaining scholarship, but with enhanced strategic complexity, including multiple levels of case quality, multiple signal levels, variable levels of fee-shifting, adjustable levels of risk aversion, and litigant options to file, answer, and quit before trial. The richness of game features can provide a useful complement to analytical models. The computational approach shines in three ways. First, it can illustrate how different game features may interact. Second, the computational approach can make it possible to explore relatively small changes in applicable rules. Third, welfare effects may be precisely measured, and different aspects of accuracy may be distinguished. 
+The algorithmic game theory model thus follows in the Bayesian tradition of recent settlement bargaining scholarship, but with enhanced strategic complexity, including multiple levels of case quality, multiple signal levels, variable approaches to fee-shifting, adjustable levels of risk aversion, and litigant options to file, answer, and quit before trial. Though a computational model may not offer the elegance and generalizability of analytical models, the richness of game features can provide a useful complement to those models. The computational approach shines in three ways. First, it can illustrate how different game features may interact when analytical computation might be intractable. Second, the computational approach can make it possible to explore relatively small changes in applicable rules without developing an entirely new model. Third, welfare effects may be precisely measured, and different aspects of accuracy may be distinguished. 
 
 The comparison of fee-shifting rules illustrates all of these advantages. Switching from our baseline American rule simulation to a regime in which fees are shifted after trial makes the plaintiff more conciliatory at one signal consistent with a slightly weak case, producing an increase in settlement but leaving the rest of the equilibrium largely intact. Extending fee shifting to cases in which the defendant does not answer or a party withdraws, however, has a much more substantial effect. The direct effect of the change is that a defendant with a weak case is paradoxically more likely to answer, because a defendant who does not answer must not only pay damages, but also the plaintiff's filing fees. That in turn discourages plaintiff filing. Expansion of fee shifting thus adversely affects meritorious plaintiffs while benefiting truly not liable defendants.
 
-This is not a just so story, but a set of conclusions that can be supported by considering equilibria and how each party's best response would change if only parts of the opponent's strategy changed. Admittedly, a computational solution can lack the elegance of a mathematical proof. Indeed, the great virtue of being able to test how different decisions and rules interact will tend to mean that conclusions will be guarded. Still the model not only reveals an intuition, that extending fee shifting to nonanswer makes defendants more willing to answer, but also can show that the magnitude of this effect may outweigh competing effects. This analysis does not conclusively resolve the question of what stages should be included under a fee-shifting rule, let alone the broader debate concerning the advisability of the American and British rules, but it helps identify some of the policy stakes.
+This is not a just so story, but a set of conclusions that can be supported by considering equilibria and how each party's best response would change when parts of the opponent's strategy are taken (say, filing behavior) from one equilibrium and parts, from another. For example, we can assess how much of an observed change in a party's behavior with a change in a fee-rule would occur if the other party retained the strategy that it had absent the change, as well as if the other party changed to its new equilibrium strategy in some ways but not others. The model not only reveals an intuition, that extending fee shifting to nonanswer makes defendants more willing to answer, but also can show that the magnitude of this effect may outweigh competing effects. This analysis does not conclusively resolve the question of what stages should be included under a fee-shifting rule, let alone the broader debate concerning the advisability of the American and British rules, but it helps identify policy stakes that might otherwise be quite challenging to model, given the interdependence of entrance and exit decisions.
 
 These results relate to a literature showing how the timing of litigation expenditures shapes bargaining by changing the credibility of threats. Bebchuk (1996) \cite{bebchuk96} shows how dividing costs across stages of litigation can make what would be a negative-expected-value claim if fully litigated viable, while Croson and Mnookin (1996) \cite{crosonmnookin} and Hubbard (2016) \cite{hubbard} show how litigants can enhance the credibility of the threat to continue pursuing a claim or defense by sinking expenditures in advance. Central to this logic is the option to exit before trial. The greater the extent to which a party has already incurred costs before the exit decision and thus reduced the costs remaining to be incurred, the less attractive exit becomes. That in turn makes the party's continued litigation more credible in earlier settlement bargaining. 
 
-The wrinkle added by extending fee shifting to exit is that if exiting itself would force a party to pay the opponent's costs incurred to date, that also ultimately makes the party's continued litigation more credible. This can counteract the strategic advantage that the plaintiff may otherwise gain from incurring costs before the defendant. When the plaintiff spends money to file and a fee shifting rule requires the defendant to reimburse the cost if it does not answer, then answering preserves the possibility of avoiding that liability, and further, its own expenses in answering might end up being borne by the plaintiff. The option of exiting before trial, meanwhile, becomes less attractive to both parties, since unilateral exit requires reimbursement of the other party's already-incurred costs. While it is not entirely intuitive how much these effects will matter, in the model, they end up being of vital significance. While plaintiffs often do not file, defendants always answer, in both the risk neutral setting and with risk aversion, including in robustness checks assessing the possibility of multiple equilibria. It is this dynamic that ultimately redounds on average to defendants' benefit when fee shifting applies in cases of unilateral exit.
+The wrinkle added by extending fee shifting to exit is that if exiting itself would force a party to pay the opponent's costs incurred to date, that also ultimately makes the party's continued litigation more credible. This can counteract the strategic advantage that the plaintiff may otherwise gain from incurring costs before the defendant. When the plaintiff spends money to file and a fee-shifting rule requires the defendant to reimburse the cost if it does not answer, then answering preserves the possibility of avoiding that liability, and further, its own expenses in answering might end up being borne by the plaintiff. The option of exiting before trial, meanwhile, becomes less attractive to both parties, since unilateral exit requires reimbursement of the other party's already-incurred costs. While it is not entirely intuitive how much these effects will matter, the results indicate that they are of vital significance. While plaintiffs often do not file, defendants always answer, in both the risk neutral setting and with risk aversion, including in robustness checks assessing the possibility of multiple equilibria. It is this dynamic that ultimately redounds on average to defendants' benefit when fee shifting applies in cases of unilateral exit.
 
-The computational results also offer many intriguing observations along the way. The parties are highly aggressive bargainers with risk neutrality, not so much deciding how much of the perceived settlement surplus they wish to insist on, but instead holding out for outcomes far more favorable than their assessments of case strength would suggest. Offers and demands often remain constant across multiple signal levels before jumping at a threshold. Substantial bargaining failure occurs even though parties have relatively good information and even though the one-round structure eliminates opportunities to influence an opponent's offer through one's own. Meanwhile, equilibria with greater settlement do not necessarily offer lower expenditures or greater accuracy. Finally, risk aversion can increase settlement while also increasing expenditures and causing settlement values to depart further from the amounts warranted by underlying liability, particularly in the absence of fee shifting.
+The computational results also offer many intriguing observations along the way. The parties are highly aggressive bargainers with risk neutrality, not so much deciding how much of the perceived settlement surplus they wish to insist on, but instead holding out for outcomes far more favorable than their assessments of case strength would suggest. Offers and demands often remain constant across multiple signal levels before jumping at a threshold. Substantial bargaining failure occurs even though parties have relatively good information and even though the one-round structure eliminates opportunities to influence an opponent's offer through a bluff. Meanwhile, equilibria with greater settlement do not necessarily offer lower expenditures or greater accuracy. Finally, risk aversion can increase settlement while also increasing expenditures and causing settlement values to depart further from the amounts warranted by underlying liability, particularly in the absence of fee shifting.
 
 \clearpage
 \section{The Model}
 
-\Needspace{0.42\textheight}
+This section frames the correlated signals model in explicitly game theoretic terms by describing the extensive-form game tree. Section \ref{sec:information-structure} describes the signals the parties and the court receive of the case quality. Section \ref{sec:litigation-sequence} sets out the sequence of litigation decisions and explains how the parties' information changes as the game progresses. Section \ref{sec:costs-preferences-fees} specifies how litigation costs are accrued and assigned under the three fee-shifting rules, as well as how risk preferences affect utility. Section \ref{sec:parameters-path} summarizes model parameters and illustrates a path through the game tree. Section \ref{sec:outcome-measures} defines social welfare outcome measures.
+
+\Needspace{4\baselineskip}
 \subsection{Information structure}
+\label{sec:information-structure}
+
+The underlying strength of the plaintiff's case, $Q$, is defined on a continuous range, distributed uniformly over $[0,1]$ in the baseline simulations. Because the computational approach used here depends on extensive-form game trees, however, the game presented to the solver must have finitely many information sets and actions.
+
+Let $\mathcal{S}_P$, $\mathcal{S}_D$, and $\mathcal{S}_C$ be the signal sets for the plaintiff, defendant, and court, and let $\mathcal{O}$ be each party's offer set. The random signals $X_P$, $X_D$, and $X_C$ take values in the corresponding sets. The baseline has $|\mathcal{S}_P|=|\mathcal{S}_D|=10$, $|\mathcal{S}_C|=2$, and $|\mathcal{O}|=10$. (As a robustness check, an extension uses $|\mathcal{O}|=15$ for a core subset of parameters while retaining the same signal sets.) 
+
+A model with discrete signals and offers is admittedly less general in these respects than a model based on continuous quantities, and a virtue of the mathematical literature on settlement bargaining is that some variables can be modeled continuously. In Bebchuk (1984)\cite{bebchuk84}, for example, the defendant knows the probability that the court will find liability, which can be any value from a mutually known probability density function. But not all variables in mathematical settlement models are continuous. In their review of the settlement bargaining literature, Daughety and Reinganum (2012) \cite{daughetyreinganum2012} include both two-types and continuous types models. Even models that offer continuous types in one respect feature only one or two types in another respect. For example, Klerman, Lee, and Liu (2018) \cite{klermanleeliu} allow each party to obtain a continuous signal of the quality of litigation, but the objective probability of prevailing at trial can take on only one of two values. Thus, the conventions of the existing literature do not mandate continuous variables. The ten signal levels for each party allow a considerably greater degree of granularity than two-types models, while underlying case quality varies continuously, as in Klerman, Lee, and Liu.
+
+The discretized signals of case quality that the plaintiff, defendant, and court receive are independent conditional on the exact value of $Q$. They are correlated signals, however, because each depends on $Q$. A party that receives a signal indicating that the plaintiff has a relatively strong case should conclude that the other party and the court will be more likely to also have such a signal or a nearby one. The level of noise is parameterized. Specifically, the parameters $\sigma_P$, $\sigma_D$, and $\sigma_C$ represent the standard deviations of the normal noise used to generate the plaintiff's, defendant's, and court's signals. That is, for a given underlying case quality $Q=q$, each noisy assessment is drawn from a normal distribution centered on $q$, with the standard deviation specified for the party or court. 
+
+The interval $[0,1]$ is divided into equal-width signal intervals, and the ten party-signal labels are the interval midpoints, from $0.05$ to $0.95$. Noisy assessments that lie outside $[0,1]$ are excluded. Thus, with ten signal intervals, an assessment between $0.3$ and $0.4$ produces the signal labeled $0.35$. Conditional on any $q$, the probability that a party receives a particular signal is the area under the normal density curve within that signal's interval divided by the total area between zero and one. 
+
+Because the underlying case quality is continuous, calculating the probabilities used in the game for discrete signals requires integrating over the possible values of $Q$. For $i\in\mathcal{S}_P$ and $j\in\mathcal{S}_D$, let $p_i(q)=\Pr(X_P=i\mid Q=q)$ and $d_j(q)=\Pr(X_D=j\mid Q=q)$ denote the corresponding conditional signal probabilities. The signals are independent conditional on $q$, so, under the baseline uniform distribution of quality,
+\[
+\Pr(X_P=i,X_D=j)
+=
+\int_0^1 p_i(q)d_j(q)\,dq.
+\]
+This integral accounts for every possible underlying quality that could produce the observed pair of signals. This makes it straightforward to calculate the probability of any defendant signal given a particular plaintiff signal. The integrals over case quality are evaluated numerically using 64-point Gauss--Legendre quadrature, which approximates each integral by a weighted sum of evaluations at selected quality values. For the baseline information structure, an automated test verifies that increasing the number of quadrature points from 64 to 128 changes no calculated signal or true-liability probability by more than $10^{-9}$.
+
+Figure \ref{fig:information-structure} illustrates the relationship between case quality and the parties' information. Because $Q$ is defined continuously, the groupings on the left are illustrative only. The highlighted fan out demonstrates the relative probabilities that a plaintiff or a defendant will receive different signals given that the continuous case quality is somewhere between $0.6$ and $0.8$. The informal intent is for information to be fairly strong. The combined probability that the signal is within this range (either $0.65$ or $0.75$) is $39.9\%$, and the probability that the signal is less than $0.5$ is only $17.9\%$.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 1 - Information structure.pdf}
@@ -85,17 +109,39 @@ The computational results also offer many intriguing observations along the way.
     \label{fig:information-structure}
 \end{figure}
 
-\Needspace{0.92\textheight}
-\subsection{Litigation sequence and updating}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth,height=0.76\textheight,keepaspectratio]{../Figures/Figure 2 - Worked equilibrium path.pdf}
-    \caption{Worked equilibrium path}
-    \label{fig:worked-equilibrium-path}
-\end{figure}
+A simpler design would restrict $q$ to $\{0, 1\}$ and then to derive each party's and the court's signal directly from the true state. The approach of allowing a continuous $Q$ is more consistent with the literature, particularly Klerman, Lee, and Liu, though they allow factual strength to vary across the entire real line while constraining trial-win probability to only two values. More significantly, continuous merits better exhibit an important feature of correlated signals, that a party expects that its opponent likely has a signal close to the party's own. Not so with a direct signal of truth. For example, when a party receives a signal of exactly $0.5$ (as would be possible with an odd number of signals), the opponent is no more likely to receive a signal of $0.5$ than if the party had drawn any other signal. The approach of drawing a signal directly from the underlying truth is, however, used as a robustness check and reported in Online Appendix [SPECIFY].
 
-\Needspace{0.70\textheight}
-\subsection{Costs, preferences, and fee rules}
+\Needspace{4\baselineskip}
+\subsection{Litigation sequence and updating}
+\label{sec:litigation-sequence}
+
+The game begins with the plaintiff's decision whether to file and, conditional on filing, the defendant's decision whether to answer. Neither party knows its opponent's signal. Although the game tree imposes an ordering, making it appear that the Chance decision determining the plaintiff's signal occurs before the Chance decision determining the defendant's signal, that ordering has no strategic effect. An information set groups decision points that a player cannot distinguish. When the plaintiff makes its decision whether to file, it arrives at an information set containing solely its signal. This may follow any of $|\mathcal{S}_D|$ defendant game nodes. The defendant observes filing and can infer information from it. At later stages, the parties condition on both filing and answering. Thus, their strategies reflect both their private signals and the information conveyed by participation, although no new evidentiary signal arrives during the game.
+
+Assuming that the plaintiff files and the defendant answers, then the plaintiff faces a decision whether the plaintiff will abandon the litigation rather than incur trial costs if settlement fails, and the defendant similarly faces a decision whether to default in the event settlement fails. Neither party's decision has any immediate effect, and neither party finds out about the other party's decision. The placement of these decisions before settlement rather than after is admittedly counterintuitive. But it greatly speeds up the algorithm for calculating equilibria, relative to a model in which each player takes into account both its own settlement offer and its opponent's in deciding whether to quit. With the latter approach, there would be one information set for each player for each triple of a liability signal, a settlement offer, and an opponent's settlement offer. By deciding abandonment or defaulting in advance, the number of information sets in the game is greatly reduced, with just one information set concerning quitting for each liability signal for a player. This specification does not allow a party to revise its exit decision in response to the opponent's observed offer. Including decisions whether a party will abandon or quit litigation continues to serve its primary role of affecting bargaining indirectly, by forcing each party to consider in making a settlement offer whether its opponent has a credible threat to take a case to trial.
+
+The bargaining protocol used is that introduced by Chatterjee and Samuelson (1983) \cite{chatterjeesamuelson} and used in Friedman and Wittman \cite{friedmanwittman}, Dari-Mattiacci and Saraceno (2020) \cite{darimatiaccisaraceno}, and Abramowicz (2025) \cite{abramowicz}. Each party submits an offer without observing the other's, and the case settles if and only if the defendant's offer is at least as high as the plaintiff's demand, with the settlement value equal to the midpoint. While future work might employ some other more complex bargaining protocol, such as back-and-forth offers between the parties, that would increase the number of information sets and the computational burden. Chatterjee-Samuelson bargaining avoids the simplification in the Landes-Gould-Posner bargaining models of assuming that a case will settle whenever that is in the mutual interest of the parties, given their expectations. With Chatterjee-Samuelson bargaining, parties have some incentive to shade their offers in their own favor in the hope of capturing more of the settlement surplus, though they must balance this objective with the risk of bargaining failure. The approach thus allows for an important dimension of strategic bargaining, while avoiding the simplification adopted by models that arbitrarily choose a player to make a take-it-or-leave-it offer to the other player.
+
+If a case does not settle but one party previously decided to quit in the event of settlement failure, the game ends without trial. If both parties decided to quit, a lottery assigns each a $50\%$ chance of being the party that quits. This resolves mutual withdrawal once, rather than treating both parties as separately losing.  If neither party quits after settlement failure, each incurs the additional trial cost and the court determines liability.
+
+If bargaining fails and neither party quits, then a trial occurs. The court has two signal intervals, based on whether assessments lie below or above $0.5$ and corresponding to no liability versus liability. Like the parties, the court can therefore make mistakes relative to true liability. The court's decision rule does not refine its inference based on the parties' filing, answering, or bargaining decisions. Making the court an additional strategic player that chooses a decision rule to optimize social welfare, more in the spirit of the mechanism-design literature such as Spier (1994) \cite{spier}, remains a possible extension.
+
+\Needspace{4\baselineskip}
+\subsection{Costs, preferences, and fee shifting rules}
+\label{sec:costs-preferences-fees}
+
+A plaintiff prevailing at trial receives a unit damages award. The allocation of costs depends on the fee shifting rule, and the parties' utilities depend on specification of risk preferences. 
+
+The ordinary-cost specifications set $c_{file}=c_{answer}=c_{trial}=0.15$. Here $c_{trial}$ is the additional trial cost for each party, so each spends $0.30$ if the case reaches trial. There is no separate bargaining cost. Costs are fixed rather than chosen strategically. The model does not differentiate whether these costs take the form of attorney fees, court costs, or litigants' time. Each party's initial wealth is $10.0$; with risk neutrality, this initial level does not affect the equilibrium.
+
+A computational model also can easily consider the effects of risk aversion. Utility with constant absolute risk aversion is modeled as a function of wealth, $U=-e^{-\alpha W}$. The main risk-averse comparison sets $\alpha=2$ for both parties. Utility values may be positively scaled and shifted without affecting the equilibrium. The Online Repository's Supplemental Materials folder contains a subfolder "Risk aversion utility curves" with a diagram illustrating utility as a function of wealth with this level of risk aversion.
+
+Under the American rule, each party bears its own costs. Trial Fee-Shifting requires the trial loser to reimburse the winner's incurred costs. Complete Fee-Shifting adds reimbursement of the plaintiff's filing cost when the defendant does not answer, and reimbursement of the opponent's incurred costs when a party later exits unilaterally. No fee award attaches to nonfiling, and withdrawal does not incur future trial expenses. In settled cases, each party bears its own costs. Table \ref{tab:model-primitives} summarizes the model primitives and fee rules.
+
+\subsection{Parameter Values and Example Path}
+\label{sec:parameters-path}
+
+Table \ref{tab:model-primitives} summarizes the parameters of the model. 
+
 \begin{table}[H]
     \centering
     \caption{Model primitives}
@@ -103,64 +149,133 @@ The computational results also offer many intriguing observations along the way.
     \includegraphics[width=\linewidth]{../Tables/Table 1 - Model primitives.pdf}
 \end{table}
 
-\subsection{Equilibrium and computation}
+Figure \ref{fig:worked-equilibrium-path} illustrates a portion of the game tree for the baseline simulation under the American rule. The $C$ squares represent chance decisions, while the $P$ and $D$ circles represent plaintiff and defendant information sets numbered in the full game tree. Decision probabilities are rounded to three decimal places. For example, at $D_12$, the defendant does not know the plaintiff's signal and acts based on its anticipated utility absent this information, deciding to answer because that produces higher utility. Meanwhile, $P_{48}$ illustrates a mixed strategy, where the plaintiff is indifferent whether to file because each decision yields the same wealth and thus utility. The second panel in the diagram continues the first and illustrates two successful settlements, which both happen to occur when the plaintiff's demand happens to equal the defendant's offer. Finally, trial probabilities are listed in the third panel. 
 
-\subsection{Outcome measures}
-
-\clearpage
-\section{Correlated Signals and Fee Shifting: Risk-Neutral Results}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{../Figures/Figure 3 - Participation and offers.pdf}
-    \caption{Participation and offers}
-    \label{fig:participation-and-offers}
+    \includegraphics[width=\linewidth,height=0.76\textheight,keepaspectratio]{../Figures/Figure 2 - Worked equilibrium path.pdf}
+    \caption{Worked equilibrium path}
+    \label{fig:worked-equilibrium-path}
 \end{figure}
 
-\subsection{Aggressive bargaining under the American rule}
+As a computational simplification with no effect on the equilibria, chance decisions at the  end of games are collapsed. Replacing the court's decision with a single node reflecting the parties' expected utilities, taking into account risk aversion if applicable, leaves their incentives unchanged. Similarly, when both parties decide to quit, the expected utility from the mutual-withdrawal lottery can be calculated directly.
 
-\subsection{Trial Fee-Shifting}
+\subsection{Outcome measures}
+\label{sec:outcome-measures}
 
-\subsection{Complete Fee-Shifting and the incentive to answer}
+Once an equilibrium is calculated, outcome probabilities and welfare measures can be evaluated by weighting the possible dispositions and underlying truth states. These are deterministic expectations rather than Monte Carlo estimates. 
 
-\subsection{Defense, filing, and the bargaining population}
+True liability $T$ is binary, with $\Pr(T=1\mid Q=q)=q$.\footnote{This can be derived by assuming that Chance first determines true liability, with $\Pr(T=1)=\frac{1}{2}$, and then draws case quality from $Q\mid T=1\sim\operatorname{Beta}(2,1)$ or $Q\mid T=0\sim\operatorname{Beta}(1,2)$. These are probability distributions that have linear densities $2q$ and $2(1-q)$, respectively. Their equal mixture is uniform on $[0,1]$, and Bayes' rule yields $\Pr(T=1\mid Q=q)=q$. The Online Repository features extensions with different distributions of case merits.} 
+Thus, although true liability and the strength of the plaintiff's case are correlated, a plaintiff can have a weak case despite true liability, or a strong case despite the absence of true liability. Neither party directly observes $Q$ or $T$.
 
-\Needspace{0.44\textheight}
-\subsection{Monetary consequences}
-\begin{table}[H]
-    \centering
-    \caption{Welfare outcomes}
-    \label{tab:welfare-outcomes}
-    \includegraphics[width=\linewidth]{../Tables/Table 2 - Welfare outcomes.pdf}
-\end{table}
+
+Explicit modeling of true liability permits measurement of the accuracy of outcomes. We can compare each party's net gain or loss with the outcome in a hypothetical perfect and costless litigation system. Defining accuracy solely by whether settlements mimic judgments would instead ignore imperfections in judgments themselves. A more ambitious approach would model the emergence of disputes endogenously in a particular legal context, as in Hylton (2002) \cite{hylton}, where a potential tort defendant initially decides how much care to take. This is left for a future extension, and the present model treats the population of potential disputes as given.
+
+The monetary measures distinguish three interests. For a meritorious plaintiff, the shortfall is the amount by which net recovery, including litigation costs and fee transfers, falls below the unit damages award (or zero, if a full recovery is obtained). For a truly nonliable defendant, the burden is its net loss from litigation. For a truly liable defendant, the excess burden is its net loss above the unit damages award (or zero, if there is no net burden). Each measure is weighted by the probability of the relevant truth state, so that the reported figures are contributions per potential dispute, including disputes never filed.
+
+Gross outcome error separately measures the absolute difference between the base payment and the payment warranted by true liability, before litigation costs and separately awarded fees. Real expenditures measure resources consumed in filing, answering, and trial. These measures distinguish errors in payments from the costs of obtaining a disposition. Their relative importance may be context-sensitive. 
 
 \clearpage
-\section{Risk Aversion and Litigation Outcomes}
+\section{Results}
+\label{sec:results}
+
+\subsection{Risk Neutrality}
+\label{sec:risk-neutrality}
+
+Figure \ref{fig:dispositions} reports the dispositions of potential disputes under the three fee-shifting rules with risk neutrality and ordinary costs. Figure \ref{fig:participation-and-offers} then shows the participation and bargaining strategies underlying these outcomes.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{../Figures/Figure 4 - Dispositions.pdf}
-    \caption{Dispositions}
+    \includegraphics[width=\linewidth]{../Figures/Figure 3 - Dispositions.pdf}
+    \caption{Risk-neutral dispositions}
     \label{fig:dispositions}
 \end{figure}
 
-\subsection{Settlement, participation, and expenditures}
+That strategic bargaining might occur is not surprising. All of the Bayesian models of settlement that use Chatterjee-Samuelson bargaining (including Friedman and Wittman (2006) \cite{friedmanwittman}) recognize that each party faces a trade-off: Greater generosity increases the chance of avoiding trial, but greater stinginess increases the portion of the bargaining surplus that the offeror will receive if a settlement does occur. But strategic bargaining plays a considerably larger role than one might expect. Figure \ref{fig:participation-and-offers} illustrates substantial strategic bargaining even with the baseline information structure. Real-world bargaining includes many features not accounted for in this model, but this result tentatively suggests that litigants might rationally often fail to reach settlements even when their actual assessments of the litigation value are not far apart. At least, these results should make us cautious about accepting at face value the results of Landes-Posner-Gould models that assume settlement occurs whenever settlement would produce social surplus.
 
-\subsection{Risk aversion under the two fee-shifting rules}
-\refstepcounter{table}\label{tab:strategy-mechanisms}
-\noindent\textit{Table \thetable\ (Strategy mechanisms): to be reduced before insertion.}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../Figures/Figure 4 - Participation and offers.pdf}
+    \caption{Risk-neutral participation and offers}
+    \label{fig:participation-and-offers}
+\end{figure}
 
-\subsection{Monetary burdens and the cost sweep}
+Table \ref{tab:strategy-mechanisms} presents selected decompositions of the changes in equilibrium strategies under the fee-shifting rules.
 
-\subsection{Legal implications}
+\begin{table}[H]
+    \centering
+    \caption{Selected risk-neutral strategy changes}
+    \label{tab:strategy-mechanisms}
+    \includegraphics[width=\linewidth]{../Tables/Table 2 - Strategy mechanisms.pdf}
+    \par\smallskip
+    \begin{minipage}{\linewidth}
+    \footnotesize\setstretch{1}
+    \textit{Note:} Direct changes the fee rule while holding the opponent's strategy fixed. Opponent-entry and opponent-offer contributions average over the orders of replacing opponent strategy components. Filing and answering contributions are percentage points; demand contributions are fractions of damages. Opponent-exit and remaining contributions are zero in these rows. The full analysis and diagnostic checks are in the \href{https://github.com/mbabramo/correlated-signals-article}{online repository}.
+    \end{minipage}
+\end{table}
 
-\section{Extensions, Robustness, and Limits}
+\subsection{Risk Aversion}
+\label{sec:risk-aversion}
 
-\subsection{Information quality, merits, and cost timing}
+Table \ref{tab:risk-averse-outcomes} reports dispositions and monetary outcomes when both parties have CARA risk aversion with coefficient $\alpha=2$, holding ordinary costs and the information structure fixed. These results describe the selected equilibria; Section \ref{sec:multiple-equilibria} considers variation across recovered equilibria.
 
-\subsection{Multiple equilibria}
+\begin{table}[H]
+    \centering
+    \caption{Risk-averse dispositions and welfare outcomes}
+    \label{tab:risk-averse-outcomes}
+    \includegraphics[width=\linewidth]{../Tables/Table 3 - Risk-averse outcomes.pdf}
+    \par\smallskip
+    \begin{minipage}{\linewidth}
+    \footnotesize\setstretch{1}
+    \textit{Note:} All outcomes use the population of potential disputes. Mutual exit is allocated equally to abandonment and default. Welfare measures are amounts per potential dispute in units of damages, rounded to three decimals; they are distinct and should not be added together.
+    \end{minipage}
+\end{table}
 
-\subsection{Finer offer grid}
+\subsection{Welfare Analysis}
+\label{sec:welfare-analysis}
 
-\subsection{Empirical interpretation and model limitations}
+Table \ref{tab:welfare-outcomes} reports the risk-neutral welfare measures. Together with the risk-averse measures in Table \ref{tab:risk-averse-outcomes}, it permits comparison of monetary burdens, gross outcome error, and real expenditures across fee rules and risk preferences, using the definitions in Section \ref{sec:outcome-measures}.
+
+\begin{table}[H]
+    \centering
+    \caption{Risk-neutral welfare outcomes}
+    \label{tab:welfare-outcomes}
+    \includegraphics[width=\linewidth]{../Tables/Table 4 - Welfare outcomes.pdf}
+\end{table}
+
+\section{Robustness and Limits}
+\label{sec:robustness}
+
+\subsection{Cost Levels and Timing}
+\label{sec:cost-levels-timing}
+
+The parameter values are not calibrated to actual data, and real-world values are likely to vary from place to place and case category to case category. An important dimension is the cost relative to the stakes. Litigation may play out very differently in a small claim, in which lawyers' fees and the parties' own time may be large relative to the amount at issue, than in a large suit in which legal expenses constitute a small fraction of the stakes. To examine this dimension, the baseline cost levels are multiplied by each element of $\{\frac{1}{4},\frac{1}{2},1,2,4\}$, holding the other features of each specification fixed.
+
+Settlement bargaining dynamics depend on when costs are incurred. The cost-timing extensions hold constant the total costs that each party would bear if a case reached trial, but vary whether those costs are borne at entry or remain avoidable until trial. These comparisons change the distribution of fixed costs across stages; they do not model the parties' choice of how much to spend.
+
+\subsection{Information Quality and Structure}
+\label{sec:information-quality}
+
+The information-quality checks vary the parties' and court's signal noise together and consider alternative distributions of case quality and relationships between true liability and signals. The full comparisons are reported in the online repository.
+
+\subsection{Offer-Grid Sensitivity}
+\label{sec:offer-grid}
+
+The granularity of available offers is another potential source of sensitivity. Suppose, for example, that a change in some parameter would lead in a continuous model to slight changes in the parties' settlement functions that nonetheless had large effects on the settlement rate. It could be difficult for a discrete model, in which each party must choose among only ten offer levels, to capture that nuance. Discrete offers are therefore a limitation even when the selected equilibrium features widely separated demands and offers. Comparing ten and fifteen available offers tests sensitivity to a finer grid, but does not establish convergence to a model with continuous offers.
+
+\subsection{Multiple Equilibria}
+\label{sec:multiple-equilibria}
+
+Finding an equilibrium does not establish whether it is representative of other equilibria of the same game. The computational approach therefore raises the question whether the results depend on which equilibrium the algorithm finds. I address this by varying the initial strategy profiles supplied to the solver and examining both the distinct profiles recovered and the variation in their outcomes. This exercise cannot determine how many equilibria exist: in principle, the recovered profiles could be the entire population or a small sample. Recovery frequencies describe the numerical search rather than the probability that litigants would select a particular equilibrium.
+
+\subsection{Empirical Interpretation}
+\label{sec:empirical-interpretation}
+
+At least three limitations affect the interpretation of the model. First, litigants may not be rational Bayesians who play equilibrium strategies. But, as the literature generally presumes, models assuming rationality may provide a first guess at how litigants behave, and economic forces may gradually push actors in any given legal context toward equilibrium strategies.  Moreover, though more complicated to model, two-sided asymmetric information seems like a more accurate description of most litigation than one-sided information, and a model that recognizes the possibility that litigants may not contest litigation or may quit after settlement failure illustrates dynamics that some models assume away.
+
+Second, models' usefulness may depend on parameter values, and the parameters here are not calibrated based on data, either statistics from actual litigation or on microfoundations of individual behavior. Different categories of litigation may require different calibrations. As Gelbach (2018) \cite{gelbach} observes, quite different structural models may also share a common reduced form, making empirical discrimination difficult.
+
+Third, the model omits important features of litigation, including learning and bargaining over time, as well as the role of lawyers and agency costs. Indeed, this is but a first step toward building models that can incorporate even more complex features of the litigation game. Because the game tree size may increase exponentially with additional features, other computational game theory approaches that seek approximate equilibria may be needed to make larger game models solvable.
 
 \section{Conclusion}
 

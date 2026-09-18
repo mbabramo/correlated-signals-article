@@ -9,5 +9,127 @@
       "Sha256": "36ae614b8c377792a4334fda894ad03ad8a6635191fafadb4b7aa28f4c1545fd"
     }
   ],
-  "Caption": "Model primitives and the three core fee rules. Stage costs shown at cost multiplier 1; the same multiplier scales all costs. Signals are conditionally independent given exact Q and correlated unconditionally. Parties observe their own signal, not Q, true liability or the court signal. Exit reimbursements cover incurred, unsaved expenses; future trial costs are not incurred on exit. Nonanswer reimburses the plaintiff's incurred filing expense under Complete Fee-Shifting. Unfiled disputes incur no litigation costs. Settlement uses the model's inclusive transfer with each party bearing its own costs. Mutual give-up is allocated equally between abandonment and default. The rules are precise model treatments, not complete descriptions of national procedural systems."
+  "Caption": "Model primitives and the three core fee rules. Conditional on case quality Q=q, the probability of true liability is q; the unconditional probability is 0.5. Court findings may differ from true liability. Stage costs shown at cost multiplier 1; the same multiplier scales all costs. Signals are conditionally independent given exact Q and correlated unconditionally. Parties observe their own signal, not Q, true liability or the court signal. Exit reimbursements cover incurred, unsaved expenses; future trial costs are not incurred on exit. Nonanswer reimburses the plaintiff's incurred filing expense under Complete Fee-Shifting. Unfiled disputes incur no litigation costs. Settlement uses the model's inclusive transfer with each party bearing its own costs. Mutual give-up is allocated equally between abandonment and default. The rules are precise model treatments, not complete descriptions of national procedural systems.",
+  "Primitives": {
+    "CaseQuality": {
+      "Distribution": "Uniform [0,1]",
+      "ObservedByParties": false
+    },
+    "TrueLiability": {
+      "States": [
+        0,
+        1
+      ],
+      "ConditionalProbability": "Pr(T=1 | Q=q)=q",
+      "UnconditionalProbability": 0.5
+    },
+    "Signals": {
+      "AssessmentDistribution": "Normal centered on q, truncated to [0,1]",
+      "ConditionallyIndependentGiven": "Exact Q",
+      "PlaintiffCount": 10,
+      "DefendantCount": 10,
+      "CourtCount": 2,
+      "PartyBins": "Equal-width intervals with midpoint labels",
+      "PartyLabels": [
+        0.05,
+        0.15,
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "PlaintiffSigma": 0.2,
+      "DefendantSigma": 0.2,
+      "CourtSigma": 0.2,
+      "CourtLiabilityThreshold": 0.5,
+      "NewEvidenceDuringPlay": false
+    },
+    "Damages": 1,
+    "InitialWealth": {
+      "Plaintiff": 10,
+      "Defendant": 10
+    },
+    "Participation": {
+      "Filing": "Voluntary",
+      "Answering": "Voluntary after filing",
+      "NonfilingPayment": 0,
+      "NonfilingCosts": 0
+    },
+    "Bargaining": {
+      "Rounds": 1,
+      "Simultaneous": true,
+      "OffersPerParty": 10,
+      "OfferValues": [
+        0.05,
+        0.15,
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.95
+      ],
+      "SettlementCondition": "P demand <= D offer",
+      "SettlementAmount": "Midpoint of demand and offer",
+      "FinerGridOffersPerParty": 15,
+      "FinerGridRule": "Equal-width interval midpoints; signal counts unchanged"
+    },
+    "Exit": {
+      "Timing": "Private commitment before offers, effective only after bargaining failure",
+      "Plaintiff": "Abandonment",
+      "Defendant": "Default",
+      "MutualExitAbandonmentProbability": 0.5,
+      "MutualExitDefaultProbability": 0.5,
+      "FutureTrialCostsIncurred": false
+    },
+    "OrdinaryCosts": {
+      "Filing": 0.15,
+      "Answering": 0.15,
+      "TrialPerPartyAdditional": 0.15,
+      "Bargaining": 0,
+      "TotalPerPartyThroughTrialBeforeFeeShifting": 0.3
+    },
+    "CostMultipliers": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "Preferences": {
+      "RiskNeutral": "U(W)=W",
+      "RiskAverse": "U(W)=-exp(-alpha W)",
+      "RiskAverseAlphaBothParties": 2
+    },
+    "FeeRules": [
+      "American",
+      "Trial Fee-Shifting",
+      "Complete Fee-Shifting"
+    ]
+  },
+  "Notation": {
+    "SignalSets": [
+      "\\mathcal{S}_P",
+      "\\mathcal{S}_D",
+      "\\mathcal{S}_C"
+    ],
+    "RandomSignals": [
+      "X_P",
+      "X_D",
+      "X_C"
+    ],
+    "OfferSet": "\\mathcal{O}",
+    "Counts": "Set cardinalities",
+    "SignalNoiseParameters": [
+      "\\sigma_P",
+      "\\sigma_D",
+      "\\sigma_C"
+    ]
+  }
 }

@@ -1,20 +1,25 @@
 \documentclass[10pt,border=5pt,varwidth=16cm]{standalone}
-\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,tabularx,array,microtype}
-\begin{document}\begin{minipage}{16cm}\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\linewidth}{@{}p{3cm}X@{}}
-\toprule Primitive & Core comparison \\ \midrule
-Common merits & $Q\sim U[0,1]$; $T\mid Q\sim\mathrm{Bernoulli}(Q)$; $\Pr(T=1)=0.5$ \\
-Private information & One noisy merits signal per party; 10 signal bins each \\
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,tabularx,array,microtype,BOONDOX-cal}
+\begin{document}\begin{minipage}{16cm}\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}X@{}}
+\toprule Primitive & Core specifications \\ \midrule
+Case quality & Unobserved continuous quality $Q\sim U[0,1]$ \\
+True liability & $T=1$ means truly liable. Given quality $q$, $\Pr(T=1\mid Q=q)=q$; the unconditional probability is $\Pr(T=1)=0.5$. \\
+Signal generation & Each party and the court receive a noisy assessment drawn from a normal distribution centered on $q$, truncated to $[0,1]$. Assessments are independent conditional on exact $q$. \\
 Signal noise & $\sigma_P=\sigma_D=\sigma_C=0.20$ \\
-Adjudication & Two court-signal bins; fixed damages $d=1$ \\
+Party signals & $X_P\in\mathcal{S}_P$ and $X_D\in\mathcal{S}_D$, with $|\mathcal{S}_P|=|\mathcal{S}_D|=10$. Ten equal-width intervals per party have midpoint labels $0.05,0.15,\ldots,0.95$. \\
+Court signal and rule & $X_C\in\mathcal{S}_C$, with $|\mathcal{S}_C|=2$. The court finds no liability for assessments below $0.5$, and liability for assessments at or above $0.5$. \\
+Damages & Fixed award $d=1$ if P wins at trial or D defaults; zero if P abandons or loses at trial \\
 Initial wealth & $w_P=w_D=10$ \\
-Filing and answering & Endogenous; cost $0.15$ for each acting party \\
-Trial & Additional cost $0.15$ per party; no additional bargaining cost \\
-Exit & Parties commit before offers to continue or exit if bargaining fails \\
-Bargaining & One simultaneous round; 10 offers $0.05,0.15,\ldots,0.95$; midpoint settlement if demand $\leq$ offer \\
-Preferences & Risk neutral or symmetric CARA, $\alpha=2$ \\
-Cost comparisons & Common cost multipliers $0.25,0.5,1,2,4$ \\
-Integration & 64-point Gauss--Legendre integration over continuous merits \\
+Filing and answering & P chooses whether to file; after filing, D chooses whether to answer or default. Nonfiling ends the dispute without payment or litigation costs. \\
+Bargaining rounds & Single simultaneous round \\
+Offer grid & $\mathcal{O}=\{0.05,0.15,\ldots,0.95\}$, with $|\mathcal{O}|=10$ choices per party. The finer-grid check uses $|\mathcal{O}|=15$ midpoint offers with the same signal sets. \\
+Settlement rule & Settlement occurs if P's demand is no greater than D's offer; D pays P the midpoint of the two amounts. \\
+Exit & Before offers, each party privately commits to continue or quit if bargaining fails. P may abandon; D may default. Trial occurs only if bargaining fails and neither quits. \\
+Mutual exit & If both commit to quit and bargaining fails, a lottery selects P's abandonment or D's default with probability $0.5$ each. \\
+Stage costs & $c_{file}=c_{answer}=c_{trial}=0.15$ at ordinary costs; trial costs are additional and per party. Each incurs $0.30$ through trial before fee shifting. No separate bargaining cost. \\
+Cost multipliers & A common multiplier $c\in\{0.25,0.5,1,2,4\}$ scales all stage costs; ordinary costs use $c=1$. \\
+Preferences & Both parties maximize expected utility: risk neutral, $U(W)=W$, or CARA, $U(W)=-e^{-\alpha W}$ with $\alpha=2$ for both parties. \\
 \bottomrule\end{tabularx}\par\medskip
 \begin{tabularx}{\linewidth}{@{}Xccc@{}}
 \toprule Fee trigger & American & \shortstack{Trial\\Fee-Shifting} & \shortstack{Complete\\Fee-Shifting} \\ \midrule
