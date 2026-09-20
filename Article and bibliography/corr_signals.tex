@@ -76,7 +76,7 @@ The computational results also offer many intriguing observations along the way.
 \clearpage
 \section{The Model}
 
-This section frames the correlated signals model in explicitly game theoretic terms by describing the extensive-form game tree. Section \ref{sec:information-structure} describes the signals the parties and the court receive of the case quality. Section \ref{sec:litigation-sequence} sets out the sequence of litigation decisions and explains how the parties' information changes as the game progresses. Section \ref{sec:costs-preferences-fees} specifies how litigation costs are accrued and assigned under the three fee-shifting rules, as well as how risk preferences affect utility. Section \ref{sec:parameters-path} summarizes model parameters and illustrates a path through the game tree. Section \ref{sec:outcome-measures} defines social welfare outcome measures.
+This part frames the correlated signals model in explicitly game theoretic terms by describing the extensive-form game tree. Section \ref{sec:information-structure} describes the signals the parties and the court receive of the case quality. Section \ref{sec:litigation-sequence} sets out the sequence of litigation decisions and explains how the parties' information changes as the game progresses. Section \ref{sec:costs-preferences-fees} specifies how litigation costs are accrued and assigned under the three fee-shifting rules, as well as how risk preferences affect utility. Section \ref{sec:parameters-path} summarizes model parameters and illustrates a path through the game tree. Section \ref{sec:outcome-measures} defines social welfare outcome measures.
 
 \Needspace{4\baselineskip}
 \subsection{Information structure}
@@ -135,7 +135,11 @@ The ordinary-cost specifications set $c_{file}=c_{answer}=c_{trial}=0.15$. Here 
 
 A computational model also can easily consider the effects of risk aversion. Utility with constant absolute risk aversion is modeled as a function of wealth, $U=-e^{-\alpha W}$. The main risk-averse comparison sets $\alpha=2$ for both parties. Utility values may be positively scaled and shifted without affecting the equilibrium. The Online Repository's Supplemental Materials folder contains a subfolder "Risk aversion utility curves" with a diagram illustrating utility as a function of wealth with this level of risk aversion.
 
-Under the American rule, each party bears its own costs. Trial Fee-Shifting requires the trial loser to reimburse the winner's incurred costs. Complete Fee-Shifting adds reimbursement of the plaintiff's filing cost when the defendant does not answer, and reimbursement of the opponent's incurred costs when a party later exits unilaterally. No fee award attaches to nonfiling, and withdrawal does not incur future trial expenses. In settled cases, each party bears its own costs. Table \ref{tab:model-primitives} summarizes the model primitives and fee rules.
+Under the American rule, each party bears its own costs. Trial Fee-Shifting requires the trial loser to reimburse the winner's incurred costs. Complete Fee-Shifting adds reimbursement of the plaintiff's filing cost when the defendant does not answer, and reimbursement of the opponent's incurred costs when a party later exits unilaterally. No fee award attaches to nonfiling, and withdrawal does not incur future trial expenses. In settled cases, each party bears its own costs. 
+
+The justification for studying both trial fee-shifting and complete fee-shifting rules is not that different jurisdictions adopt different approaches. To the contrary, the English rule as practiced in the United Kingdom is a complete fee-shifting rule. See, e.g., Field v Del Vecchio [2022] EWHC 1117 (Ch), [32]–[34] [CHECK CITE]. Even in the United States, when a statute allows fee shifting to the prevailing party, a party that prevails by default qualifies. See, e.g., Kirtsaeng v. John Wiley \& Sons, Inc., 579 U.S. 197, 208 n.3 (2016).  Trial fee-shifting, however, has sometimes been assumed in the literature as the applicable rule. Farmer \& Pecorino (YEAR) [CITE -- Costly Voluntary Disclosure] and Huang (2004) assume that trial expenses only are shifted.  It is worth assessing whether that assumption matters and whether there might be any advantages to fee-shifting rules that apply only after trial.
+
+Table \ref{tab:model-primitives} summarizes the model primitives and fee rules.
 
 \subsection{Parameter Values and Example Path}
 \label{sec:parameters-path}
@@ -179,10 +183,14 @@ Gross outcome error separately measures the absolute difference between the base
 \section{Results}
 \label{sec:results}
 
+This part reports the principal results, focusing on the six baseline cases, involving three fee-shifting rules (American, trial fee shifting, and complete shifting) with both risk neutrality and risk aversion. Section \ref{sec:risk-neutrality} begins with the results under risk neutrality. In addition to showing the dispositions and the party strategies that produce them, it identifies the key explanations for the differences by examining best responses to opponents' equilibrium strategies under both rules. Section \ref{sec:risk-aversion} similarly reports results for risk aversion. In both cases, trial-only fee shifting has a scant effect on filing and answering, but complete risk aversion increases rates at which plaintiffs fail to file while leading defendants to always answer. Section \ref{sec:welfare-analysis} considers the welfare implications of the two fee-shifting rules.
+
 \subsection{Risk Neutrality}
 \label{sec:risk-neutrality}
 
-Figure \ref{fig:dispositions} reports the dispositions of potential disputes under the three fee-shifting rules with risk neutrality and ordinary costs. Figure \ref{fig:participation-and-offers} then shows the participation and bargaining strategies underlying these outcomes.
+Figure \ref{fig:dispositions} reports the dispositions of potential disputes under the three fee-shifting rules with risk neutrality and ordinary costs. The American rule results show little settlement. In $19.1\%$ of potential cases, the plaintiff does not file, and in $38.3\%$, the defendant defaults after the plaintiff files. A settlement occurs only $8.3\%$ of the time, and the remaining $45.3\%$ of potential cases go to trial, with the plaintiff winning slightly more than the defendant. It is true that one might consider some of the party defaults to be a form of settlement, particularly given that the model does not include a pre-filing settlement phase. Nonetheless, it may be surprising that conditional on filing and answering, relatively few cases go to trial, particularly given empirical data on filing rates. [CITE KLERMAN AND COAUTHOR] After all, the information structure was designed to give parties relatively good information about the strength of the plaintiff's claim, and parties that settle can split the surplus from such settlement.
+
+The fee-shifting results may seem even more puzzling. First, switching from the American rule to trial fee-shifting considerably increases the rate of trial conditional on filing and answering, from $19.0\%$ to $41.7\%$. This reverses the familiar finding that fee shifting should make trial more likely in litigated cases, because higher stakes should make mutually optimistic parties less willing to settle. [CITE] Second, switching to complete fee-shifting produces yet another increase, to $57.8\%$ of cases conditional on filing and answering. And third, and perhaps most oddly, the proportion of cases in which potential plaintiffs do not file increases greatly (from $19.1\%$ and $17.8\%$ in the American and trial fee-shifting cases, respectively, to $39.2\%$), while the proportion of all cases in which the defendant does not file tumbles (from $37.3\%$ and $38.3\%$, respectively, to $0$). 
 
 \begin{figure}[H]
     \centering
@@ -200,7 +208,14 @@ That strategic bargaining might occur is not surprising. All of the Bayesian mod
     \label{fig:participation-and-offers}
 \end{figure}
 
-Table \ref{tab:strategy-mechanisms} presents selected decompositions of the changes in equilibrium strategies under the fee-shifting rules.
+
+For many signals, the parties' strategies are the same under all rules. For example, the plaintiff never files with a signal of $0.05$ of $0.15$ and always files with a signal of $0.45$ or higher. Similarly, the defendant always answers with a signal up to $0.55$. But at signals 0.25 and 0.35, the plaintiff does not file with complete fee shifting, while filing a high percentage or all of the time with the other two rules, and the same occurs on the defendants' side. The increase in settlements, meanwhile, arises principally from the signals of $0.65$ or higher in which the defendant answers only in the complete fee-shifting regime. In those cases, the defendant offers settlements of $0.95$. That leads to completed settlements at that same value when the plaintiff offers settlements of $0.45$ or higher. The plaintiff insists on a settlement at that value with a signal of $0.45$ or greater, whereas, with the American rule and trial fee-shifting, the plaintiff's offer was that high only for a signal of $0.75$ or $0.65$, respectively. 
+ 
+The one-sided nature of settlements extends across all three rules. With the American rule, the only settlements occur when the plaintiff's signal is $0.25$, and the plaintiff accepts what might be seen as a nuisance payoff of $0.05$. Under trial fee-shifting, the settlements occur at that signal and $0.35$ for the same value. Complete fee-shifting simply changes the value at which settlements occur to the other side of the probability spectrum. More generally, across all rules, each party insists on a settlement highly favorable to it under most signals, conditional on filing and entering, but for relatively extreme values will accede to a settlement highly favorable to the other party. It turns out to be a better strategy for a litigant to hold out for the highly favorable settlements than to offer middling settlements that would more evenly split the apparent surplus from settlement.
+ 
+To better appreciate the logic underlying changes across equilibria, we need to assess whether changes in strategies occur as a direct result of a change in the fee-shifting rule or as a result of an opponent's change in strategy, itself as a result of a change in the fee-shifting rule, or as some combination. The exercise proves straightforward for the three strategies at baseline. Table \ref{tab:strategy-mechanisms} presents selected decompositions of the changes in equilibrium strategies under the fee-shifting rules. When changing from the American rule to trial fee-shifting, the most important change occurs in the plaintiff demand function at signal $0.35$, with the plaintiff dropping the demand from $0.75$ to the nuisance value of $0.05$. This drop occurs even if we calculate the plaintiff's optimal strategy while holding the defendant's strategy constant at its strategy under the American rule. Thus, we can say with confidence that the entire drop is a direct result of the change in rules. 
+
+With the change from trial to complete fee-shifting, however, the story is more complex. The defendant's decision to answer across a range of high signals can be entirely directly attributable to the change in rules, but none of the plaintiff's decision not to file at signals $0.25$ and $0.35$ can be attributed to the change in rules. Rather, the change is entirely attributable to the defendant's decision to answer. When the defendant's strategy is held constant at the strategy under trial fee shifting but applying the complete fee-shifting rule, the plaintiff does not change its file decision, but if the defendant's strategy is altered to include the defendant's offers under the complete fee-shifting equilibrium, then the plaintiff does change its file decision. Once we know that the change in equilibrium is set off entirely by the defendant's decision to always answer, the underlying motivating logic is simple. A defendant who does not answer must pay the plaintiff's filing fee, while the defendant can potentially avoid that expense by continuing to litigate.
 
 \begin{table}[H]
     \centering
@@ -217,28 +232,44 @@ Table \ref{tab:strategy-mechanisms} presents selected decompositions of the chan
 \subsection{Risk Aversion}
 \label{sec:risk-aversion}
 
-Table \ref{tab:risk-averse-outcomes} reports dispositions and monetary outcomes when both parties have CARA risk aversion with coefficient $\alpha=2$, holding ordinary costs and the information structure fixed. These results describe the selected equilibria; Section \ref{sec:multiple-equilibria} considers variation across recovered equilibria.
+Figure \ref{fig:risk-averse-dispositions} reports dispositions when both parties have CARA risk aversion with coefficient $\alpha=2$, holding ordinary costs and the information structure fixed. Figure \ref{fig:risk-averse-participation-and-offers} shows the corresponding participation and offer strategies. Table \ref{tab:risk-averse-strategy-changes} presents selected strategy changes from introducing risk aversion and from extending fee shifting under risk aversion.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../Figures/Figure 5 - Risk-averse dispositions.pdf}
+    \caption{Risk-averse dispositions}
+    \label{fig:risk-averse-dispositions}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../Figures/Figure 6 - Risk-averse participation and offers.pdf}
+    \caption{Risk-averse participation and offers}
+    \label{fig:risk-averse-participation-and-offers}
+\end{figure}
 
 \begin{table}[H]
     \centering
-    \caption{Risk-averse dispositions and welfare outcomes}
-    \label{tab:risk-averse-outcomes}
-    \includegraphics[width=\linewidth]{../Tables/Table 3 - Risk-averse outcomes.pdf}
+    \caption{Selected strategy changes involving risk aversion}
+    \label{tab:risk-averse-strategy-changes}
+    \includegraphics[width=\linewidth]{../Tables/Table 3 - Risk-averse strategy changes.pdf}
     \par\smallskip
     \begin{minipage}{\linewidth}
     \footnotesize\setstretch{1}
-    \textit{Note:} All outcomes use the population of potential disputes. Mutual exit is allocated equally to abandonment and default. Welfare measures are amounts per potential dispute in units of damages, rounded to three decimals; they are distinct and should not be added together.
+    \textit{Note:} Panels A--C change both parties' risk preferences; panel D changes the fee rule. Contributions are defined as in Table \ref{tab:strategy-mechanisms}, with opponent-exit contributions also shown. Demand and offer amounts and contributions are fractions of damages. Displayed histories are reached in both equilibria. The exit commitment applies after bargaining failure; demands and offers condition on commitment to continue. Remaining contributions are zero. Full results and diagnostic checks are in the \href{https://github.com/mbabramo/correlated-signals-article}{online repository}.
     \end{minipage}
 \end{table}
+
+Consider first the effect of adding risk aversion, holding constant the fee-shifting rule. With the American rule, settlement becomes the dominant method of resolution, occurring in $88.1\%$ of cases. Interestingly, however, the players' strategies still do not embody gradual increases in offers based on signals. Instead, each party's strategy pools at the $0.15$ level for signals up to $0.45$ and $0.85$ for higher signals. Table \ref{tab:risk-averse-strategy-changes} highlights that some of these offer changes (such as the defendant offering $0.85$ instead of $0.05$ at signal level $0.65$ and the plaintiff demanding $0.15$ instead of $0.75$ at the mirror signal $0.35$) are predominantly direct consequences of risk aversion. The risk of trial leads parties to become generous at signals that indicate slight weakness in their case. The more interesting change is in filing and answering. The plaintiff now always files for signals less than or equal to $0.35$, and what motivates this change is not the direct effect of risk aversion, but the change in defendant offers. With signal $0.35$, the direct effect of risk aversion is that the plaintiff switches from risky and uncertain filing to not filing, but the increased generosity of the defendant's offers entirely counters this.
 
 \subsection{Welfare Analysis}
 \label{sec:welfare-analysis}
 
-Table \ref{tab:welfare-outcomes} reports the risk-neutral welfare measures. Together with the risk-averse measures in Table \ref{tab:risk-averse-outcomes}, it permits comparison of monetary burdens, gross outcome error, and real expenditures across fee rules and risk preferences, using the definitions in Section \ref{sec:outcome-measures}.
+Table \ref{tab:welfare-outcomes} reports welfare measures under both risk neutrality and risk aversion. It compares monetary burdens, gross outcome error, and real expenditures across fee rules and risk preferences, using the definitions in Section \ref{sec:outcome-measures}.
 
 \begin{table}[H]
     \centering
-    \caption{Risk-neutral welfare outcomes}
+    \caption{Welfare outcomes under risk neutrality and risk aversion}
     \label{tab:welfare-outcomes}
     \includegraphics[width=\linewidth]{../Tables/Table 4 - Welfare outcomes.pdf}
 \end{table}

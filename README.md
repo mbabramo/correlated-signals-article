@@ -4,8 +4,8 @@ The September 16 rebuild contains **276 verified cases**. Every retained ten-off
 
 ## Reading the collection
 
-- [Figures](Figures/README.md): four numbered main figures, including the three-rule strategy figure and six-case dispositions.
-- [Tables](Tables/README.md): three numbered main tables: model primitives, welfare outcomes and seven panels of strategy comparisons.
+- [Figures](Figures/README.md): six numbered main figures, including separate disposition and four-panel strategy figures for risk neutrality and risk aversion.
+- [Tables](Tables/README.md): four numbered main tables: model primitives, selected risk-neutral strategy changes, selected risk-averse strategy changes and combined welfare outcomes.
 - [Results](Results/README.md): the full routine study. Figures and tables share `Aggregated Data/<Specification>/<Risk Neutral|Risk Averse|Risk Comparison>`. Each cost has separate welfare and disposition files. PDF/PNG sit in the display folder; TeX/CSV/JSON sit in its `Sources` folder.
 - [Supplemental materials](<Supplemental materials/README.md>): separate solution-path, game-tree, signal, multiple-equilibrium and strategy-change workflows. Ordinary parameter variations remain in Results.
 - [Main exhibit manifest](manuscript-exhibits.json): exact canonical-source and numbered-output hashes, including caption companions.
@@ -17,7 +17,7 @@ There are **2,024 routine exhibits**: 1,656 individual diagrams, 92 strategy fig
 
 Run `scripts/Rebuild-ArticleResults.ps1` **from the ACESim4 repository**. It produces the retained suite and diagrams, using all available processors by default. `-DiagramsOnly` uses completed reports. A clean rebuild begins with `scripts/Prepare-ArticleRebuild.ps1`, which derives the case matrix from C#, preserves available matching profiles and lists missing cases. See [the workflow](Results/README.md) for exact behavior and validation.
 
-After production and diagram verification, run ACESim4's `scripts/Publish-ArticleResults.ps1 -ResultsSource <completed Results> -ArticleDirectory <this repository> -Python <python with pypdf>`. It verifies and imports the collection, refreshes Figures 3/4 and Table 2, and preserves the other main exhibits and separate supplemental calculations. `LitigCharts equilibrium-manuscript` refreshes Table 3 from the saved comparisons.
+After production and diagram verification, run ACESim4's `scripts/Publish-ArticleResults.ps1 -ResultsSource <completed Results> -ArticleDirectory <this repository> -Python <python with pypdf>`. It verifies and imports the collection, refreshes Figures 3-6 and Table 4, and preserves the other main exhibits and separate supplemental calculations. `LitigCharts equilibrium-manuscript` refreshes Tables 2 and 3 from the saved comparisons.
 
 The original labels in option-set names are unchanged: CS004 `Fee-British` means Trial Fee-Shifting; CS006EF `ExitFees-AllUnilateralExits` means Complete Fee-Shifting. Initial nonanswer and later unilateral exit both trigger the latter rule. There is no separate exit-extension results folder. Mandatory participation/no-exit cases are removed from the routine study and active article outputs.
 

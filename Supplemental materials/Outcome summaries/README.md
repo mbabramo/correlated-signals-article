@@ -1,5 +1,7 @@
-# Outcome summaries
+# Manuscript disposition figures
 
-[Risk-averse outcomes](risk-averse-outcomes.pdf) combines the seven disposition shares and five welfare measures for the three ordinary-cost fee rules, using the selected equilibria with symmetric CARA coefficient 2. It supplies manuscript Table 3.
+[Risk-neutral dispositions](risk-neutral-dispositions.pdf) and [risk-averse dispositions](risk-averse-dispositions.pdf) supply manuscript Figures 3 and 5. Each compares the three fee rules at ordinary costs, standard noise and ten offers.
 
-The Sources directory contains editable TeX, unrounded data and input hashes in JSON, and the caption text. Regenerate with ACESim4 scripts/build_risk_averse_summary.py --article <article repository>. The main-exhibit publication workflow also performs this step. Full risk-neutral/risk-averse comparison displays remain under Results/Aggregated Data/Baseline/Risk Comparison.
+These manuscript versions remove the redundant risk heading from the original single-risk charts. Their numerical data are unchanged. Sources contains editable TeX, exact data with original-source hashes, and caption text. Regenerate with ACESim4 `scripts/build_manuscript_dispositions.py --article <article repository>`; the main-exhibit publisher runs this automatically.
+
+The combined welfare table is retained under Results/Aggregated Data/Baseline/Risk Comparison and published as Table 4. Strategy selections are under Supplemental materials/Equilibrium strategy changes and published as Tables 2 and 3.
