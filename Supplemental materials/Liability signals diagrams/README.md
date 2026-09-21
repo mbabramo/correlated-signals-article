@@ -7,6 +7,8 @@ description (.txt), and unrounded probability-flow data (.json).
 | Model prefix | Separate relationship files | Intended use |
 |---|---|---|
 | Continuous merits | truth, party, court | Party diagram provisionally main Figure 1; truth and court Appendix A |
+| Center-weighted merits | truth, party, court | Alternative continuous merits, Beta(2,2); robustness materials |
+| Polarized merits | truth, party, court | Alternative continuous merits, Beta(0.5,0.5); robustness materials |
 | Truth-conditioned merits | truth (truth to discrete merits), party, court | Appendix B |
 | Direct binary signals | party, court | Appendix B |
 
@@ -41,6 +43,16 @@ generally conditional on a displayed interval. The reference Q interval
 0.60--0.80 has a 0.70 chance of true liability and approximately a 0.82 chance
 of a liable court finding: truth and adjudication are distinct.
 
+Center-weighted merits use a Beta(2,2) distribution for continuous Q, concentrating
+cases near the middle. Polarized merits use Beta(0.5,0.5), concentrating cases
+near the extremes. Both retain Pr(T=1 | Q=q)=q, an unconditional liability
+probability of 0.5, and party/court noise of 0.2. They use the same five display
+intervals as the baseline, with their actual prior probability masses. Each
+ribbon integrates the signal kernel against the relevant merits distribution
+within its interval. Thus the reference interval's conditional probabilities
+are recalculated for each distribution, rather than copied from the baseline.
+Both alternatives have forward, inverse and party-to-party diagrams in both palettes.
+
 The party diagram represents either party because their noise is equal in these
 specifications. It does not show an observed opponent signal. Court findings
 are not observed by litigants before bargaining. The separate diagrams depict marginal
@@ -63,9 +75,10 @@ The `all` target also includes this family. See LitigCharts/README.md for
 sources-only, compile-only, output-root and jobs options. No solver or saved
 equilibrium is needed for these probability diagrams.
 
-There are eight forward relationships and sixteen forward PDFs (color and grayscale),
-plus three inverse party-signal relationships in both palettes (six more PDFs),
-and three party-to-party prediction relationships in both palettes (six more PDFs).
+There are fourteen forward relationships and twenty-eight forward PDFs (color and grayscale),
+plus five inverse party-signal relationships in both palettes (ten more PDFs),
+and five party-to-party prediction relationships in both palettes (ten more PDFs):
+48 current diagrams in total. These counts exclude the historical source file.
 For example, `Continuous merits - party - bw.pdf` is the grayscale party-signal
 illustration. No combined multi-panel PDF is generated or retained.
 
@@ -74,12 +87,14 @@ illustration. No combined multi-panel PDF is generated or retained.
 Use `diagrams inverse-signals --config <article-diagrams.json>` to regenerate:
 
 - `Continuous merits - party inverse - bw.pdf` (and `-color.pdf`).
+- `Center-weighted merits - party inverse - bw.pdf` (and `-color.pdf`).
+- `Polarized merits - party inverse - bw.pdf` (and `-color.pdf`).
 - `Truth-conditioned merits - party inverse - bw.pdf` (and `-color.pdf`).
 - `Direct binary signals - party inverse - bw.pdf` (and `-color.pdf`).
 
-The same lower-middle signal bin, labeled 0.45, is the reference in all three,
+The same lower-middle signal bin, labeled 0.45, is the reference in all five,
 highlighted in both palettes. Its
-0.55 counterpart is the mirror image. The two merits destination axes use the same five
+0.55 counterpart is the mirror image. All merits destination axes use the same five
 merits intervals; each interval in the truth-conditioned model collects two
 discrete merits levels, without smoothing them. Joint flows are transposed
 from the forward distributions with their prior weights intact. TXT/JSON
@@ -90,7 +105,10 @@ conditioned on observed filing, answering, or an opponent signal.
 At the production calibration, the central 0.40--0.60 posterior mass is about
 34.8% for continuous merits and 31.4% for truth-conditioned merits. The comparison
 is therefore modest; these diagrams do not show a dramatic split or two sharply
-different middle-signal distributions. The direct-binary inverse instead has
+different middle-signal distributions. The corresponding central posterior
+mass is 41.9% for center-weighted merits and 29.2% for polarized merits; their
+unconditional central merits masses are 29.6% and 12.8%, respectively.
+The direct-binary inverse instead has
 the two truth states as destinations, with posterior probabilities about 60.0%
 not liable and 40.0% liable. Its middle signal represents uncertainty about truth,
 not intermediate latent merits. Both the baseline and this alternative have
@@ -98,11 +116,10 @@ binary truth; the distinction is the presence of shared merits heterogeneity,
 including within a true-liability state. These are additional explanatory candidates, not an
 automatic change to the four-figure main-article plan.
 
-The configuration's SignalSpecifications list can also select LowNoise,
-HighNoise, CenterWeightedContinuousMerits or PolarizedContinuousMerits.
-Those draw from the corresponding production settings. They are not selected
-by default: keep the main article focused and request additional supplementary
-illustrations when needed.
+The article configuration's SignalSpecifications list includes Baseline,
+CenterWeightedContinuousMerits, PolarizedContinuousMerits,
+TruthConditionedLatentMerits and DirectBinaryStateSignals. Each uses its
+corresponding production settings. LowNoise and HighNoise remain optional.
 
 Damages remain available via the separate `damages-signals` target, routed
 outside this article by the configuration. The current continuous-merits
@@ -112,7 +129,7 @@ figure.
 ## Party signal to other-party signal
 
 Use `diagrams party-to-party --config <article-diagrams.json>` to regenerate
-the three standalone `party to party` diagrams in color and grayscale. They are
+the five standalone `party to party` diagrams in color and grayscale. They are
 also included in `all`. The diagrams use the production joint signal distribution,
 not a product of average signal kernels over coarse merits intervals. One reference
 plaintiff signal (0.45) predicts the distribution of possible defendant signals;
@@ -126,6 +143,8 @@ For opponent signals in [0.40,0.60), combining the bins labeled 0.45 and 0.55:
 | Model | Unconditional probability | Given own signal 0.45 |
 |---|---:|---:|
 | Continuous merits | 21.5% | 27.8% |
+| Center-weighted merits | 26.5% | 30.4% |
+| Polarized merits | 16.5% | 25.1% |
 | Truth-conditioned merits | 20.1% | 26.7% |
 | Direct binary signals | 16.7% | 16.7% |
 

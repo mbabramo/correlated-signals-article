@@ -2,17 +2,19 @@
 
 This folder is reserved for analyses or illustrations generated separately from the routine parameter study. Placement here does not determine whether a particular exhibit appears in the main text or an online appendix. Standard parameter variation belongs in Results.
 
+Reproducible [pairwise fee-rule comparisons](<Generated pairwise comparisons/README.md>) summarize the saved results with and without extreme costs. The comprehensive figures and welfare tables are in [Results/Aggregated Data](<../Results/Aggregated Data/README.md>); selected manuscript exhibits are in Figures and Tables.
+
 The directed-comparison expansion is complete: 90 saved-equilibrium comparison tables cover all six fee transitions within each risk preference and both risk directions within every fee rule, across five costs. The comparison audit verifies 6,701 printed numeric entries and 810 fingerprints; all 90 tables and the full strategy packet were visually reviewed. All six exact path replays are verified, including both Complete Fee-Shifting cases; the combined viewer and six individual viewers are complete. The fresh six-case fifty-start search completed on September 17, 2026, using clean numerical source `28566ab3`. Its 268 verified recoveries contain 85 distinct profiles. All profiles passed a fresh best-response check, and 517 exhibits have been verified and imported, replacing the old two-case reference outputs. Reporting repairs are documented with the original production records. All 276 routine cases and 2,024 routine exhibits were already verified and committed. See expansion-status.json and each workflow's completion manifests.
 
 The multiple-start results preserve universal answering in all 22 recovered Complete Fee-Shifting profiles across both risk settings. They also preserve the risk-neutral welfare/disposition comparison across recovered profiles, while showing substantial variation under risk aversion. See [the six-case findings](<Multiple equilibria/Findings.md>) for the fee-trigger mechanism, direct answering checks, and the needed qualifications about equilibrium selection and the scope of the search.
 
 | Folder | Contents and role |
 |---|---|
+| [Generated pairwise comparisons](<Generated pairwise comparisons/README.md>) | Reproducible fee-rule comparisons with and without extreme costs, case-level details, and the direct answering-strategy audit |
 | [Equilibrium solution paths](<Equilibrium solution paths/README.md>) | Separate trajectory/replay calculations, original solve logs, and interactive path diagrams |
 | [Game tree diagrams](<Game tree diagrams/README.md>) | Reduced structural trees, worked saved-equilibrium path, and the primitives/fee-trigger table |
 | [Liability signals diagrams](<Liability signals diagrams/README.md>) | Separate signal-architecture probability illustrations and their data |
 | [Risk aversion utility curves](<Risk aversion utility curves/README.md>) | Utility-function illustrations for risk neutrality and CARA risk aversion, with editable LaTeX source |
-| [Outcome summaries](<Outcome summaries/README.md>) | Disposition figures with redundant risk headings removed for manuscript presentation |
 | [Multiple equilibria](<Multiple equilibria/README.md>) | Completed six-case multiple-start study: 85 profiles, recovery/dispersion records and associated diagrams |
 | [Equilibrium strategy changes](<Equilibrium strategy changes/README.md>) | All 90 directed fee/risk comparisons, the complete seven-panel packet, and the short manuscript selections |
 
@@ -20,4 +22,4 @@ Participation restrictions, Cost comparisons and Fee shifting on exit are no lon
 
 Original inputs for separate calculations are preserved exactly, since a report rebuild can reserialize an equilibrium or action report without changing its outcomes. Live requests point to those preserved local inputs. Where requests have been relocated, recorded requests preserve the bytes used by the original calculation. Use the live request for reproduction. Strategy comparisons are arranged directly by cost and contrast under Data; the auxiliary mixing workflow and its outputs have been removed. The saved equilibria's native mixed strategies, tie/completion checks and residuals are retained. Within Equilibrium strategy changes, Sources/Tex contains table layouts, Sources/Json contains table-specific values and provenance, and Tables contains finished PDFs and PNGs. These include the seven-panel manuscript mechanism table; its caption remains in Sources.
 
-The revision plan proposes nine numbered online figures and sixteen tables. That appendix manuscript is still to be assembled. Current main outputs are the five numbered Figures and four numbered Tables at the repository root. Use their Sources caption companions and manuscript-exhibits.json for insertion and attribution. Git history retains superseded material; there is no archive directory.
+The revision plan proposes nine numbered online figures and sixteen tables. That appendix manuscript is still to be assembled. Current main outputs are the six numbered Figures and six numbered Tables at the repository root. Use their Sources caption companions and manuscript-exhibits.json for insertion and attribution. Drafting notes and superseded working tables are kept outside this repository.
