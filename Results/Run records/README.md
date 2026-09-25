@@ -1,5 +1,7 @@
 # Run records
 
-Reproducible render sources, executed commands, source identities, immutable QA evidence and the file-level staging manifest accompany the exhibits. Full build/source/input manifests and historical attempts remain in the isolated execution workspace identified by those records. No separate computational-methods section is introduced.
+Reproducible sources, executed commands, source identities, numerical and visual QA, and the staging manifest accompany the current working collection. Full solver records remain in the isolated workspace identified by those records. No separate computational-methods section is introduced.
 
-This overlay is prepared for review, not final publication. The repository, manuscript, bibliography, unrelated working-tree changes and protected utility-curve sources were not modified.
+The user authorized this working-repository refresh and removal of superseded generated files on September 25, 2026. The entire prior generated collection and pre-existing manuscript/backup files were archived and hash-verified before replacement. working-collection-update.json identifies that archive and the complete file-level change plan. Utility curves, bibliography, unrelated build logs and backups were preserved.
+
+The manuscript source and its compiled PDF now contain only documented factual/mechanical changes and explicit editorial flags; manuscript-revision-20260925.json records those changes, with separate build and visual-review evidence. This working update is not a completed final-publication certificate. Remaining comparisons, trajectory QA and other recorded release gates are still pending.

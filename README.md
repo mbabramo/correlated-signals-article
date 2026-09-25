@@ -24,6 +24,8 @@ Still pending before final publication:
 - Their two welfare comparisons and eight strategic directions, followed by updated Table 5 and supplemental summaries.
 - Fourth verified trajectory and interactive visual QA of the viewers.
 - User choice on truth-map sensitivity exponents (proposed 0.5 and 2, baseline 1), or explicit omission.
-- Complete release evidence, then the authorized archive/replacement procedure.
+- Complete final release evidence after the pending work; the reviewed available working collection has now been archived, synchronized and committed.
 
 [Manuscript and bibliography](Article%20and%20bibliography/) remain in their existing folder. This is the reviewed available working collection, not a certificate of completed final publication. Historical generated material is preserved in the external hash-verified archive identified in Results/Run records/working-collection-update.json.
+
+The manuscript now contains limited factual corrections and explicit italicized **Update needed** passages. See [revision notes](Article%20and%20bibliography/Revision%20notes.md); the substantive narrative remains for the author to revise.
