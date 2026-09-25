@@ -1,0 +1,90 @@
+{
+  "Schema": "validated-strategic-pair-v1",
+  "Passed": true,
+  "FinishedUtc": "2026-09-24T04:15:33.691105+00:00",
+  "Request": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\requests\\pair-099c177cf840740c.json",
+    "Sha256": "df900e20730225696855337184d8ca20029dff42f5c3ffd478a6ed43833a6f9a",
+    "Bytes": 3701
+  },
+  "Build": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\provenance\\final-reporting-v4-build.json",
+    "Sha256": "0cac36b7d3e4fbf5cb0bbc9dd6b6b2fa45380c3fc3cfd66dd7e76259e7165bc3",
+    "Bytes": 47345
+  },
+  "Catalog": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\audited-primary-catalog-v3\\catalog.json",
+    "Sha256": "c2e50e15c3386831ed22306d2522ed472c4bf1cca936dac9dbd1e8d95a01f72c",
+    "Bytes": 231581
+  },
+  "Checks": {
+    "CompleteEndpointProbabilitiesIdentical": true,
+    "CoalitionsPerPlayer": 16,
+    "OrdersIndependentlyChecked": 24,
+    "TieAndOffPathChecksComplete": true,
+    "AllocationRows": 40,
+    "SolvesStarted": 0,
+    "Manifest": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\equilibrium-changes-manifest.json",
+      "Sha256": "68a58008c75abfd6ffc77d3ad87ac595f58295779a22895a0fc5fd9a642f4b40",
+      "Bytes": 1817523
+    },
+    "Outputs": [
+      {
+        "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\pair-099c177cf840740c-forward.json",
+        "Sha256": "69d48b67b68f64f85ded0e1451c60517a2054f12c60fa7a887260bd43372d23a"
+      },
+      {
+        "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\pair-099c177cf840740c-reverse.json",
+        "Sha256": "62597e58289ecb9be096ef20060f68f37a9975f33d82c790b5a4fc6846f369a6"
+      }
+    ]
+  },
+  "EndpointAudits": [
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\remaining-profile-audits-v1\\private-noise__sigma-0p4__american__ra__cost-1\\validation.json",
+      "Sha256": "102a3d788aeec18cfdf8fa97873f413bb694694189301a1a78e44aad1ec301b7"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\remaining-profile-audits-v1\\private-noise__sigma-0p4__complete__ra__cost-1\\validation.json",
+      "Sha256": "bd3bcde305b47d6b903f825fab6717da3b09513cd3c9f9decdead317d140e7d0"
+    }
+  ],
+  "Directions": [
+    {
+      "source": "private-noise__sigma-0p4__american__ra__cost-1",
+      "target": "private-noise__sigma-0p4__complete__ra__cost-1",
+      "reasons": [
+        "matched-american-complete"
+      ],
+      "MissingAuditedProfiles": [],
+      "Disposition": "Ready to materialize from audited profiles"
+    },
+    {
+      "source": "private-noise__sigma-0p4__complete__ra__cost-1",
+      "target": "private-noise__sigma-0p4__american__ra__cost-1",
+      "reasons": [
+        "matched-american-complete"
+      ],
+      "MissingAuditedProfiles": [],
+      "Disposition": "Ready to materialize from audited profiles"
+    }
+  ],
+  "Outputs": [
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\equilibrium-changes-manifest.json",
+      "Sha256": "68a58008c75abfd6ffc77d3ad87ac595f58295779a22895a0fc5fd9a642f4b40",
+      "Bytes": 1817523
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\pair-099c177cf840740c-forward.json",
+      "Sha256": "69d48b67b68f64f85ded0e1451c60517a2054f12c60fa7a887260bd43372d23a",
+      "Bytes": 24124855
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-099c177cf840740c\\pair-099c177cf840740c-reverse.json",
+      "Sha256": "62597e58289ecb9be096ef20060f68f37a9975f33d82c790b5a4fc6846f369a6",
+      "Bytes": 24132163
+    }
+  ]
+}

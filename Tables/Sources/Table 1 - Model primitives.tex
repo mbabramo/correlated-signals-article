@@ -1,32 +1,25 @@
-\documentclass[10pt,border=5pt,varwidth=16cm]{standalone}
-\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,tabularx,array,microtype,BOONDOX-cal}
-\begin{document}\begin{minipage}{16cm}\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}X@{}}
-\toprule Primitive & Core specifications \\ \midrule
-Case quality & Unobserved continuous quality $Q\sim U[0,1]$ \\
-True liability & $T=1$ means truly liable. Given quality $q$, $\Pr(T=1\mid Q=q)=q$; the unconditional probability is $\Pr(T=1)=0.5$. \\
-Signal generation & Each party and the court receive a noisy assessment drawn from a normal distribution centered on $q$, truncated to $[0,1]$. Assessments are independent conditional on exact $q$. \\
-Signal noise & $\sigma_P=\sigma_D=\sigma_C=0.20$ \\
-Party signals & $X_P\in\mathcal{S}_P$ and $X_D\in\mathcal{S}_D$, with $|\mathcal{S}_P|=|\mathcal{S}_D|=10$. Ten equal-width intervals per party have midpoint labels $0.05,0.15,\ldots,0.95$. \\
-Court signal and rule & $X_C\in\mathcal{S}_C$, with $|\mathcal{S}_C|=2$. The court finds no liability for assessments below $0.5$, and liability for assessments at or above $0.5$. \\
-Damages & Fixed award $d=1$ if P wins at trial or D defaults; zero if P abandons or loses at trial \\
-Initial wealth & $w_P=w_D=10$ \\
-Filing and answering & P chooses whether to file; after filing, D chooses whether to answer or default. Nonfiling ends the dispute without payment or litigation costs. \\
-Bargaining rounds & Single simultaneous round \\
-Offer grid & $\mathcal{O}=\{0.05,0.15,\ldots,0.95\}$, with $|\mathcal{O}|=10$ choices per party. The finer-grid check uses $|\mathcal{O}|=15$ midpoint offers with the same signal sets. \\
-Settlement rule & Settlement occurs if P's demand is no greater than D's offer; D pays P the midpoint of the two amounts. \\
-Exit & Before offers, each party privately commits to continue or quit if bargaining fails. P may abandon; D may default. Trial occurs only if bargaining fails and neither quits. \\
-Mutual exit & If both commit to quit and bargaining fails, a lottery selects P's abandonment or D's default with probability $0.5$ each. \\
-Stage costs & $c_{file}=c_{answer}=c_{trial}=0.15$ at ordinary costs; trial costs are additional and per party. Each incurs $0.30$ through trial before fee shifting. No separate bargaining cost. \\
-Cost multipliers & A common multiplier $c\in\{0.25,0.5,1,2,4\}$ scales all stage costs; ordinary costs use $c=1$. \\
-Preferences & Both parties maximize expected utility: risk neutral, $U(W)=W$, or CARA, $U(W)=-e^{-\alpha W}$ with $\alpha=2$ for both parties. \\
-\bottomrule\end{tabularx}\par\medskip
-\begin{tabularx}{\linewidth}{@{}Xccc@{}}
-\toprule Fee trigger & American & \shortstack{Trial\\Fee-Shifting} & \shortstack{Complete\\Fee-Shifting} \\ \midrule
-After trial & Own costs & Loser pays & Loser pays \\
-Initial nonanswer & Own costs & Own costs & D pays P's fees \\
-Later P abandonment & Own costs & Own costs & P pays D's fees \\
-Later D default & Own costs & Own costs & D pays P's fees \\
-Settlement & Own costs & Own costs & Own costs \\
-\bottomrule\end{tabularx}
-\end{minipage}\end{document}
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,tabularx,microtype,tikz}
+\usetikzlibrary{patterns,patterns.meta,shapes.geometric,arrows.meta,calc,positioning}
+\begin{document}
+\begin{minipage}{16.250cm}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.178cm}>{\raggedright\arraybackslash}p{12.632cm}@{}}
+\toprule
+\textbf{Primitive} & \textbf{Value / interpretation}\\\midrule
+Merits and truth & Q is uniform on [0,1]; true liability T | Q is Bernoulli(Q).\\
+Signals & 10 private signal bins per party; party noise 0.2; court noise 0.2; two court findings.\\
+Damages and wealth & Damages 1; initial wealth 10 per party. Monetary quantities are in units of damages.\\
+Preferences & Risk neutral or symmetric CARA risk aversion with alpha = 2.\\
+Costs & Filing / answering: 0.15 each; additional trial costs: 0.15 each; ordinary multiplier 1.\\
+Private exit commitments & After filing and answering, each party commits whether to exit if bargaining fails.\\
+Agreement and offers & Simultaneous agreement; offers only if both agree. Separate information sets; own commitment is remembered.\\
+Offer actions & 0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95; overlapping offers settle at their midpoint.\\
+Unsuccessful bargaining & Apply private exit commitments: abandonment, default, mutual-exit lottery, or trial. Refusal is not a terminal disposition.\\
+Fee rules & American: own costs. British: loser pays at trial and the specified unilateral exits. Trial-only fee shifting is a separate cost-1 extension.\\
+\bottomrule\end{tabular}
+\end{minipage}
+\end{document}

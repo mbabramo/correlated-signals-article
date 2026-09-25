@@ -1,0 +1,5230 @@
+{
+  "OptionSet": "Agreement-Enabled__Specification-ModerateRiskAversion__Cost-1__Fee-British__ExitFees-AllUnilateralExits",
+  "Equilibrium": 1,
+  "AgreementEnabled": true,
+  "CostMultiplier": 1,
+  "FeeRule": "Complete Fee-Shifting",
+  "Alpha": 2,
+  "AlphaP": 2,
+  "AlphaD": 2,
+  "Risk": "Risk Averse",
+  "Profile": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\production\\approximate-stable-200-v1\\starts\\baseline__standard__complete__ra__cost-1-start-00016\\approximate-profile.csv",
+    "Sha256": "8D0FC87873D0142F104F49D32E85AD575682FF169A78D5BE8990336F3742FDA6"
+  },
+  "ActionReport": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\production\\approximate-stable-200-v1\\starts\\baseline__standard__complete__ra__cost-1-start-00016\\information-set-actions.csv",
+    "Sha256": "758E715DE0F604BDDB8625C7D778DC8615AB5B57504C17F3BE3BF6F8832C1C05"
+  },
+  "ReplayReport": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\production\\approximate-stable-200-v1\\starts\\baseline__standard__complete__ra__cost-1-start-00016\\replayed-report.csv",
+    "Sha256": "BD952BA9DDE28F462D04199F87FDFF4D3B54C762F4BF20A5B288C9CCCA8C7AD4"
+  },
+  "Metrics": {
+    "Filing": 0.60759,
+    "JointFileAnswer": 0.60759,
+    "AnsweringGivenFiling": 1,
+    "BothAgreeGivenStage": 0.9241122143627051,
+    "OnlyPlaintiffDeclinesGivenStage": 0,
+    "OnlyDefendantDeclinesGivenStage": 0.07588778563729495,
+    "BothDeclineGivenStage": 0,
+    "Settlement": 0.4889415306,
+    "Abandonment": 0.09765455600000002,
+    "Default": 0,
+    "MutualExitBeforeAllocation": 0,
+    "Trial": 0.0209939134,
+    "TrialGivenFiling": 0.03455276321203444,
+    "TrialGivenFileAnswer": 0.03455276321203444
+  },
+  "BySignal": [
+    {
+      "Signal": 1,
+      "PlaintiffSignalProbability": 0.08045000000000001,
+      "DefendantSignalProbability": 0.08045061999999999,
+      "Filing": 0,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 2,
+      "PlaintiffSignalProbability": 0.09768000000000002,
+      "DefendantSignalProbability": 0.09767826119999999,
+      "Filing": 0,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 3,
+      "PlaintiffSignalProbability": 0.10618,
+      "DefendantSignalProbability": 0.1061802086,
+      "Filing": 0,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 4,
+      "PlaintiffSignalProbability": 0.1081,
+      "DefendantSignalProbability": 0.1080961854,
+      "Filing": 0,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 5,
+      "PlaintiffSignalProbability": 0.1076,
+      "DefendantSignalProbability": 0.10760218790000001,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 6,
+      "PlaintiffSignalProbability": 0.1076,
+      "DefendantSignalProbability": 0.10760135250000001,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 7,
+      "PlaintiffSignalProbability": 0.10809999999999999,
+      "DefendantSignalProbability": 0.1080937146,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 8,
+      "PlaintiffSignalProbability": 0.10618,
+      "DefendantSignalProbability": 0.1061763222,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 9,
+      "PlaintiffSignalProbability": 0.09768,
+      "DefendantSignalProbability": 0.0976735508,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    },
+    {
+      "Signal": 10,
+      "PlaintiffSignalProbability": 0.08043,
+      "DefendantSignalProbability": 0.08044759679999999,
+      "Filing": 1,
+      "AnsweringGivenFiling": 1
+    }
+  ],
+  "Strategies": [
+    {
+      "InformationSet": 0,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 1,
+      "OwnExit": null,
+      "Contents": "1",
+      "Reach": 0.08045000000000001,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 2,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 1,
+      "OwnExit": null,
+      "Contents": "1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.8,
+        0.2
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 4,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 1,
+      "OwnExit": 1,
+      "Contents": "1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.6,
+        0.4000000000000001
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 6,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 1,
+      "OwnExit": 1,
+      "Contents": "1,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.13333333333333333,
+        0.022222222222222223,
+        0.022222222222222223,
+        0.15555555555555556,
+        0.15555555555555556,
+        0.17777777777777778,
+        0.2,
+        0.022222222222222223,
+        0.06666666666666667,
+        0.044444444444444446
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 10,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 1,
+      "OwnExit": 2,
+      "Contents": "1,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 11,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 1,
+      "OwnExit": 2,
+      "Contents": "1,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.1568627450980392,
+        0.0392156862745098,
+        0.05882352941176471,
+        0.0392156862745098,
+        0.11764705882352942,
+        0.0196078431372549,
+        0.13725490196078433,
+        0.09803921568627451,
+        0.17647058823529413,
+        0.1568627450980392
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 66,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 2,
+      "OwnExit": null,
+      "Contents": "2",
+      "Reach": 0.09768000000000002,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 67,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 2,
+      "OwnExit": null,
+      "Contents": "2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.33333333333333337,
+        0.6666666666666667
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 68,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 2,
+      "OwnExit": 1,
+      "Contents": "2,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.2222222222222222,
+        0.7777777777777778
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 69,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 2,
+      "OwnExit": 1,
+      "Contents": "2,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.19565217391304346,
+        0.19565217391304346,
+        0.043478260869565216,
+        0.021739130434782608,
+        0.13043478260869562,
+        0.043478260869565216,
+        0.021739130434782608,
+        0.15217391304347824,
+        0.08695652173913043,
+        0.10869565217391303
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 70,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 2,
+      "OwnExit": 2,
+      "Contents": "2,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.5384615384615385,
+        0.46153846153846156
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 71,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 2,
+      "OwnExit": 2,
+      "Contents": "2,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.07272727272727272,
+        0.01818181818181818,
+        0.09090909090909093,
+        0.16363636363636364,
+        0.05454545454545455,
+        0.1090909090909091,
+        0.12727272727272726,
+        0.12727272727272726,
+        0.09090909090909093,
+        0.14545454545454545
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 72,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 3,
+      "OwnExit": null,
+      "Contents": "3",
+      "Reach": 0.10618,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 73,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 3,
+      "OwnExit": null,
+      "Contents": "3,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.38461538461538464,
+        0.6153846153846154
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 74,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 3,
+      "OwnExit": 1,
+      "Contents": "3,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.2222222222222222,
+        0.7777777777777778
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 75,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 3,
+      "OwnExit": 1,
+      "Contents": "3,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.15254237288135591,
+        0.15254237288135591,
+        0.0677966101694915,
+        0.15254237288135591,
+        0.10169491525423727,
+        0.03389830508474575,
+        0.03389830508474575,
+        0.0677966101694915,
+        0.15254237288135591,
+        0.08474576271186438
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 76,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 3,
+      "OwnExit": 2,
+      "Contents": "3,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.5,
+        0.5
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 77,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 3,
+      "OwnExit": 2,
+      "Contents": "3,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.05405405405405407,
+        0.16216216216216223,
+        0.21621621621621628,
+        0.027027027027027035,
+        0.10810810810810814,
+        0.027027027027027035,
+        0.027027027027027035,
+        0.2432432432432433,
+        0.10810810810810814,
+        0.027027027027027035
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 78,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 4,
+      "OwnExit": null,
+      "Contents": "4",
+      "Reach": 0.1081,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 79,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 4,
+      "OwnExit": null,
+      "Contents": "4,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.4570640377976686,
+        0.5429359622023314
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 80,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 4,
+      "OwnExit": 1,
+      "Contents": "4,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.9257576732548203,
+        0.07424232674517978
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 81,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 4,
+      "OwnExit": 1,
+      "Contents": "4,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.13559322033898305,
+        0.06779661016949153,
+        0.10169491525423728,
+        0.13559322033898305,
+        0.15254237288135594,
+        0.05084745762711864,
+        0.11864406779661017,
+        0.0847457627118644,
+        0.03389830508474576,
+        0.11864406779661017
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 82,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 4,
+      "OwnExit": 2,
+      "Contents": "4,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.25,
+        0.7500000000000001
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 83,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 4,
+      "OwnExit": 2,
+      "Contents": "4,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.14754098360655737,
+        0.01639344262295082,
+        0.14754098360655737,
+        0.13114754098360656,
+        0.14754098360655737,
+        0.01639344262295082,
+        0.08196721311475409,
+        0.14754098360655737,
+        0.01639344262295082,
+        0.14754098360655737
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 84,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 5,
+      "OwnExit": null,
+      "Contents": "5",
+      "Reach": 0.1076,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 85,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 5,
+      "OwnExit": null,
+      "Contents": "5,1,1",
+      "Reach": 0.1076,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 86,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 5,
+      "OwnExit": 1,
+      "Contents": "5,1,1,1",
+      "Reach": 0.1076,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 87,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 5,
+      "OwnExit": 1,
+      "Contents": "5,1,1,1,1,1",
+      "Reach": 0.0864942259794025,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 88,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 5,
+      "OwnExit": 2,
+      "Contents": "5,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.4,
+        0.6
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 89,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 5,
+      "OwnExit": 2,
+      "Contents": "5,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.1568627450980392,
+        0.0784313725490196,
+        0.1764705882352941,
+        0.11764705882352941,
+        0.0196078431372549,
+        0.1568627450980392,
+        0.1764705882352941,
+        0.058823529411764705,
+        0.0392156862745098,
+        0.0196078431372549
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 90,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 6,
+      "OwnExit": null,
+      "Contents": "6",
+      "Reach": 0.10759999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 91,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 6,
+      "OwnExit": null,
+      "Contents": "6,1,1",
+      "Reach": 0.10759999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 92,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 6,
+      "OwnExit": 1,
+      "Contents": "6,1,1,1",
+      "Reach": 0.10759999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 93,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 6,
+      "OwnExit": 1,
+      "Contents": "6,1,1,1,1,1",
+      "Reach": 0.0949516969522647,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 94,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 6,
+      "OwnExit": 2,
+      "Contents": "6,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.27272727272727276,
+        0.7272727272727273
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 95,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 6,
+      "OwnExit": 2,
+      "Contents": "6,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.13043478260869568,
+        0.06521739130434784,
+        0.1739130434782609,
+        0.04347826086956522,
+        0.08695652173913045,
+        0.13043478260869568,
+        0.02173913043478261,
+        0.1521739130434783,
+        0.02173913043478261,
+        0.1739130434782609
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 96,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 7,
+      "OwnExit": null,
+      "Contents": "7",
+      "Reach": 0.10809999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 97,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 7,
+      "OwnExit": null,
+      "Contents": "7,1,1",
+      "Reach": 0.10809999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 98,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 7,
+      "OwnExit": 1,
+      "Contents": "7,1,1,1",
+      "Reach": 0.10809999999999999,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 99,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 7,
+      "OwnExit": 1,
+      "Contents": "7,1,1,1,1,1",
+      "Reach": 0.1012545098761959,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 100,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 7,
+      "OwnExit": 2,
+      "Contents": "7,1,1,2",
+      "Reach": 0,
+      "Probabilities": [
+        0.9,
+        0.09999999999999999
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 101,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 7,
+      "OwnExit": 2,
+      "Contents": "7,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.18,
+        0.060000000000000005,
+        0.12000000000000001,
+        0.04,
+        0.10000000000000002,
+        0.02,
+        0.14,
+        0.16,
+        0.04,
+        0.14
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 102,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 8,
+      "OwnExit": null,
+      "Contents": "8",
+      "Reach": 0.10618,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 103,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 8,
+      "OwnExit": null,
+      "Contents": "8,1,1",
+      "Reach": 0.10618,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 104,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 8,
+      "OwnExit": 1,
+      "Contents": "8,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.5,
+        0.5
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 105,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 8,
+      "OwnExit": 1,
+      "Contents": "8,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.14,
+        0.04,
+        0.08,
+        0.18,
+        0.02,
+        0.08,
+        0.18,
+        0.04,
+        0.1,
+        0.14
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 106,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 8,
+      "OwnExit": 2,
+      "Contents": "8,1,1,2",
+      "Reach": 0.10618,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 107,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 8,
+      "OwnExit": 2,
+      "Contents": "8,1,1,2,1,1",
+      "Reach": 0.10280906453421855,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 108,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 9,
+      "OwnExit": null,
+      "Contents": "9",
+      "Reach": 0.09768,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 109,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 9,
+      "OwnExit": null,
+      "Contents": "9,1,1",
+      "Reach": 0.09768,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 110,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 9,
+      "OwnExit": 1,
+      "Contents": "9,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.47058823529411764,
+        0.5294117647058824
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 111,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 9,
+      "OwnExit": 1,
+      "Contents": "9,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.058823529411764705,
+        0.019607843137254898,
+        0.07843137254901959,
+        0.1372549019607843,
+        0.1372549019607843,
+        0.15686274509803919,
+        0.019607843137254898,
+        0.0980392156862745,
+        0.11764705882352941,
+        0.17647058823529413
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 112,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 9,
+      "OwnExit": 2,
+      "Contents": "9,1,1,2",
+      "Reach": 0.09768,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 113,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 9,
+      "OwnExit": 2,
+      "Contents": "9,1,1,2,1,1",
+      "Reach": 0.09616420735056336,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 114,
+      "Player": 0,
+      "Decision": "PFile",
+      "Signal": 10,
+      "OwnExit": null,
+      "Contents": "10",
+      "Reach": 0.08043,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 115,
+      "Player": 0,
+      "Decision": "PAbandon",
+      "Signal": 10,
+      "OwnExit": null,
+      "Contents": "10,1,1",
+      "Reach": 0.08043,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 116,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 10,
+      "OwnExit": 1,
+      "Contents": "10,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.6363636363636364,
+        0.3636363636363637
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 117,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 10,
+      "OwnExit": 1,
+      "Contents": "10,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.15384615384615383,
+        0.03846153846153846,
+        0.11538461538461539,
+        0.03846153846153846,
+        0.11538461538461539,
+        0.17307692307692307,
+        0.17307692307692307,
+        0.09615384615384616,
+        0.07692307692307691,
+        0.01923076923076923
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 118,
+      "Player": 0,
+      "Decision": "PAgreeToBargain",
+      "Signal": 10,
+      "OwnExit": 2,
+      "Contents": "10,1,1,2",
+      "Reach": 0.08043,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 119,
+      "Player": 0,
+      "Decision": "POffer",
+      "Signal": 10,
+      "OwnExit": 2,
+      "Contents": "10,1,1,2,1,1",
+      "Reach": 0.0798076356319909,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 1,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 1,
+      "OwnExit": null,
+      "Contents": "1,1",
+      "Reach": 0.0142592886,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 3,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 1,
+      "OwnExit": null,
+      "Contents": "1,1,1",
+      "Reach": 0.0142592886,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 5,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 1,
+      "OwnExit": 1,
+      "Contents": "1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.7777777777777778,
+        0.2222222222222222
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 7,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 1,
+      "OwnExit": 1,
+      "Contents": "1,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.11904761904761905,
+        0.023809523809523815,
+        0.07142857142857144,
+        0.11904761904761905,
+        0.023809523809523815,
+        0.14285714285714288,
+        0.16666666666666666,
+        0.09523809523809526,
+        0.07142857142857144,
+        0.16666666666666666
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 8,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 1,
+      "OwnExit": 2,
+      "Contents": "1,1,1,2",
+      "Reach": 0.0142592886,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 9,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 1,
+      "OwnExit": 2,
+      "Contents": "1,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.15384615384615388,
+        0.05128205128205129,
+        0.12820512820512822,
+        0.07692307692307694,
+        0.07692307692307694,
+        0.15384615384615388,
+        0.025641025641025644,
+        0.10256410256410257,
+        0.05128205128205129,
+        0.17948717948717952
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 12,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 2,
+      "OwnExit": null,
+      "Contents": "2,1",
+      "Reach": 0.0230133029,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 13,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 2,
+      "OwnExit": null,
+      "Contents": "2,1,1",
+      "Reach": 0.0230133029,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 14,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 2,
+      "OwnExit": 1,
+      "Contents": "2,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.6666666666666667,
+        0.33333333333333337
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 15,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 2,
+      "OwnExit": 1,
+      "Contents": "2,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.047619047619047616,
+        0.14285714285714288,
+        0.07936507936507937,
+        0.12698412698412698,
+        0.047619047619047616,
+        0.11111111111111112,
+        0.14285714285714288,
+        0.047619047619047616,
+        0.12698412698412698,
+        0.12698412698412698
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 16,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 2,
+      "OwnExit": 2,
+      "Contents": "2,1,1,2",
+      "Reach": 0.0230133029,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 17,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 2,
+      "OwnExit": 2,
+      "Contents": "2,1,1,2,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.052631578947368425,
+        0.13157894736842107,
+        0.10526315789473685,
+        0.07894736842105263,
+        0.052631578947368425,
+        0.2368421052631579,
+        0.026315789473684213,
+        0.13157894736842107,
+        0.026315789473684213,
+        0.15789473684210525
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 18,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 3,
+      "OwnExit": null,
+      "Contents": "3,1",
+      "Reach": 0.034133589400000004,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 19,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 3,
+      "OwnExit": null,
+      "Contents": "3,1,1",
+      "Reach": 0.034133589400000004,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 20,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 3,
+      "OwnExit": 1,
+      "Contents": "3,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.5294117647058824,
+        0.4705882352941177
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 21,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 3,
+      "OwnExit": 1,
+      "Contents": "3,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.18367346938775514,
+        0.18367346938775514,
+        0.14285714285714285,
+        0.020408163265306124,
+        0.163265306122449,
+        0.0816326530612245,
+        0.04081632653061225,
+        0.0816326530612245,
+        0.06122448979591837,
+        0.04081632653061225
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 22,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 3,
+      "OwnExit": 2,
+      "Contents": "3,1,1,2",
+      "Reach": 0.034133589400000004,
+      "Probabilities": [
+        0.7411327571848026,
+        0.25886724281519735
+      ],
+      "ReachedConditionalProbabilities": [
+        0.7411327571848026,
+        0.25886724281519735
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 23,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 3,
+      "OwnExit": 2,
+      "Contents": "3,1,1,2,1,1",
+      "Reach": 0.025297521224635956,
+      "Probabilities": [
+        0.8650015584092055,
+        0.13499844159079455,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0.8650015584092055,
+        0.13499844159079455,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 24,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 4,
+      "OwnExit": null,
+      "Contents": "4,1",
+      "Reach": 0.0472422885,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 25,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 4,
+      "OwnExit": null,
+      "Contents": "4,1,1",
+      "Reach": 0.0472422885,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 26,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 4,
+      "OwnExit": 1,
+      "Contents": "4,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 27,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 4,
+      "OwnExit": 1,
+      "Contents": "4,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.11320754716981134,
+        0.09433962264150945,
+        0.05660377358490567,
+        0.169811320754717,
+        0.1509433962264151,
+        0.03773584905660377,
+        0.07547169811320754,
+        0.1509433962264151,
+        0.03773584905660377,
+        0.11320754716981134
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 28,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 4,
+      "OwnExit": 2,
+      "Contents": "4,1,1,2",
+      "Reach": 0.0472422885,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 29,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 4,
+      "OwnExit": 2,
+      "Contents": "4,1,1,2,1,1",
+      "Reach": 0.0472422885,
+      "Probabilities": [
+        0,
+        0.2455206902684263,
+        0.22922810535204943,
+        0.5252512043795243,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0.2455206902684263,
+        0.22922810535204943,
+        0.5252512043795243,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 30,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 5,
+      "OwnExit": null,
+      "Contents": "5,1",
+      "Reach": 0.0616045699,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 31,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 5,
+      "OwnExit": null,
+      "Contents": "5,1,1",
+      "Reach": 0.0616045699,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 32,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 5,
+      "OwnExit": 1,
+      "Contents": "5,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.35714285714285715,
+        0.6428571428571428
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 33,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 5,
+      "OwnExit": 1,
+      "Contents": "5,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.12727272727272726,
+        0.1636363636363636,
+        0.03636363636363636,
+        0.10909090909090907,
+        0.01818181818181818,
+        0.09090909090909091,
+        0.12727272727272726,
+        0.12727272727272726,
+        0.1636363636363636,
+        0.03636363636363636
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 34,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 5,
+      "OwnExit": 2,
+      "Contents": "5,1,1,2",
+      "Reach": 0.0616045699,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 35,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 5,
+      "OwnExit": 2,
+      "Contents": "5,1,1,2,1,1",
+      "Reach": 0.0616045699,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 36,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 6,
+      "OwnExit": null,
+      "Contents": "6,1",
+      "Reach": 0.0759516508,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 37,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 6,
+      "OwnExit": null,
+      "Contents": "6,1,1",
+      "Reach": 0.0759516508,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 38,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 6,
+      "OwnExit": 1,
+      "Contents": "6,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.4,
+        0.6
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 39,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 6,
+      "OwnExit": 1,
+      "Contents": "6,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.0784313725490196,
+        0.058823529411764705,
+        0.17647058823529413,
+        0.09803921568627452,
+        0.13725490196078433,
+        0.0784313725490196,
+        0.0392156862745098,
+        0.058823529411764705,
+        0.09803921568627452,
+        0.17647058823529413
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 40,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 6,
+      "OwnExit": 2,
+      "Contents": "6,1,1,2",
+      "Reach": 0.0759516508,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 41,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 6,
+      "OwnExit": 2,
+      "Contents": "6,1,1,2,1,1",
+      "Reach": 0.0759516508,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 42,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 7,
+      "OwnExit": null,
+      "Contents": "7,1",
+      "Reach": 0.0880834463,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 43,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 7,
+      "OwnExit": null,
+      "Contents": "7,1,1",
+      "Reach": 0.0880834463,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 44,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 7,
+      "OwnExit": 1,
+      "Contents": "7,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.14285714285714288,
+        0.8571428571428572
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 45,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 7,
+      "OwnExit": 1,
+      "Contents": "7,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.20454545454545456,
+        0.11363636363636365,
+        0.13636363636363635,
+        0.11363636363636365,
+        0.02272727272727273,
+        0.02272727272727273,
+        0.09090909090909093,
+        0.13636363636363635,
+        0.04545454545454546,
+        0.11363636363636365
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 46,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 7,
+      "OwnExit": 2,
+      "Contents": "7,1,1,2",
+      "Reach": 0.0880834463,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 47,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 7,
+      "OwnExit": 2,
+      "Contents": "7,1,1,2,1,1",
+      "Reach": 0.0880834463,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 48,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 8,
+      "OwnExit": null,
+      "Contents": "8,1",
+      "Reach": 0.0945169464,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 49,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 8,
+      "OwnExit": null,
+      "Contents": "8,1,1",
+      "Reach": 0.0945169464,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 50,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 8,
+      "OwnExit": 1,
+      "Contents": "8,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.6,
+        0.4000000000000001
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 51,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 8,
+      "OwnExit": 1,
+      "Contents": "8,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.12765957446808507,
+        0.08510638297872339,
+        0.10638297872340424,
+        0.10638297872340424,
+        0.06382978723404253,
+        0.10638297872340424,
+        0.06382978723404253,
+        0.1914893617021276,
+        0.08510638297872339,
+        0.06382978723404253
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 52,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 8,
+      "OwnExit": 2,
+      "Contents": "8,1,1,2",
+      "Reach": 0.0945169464,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 53,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 8,
+      "OwnExit": 2,
+      "Contents": "8,1,1,2,1,1",
+      "Reach": 0.0945169464,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 54,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 9,
+      "OwnExit": null,
+      "Contents": "9,1",
+      "Reach": 0.09141779530000001,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 55,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 9,
+      "OwnExit": null,
+      "Contents": "9,1,1",
+      "Reach": 0.09141779530000001,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 56,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 9,
+      "OwnExit": 1,
+      "Contents": "9,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.45454545454545453,
+        0.5454545454545455
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 57,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 9,
+      "OwnExit": 1,
+      "Contents": "9,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.015873015873015872,
+        0.12698412698412698,
+        0.12698412698412698,
+        0.031746031746031744,
+        0.031746031746031744,
+        0.12698412698412698,
+        0.14285714285714288,
+        0.12698412698412698,
+        0.14285714285714288,
+        0.12698412698412698
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 58,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 9,
+      "OwnExit": 2,
+      "Contents": "9,1,1,2",
+      "Reach": 0.09141779530000001,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 59,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 9,
+      "OwnExit": 2,
+      "Contents": "9,1,1,2,1,1",
+      "Reach": 0.09141779530000001,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 60,
+      "Player": 1,
+      "Decision": "DAnswer",
+      "Signal": 10,
+      "OwnExit": null,
+      "Contents": "10,1",
+      "Reach": 0.0773671219,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 61,
+      "Player": 1,
+      "Decision": "DDefault",
+      "Signal": 10,
+      "OwnExit": null,
+      "Contents": "10,1,1",
+      "Reach": 0.0773671219,
+      "Probabilities": [
+        0,
+        1
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        1
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 62,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 10,
+      "OwnExit": 1,
+      "Contents": "10,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.7777777777777778,
+        0.22222222222222224
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 63,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 10,
+      "OwnExit": 1,
+      "Contents": "10,1,1,1,1,1",
+      "Reach": 0,
+      "Probabilities": [
+        0.08771929824561404,
+        0.14035087719298245,
+        0.05263157894736842,
+        0.14035087719298245,
+        0.017543859649122806,
+        0.12280701754385964,
+        0.15789473684210525,
+        0.08771929824561404,
+        0.08771929824561404,
+        0.10526315789473684
+      ],
+      "ReachedConditionalProbabilities": null,
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    },
+    {
+      "InformationSet": 64,
+      "Player": 1,
+      "Decision": "DAgreeToBargain",
+      "Signal": 10,
+      "OwnExit": 2,
+      "Contents": "10,1,1,2",
+      "Reach": 0.0773671219,
+      "Probabilities": [
+        1,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        1,
+        0
+      ],
+      "Actions": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "InformationSet": 65,
+      "Player": 1,
+      "Decision": "DOffer",
+      "Signal": 10,
+      "OwnExit": 2,
+      "Contents": "10,1,1,2,1,1",
+      "Reach": 0.0773671219,
+      "Probabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "ReachedConditionalProbabilities": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "Actions": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ]
+    }
+  ],
+  "ReachedHistories": [
+    {
+      "Probability": 0.018699798,
+      "PSignal": 1,
+      "DSignal": 1,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0192557075,
+      "PSignal": 1,
+      "DSignal": 2,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.016431108,
+      "PSignal": 1,
+      "DSignal": 3,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.011804428499999998,
+      "PSignal": 1,
+      "DSignal": 4,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.007269461999999999,
+      "PSignal": 1,
+      "DSignal": 5,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0039090654999999995,
+      "PSignal": 1,
+      "DSignal": 6,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0018656354999999998,
+      "PSignal": 1,
+      "DSignal": 7,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0007980639999999999,
+      "PSignal": 1,
+      "DSignal": 8,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0003081235,
+      "PSignal": 1,
+      "DSignal": 9,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.00010860749999999999,
+      "PSignal": 1,
+      "DSignal": 10,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0192556584,
+      "PSignal": 2,
+      "DSignal": 1,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0209904552,
+      "PSignal": 2,
+      "DSignal": 2,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0192634728,
+      "PSignal": 2,
+      "DSignal": 3,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0151560288,
+      "PSignal": 2,
+      "DSignal": 4,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.010411711200000002,
+      "PSignal": 2,
+      "DSignal": 5,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0063472464,
+      "PSignal": 2,
+      "DSignal": 6,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0034705704,
+      "PSignal": 2,
+      "DSignal": 7,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0017123304,
+      "PSignal": 2,
+      "DSignal": 8,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0007638576,
+      "PSignal": 2,
+      "DSignal": 9,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0003086688,
+      "PSignal": 2,
+      "DSignal": 10,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.016431354999999998,
+      "PSignal": 3,
+      "DSignal": 1,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.019263175599999998,
+      "PSignal": 3,
+      "DSignal": 2,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0193597994,
+      "PSignal": 3,
+      "DSignal": 3,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0169909236,
+      "PSignal": 3,
+      "DSignal": 4,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0132310898,
+      "PSignal": 3,
+      "DSignal": 5,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.009244030799999999,
+      "PSignal": 3,
+      "DSignal": 6,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0058271584,
+      "PSignal": 3,
+      "DSignal": 7,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0033213104,
+      "PSignal": 3,
+      "DSignal": 8,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0017126833999999997,
+      "PSignal": 3,
+      "DSignal": 9,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0007984735999999999,
+      "PSignal": 3,
+      "DSignal": 10,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.01180452,
+      "PSignal": 4,
+      "DSignal": 1,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.01515562,
+      "PSignal": 4,
+      "DSignal": 2,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.016992239,
+      "PSignal": 4,
+      "DSignal": 3,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.016902516,
+      "PSignal": 4,
+      "DSignal": 4,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.015085355000000002,
+      "PSignal": 4,
+      "DSignal": 5,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.012149359,
+      "PSignal": 4,
+      "DSignal": 6,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.008846904,
+      "PSignal": 4,
+      "DSignal": 7,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.005827671,
+      "PSignal": 4,
+      "DSignal": 8,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.003471091,
+      "PSignal": 4,
+      "DSignal": 9,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0018647250000000002,
+      "PSignal": 4,
+      "DSignal": 10,
+      "File": 2,
+      "Answer": 0,
+      "PExit": 0,
+      "DExit": 0,
+      "PAgree": 0,
+      "DAgree": 0,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.007269456,
+      "PSignal": 5,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.010411376,
+      "PSignal": 5,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.00848181947324875,
+      "PSignal": 5,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 0.0013237345061537517,
+      "PSignal": 5,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.003424942020597497,
+      "PSignal": 5,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0037035431031954215,
+      "PSignal": 5,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.0034577785184090903,
+      "PSignal": 5,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.00792312237839549,
+      "PSignal": 5,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.015519148,
+      "PSignal": 5,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.014436692000000001,
+      "PSignal": 5,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.01214804,
+      "PSignal": 5,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.009243916,
+      "PSignal": 5,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.006346248,
+      "PSignal": 5,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.003910184,
+      "PSignal": 5,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0039091080000000005,
+      "PSignal": 6,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.006346248,
+      "PSignal": 6,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.005926098820322057,
+      "PSignal": 6,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 0.0009248701319426547,
+      "PSignal": 6,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.002392947047735288,
+      "PSignal": 6,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0029825951662084535,
+      "PSignal": 6,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.002784672192940911,
+      "PSignal": 6,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.006380772640850637,
+      "PSignal": 6,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.014436692000000001,
+      "PSignal": 6,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.015519148,
+      "PSignal": 6,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.015084444,
+      "PSignal": 6,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.013230496,
+      "PSignal": 6,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.010411376,
+      "PSignal": 6,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0072705320000000006,
+      "PSignal": 6,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0018658060000000002,
+      "PSignal": 7,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.003471091,
+      "PSignal": 7,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0037360090938001887,
+      "PSignal": 7,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 0.0005830687823957274,
+      "PSignal": 7,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.001508593123804084,
+      "PSignal": 7,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0021720979768185015,
+      "PSignal": 7,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.0020279590421514674,
+      "PSignal": 7,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.004646846981030031,
+      "PSignal": 7,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.012149359,
+      "PSignal": 7,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.015085355000000002,
+      "PSignal": 7,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.016902516,
+      "PSignal": 7,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.016992239,
+      "PSignal": 7,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.01515562,
+      "PSignal": 7,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.011803438999999999,
+      "PSignal": 7,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 1,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0007984735999999999,
+      "PSignal": 8,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0017126833999999997,
+      "PSignal": 8,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0021292289591730803,
+      "PSignal": 8,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 0.0003323029750454798,
+      "PSignal": 8,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.0008597784657814403,
+      "PSignal": 8,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0014306879526714586,
+      "PSignal": 8,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.0013357484796182799,
+      "PSignal": 8,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.003060721967710262,
+      "PSignal": 8,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.009244030799999999,
+      "PSignal": 8,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0132310898,
+      "PSignal": 8,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0169909236,
+      "PSignal": 8,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0193597994,
+      "PSignal": 8,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.019263175599999998,
+      "PSignal": 8,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.016431354999999998,
+      "PSignal": 8,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0003086688,
+      "PSignal": 9,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0007638576,
+      "PSignal": 9,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0010977424679585576,
+      "PSignal": 9,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 0.00017132168260479853,
+      "PSignal": 9,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.000443266249436644,
+      "PSignal": 9,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0008520968402331684,
+      "PSignal": 9,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.0007955522772829044,
+      "PSignal": 9,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.0018229212824839277,
+      "PSignal": 9,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.0063472464,
+      "PSignal": 9,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.010411711200000002,
+      "PSignal": 9,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0151560288,
+      "PSignal": 9,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0192634728,
+      "PSignal": 9,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0209904552,
+      "PSignal": 9,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0192556584,
+      "PSignal": 9,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0001077762,
+      "PSignal": 10,
+      "DSignal": 1,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0003080469,
+      "PSignal": 10,
+      "DSignal": 2,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0005114964686974169,
+      "PSignal": 10,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 1
+    },
+    {
+      "Probability": 7.982786329349006E-05,
+      "PSignal": 10,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.00020654126800909314,
+      "PSignal": 10,
+      "DSignal": 3,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 2,
+      "POffer": 0,
+      "DOffer": 0
+    },
+    {
+      "Probability": 0.0004579382432531341,
+      "PSignal": 10,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 2
+    },
+    {
+      "Probability": 0.00042754977494726114,
+      "PSignal": 10,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 3
+    },
+    {
+      "Probability": 0.0009796836817996047,
+      "PSignal": 10,
+      "DSignal": 4,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 4
+    },
+    {
+      "Probability": 0.0039080937,
+      "PSignal": 10,
+      "DSignal": 5,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0072676547999999995,
+      "PSignal": 10,
+      "DSignal": 6,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0118014939,
+      "PSignal": 10,
+      "DSignal": 7,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0164270232,
+      "PSignal": 10,
+      "DSignal": 8,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0192509205,
+      "PSignal": 10,
+      "DSignal": 9,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    },
+    {
+      "Probability": 0.0186959535,
+      "PSignal": 10,
+      "DSignal": 10,
+      "File": 1,
+      "Answer": 1,
+      "PExit": 2,
+      "DExit": 2,
+      "PAgree": 1,
+      "DAgree": 1,
+      "POffer": 8,
+      "DOffer": 8
+    }
+  ],
+  "WorkedRefusalPath": {
+    "Name": "Refusal branch",
+    "Purpose": "Verified equilibrium path",
+    "EquilibriumProbability": 0.010411376,
+    "Steps": [
+      {
+        "Decision": "PLiabilitySignal",
+        "Label": "P Liability Signal",
+        "Player": "Chance",
+        "InformationSetNumber": null,
+        "InformationSetLabels": null,
+        "InformationSetContents": null,
+        "HistoryReachProbability": 1,
+        "InformationSetReachProbability": null,
+        "OffPathInformationSet": null,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": null,
+        "SelectedAction": 5,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "0.05",
+            "Probability": 0.08045,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 2,
+            "Label": "0.15",
+            "Probability": 0.09768,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 3,
+            "Label": "0.25",
+            "Probability": 0.10618,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 4,
+            "Label": "0.35",
+            "Probability": 0.1081,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 5,
+            "Label": "0.45",
+            "Probability": 0.1076,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 6,
+            "Label": "0.55",
+            "Probability": 0.1076,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 7,
+            "Label": "0.65",
+            "Probability": 0.1081,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 8,
+            "Label": "0.75",
+            "Probability": 0.10618,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 9,
+            "Label": "0.85",
+            "Probability": 0.09768,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 10,
+            "Label": "0.95",
+            "Probability": 0.08043,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          }
+        ]
+      },
+      {
+        "Decision": "DLiabilitySignal",
+        "Label": "D Liability Signal",
+        "Player": "Chance",
+        "InformationSetNumber": null,
+        "InformationSetLabels": null,
+        "InformationSetContents": null,
+        "HistoryReachProbability": 0.1076,
+        "InformationSetReachProbability": null,
+        "OffPathInformationSet": null,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": null,
+        "SelectedAction": 2,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "0.05",
+            "Probability": 0.06756,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 2,
+            "Label": "0.15",
+            "Probability": 0.09676,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 3,
+            "Label": "0.25",
+            "Probability": 0.12296,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 4,
+            "Label": "0.35",
+            "Probability": 0.14019,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 5,
+            "Label": "0.45",
+            "Probability": 0.14423,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 6,
+            "Label": "0.55",
+            "Probability": 0.13417,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 7,
+            "Label": "0.65",
+            "Probability": 0.1129,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 8,
+            "Label": "0.75",
+            "Probability": 0.08591,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 9,
+            "Label": "0.85",
+            "Probability": 0.05898,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          },
+          {
+            "Action": 10,
+            "Label": "0.95",
+            "Probability": 0.03634,
+            "ConditionalActingPlayerUtility": null,
+            "UtilityLossFromBest": null
+          }
+        ]
+      },
+      {
+        "Decision": "PFile",
+        "Label": "P Files",
+        "Player": "P",
+        "InformationSetNumber": 84,
+        "InformationSetLabels": "P Liability Signal: 5",
+        "InformationSetContents": "5",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.1076,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 1000.0090763612118,
+        "SelectedAction": 1,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 1000.0090763612118,
+            "UtilityLossFromBest": 0
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 999.9999969136001,
+            "UtilityLossFromBest": 0.0090794476117253
+          }
+        ]
+      },
+      {
+        "Decision": "DAnswer",
+        "Label": "D Answers",
+        "Player": "D",
+        "InformationSetNumber": 12,
+        "InformationSetLabels": "D Liability Signal: 2;P Files: 1",
+        "InformationSetContents": "2,1",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.0230133029,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 999.7583193854729,
+        "SelectedAction": 1,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 999.7583193854729,
+            "UtilityLossFromBest": 0
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 998.3256593631999,
+            "UtilityLossFromBest": 1.4326600222730121
+          }
+        ]
+      },
+      {
+        "Decision": "PAbandon",
+        "Label": "P Abandons",
+        "Player": "P",
+        "InformationSetNumber": 85,
+        "InformationSetLabels": "P Liability Signal: 5;P Files: 1;D Answers: 1",
+        "InformationSetContents": "5,1,1",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.1076,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 1000.0090763612118,
+        "SelectedAction": 1,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 1000.0090763612118,
+            "UtilityLossFromBest": 0
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 999.8725182525268,
+            "UtilityLossFromBest": 0.1365581086849943
+          }
+        ]
+      },
+      {
+        "Decision": "DDefault",
+        "Label": "D Defaults",
+        "Player": "D",
+        "InformationSetNumber": 13,
+        "InformationSetLabels": "D Liability Signal: 2;P Files: 1;D Answers: 1",
+        "InformationSetContents": "2,1,1",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.0230133029,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 999.7583193854729,
+        "SelectedAction": 2,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 998.7380423205685,
+            "UtilityLossFromBest": 1.0202770649043487
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 999.7583193854729,
+            "UtilityLossFromBest": 0
+          }
+        ]
+      },
+      {
+        "Decision": "PAgreeToBargain",
+        "Label": "P Agrees To Bargain",
+        "Player": "P",
+        "InformationSetNumber": 86,
+        "InformationSetLabels": "P Liability Signal: 5;P Files: 1;D Answers: 1;P Abandons: 1",
+        "InformationSetContents": "5,1,1,1",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.1076,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 1000.0090763612118,
+        "SelectedAction": 1,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 1000.0090763612118,
+            "UtilityLossFromBest": 0
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 999.8466157471998,
+            "UtilityLossFromBest": 0.162460614011934
+          }
+        ]
+      },
+      {
+        "Decision": "DAgreeToBargain",
+        "Label": "D Agrees To Bargain",
+        "Player": "D",
+        "InformationSetNumber": 16,
+        "InformationSetLabels": "D Liability Signal: 2;P Files: 1;D Answers: 1;D Defaults: 2",
+        "InformationSetContents": "2,1,1,2",
+        "HistoryReachProbability": 0.010411376,
+        "InformationSetReachProbability": 0.0230133029,
+        "OffPathInformationSet": false,
+        "UniformFallbackForUnspecifiedStrategy": false,
+        "ConditionalActingPlayerUtility": 999.7583193854729,
+        "SelectedAction": 2,
+        "Actions": [
+          {
+            "Action": 1,
+            "Label": "Yes",
+            "Probability": 0,
+            "ConditionalActingPlayerUtility": 999.4945410680813,
+            "UtilityLossFromBest": 0.26377831739159774
+          },
+          {
+            "Action": 2,
+            "Label": "No",
+            "Probability": 1,
+            "ConditionalActingPlayerUtility": 999.7583193854729,
+            "UtilityLossFromBest": 0
+          }
+        ]
+      }
+    ],
+    "ExpectedFinalWealth": [
+      9.7,
+      10
+    ],
+    "ExpectedUtilityUnrounded": [
+      999.8466143327928,
+      1000
+    ],
+    "Outcomes": [
+      {
+        "Outcome": "Abandonment",
+        "CourtSignal": null,
+        "ConditionalProbability": 1,
+        "EquilibriumHistoryProbability": 0.010411376,
+        "TransferToPlaintiff": 0,
+        "PlaintiffNetMonetaryPayoff": -0.3,
+        "DefendantNetMonetaryPayoff": 0,
+        "PlaintiffFinalWealth": 9.7,
+        "DefendantFinalWealth": 10,
+        "PlaintiffUtility": 999.8466143327928,
+        "DefendantUtility": 1000,
+        "PlaintiffNetLitigationExpense": 0.3,
+        "DefendantNetLitigationExpense": -0
+      }
+    ]
+  },
+  "MaximumNormalizationResidual": 4.440892098500626E-16,
+  "UnspecifiedOffPathInformationSets": [],
+  "Accounting": {
+    "TerminalsChecked": 296,
+    "MaximumUnroundedResidual": 0,
+    "MaximumExpenseResidual": 1.1102230246251565E-16,
+    "PrintedReportResidual": -2.5000000000829914E-05
+  },
+  "DistinctnessNotes": "Complete strategies include unreached actions. Reached behavior is the joint distribution of reached histories. Outcomes are compared separately. Recovery frequency is not equilibrium selection."
+}

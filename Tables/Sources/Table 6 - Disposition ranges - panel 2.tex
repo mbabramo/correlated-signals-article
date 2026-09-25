@@ -1,0 +1,23 @@
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,tabularx,microtype,tikz}
+\usetikzlibrary{patterns,patterns.meta,shapes.geometric,arrows.meta,calc,positioning}
+\begin{document}
+\begin{minipage}{16.250cm}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\noindent\textbf{Risk averse: 50 American / 49 British accepted | 50 attempted starts per setting}\par\smallskip
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{4.686cm}>{\centering\arraybackslash}p{2.245cm}>{\centering\arraybackslash}p{2.987cm}>{\centering\arraybackslash}p{2.245cm}>{\centering\arraybackslash}p{2.987cm}@{}}
+\toprule
+\textbf{Outcome} & \textbf{American primary} & \textbf{American range (\%)} & \textbf{British primary} & \textbf{British range (\%)}\\\midrule
+Files & 100.00 & 61.08 - 100.00 & 60.76 & 54.23 - 100.00\\
+Files and answers & 100.00 & 25.71 - 100.00 & 25.62 & 24.27 - 100.00\\
+Settles & 95.90 & 13.82 - 95.90 & 5.99 & 4.53 - 96.82\\
+P abandons & 0.00 & 0.00 - 6.17 & 7.76 & 0.00 - 9.77\\
+D defaults & 0.00 & 0.00 - 12.31 & 7.76 & 0.00 - 18.85\\
+Trial & 4.10 & 4.10 - 11.88 & 4.10 & 1.67 - 6.08\\
+\bottomrule\end{tabular}
+\par\smallskip{\footnotesize Percent of potential disputes; primary denotes the exact single-start profile.}
+\end{minipage}
+\end{document}

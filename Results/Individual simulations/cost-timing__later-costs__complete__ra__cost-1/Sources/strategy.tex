@@ -1,0 +1,830 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=11in,paperheight=8.5in,margin=.4in,footskip=16pt]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{pgfplots}\usepackage{booktabs}
+\pgfplotsset{compat=1.18}\definecolor{navy}{RGB}{25,69,102}
+\pagestyle{plain}\setlength{\parindent}{0pt}
+\begin{document}
+\noindent{\Large\bfseries cost-timing / later-costs; Complete fee shifting; Symmetric risk aversion (alpha=2); cost multiplier 1}\par\smallskip
+{\footnotesize Case: \texttt{cost-timing\_\_later-costs\_\_complete\_\_ra\_\_cost-1}. Primary profile 1; agreement enabled.}\par\medskip
+
+{\large\bfseries Filing, answering and private exit commitments}\par\smallskip
+Filled dots: reached conditional policy. Hollow gray dots: saved off-path policy; the conditional event is undefined.\par
+Exit commitments occur privately before the simultaneous agreement decisions.\par\medskip
+\begin{tabular}{@{}cc@{}}
+\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Plaintiff: file},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(1,0) (2,0) (3,0) (4,1) (5,1) (6,1) (7,1) (8,1) (9,1) (10,1)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Defendant: answer given filing},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(1,1) (2,1) (3,1) (4,1) (5,1) (6,1) (7,1) (8,1) (9,0) (10,0)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {};
+\end{axis}\end{tikzpicture}\\
+\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Plaintiff: commit to abandon if bargaining fails},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(4,1) (5,1) (6,1) (7,0) (8,0) (9,0) (10,0)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(1,0.5) (2,0.5) (3,0.5)};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Defendant: commit to default if bargaining fails},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(1,0) (2,0) (3,0) (4,0) (5,1) (6,1) (7,1) (8,1)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(9,0.5) (10,0.5)};
+\end{axis}\end{tikzpicture}
+\end{tabular}\par\smallskip
+{\small Filing: 0.7157; joint filing/answering: 0.5416; answering given filing: 0.7567.}
+
+\newpage
+\noindent{\Large\bfseries cost-timing / later-costs; Complete fee shifting; Symmetric risk aversion (alpha=2); cost multiplier 1}\par\smallskip
+{\footnotesize Case: \texttt{cost-timing\_\_later-costs\_\_complete\_\_ra\_\_cost-1}. Primary profile 1; agreement enabled.}\par\medskip
+
+{\large\bfseries Agreement conditional on private signal and own exit commitment}\par\smallskip
+Both parties choose without observing the other party\textquotesingle s agreement choice or private exit commitment.\par
+Offers occur only if both agree. Refusal activates the original commitment-dependent outcomes.\par\medskip
+\begin{tabular}{@{}cc@{}}
+\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Plaintiff agrees | committed to abandon},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(4,1) (5,1) (6,1)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(1,0.5) (2,0.5) (3,0.5) (7,0.5) (8,0.5) (9,0.5) (10,0.5)};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Defendant agrees | committed to default},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(5,1) (6,1) (7,1) (8,1)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(1,0.5) (2,0.5) (3,0.5) (4,0.5) (9,0.5) (10,0.5)};
+\end{axis}\end{tikzpicture}\\
+\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Plaintiff agrees | committed to continue},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(7,0.84769366723009221) (8,0) (9,0) (10,0)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(1,0.5) (2,0.5) (3,0.5) (4,0.5) (5,0.5) (6,0.5)};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[width=4.85in,height=2.5in,title={Defendant agrees | committed to contest},xmin=.5,xmax=10.5,ymin=0,ymax=1,xtick={1,...,10},ytick={0,.25,.5,.75,1},xlabel={Private signal},ylabel={Probability of Yes},grid=major,tick label style={font=\small},label style={font=\small},title style={font=\normalsize},clip=false]
+\addplot[only marks,mark=*,mark size=2pt,color=navy] coordinates {(1,0) (2,0) (3,0.6287154446960812) (4,1)};
+\addplot[only marks,mark=o,mark size=2.4pt,color=gray] coordinates {(5,0.5) (6,0.5) (7,0.5) (8,0.5) (9,0.5) (10,0.5)};
+\end{axis}\end{tikzpicture}
+\end{tabular}\par\smallskip
+{\small Joint agreement-stage reach: 0.5416. Conditional joint outcomes: both agree 0.5224; only P declines 0.324; only D declines 0.1402; both decline 0.01349. These use the full joint signal/history distribution. Hollow dots retain saved off-path policies.}
+\newpage
+\noindent{\Large\bfseries cost-timing / later-costs; Complete fee shifting; Symmetric risk aversion (alpha=2); cost multiplier 1}\par\smallskip
+{\footnotesize Case: \texttt{cost-timing\_\_later-costs\_\_complete\_\_ra\_\_cost-1}. Primary profile 1; agreement enabled.}\par\medskip
+
+{\large\bfseries Complete mixed offer distributions}\par\smallskip
+Rows show the saved policy at each private signal and own commitment, after both parties agree to bargain.\par
+An asterisk marks an unreachable information set: its saved completion is shown, but no reached conditional distribution exists.\par\medskip
+\begin{tabular}{@{}cc@{}}
+\begin{tikzpicture}\begin{axis}[
+width=4.85in,height=2.55in,title={Plaintiff | committed to abandon},
+xmin=.5,xmax=10.5,ymin=.5,ymax=10.5,y dir=reverse,
+xtick={1,...,10},xticklabels={0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95},
+ytick={1,...,10},yticklabels={1*,2*,3*,4,5,6,7*,8*,9*,10*},
+xlabel={Offer (damages = 1)},ylabel={Private signal},
+tick label style={font=\scriptsize},label style={font=\small},title style={font=\normalsize},
+colormap={policy}{color(0cm)=(white);color(1cm)=(navy)},point meta min=0,point meta max=1,
+axis on top,clip=false]
+\addplot[matrix plot*,mesh/cols=10,point meta=explicit] table[meta=p] {
+x y p
+1 1 0.10000000000000001
+2 1 0.10000000000000001
+3 1 0.10000000000000001
+4 1 0.10000000000000001
+5 1 0.10000000000000001
+6 1 0.10000000000000001
+7 1 0.10000000000000001
+8 1 0.10000000000000001
+9 1 0.10000000000000001
+10 1 0.10000000000000001
+1 2 0.10000000000000001
+2 2 0.10000000000000001
+3 2 0.10000000000000001
+4 2 0.10000000000000001
+5 2 0.10000000000000001
+6 2 0.10000000000000001
+7 2 0.10000000000000001
+8 2 0.10000000000000001
+9 2 0.10000000000000001
+10 2 0.10000000000000001
+1 3 0.10000000000000001
+2 3 0.10000000000000001
+3 3 0.10000000000000001
+4 3 0.10000000000000001
+5 3 0.10000000000000001
+6 3 0.10000000000000001
+7 3 0.10000000000000001
+8 3 0.10000000000000001
+9 3 0.10000000000000001
+10 3 0.10000000000000001
+1 4 0
+2 4 0
+3 4 0
+4 4 0
+5 4 0
+6 4 1
+7 4 0
+8 4 0
+9 4 0
+10 4 0
+1 5 0
+2 5 0
+3 5 0
+4 5 0
+5 5 0
+6 5 1
+7 5 0
+8 5 0
+9 5 0
+10 5 0
+1 6 0
+2 6 0
+3 6 0
+4 6 0
+5 6 0
+6 6 1
+7 6 0
+8 6 0
+9 6 0
+10 6 0
+1 7 0.10000000000000001
+2 7 0.10000000000000001
+3 7 0.10000000000000001
+4 7 0.10000000000000001
+5 7 0.10000000000000001
+6 7 0.10000000000000001
+7 7 0.10000000000000001
+8 7 0.10000000000000001
+9 7 0.10000000000000001
+10 7 0.10000000000000001
+1 8 0.10000000000000001
+2 8 0.10000000000000001
+3 8 0.10000000000000001
+4 8 0.10000000000000001
+5 8 0.10000000000000001
+6 8 0.10000000000000001
+7 8 0.10000000000000001
+8 8 0.10000000000000001
+9 8 0.10000000000000001
+10 8 0.10000000000000001
+1 9 0.10000000000000001
+2 9 0.10000000000000001
+3 9 0.10000000000000001
+4 9 0.10000000000000001
+5 9 0.10000000000000001
+6 9 0.10000000000000001
+7 9 0.10000000000000001
+8 9 0.10000000000000001
+9 9 0.10000000000000001
+10 9 0.10000000000000001
+1 10 0.10000000000000001
+2 10 0.10000000000000001
+3 10 0.10000000000000001
+4 10 0.10000000000000001
+5 10 0.10000000000000001
+6 10 0.10000000000000001
+7 10 0.10000000000000001
+8 10 0.10000000000000001
+9 10 0.10000000000000001
+10 10 0.10000000000000001
+};
+\node[font=\scriptsize,text=black] at (axis cs:1,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,3) {0.1};
+\node[font=\scriptsize,text=white] at (axis cs:6,4) {1};
+\node[font=\scriptsize,text=white] at (axis cs:6,5) {1};
+\node[font=\scriptsize,text=white] at (axis cs:6,6) {1};
+\node[font=\scriptsize,text=black] at (axis cs:1,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,10) {0.1};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[
+width=4.85in,height=2.55in,title={Defendant | committed to default},
+xmin=.5,xmax=10.5,ymin=.5,ymax=10.5,y dir=reverse,
+xtick={1,...,10},xticklabels={0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95},
+ytick={1,...,10},yticklabels={1*,2*,3*,4*,5,6,7,8,9*,10*},
+xlabel={Offer (damages = 1)},ylabel={Private signal},
+tick label style={font=\scriptsize},label style={font=\small},title style={font=\normalsize},
+colormap={policy}{color(0cm)=(white);color(1cm)=(navy)},point meta min=0,point meta max=1,
+axis on top,clip=false]
+\addplot[matrix plot*,mesh/cols=10,point meta=explicit] table[meta=p] {
+x y p
+1 1 0.10000000000000001
+2 1 0.10000000000000001
+3 1 0.10000000000000001
+4 1 0.10000000000000001
+5 1 0.10000000000000001
+6 1 0.10000000000000001
+7 1 0.10000000000000001
+8 1 0.10000000000000001
+9 1 0.10000000000000001
+10 1 0.10000000000000001
+1 2 0.10000000000000001
+2 2 0.10000000000000001
+3 2 0.10000000000000001
+4 2 0.10000000000000001
+5 2 0.10000000000000001
+6 2 0.10000000000000001
+7 2 0.10000000000000001
+8 2 0.10000000000000001
+9 2 0.10000000000000001
+10 2 0.10000000000000001
+1 3 0.10000000000000001
+2 3 0.10000000000000001
+3 3 0.10000000000000001
+4 3 0.10000000000000001
+5 3 0.10000000000000001
+6 3 0.10000000000000001
+7 3 0.10000000000000001
+8 3 0.10000000000000001
+9 3 0.10000000000000001
+10 3 0.10000000000000001
+1 4 0.10000000000000001
+2 4 0.10000000000000001
+3 4 0.10000000000000001
+4 4 0.10000000000000001
+5 4 0.10000000000000001
+6 4 0.10000000000000001
+7 4 0.10000000000000001
+8 4 0.10000000000000001
+9 4 0.10000000000000001
+10 4 0.10000000000000001
+1 5 0
+2 5 0
+3 5 0
+4 5 0
+5 5 0
+6 5 1
+7 5 0
+8 5 0
+9 5 0
+10 5 0
+1 6 0
+2 6 0
+3 6 0
+4 6 0
+5 6 0
+6 6 1
+7 6 0
+8 6 0
+9 6 0
+10 6 0
+1 7 0
+2 7 0
+3 7 0
+4 7 0
+5 7 0
+6 7 1
+7 7 0
+8 7 0
+9 7 0
+10 7 0
+1 8 0
+2 8 0
+3 8 0
+4 8 0
+5 8 0
+6 8 1
+7 8 0
+8 8 0
+9 8 0
+10 8 0
+1 9 0.10000000000000001
+2 9 0.10000000000000001
+3 9 0.10000000000000001
+4 9 0.10000000000000001
+5 9 0.10000000000000001
+6 9 0.10000000000000001
+7 9 0.10000000000000001
+8 9 0.10000000000000001
+9 9 0.10000000000000001
+10 9 0.10000000000000001
+1 10 0.10000000000000001
+2 10 0.10000000000000001
+3 10 0.10000000000000001
+4 10 0.10000000000000001
+5 10 0.10000000000000001
+6 10 0.10000000000000001
+7 10 0.10000000000000001
+8 10 0.10000000000000001
+9 10 0.10000000000000001
+10 10 0.10000000000000001
+};
+\node[font=\scriptsize,text=black] at (axis cs:1,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,4) {0.1};
+\node[font=\scriptsize,text=white] at (axis cs:6,5) {1};
+\node[font=\scriptsize,text=white] at (axis cs:6,6) {1};
+\node[font=\scriptsize,text=white] at (axis cs:6,7) {1};
+\node[font=\scriptsize,text=white] at (axis cs:6,8) {1};
+\node[font=\scriptsize,text=black] at (axis cs:1,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,10) {0.1};
+\end{axis}\end{tikzpicture}\\
+\begin{tikzpicture}\begin{axis}[
+width=4.85in,height=2.55in,title={Plaintiff | committed to continue},
+xmin=.5,xmax=10.5,ymin=.5,ymax=10.5,y dir=reverse,
+xtick={1,...,10},xticklabels={0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95},
+ytick={1,...,10},yticklabels={1*,2*,3*,4*,5*,6*,7,8*,9*,10*},
+xlabel={Offer (damages = 1)},ylabel={Private signal},
+tick label style={font=\scriptsize},label style={font=\small},title style={font=\normalsize},
+colormap={policy}{color(0cm)=(white);color(1cm)=(navy)},point meta min=0,point meta max=1,
+axis on top,clip=false]
+\addplot[matrix plot*,mesh/cols=10,point meta=explicit] table[meta=p] {
+x y p
+1 1 0.10000000000000001
+2 1 0.10000000000000001
+3 1 0.10000000000000001
+4 1 0.10000000000000001
+5 1 0.10000000000000001
+6 1 0.10000000000000001
+7 1 0.10000000000000001
+8 1 0.10000000000000001
+9 1 0.10000000000000001
+10 1 0.10000000000000001
+1 2 0.10000000000000001
+2 2 0.10000000000000001
+3 2 0.10000000000000001
+4 2 0.10000000000000001
+5 2 0.10000000000000001
+6 2 0.10000000000000001
+7 2 0.10000000000000001
+8 2 0.10000000000000001
+9 2 0.10000000000000001
+10 2 0.10000000000000001
+1 3 0.10000000000000001
+2 3 0.10000000000000001
+3 3 0.10000000000000001
+4 3 0.10000000000000001
+5 3 0.10000000000000001
+6 3 0.10000000000000001
+7 3 0.10000000000000001
+8 3 0.10000000000000001
+9 3 0.10000000000000001
+10 3 0.10000000000000001
+1 4 0.10000000000000001
+2 4 0.10000000000000001
+3 4 0.10000000000000001
+4 4 0.10000000000000001
+5 4 0.10000000000000001
+6 4 0.10000000000000001
+7 4 0.10000000000000001
+8 4 0.10000000000000001
+9 4 0.10000000000000001
+10 4 0.10000000000000001
+1 5 0.10000000000000001
+2 5 0.10000000000000001
+3 5 0.10000000000000001
+4 5 0.10000000000000001
+5 5 0.10000000000000001
+6 5 0.10000000000000001
+7 5 0.10000000000000001
+8 5 0.10000000000000001
+9 5 0.10000000000000001
+10 5 0.10000000000000001
+1 6 0.10000000000000001
+2 6 0.10000000000000001
+3 6 0.10000000000000001
+4 6 0.10000000000000001
+5 6 0.10000000000000001
+6 6 0.10000000000000001
+7 6 0.10000000000000001
+8 6 0.10000000000000001
+9 6 0.10000000000000001
+10 6 0.10000000000000001
+1 7 0
+2 7 0
+3 7 0
+4 7 0
+5 7 0
+6 7 0
+7 7 0
+8 7 0.26623984239698933
+9 7 0.23571136301744872
+10 7 0.498048794585562
+1 8 0.10000000000000001
+2 8 0.10000000000000001
+3 8 0.10000000000000001
+4 8 0.10000000000000001
+5 8 0.10000000000000001
+6 8 0.10000000000000001
+7 8 0.10000000000000001
+8 8 0.10000000000000001
+9 8 0.10000000000000001
+10 8 0.10000000000000001
+1 9 0.10000000000000001
+2 9 0.10000000000000001
+3 9 0.10000000000000001
+4 9 0.10000000000000001
+5 9 0.10000000000000001
+6 9 0.10000000000000001
+7 9 0.10000000000000001
+8 9 0.10000000000000001
+9 9 0.10000000000000001
+10 9 0.10000000000000001
+1 10 0.10000000000000001
+2 10 0.10000000000000001
+3 10 0.10000000000000001
+4 10 0.10000000000000001
+5 10 0.10000000000000001
+6 10 0.10000000000000001
+7 10 0.10000000000000001
+8 10 0.10000000000000001
+9 10 0.10000000000000001
+10 10 0.10000000000000001
+};
+\node[font=\scriptsize,text=black] at (axis cs:1,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,3) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,4) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,7) {0.2662};
+\node[font=\scriptsize,text=black] at (axis cs:9,7) {0.2357};
+\node[font=\scriptsize,text=black] at (axis cs:10,7) {0.498};
+\node[font=\scriptsize,text=black] at (axis cs:1,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,10) {0.1};
+\end{axis}\end{tikzpicture}&\begin{tikzpicture}\begin{axis}[
+width=4.85in,height=2.55in,title={Defendant | committed to contest},
+xmin=.5,xmax=10.5,ymin=.5,ymax=10.5,y dir=reverse,
+xtick={1,...,10},xticklabels={0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95},
+ytick={1,...,10},yticklabels={1*,2*,3,4,5*,6*,7*,8*,9*,10*},
+xlabel={Offer (damages = 1)},ylabel={Private signal},
+tick label style={font=\scriptsize},label style={font=\small},title style={font=\normalsize},
+colormap={policy}{color(0cm)=(white);color(1cm)=(navy)},point meta min=0,point meta max=1,
+axis on top,clip=false]
+\addplot[matrix plot*,mesh/cols=10,point meta=explicit] table[meta=p] {
+x y p
+1 1 0.10000000000000001
+2 1 0.10000000000000001
+3 1 0.10000000000000001
+4 1 0.10000000000000001
+5 1 0.10000000000000001
+6 1 0.10000000000000001
+7 1 0.10000000000000001
+8 1 0.10000000000000001
+9 1 0.10000000000000001
+10 1 0.10000000000000001
+1 2 0.10000000000000001
+2 2 0.10000000000000001
+3 2 0.10000000000000001
+4 2 0.10000000000000001
+5 2 0.10000000000000001
+6 2 0.10000000000000001
+7 2 0.10000000000000001
+8 2 0.10000000000000001
+9 2 0.10000000000000001
+10 2 0.10000000000000001
+1 3 1
+2 3 0
+3 3 0
+4 3 0
+5 3 0
+6 3 0
+7 3 0
+8 3 0
+9 3 0
+10 3 0
+1 4 0.1228496812791067
+2 4 0.35716146368693957
+3 4 0.51998885503395376
+4 4 0
+5 4 0
+6 4 0
+7 4 0
+8 4 0
+9 4 0
+10 4 0
+1 5 0.10000000000000001
+2 5 0.10000000000000001
+3 5 0.10000000000000001
+4 5 0.10000000000000001
+5 5 0.10000000000000001
+6 5 0.10000000000000001
+7 5 0.10000000000000001
+8 5 0.10000000000000001
+9 5 0.10000000000000001
+10 5 0.10000000000000001
+1 6 0.10000000000000001
+2 6 0.10000000000000001
+3 6 0.10000000000000001
+4 6 0.10000000000000001
+5 6 0.10000000000000001
+6 6 0.10000000000000001
+7 6 0.10000000000000001
+8 6 0.10000000000000001
+9 6 0.10000000000000001
+10 6 0.10000000000000001
+1 7 0.10000000000000001
+2 7 0.10000000000000001
+3 7 0.10000000000000001
+4 7 0.10000000000000001
+5 7 0.10000000000000001
+6 7 0.10000000000000001
+7 7 0.10000000000000001
+8 7 0.10000000000000001
+9 7 0.10000000000000001
+10 7 0.10000000000000001
+1 8 0.10000000000000001
+2 8 0.10000000000000001
+3 8 0.10000000000000001
+4 8 0.10000000000000001
+5 8 0.10000000000000001
+6 8 0.10000000000000001
+7 8 0.10000000000000001
+8 8 0.10000000000000001
+9 8 0.10000000000000001
+10 8 0.10000000000000001
+1 9 0.10000000000000001
+2 9 0.10000000000000001
+3 9 0.10000000000000001
+4 9 0.10000000000000001
+5 9 0.10000000000000001
+6 9 0.10000000000000001
+7 9 0.10000000000000001
+8 9 0.10000000000000001
+9 9 0.10000000000000001
+10 9 0.10000000000000001
+1 10 0.10000000000000001
+2 10 0.10000000000000001
+3 10 0.10000000000000001
+4 10 0.10000000000000001
+5 10 0.10000000000000001
+6 10 0.10000000000000001
+7 10 0.10000000000000001
+8 10 0.10000000000000001
+9 10 0.10000000000000001
+10 10 0.10000000000000001
+};
+\node[font=\scriptsize,text=black] at (axis cs:1,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,1) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,2) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,2) {0.1};
+\node[font=\scriptsize,text=white] at (axis cs:1,3) {1};
+\node[font=\scriptsize,text=black] at (axis cs:1,4) {0.1228};
+\node[font=\scriptsize,text=black] at (axis cs:2,4) {0.3572};
+\node[font=\scriptsize,text=black] at (axis cs:3,4) {0.52};
+\node[font=\scriptsize,text=black] at (axis cs:1,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,5) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,6) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,7) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,8) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,9) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:1,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:2,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:3,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:4,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:5,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:6,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:7,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:8,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:9,10) {0.1};
+\node[font=\scriptsize,text=black] at (axis cs:10,10) {0.1};
+\end{axis}\end{tikzpicture}
+\end{tabular}\par\smallskip
+{\small Color and cell labels show action probabilities (white = 0; darkest blue = 1). Empty cell labels mean exact zero.
+Every positive entry is printed, including arbitrarily small probabilities. Full precision is retained in the editable TeX and profile JSON.}
+\end{document}

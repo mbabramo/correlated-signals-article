@@ -1,0 +1,90 @@
+{
+  "Schema": "validated-strategic-pair-v1",
+  "Passed": true,
+  "FinishedUtc": "2026-09-24T04:13:44.527054+00:00",
+  "Request": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\requests\\pair-db4e676404e89bd5.json",
+    "Sha256": "473ec8ce91d3e8e349e138245d080ebf8ebca638c10e720f3156d06b5c5283ed",
+    "Bytes": 3705
+  },
+  "Build": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\provenance\\final-reporting-v4-build.json",
+    "Sha256": "0cac36b7d3e4fbf5cb0bbc9dd6b6b2fa45380c3fc3cfd66dd7e76259e7165bc3",
+    "Bytes": 47345
+  },
+  "Catalog": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\audited-primary-catalog-v3\\catalog.json",
+    "Sha256": "c2e50e15c3386831ed22306d2522ed472c4bf1cca936dac9dbd1e8d95a01f72c",
+    "Bytes": 231581
+  },
+  "Checks": {
+    "CompleteEndpointProbabilitiesIdentical": true,
+    "CoalitionsPerPlayer": 16,
+    "OrdersIndependentlyChecked": 24,
+    "TieAndOffPathChecksComplete": true,
+    "AllocationRows": 28,
+    "SolvesStarted": 0,
+    "Manifest": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\equilibrium-changes-manifest.json",
+      "Sha256": "2604cc1dfba4e8b02fb4b60cef3b90545cf0c6a5a08b9f664e5ea3de3812c06d",
+      "Bytes": 1790764
+    },
+    "Outputs": [
+      {
+        "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\pair-db4e676404e89bd5-forward.json",
+        "Sha256": "66126364d0c186309ce02693caedab591a159c9f293ac673f82743846dfa575d"
+      },
+      {
+        "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\pair-db4e676404e89bd5-reverse.json",
+        "Sha256": "aee5638ddd9a043aa9c2e6574b19bcd3fad54e9f822c55afc36a7faf3b071987"
+      }
+    ]
+  },
+  "EndpointAudits": [
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\remaining-profile-audits-v1\\cost-timing__later-costs__american__rn__cost-1\\validation.json",
+      "Sha256": "164a3a750368b76b7f05db3309c6cc09faa06c86496b5be31c41aa2adb90a045"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\remaining-profile-audits-v1\\cost-timing__later-costs__complete__rn__cost-1\\validation.json",
+      "Sha256": "e38d2d4533c135caaf231e03bff2ce8303db3c33dcec6f0e4536981672378f0c"
+    }
+  ],
+  "Directions": [
+    {
+      "source": "cost-timing__later-costs__american__rn__cost-1",
+      "target": "cost-timing__later-costs__complete__rn__cost-1",
+      "reasons": [
+        "matched-american-complete"
+      ],
+      "MissingAuditedProfiles": [],
+      "Disposition": "Ready to materialize from audited profiles"
+    },
+    {
+      "source": "cost-timing__later-costs__complete__rn__cost-1",
+      "target": "cost-timing__later-costs__american__rn__cost-1",
+      "reasons": [
+        "matched-american-complete"
+      ],
+      "MissingAuditedProfiles": [],
+      "Disposition": "Ready to materialize from audited profiles"
+    }
+  ],
+  "Outputs": [
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\equilibrium-changes-manifest.json",
+      "Sha256": "2604cc1dfba4e8b02fb4b60cef3b90545cf0c6a5a08b9f664e5ea3de3812c06d",
+      "Bytes": 1790764
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\pair-db4e676404e89bd5-forward.json",
+      "Sha256": "66126364d0c186309ce02693caedab591a159c9f293ac673f82743846dfa575d",
+      "Bytes": 35749857
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v1\\calculations\\pair-db4e676404e89bd5\\pair-db4e676404e89bd5-reverse.json",
+      "Sha256": "aee5638ddd9a043aa9c2e6574b19bcd3fad54e9f822c55afc36a7faf3b071987",
+      "Bytes": 35811473
+    }
+  ]
+}

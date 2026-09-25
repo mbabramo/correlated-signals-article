@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=.5in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array,tabularx,longtable,microtype}
+\begin{document}\textbf{Preferences: risk neutral to moderately risk averse}\par
+British rule remains in force; cost multiplier 1\par
+{\footnotesize cost-timing / earlier-costs; 10 signals; 10 offers; party noise 0.2; court noise 0.2; entry cost 0.225; trial cost 0.075.}\par
+{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{6}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Opponent\\agreement} & Remaining & Sensitive \\\midrule
+P files & 0.25 & $0\%\to 100\%$ & $0$ & $-16.7$ & $+33.3$ & $0$ & $+83.3$ & $0$ & Yes\\
+P files & 0.35 & $3.5\%\to 100\%$ & $-3.5$ & $-16.7$ & $+33.3$ & $0$ & $+83.3$ & $0$ & Yes\\
+P agrees, continue$^{*}$ & 0.65 & $0\%\to 100\%$ & $+100$ & $0$ & $0$ & $0$ & $0$ & $0$ & Yes\\
+P agrees, continue & 0.75--0.85 & $0\%\to 100\%$ & $0$ & $+33.3$ & $+33.3$ & $0$ & $+33.3$ & $0$ & Yes\\
+P agrees, continue & 0.95 & $0\%\to 100\%$ & $0$ & $+8.3$ & $+41.7$ & $+8.3$ & $+41.7$ & $0$ & Yes\\
+P demand, continue$^{*}$ & 0.35--0.45 & $0.85\to 0.15$ & $-0.80$ & $0.00$ & $+0.45$ & $0.00$ & $-0.35$ & $0.00$ & Yes\\
+P demand, continue$^{*}$ & 0.55 & $0.95\to 0.15$ & $-0.90$ & $+0.20$ & $+0.35$ & $-0.05$ & $-0.40$ & $0.00$ & Yes\\
+D answers & 0.65 & $0.8\%\to 100\%$ & $-0.8$ & $0$ & $0$ & $0$ & $+100$ & $0$ & No\\
+D answers & 0.75--0.95 & $0\%\to 100\%$ & $0$ & $0$ & $0$ & $0$ & $+100$ & $0$ & No\\
+D agrees, continue & 0.05--0.25 & $0\%\to 100\%$ & $0$ & $+33.3$ & $+33.3$ & $0$ & $+33.3$ & $0$ & Yes\\
+D agrees, continue$^{*}$ & 0.35 & $0\%\to 100\%$ & $+100$ & $0$ & $0$ & $0$ & $0$ & $0$ & Yes\\
+D offer, continue$^{*}$ & 0.45 & $0.05\to 0.85$ & $+0.90$ & $-0.05$ & $-0.40$ & $0.00$ & $+0.35$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.55 & $0.15\to 0.85$ & $+0.80$ & $0.00$ & $-0.45$ & $0.00$ & $+0.35$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.65 & $0.15\to 0.85$ & $+0.80$ & $0.00$ & $-0.45$ & $0.00$ & $+0.35$ & $0.00$ & No\\
+\bottomrule\end{tabularx}}
+
+\smallskip{\footnotesize Probability contributions are percentage points; pure offer changes are fractions of damages. Direct changes the rule or preferences first.\par
+Opponent entry, offers, exit and agreement contributions average all 24 replacement orders. Their sum plus Direct and Remaining equals the endpoint change before rounding.\par
+Remaining retains equilibrium-selection and continuation differences. Sensitive flags tie or off-path completion dependence; these are conditional diagnostics, not causal shares.\par
+$^{*}$: an intermediate hybrid does not reach this history, although its continuation remains defined by positive opponent-and-chance reach.}\par
+\clearpage
+\end{document}

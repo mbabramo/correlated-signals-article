@@ -1,0 +1,96 @@
+{
+  "OutputDirectory": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\strategic-requests-v7\\calculations\\pair-9e310e02d89d8d79",
+  "Sources": [
+    {
+      "Id": "left",
+      "OptionSetName": "Final-Agreement__grid__signals-8-offers-8__american__ra__cost-1",
+      "EquilibriumFile": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\remaining-primary-completion-v1\\grid__signals-8-offers-8__american__ra__cost-1\\FinalAgreement Final-Agreement__grid__signals-8-offers-8__american__ra__cost-1 -equ.csv",
+      "ActionReportFile": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\remaining-primary-completion-v1\\grid__signals-8-offers-8__american__ra__cost-1\\FinalAgreement Final-Agreement__grid__signals-8-offers-8__american__ra__cost-1 -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "FinalCase": {
+        "Id": "grid__signals-8-offers-8__american__ra__cost-1",
+        "Family": "grid",
+        "Variant": "signals-8-offers-8",
+        "FeeRule": "american",
+        "AlphaP": 2,
+        "AlphaD": 2,
+        "CostMultiplier": 1,
+        "Signals": 8,
+        "Offers": [
+          0.05,
+          0.17857142857142855,
+          0.3071428571428571,
+          0.43571428571428567,
+          0.5642857142857143,
+          0.692857142857143,
+          0.8214285714285714,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": null,
+        "CalibrationSha256": null,
+        "IsExternalImport": false
+      }
+    },
+    {
+      "Id": "right",
+      "OptionSetName": "Final-Agreement__grid__signals-8-offers-8__complete__ra__cost-1",
+      "EquilibriumFile": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\remaining-primary-completion-v9\\grid__signals-8-offers-8__complete__ra__cost-1\\FinalAgreement Final-Agreement__grid__signals-8-offers-8__complete__ra__cost-1 -equ.csv",
+      "ActionReportFile": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\remaining-primary-completion-v9\\grid__signals-8-offers-8__complete__ra__cost-1\\FinalAgreement Final-Agreement__grid__signals-8-offers-8__complete__ra__cost-1 -InformationSetActions.csv",
+      "EquilibriumNumber": 1,
+      "FinalCase": {
+        "Id": "grid__signals-8-offers-8__complete__ra__cost-1",
+        "Family": "grid",
+        "Variant": "signals-8-offers-8",
+        "FeeRule": "complete",
+        "AlphaP": 2,
+        "AlphaD": 2,
+        "CostMultiplier": 1,
+        "Signals": 8,
+        "Offers": [
+          0.05,
+          0.17857142857142855,
+          0.3071428571428571,
+          0.43571428571428567,
+          0.5642857142857143,
+          0.692857142857143,
+          0.8214285714285714,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": null,
+        "CalibrationSha256": null,
+        "IsExternalImport": false
+      }
+    }
+  ],
+  "Contrasts": [
+    {
+      "Id": "pair-9e310e02d89d8d79-forward",
+      "Label": "grid__signals-8-offers-8__american__ra__cost-1 to grid__signals-8-offers-8__complete__ra__cost-1",
+      "Source": "left",
+      "Target": "right"
+    },
+    {
+      "Id": "pair-9e310e02d89d8d79-reverse",
+      "Label": "grid__signals-8-offers-8__complete__ra__cost-1 to grid__signals-8-offers-8__american__ra__cost-1",
+      "Source": "right",
+      "Target": "left"
+    }
+  ],
+  "Tolerances": {
+    "Numerical": 1e-07,
+    "Tie": 1e-10,
+    "NearTie": 1e-06
+  },
+  "CheckOffPathCompletions": true,
+  "CheckTieSensitivity": true
+}

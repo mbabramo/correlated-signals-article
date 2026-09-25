@@ -1,0 +1,146 @@
+{
+  "Case": {
+    "Id": "private-noise__sigma-0p1__american__rn__cost-1",
+    "Family": "private-noise",
+    "Variant": "sigma-0p1",
+    "FeeRule": "american",
+    "AlphaP": 0,
+    "AlphaD": 0,
+    "CostMultiplier": 1,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.1,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Identity": {
+    "Schema": "strategic-tree-v1",
+    "CompleteSha256": "cb6a1838a4d28e8bbdfb437fe0be00dba4df683a3d052ce12342fd77017f7fe0",
+    "TreeSha256": "0b01a792ade65138d0a5020ad2456823e4f8cb23a62deac9a11d60dc684e8733",
+    "CoordinatesSha256": "9fc66eb70142175945e36f8e9135dcc193c8ae829caa2441e4da6b5b0df9131e",
+    "ParametersSha256": "9e7fdfea5acc3e7f338ef57238fe6d23834e7ba488e0da5f5561fa77dc385c38",
+    "TreeNodes": 47611,
+    "TerminalNodes": 41400,
+    "InformationSets": 120,
+    "StrategyEntries": 560
+  },
+  "Panels": [
+    {
+      "Title": "The same merits generate each party\u0027s signal",
+      "SourceTitle": "Merits interval Q",
+      "DestinationTitle": "Party signal (sigma=0.10)",
+      "Sources": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "Destinations": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "JointMass": [
+        [
+          0.08140711584939342,
+          0.07452011541161055,
+          0.035049357976375886,
+          0.008120638299129849,
+          0.0008626121981213275,
+          3.941429069931571E-05,
+          7.404108865855487E-07,
+          5.547524020439193E-09,
+          1.624071120551863E-11,
+          1.8313984697299753E-14
+        ],
+        [
+          0.0075203761882073695,
+          0.030988800059455007,
+          0.061266441716625195,
+          0.061130354005172055,
+          0.030795443189838453,
+          0.0074499456734564385,
+          0.0008104169658967804,
+          3.750714671508219E-05,
+          7.097135715827209E-07,
+          5.341062022027915E-09
+        ],
+        [
+          3.750050794049205E-05,
+          0.0008101560378221969,
+          0.007445047539384555,
+          0.03075206546811798,
+          0.06095523044673477,
+          0.06095523044673474,
+          0.030752065468117977,
+          0.007445047539384562,
+          0.0008101560378221948,
+          3.750050794049136E-05
+        ],
+        [
+          5.341062021266148E-09,
+          7.097135715821831E-07,
+          3.750714671508259E-05,
+          0.0008104169658967825,
+          0.007449945673456446,
+          0.03079544318983846,
+          0.06113035400517207,
+          0.06126644171662529,
+          0.03098880005945499,
+          0.007520376188207371
+        ],
+        [
+          1.8314550665908266E-14,
+          1.624070978450869E-11,
+          5.5475240195838045E-09,
+          7.40410886584928E-07,
+          3.941429069931659E-05,
+          0.0008626121981213274,
+          0.008120638299129826,
+          0.0350493579763759,
+          0.07452011541161055,
+          0.0814071158493934
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.2000000000000001,
+      "ConditionalDestinationProbabilities": [
+        2.670531010633073E-08,
+        3.5485678579109136E-06,
+        0.00018753573357541288,
+        0.0040520848294839104,
+        0.037249728367282214,
+        0.15397721594919223,
+        0.3056517700258602,
+        0.3063322085831263,
+        0.15494400029727487,
+        0.037601880941036836
+      ]
+    }
+  ],
+  "Description": "Final prepared case private-noise__sigma-0p1__american__rn__cost-1; agreement-enabled. Merits distribution=uniform; party sigma=0.10000000000000001; court sigma=0.20000000000000001; signal bins=10.\nSpecification=Final-Agreement__private-noise__sigma-0p1__american__rn__cost-1; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.10000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events. Ribbon width denotes joint probability mass, not conditional probability. One reference source group\u0027s conditional destination probabilities are listed in this companion file and in JSON, not inside the diagram. They sum to one before display rounding. For continuous merits they condition on the entire reference interval, with the prior integrated over that interval, not on its midpoint or on a single exact Q. Bucket labels for party signals are bin midpoints, not point events. The accompanying JSON also contains unrounded joint masses. Crossings imply no extra probability. Q and T are italic mathematical variables; the Greek symbol sigma denotes the noise standard deviation. Color and grayscale share identical data and ribbon coordinates. No transparency, gradients, equilibrium loading, or solver call. Grayscale: all background ribbons have the same pale-gray fill, regardless of signal strength or source range. The reference fan alone uses darker gray and is drawn last. Gray shade indicates highlighting, not signal strength. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. The JSON Highlight index identifies the fan and the companion\u0027s reference calculation. This standalone file depicts: The same merits generate each party\u0027s signal.\n\nReference source (highlighted in both palettes): 0.60--0.80; source probability mass: 0.20000000000000009.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.05: 2.6705310106330729E-08\n0.15: 3.5485678579109136E-06\n0.25: 0.00018753573357541288\n0.35: 0.0040520848294839104\n0.45: 0.037249728367282214\n0.55: 0.15397721594919223\n0.65: 0.30565177002586019\n0.75: 0.30633220858312632\n0.85: 0.15494400029727487\n0.95: 0.037601880941036836\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}

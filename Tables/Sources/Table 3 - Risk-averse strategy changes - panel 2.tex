@@ -1,0 +1,25 @@
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,tabularx,microtype,tikz}
+\usetikzlibrary{patterns,patterns.meta,shapes.geometric,arrows.meta,calc,positioning}
+\begin{document}
+\begin{minipage}{18.420cm}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\noindent\textbf{Risk neutral to risk averse | American}\par\smallskip
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.600cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{0.700cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{2.300cm}>{\centering\arraybackslash}p{2.350cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}@{}}
+\toprule
+\textbf{Decision} & \textbf{Signal} & \textbf{Own exit} & \textbf{Action} & \textbf{Action \%} & \textbf{Reach \%} & \textbf{Direct} & \textbf{Entry} & \textbf{Offers} & \textbf{Exit} & \textbf{Agree}\\\midrule
+P files & 0.05 & -- & Yes & 0.0 $\to$ 100.0 & 8.04 $\to$ 8.04 & +0.0 & +0.0 & +100.0 & +0.0 & +0.0\\
+D answers & 0.75 & -- & Yes & 0.0 $\to$ 100.0 & 10.33 $\to$ 10.62 & +0.0 & +0.0 & +100.0 & +0.0 & +0.0\\
+P commits to exit & 0.25 & -- & Yes & 0.0 $\to$ 0.0 & 8.34 $\to$ 10.62 & +0.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+D commits to exit & 0.05 & -- & Yes & 0.0 $\to$ 0.0 & 4.05 $\to$ 8.05 & +0.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+P agrees & 0.25 & C & Yes & 100.0 $\to$ 100.0 & 8.34 $\to$ 10.62 & +0.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+D agrees & 0.05 & C & Yes & 100.0 $\to$ 100.0 & 4.05 $\to$ 8.05 & +0.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+P offer & 0.25 & C & 0.05 & 100.0 $\to$ 0.0 & 8.34 $\to$ 10.62 & +0.0 & +0.0 & -100.0 & +0.0 & +0.0\\
+D offer & 0.05 & C & 0.05 & 100.0 $\to$ 0.0 & 4.05 $\to$ 8.05 & +0.0 & +0.0 & -100.0 & +0.0 & +0.0\\
+\bottomrule\end{tabular}
+\par\smallskip{\footnotesize Action/reach: percent. Contributions: percentage points. C/E: continue/exit.}
+\end{minipage}
+\end{document}

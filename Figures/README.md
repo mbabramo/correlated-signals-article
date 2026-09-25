@@ -1,14 +1,11 @@
-# Numbered main figures
+# Figures
 
-PDF and PNG files are ready for manuscript insertion. Sources contains standalone TeX, exact-data JSON and separate caption text. Captions and costs are not added inside the research artwork.
+Existing roles and article order are preserved. Figure 7 replaces Table 4 in Welfare Analysis; other file identifiers are unchanged. Editable sources, complete numerical data and separate captions are in Sources.
 
-| Exhibit | Canonical source |
-|---|---|
-| [Figure 1 - Information structure](<Figure 1 - Information structure.pdf>) | [Continuous merits - party - bw](<../Supplemental materials/Liability signals diagrams/Continuous merits - party - bw.pdf>) |
-| [Figure 2 - Worked equilibrium path](<Figure 2 - Worked equilibrium path.pdf>) | [worked equilibrium path](<../Supplemental materials/Game tree diagrams/worked equilibrium path.pdf>) |
-| [Figure 3 - Dispositions](<Figure 3 - Dispositions.pdf>) | [Risk-neutral dispositions](<../Results/Aggregated Data/Baseline/Risk Neutral/cost-1-dispositions.pdf>) |
-| [Figure 4 - Participation and offers](<Figure 4 - Participation and offers.pdf>) | [cost-1-participation-and-offers](<../Results/Aggregated Data/Baseline/Risk Neutral/cost-1-participation-and-offers.pdf>) |
-| [Figure 5 - Risk-averse dispositions](<Figure 5 - Risk-averse dispositions.pdf>) | [Risk-averse dispositions](<../Results/Aggregated Data/Baseline/Risk Averse/cost-1-dispositions.pdf>) |
-| [Figure 6 - Risk-averse participation and offers](<Figure 6 - Risk-averse participation and offers.pdf>) | [cost-1-participation-and-offers](<../Results/Aggregated Data/Baseline/Risk Averse/cost-1-participation-and-offers.pdf>) |
-
-Run ACESim4's `scripts/publish_article_results.py refresh-main --article <article repository>` after generating the routine collection to refresh Figures 3-6 and the combined welfare Table 4. The two disposition figures omit redundant risk headings inside the artwork; the manuscript captions identify the risk preference. The generator writes these manuscript versions directly here, with editable sources in Sources. The comprehensive chart collection, including their original baseline charts, remains in Results/Aggregated Data. Figures 4 and 6 show participation and offers under risk neutrality and risk aversion, respectively. The main selection contains six figures and six tables. `manuscript-exhibits.json` records source/output hashes and caption companions; derived exhibits have separate input and output hashes.
+- [Figure 1 - Information structure](Figure%201%20-%20Information%20structure.pdf)
+- [Figure 2 - Worked equilibrium path](Figure%202%20-%20Worked%20equilibrium%20path.pdf)
+- [Figure 3 - Dispositions](Figure%203%20-%20Dispositions.pdf)
+- [Figure 4 - Participation and offers](Figure%204%20-%20Participation%20and%20offers.pdf)
+- [Figure 5 - Risk-averse dispositions](Figure%205%20-%20Risk-averse%20dispositions.pdf)
+- [Figure 6 - Risk-averse participation and offers](Figure%206%20-%20Risk-averse%20participation%20and%20offers.pdf)
+- [Figure 7 - Welfare outcomes](Figure%207%20-%20Welfare%20outcomes.pdf)

@@ -1,0 +1,152 @@
+{
+  "Schema": "validated-final-profile-v1",
+  "Passed": true,
+  "StartedUtc": "2026-09-24T02:37:30.144417Z",
+  "FinishedUtc": "2026-09-24T02:37:34.9049292Z",
+  "CaseId": "cost-multiplier__standard__american__ra__cost-2",
+  "Case": {
+    "Id": "cost-multiplier__standard__american__ra__cost-2",
+    "Family": "cost-multiplier",
+    "Variant": "standard",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 2,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": "Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American",
+    "CalibrationSha256": null,
+    "IsExternalImport": true
+  },
+  "OptionSetName": "Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American",
+  "GameIdentity": {
+    "Schema": "strategic-tree-v1",
+    "CompleteSha256": "cde73168f9b8bbadebfdd927b164945bea3878bf98929a094a0c663355fecbd9",
+    "TreeSha256": "6edb34e656e66d9de7c4ee168c2bf2e45acbf277ebb3fde111388a99c7b038ee",
+    "CoordinatesSha256": "9fc66eb70142175945e36f8e9135dcc193c8ae829caa2441e4da6b5b0df9131e",
+    "ParametersSha256": "681537ee35f418dd32bce44bfcc732ea40abf7e0444df043f0a8cac7bc1400de",
+    "TreeNodes": 47611,
+    "TerminalNodes": 41400,
+    "InformationSets": 120,
+    "StrategyEntries": 560
+  },
+  "Request": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\import-profile-audit-requests-v1\\cost-multiplier__standard__american__ra__cost-2.json",
+    "Sha256": "53998a11179a72b1b1c41591432ec15dafa53beaa25a972e71d9a87f884f0da4"
+  },
+  "Inputs": {
+    "CaseId": "cost-multiplier__standard__american__ra__cost-2",
+    "PreparedInventory": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\validation\\optimized-settled-inventory-v1\\inventory.json",
+      "Sha256": "e0d77225e59c2fcd3bd4ad5d900490e924b3f9f56f84c4bf1a2e58034714b472"
+    },
+    "CompletionEvidence": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\validated-production-imports-v1.json",
+      "Sha256": "27cc9b654559c6b73f993b8c79bd7ae421541b5eb746d8500efc316b208062bb"
+    },
+    "Equilibrium": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\frozen-completed-27\\CS007AB Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American -equ.csv",
+      "Sha256": "47cfaa31aa10f9421f930ae3719274b2d6c876cafc4cde6958235cb9df3d1db1"
+    },
+    "Actions": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\frozen-completed-27\\CS007AB Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American -InformationSetActions.csv",
+      "Sha256": "6474a984d4b0b647f5ff5e8f22e38972723b5b8d5110d30013e70f94f1a51669"
+    },
+    "Numeric": {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\imports\\frozen-completed-27\\CS007AB Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American.csv",
+      "Sha256": "9a6719b647ca9ed6e7f89185470e634691f50de3c22373939f2df497e1bce449"
+    },
+    "GenerateDiagrams": true
+  },
+  "FullBestResponseGains": [
+    3.410605131648481E-13,
+    0
+  ],
+  "MaximumGain": 3.410605131648481E-13,
+  "ActionRows": 560,
+  "ReproducedNumericCells": 5721,
+  "CompleteStrategySha256": "8e56834724ae1b5b5d86a9dd521c39946e2677c0447670975c7bc054f863ee6c",
+  "CompleteStrategyUnchanged": true,
+  "UnspecifiedOffPathInformationSets": [],
+  "Welfare": {
+    "Headline": {
+      "MeritoriousPlaintiffShortfall": 0.2767881879666328,
+      "NonliableDefendantBurden": 0.16290173969198662,
+      "LiableDefendantExcessBurden": 0.006466983220930217,
+      "GrossOutcomeError": 0.2806882775594345,
+      "RealLitigationExpenditures": 0.2555836045434376
+    },
+    "ModelTruthPrior": 0.5000000000000001,
+    "ReplayedTruthMass": 0.49999347720447385,
+    "TotalProbability": 1.0000000000000002,
+    "MaximumAccountingResidual": 2.220446049250313E-16
+  },
+  "GameAssembly": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\builds\\final-reporting-v2\\ACESimBase.dll",
+    "Sha256": "4c43a97c594b0dfd1f8489706762bc7513ec566ca6510e30f440d03539eb48e4"
+  },
+  "ReportingAssembly": {
+    "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\builds\\final-reporting-v2\\LitigCharts.dll",
+    "Sha256": "0a56de1590a6723703706d74ea28a81d8955c5021fa276218577188ad32d6947"
+  },
+  "Outputs": [
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\replayed-report.csv",
+      "Sha256": "5536a264085f3aecf2fecc634628f96fa0807c00cb912ab26790d9d8b45be6cd"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -costbreakdowndark-Eq1.tex",
+      "Sha256": "6d87431c3c5598c9c9c6d54040a05f5190773cb66bad5ea41f86e0c199d0320e"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -costbreakdownlight-Eq1.tex",
+      "Sha256": "b7c5a2a921615ab72881a74dc22eb38af8b2c06e5211399c0babc9c6f4f38ec3"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -fileans-Eq1.tex",
+      "Sha256": "eedcb09c0b34ac73a290880f55adc28923f82af28261f7eaa303a9f04e34a301"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -offers-Eq1.tex",
+      "Sha256": "3607ba85f11e57cf5f5644a84f438c60f37de6e301517316ec9a62afba779cba"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -stagecostdark-Eq1.tex",
+      "Sha256": "61c74edb17416ab907def4a28a6b4892706883f5ec5285f20b11717d71e53a0a"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -stagecostlight-Eq1.tex",
+      "Sha256": "17897a0b07b472af663ace214dbd338e2e19d80dbd82c89766f665bbb0766887"
+    },
+    {
+      "Path": "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Profiles\\Agreement-Enabled__Specification-ModerateRiskAversion__Cost-2__Fee-American-Eq1.json",
+      "Sha256": "b7210041e5ba3f466b6f67907f3e323b1d496d48a943eac96db735f834622cf9"
+    }
+  ],
+  "DiagramSources": [
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -costbreakdownlight-Eq1.tex",
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -costbreakdowndark-Eq1.tex",
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -stagecostlight-Eq1.tex",
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -stagecostdark-Eq1.tex",
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -offers-Eq1.tex",
+    "C:\\Users\\Admin\\Documents\\Codex\\correlated-signals-final-20260923\\reporting\\individual-profile-audits-v2\\cost-multiplier__standard__american__ra__cost-2\\Sources\\Diagrams\\cost-multiplier__standard__american__ra__cost-2 -fileans-Eq1.tex"
+  ],
+  "SolvesStarted": 0,
+  "RenderingAndVisualQAPending": true
+}
