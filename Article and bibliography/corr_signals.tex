@@ -392,22 +392,16 @@ Table \ref{tab:robustness-outcomes} provides a summary of how some key outcome v
 
 Finding an equilibrium does not establish whether it is representative of other equilibria of the same game. The computational approach therefore raises the question whether the results depend on which equilibrium the algorithm finds. I address this by varying the initial strategy profiles supplied to the solver and examining both the distinct profiles recovered and the variation in their outcomes. The search requested 50 starting profiles for each of the four American/British and risk-preference combinations (200 starts), of which 199 passed the approximate acceptance criteria. This exercise cannot determine with certainty how many equilibria exist. In principle, the recovered profiles could be the entire population or a small sample. \revisionnote{These are obsolete search/group counts. The current four-case search accepted 50, 50, 50 and 49 starts; distinct-profile counts require an explicit grouping criterion and tolerance.}{The exercise produced 21, 11, and 15 profiles for the three fee-shifting rules under risk neutrality, and 12, 19, and 7 under risk aversion.} The counts distinguish complete strategies, which can differ only at unreached decision points and still produce the same outcomes.
 
-\revisionnote{The current risk-neutral searches show outcome variation. These are accepted approximate profiles, not a proof of distinct exact equilibria or their likelihood.}{As shown in Table \ref{tab:multiple-equilibria}, the multiple equilibria under risk neutrality all produced the same dispositions breakdown within each fee-shifting rule.} Under risk aversion and the American rule, settlement ranged from $13.8\%$ to $95.9\%$. Some risk-averse equilibria produced lower expenditures or lower gross outcome error than the risk-neutral equilibrium; expenditures ranged from $0.182$ to $0.336$, compared to $0.292$ under risk neutrality, and the gross outcome range was $0.276$ to $0.399$, compared to $0.278$. The risk-averse burden ranges under different fee-shifting rules also overlapped.
+\revisionnote{Figure 8 now shows welfare outcomes rather than disposition ranges. The current risk-neutral searches show outcome variation. These are accepted approximate profiles, not a proof of distinct exact equilibria or their likelihood.}{As shown in Figure \ref{fig:multiple-equilibria}, the multiple equilibria under risk neutrality all produced the same dispositions breakdown within each fee-shifting rule.} Under risk aversion and the American rule, settlement ranged from $13.8\%$ to $95.9\%$. Some risk-averse equilibria produced lower expenditures or lower gross outcome error than the risk-neutral equilibrium; expenditures ranged from $0.182$ to $0.336$, compared to $0.292$ under risk neutrality, and the gross outcome range was $0.276$ to $0.399$, compared to $0.278$. The risk-averse burden ranges under different fee-shifting rules also overlapped.
 
-\begin{table}[H]
+\begin{figure}[H]
 \centering
-\caption{Range of disposition results under multiple equilibria}
-\label{tab:multiple-equilibria}
-\includegraphics[page=1,width=\linewidth,height=0.71\textheight,keepaspectratio]{../Tables/Table 6 - Disposition ranges.pdf}
-\end{table}
+\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{../Figures/Figure 8 - Multiple equilibrium welfare outcomes.pdf}
+\caption{Multiple equilibrium welfare outcomes}
+\label{fig:multiple-equilibria}
+\end{figure}
 
-\begin{table}[H]
-\ContinuedFloat
-\centering
-\caption{Range of disposition results under multiple equilibria (continued)}
-\includegraphics[page=2,width=\linewidth,height=0.71\textheight,keepaspectratio]{../Tables/Table 6 - Disposition ranges.pdf}
-\end{table}
-
+\clearpage
 \section{Conclusion}
 
 \revisionnote{The concluding universal-answering mechanism and trial-only welfare ranking are superseded. Preserve the general framing but reassess those conclusions using current results.}{%

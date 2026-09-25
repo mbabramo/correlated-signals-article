@@ -2,7 +2,7 @@
 
 The author's narrative and organization are retained. Bold italic **[Update needed: ...]** labels explain why each marked passage needs attention; the retained passage is italicized. No replacement analysis has been drafted.
 
-Basic corrections update tree sizes, approved grid and timing values, the American risk-averse settlement percentage, multiple-start coverage and ranges, and exhibit references. All pages of the updated multi-page tables are included. Figure 7 replaces Table 4 without moving the Welfare Analysis section.
+Basic corrections update tree sizes, approved grid and timing values, the American risk-averse settlement percentage, multiple-start coverage and ranges, and exhibit references. All pages of the updated multi-page tables are included. Figure 7 replaces Table 4 without moving Welfare Analysis. Figure 8 replaces Table 6 within Multiple Equilibria; its five welfare measures show every accepted start, while the disposition ranges remain in the supplement.
 
 ## Passages requiring author revision
 

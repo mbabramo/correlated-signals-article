@@ -66,7 +66,7 @@ for folder in ('Figures','Tables'):
     for f in sorted((main/folder).rglob('*')):
         if f.is_file():put(f,f.relative_to(main))
     rows=[link(x['Title'],stage/folder/pathlib.Path(x['PDF']['Path']).name,folder) for x in m['Artifacts'] if x['Folder']==folder]
-    write(folder+'/README.md','# '+folder+'\n\nExisting roles and article order are preserved. Figure 7 replaces Table 4 in Welfare Analysis; other file identifiers are unchanged. Editable sources, complete numerical data and separate captions are in Sources.\n\n'+'\n'.join('- '+x for x in rows)+'\n')
+    write(folder+'/README.md','# '+folder+'\n\nExisting roles and article order are preserved. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria. Other file identifiers are unchanged. Editable sources, complete numerical data and separate captions are in Sources.\n\n'+'\n'.join('- '+x for x in rows)+'\n')
 put(main/'manifest.json','Results/Run records/numbered-exhibits-manifest.json')
 put(main/'data-preservation-validation.json','Results/Run records/exhibit-data-preservation.json')
 
@@ -173,10 +173,10 @@ for item in approx['Attempts']:
     put(item['Result'],folder+'/Sources/Attempts/'+stem+'-result.json')
     if item['Accepted']:put(item['Profile'],folder+'/Sources/Profiles/'+stem+'.json')
 diagram=OUTPUTS/'Multiple-equilibrium-outcome-diagram-British'
-for f in sorted(diagram.iterdir()):
-    if f.is_file():put(f,folder+('/' if f.suffix in ('.png','.svg') else '/Sources/')+f.name)
+put(diagram/'all-outcomes.csv',folder+'/Sources/all-outcomes.csv')
+put(main/'Supplemental materials/Multiple equilibria/Sources/disposition-ranges.json',folder+'/Sources/disposition-ranges.json')
 put(ROOT/'scripts/approximate_catalog.py',folder+'/Sources/approximate_catalog.py')
-write(folder+'/README.md','# Multiple equilibria\n\nThe cost-1 floating-point search completed 200 starts across American/British and risk-neutral/risk-averse cases. 199 passed the approved acceptance criteria; British risk-averse start 12 did not. These are accepted profiles, not 199 distinct exact equilibria.\n\n[multiple-outcomes.svg](multiple-outcomes.svg) plots every accepted outcome; Table 6 reports disposition ranges. Grouping by complete strategies, reached strategies and outcomes is retained separately in Sources/catalog.json. Tolerance-based groups are descriptive, not proof of mathematical identity, nor estimates of equilibrium likelihood.\n\nAll full profiles, audit results, failed-attempt accounting, full-precision outcomes and grouping thresholds are retained. Exact primary profiles and approximate acceptance bands remain distinct.\n')
+write(folder+'/README.md','# Multiple equilibria\n\nThe cost-1 floating-point search completed 200 starts across American/British and risk-neutral/risk-averse cases. 199 passed the approved acceptance criteria; British risk-averse start 12 did not. These are accepted profiles, not 199 distinct exact equilibria.\n\n[Figure 8](../../Figures/Figure%208%20-%20Multiple%20equilibrium%20welfare%20outcomes.pdf) plots every accepted welfare outcome; [disposition ranges](Sources/disposition-ranges.json) remain in Sources. Grouping by complete strategies, reached strategies and outcomes is retained separately in Sources/catalog.json. Tolerance-based groups are descriptive, not proof of mathematical identity, nor estimates of equilibrium likelihood.\n\nAll full profiles, audit results, failed-attempt accounting, full-precision outcomes and grouping thresholds are retained. Exact primary profiles and approximate acceptance bands remain distinct.\n')
 
 # No outdated trajectory is substituted for the running fourth replay.
 folder='Supplemental materials/Equilibrium solution paths'
@@ -222,7 +222,7 @@ pending=[
  'Fourth verified trajectory and interactive visual QA of the viewers.',
  'User choice on truth-map sensitivity exponents (proposed 0.5 and 2, baseline 1), or explicit omission.',
  'Complete release evidence, then the authorized archive/replacement procedure.']
-intro='# Article tables, figures and supplemental materials\n\nRevised 25 September 2026 in the existing repository structure. Seven figures and five tables cover the currently available results. Figure 7 replaces Table 4 in Welfare Analysis; Table 5 labels the two unfinished grid contrasts. The prior typography, directional patterns and shared American/British strategy axes are restored. Table names and captions are separate from the table files. No manuscript reorganization or figure consolidation is introduced.\n\n'
+intro='# Article tables, figures and supplemental materials\n\nRevised 25 September 2026 in the existing repository structure. Eight figures and four tables cover the currently available results. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria; Table 5 labels the two unfinished grid contrasts. The prior typography, directional patterns and shared American/British strategy axes are restored. Table names and captions are separate from the table files. No manuscript reorganization or figure consolidation is introduced.\n\n'
 intro+='- [Figures](Figures/README.md)\n- [Tables](Tables/README.md)\n- [Individual simulations](Results/Individual%20simulations/README.md)\n- [Aggregated data](Results/Aggregated%20Data/README.md)\n'
 for sub in ('Generated pairwise comparisons','Equilibrium strategy changes','Liability signals diagrams','Game tree diagrams','Multiple equilibria','Equilibrium solution paths','Risk aversion utility curves'):
     intro+='- ['+sub+'](Supplemental%20materials/'+quote(sub)+'/README.md)\n'

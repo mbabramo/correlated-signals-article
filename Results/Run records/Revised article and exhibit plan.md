@@ -38,7 +38,7 @@ Keep existing labels, cross-references and placement anchors where possible. Pre
 
 ## Existing numbered exhibits and necessary updates
 
-The user approved one change of exhibit type: Figure 7 replaces Table 4 within Welfare Analysis. The set is now seven figures and five tables. Figures 1-6 and Tables 1-3, 5-6 retain their existing file identifiers and roles; no unrelated renumbering or article reorganization is introduced. The prepared collection is an isolated overlay, subject to the existing final release gates.
+The user approved two changes of exhibit type: Figure 7 replaces Table 4 within Welfare Analysis, and Figure 8 replaces Table 6 within Multiple Equilibria. The set is now eight figures and four tables. Figures 1-6 and Tables 1-3, 5 retain their existing identifiers and roles; no unrelated renumbering or reorganization is introduced. This is the reviewed working collection; final release gates still apply.
 
 | Existing exhibit | Existing location | Treatment |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The user approved one change of exhibit type: Figure 7 replaces Table 4 within W
 | **Table 3 - Risk-averse strategy changes** | Results / Risk Aversion | Retain a separate table for changes involving risk aversion. Use the reviewed American-to-British RA and RN-to-RA under each rule panels. Do not merge this into Table 2. |
 | **Figure 7 - Welfare outcomes (replaces Table 4)** | Results / Welfare Analysis | Use the full 20-case American/British monetary-outcomes figure: risk-neutral and risk-averse panels, five cost multipliers as rows, five separate outcome measures as columns. Keep common scales within each column. This is the levels comparison, not the mechanical/behavioral decomposition. |
 | **Table 5 - Overall results summary** | Robustness / Parameter Changes | Keep the RN and symmetric-RA panels. Immediately after earlier-costs and later-costs rows, put the corresponding cost-1 trial-only-versus-American row. Group calibrated direct binary with center-weighted and polarized merits near the end. Other rows compare British minus American. Asymmetric risk cases remain separate. Two grid rows remain Pending until validated imports arrive. |
-| **Table 6 - Disposition ranges** | Robustness / Multiple Equilibria | Retain the range table and location, updated from the 200-start/199-accepted-profile study. Discuss monetary ranges here too, with the requested full outcome plot available in the existing multiple-equilibria materials. |
+| **Figure 8 - Multiple equilibrium welfare outcomes** | Robustness / Multiple Equilibria | Show all 199 accepted profiles across five welfare measures in risk-neutral and risk-averse panels. Use the established American circles and British small open diamonds, shared scales and bottom legend. Retain disposition ranges in the supplement. |
 
 Adding agreement information may require extra panels within a strategy figure or an adjacent supplemental reference. Keep the disposition/strategy and RN/RA distinctions. Any change to numbering, merging or moving exhibits needs a specific scientific or space constraint; do not make it just to match the earlier working-artifact list.
 
@@ -80,7 +80,7 @@ The monetary welfare decomposition is different from this strategic-response dec
 | All-cost monetary overview, former F2 | Approved as Figure 7 replacing Table 4 in Welfare Analysis, using all 20 latest main profiles. It does not move to the beginning. |
 | Combined participation/disposition overview, former F3 | Cross-check/source material for existing Figures 3-6. Prepare the separate final figures and restore full signal-dependent strategy/offer content where the overview lacks it. |
 | Mechanical/behavioral welfare plot, former F4 | Welfare Analysis and the corresponding welfare decomposition materials. Main-text placement, if needed, is local to that existing discussion. |
-| Multiple-start outcome plot, former F5 | Existing Multiple Equilibria subsection and folder, alongside the updated Table 6. No separate early-results section. |
+| Multiple-start outcome plot, former F5 | Existing Multiple Equilibria subsection and folder, as Figure 8 in place of Table 6. No separate early-results section. |
 | Combined strategic packet, former T2 | Reviewed source panels for separate existing Tables 2 and 3, as mapped above. |
 | Proposed robustness table, former T3 | Input for updating existing Table 5 within Parameter Changes; not a renumbering of the strategy table. |
 

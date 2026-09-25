@@ -160,13 +160,11 @@ def main():
                 ranges.append(dict(CaseId=caseid,Metric=key,Accepted=len(vals),MinimumPercent=lo,MaximumPercent=hi,ExactPrimaryPercent=base))
             rows.append([label,*cells])
         sections.append((('Risk neutral: 50 American / 50 British accepted' if risk=='rn' else 'Risk averse: 50 American / 49 British accepted')+' | 50 attempted starts per setting',rows))
-    simple_table(title,sections,[240,115,153,115,153],['Outcome','American primary','American range (%)','British primary','British range (%)'],[
-        'Percent of all potential disputes. Files and answers is a joint population share, not answering conditional on filing. Primary = exact single start.',
-        'Ranges cover all accepted approximate profiles, including repeated discoveries; 199 accepted profiles are not 199 distinct exact equilibria.',
-        'One British risk-averse attempt failed the 20,000-pivot acceptance rule. Recovery counts are not probabilities of real-world equilibrium selection.',
-        'The five monetary-outcome ranges, individual profiles and grouping sensitivity remain in the existing Multiple equilibria materials.'],8.8)
-    record('Tables',title,dict(Grouping=identity(GROUP),Ranges=ranges,Attempts=200,Accepted=199),
-        'Disposition ranges across independently audited accepted floating-point searches at cost multiplier 1, alongside each exact single-start primary result. All 200 attempts remain accounted for; one British risk-averse attempt did not qualify. These ranges are observed results, not bounds on all equilibria or probabilities of equilibrium selection.')
+    supplement=out/'Supplemental materials/Multiple equilibria/Sources'
+    supplement.mkdir(parents=True)
+    save_new(supplement/'disposition-ranges.json',dict(Grouping=identity(GROUP),Ranges=ranges,Attempts=200,Accepted=199))
+    from multiple_welfare_figure import generate
+    artifacts.append(generate(out,write_manifest=False))
 
     for artifact in artifacts:
         pdf=pathlib.Path(artifact['PDF']['Path']);stem=artifact['Title'];pages=out/'review-pages'/stem;pages.mkdir()
@@ -183,9 +181,9 @@ def main():
     for folder in ('Figures','Tables'):
         shutil.copy2(__file__,out/folder/'Sources'/pathlib.Path(__file__).name)
     save_new(out/'manifest.json',dict(Schema='preserved-numbered-article-exhibits-v1',CreatedUtc=utc(),Generator=identity(__file__),Inputs=inputs,
-        Artifacts=artifacts,NumberedFigures=7,NumberedTables=5,PrimaryProfiles=80,ExpectedProfiles=82,AutomatedChecksPassed=True,VisualReviewPending=True,
+        Artifacts=artifacts,NumberedFigures=8,NumberedTables=4,PrimaryProfiles=80,ExpectedProfiles=82,AutomatedChecksPassed=True,VisualReviewPending=True,
         SolvesStarted=0,ScientificReplayJobsStarted=0,CompleteArticle=False,MissingProfiles=catalog['MissingAuditedCaseIds']))
-    (out/'README.md').write_text('# Numbered article exhibits\n\nSeven figures and five tables retain the article order. Figure 7 replaces the former Table 4 in Welfare Analysis. Other file numbers are preserved to avoid unrelated cross-reference changes. Sources include unrounded data, complete policies and captions. The two missing grid comparisons in Table 5 are explicitly pending. No manuscript, user repository or running job was changed.\n\n'+ '\n'.join('- ['+a['Title']+']('+a['Folder']+'/'+a['Title']+'.pdf)' for a in artifacts)+'\n',encoding='utf-8')
+    (out/'README.md').write_text('# Numbered article exhibits\n\nEight figures and four tables retain the article order. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria. Other file numbers are preserved to avoid unrelated cross-reference changes. Sources include unrounded data, complete policies and captions. Disposition ranges remain in the supplement. The two missing grid comparisons in Table 5 are explicitly pending. No manuscript, user repository or running job was changed.\n\n'+ '\n'.join('- ['+a['Title']+']('+a['Folder']+'/'+a['Title']+'.pdf)' for a in artifacts)+'\n',encoding='utf-8')
     print(f'Prepared {len(artifacts)} numbered exhibits; visual review pending; two grid comparisons remain pending.')
 
 if __name__=='__main__':main()

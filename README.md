@@ -1,6 +1,6 @@
 # Correlated-signals litigation article
 
-Revised 25 September 2026 in the existing repository structure. Seven figures and five tables cover the currently available results. Figure 7 replaces Table 4 in Welfare Analysis; Table 5 labels the two unfinished grid contrasts. The prior typography, directional patterns and shared American/British strategy axes are restored. Table names and captions are separate from the table files. No manuscript reorganization or figure consolidation is introduced.
+Revised 25 September 2026 in the existing repository structure. Eight figures and four tables cover the currently available results. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria; Table 5 labels the two unfinished grid contrasts. The prior typography, directional patterns and shared American/British strategy axes are restored. Table names and captions are separate from the table files. No manuscript reorganization or figure consolidation is introduced.
 
 - [Figures](Figures/README.md)
 - [Tables](Tables/README.md)
