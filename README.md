@@ -29,3 +29,5 @@ Still pending before final publication:
 [Manuscript and bibliography](Article%20and%20bibliography/) remain in their existing folder. This is the reviewed available working collection, not a certificate of completed final publication. Historical generated material is preserved in the external hash-verified archive identified in Results/Run records/working-collection-update.json.
 
 The manuscript now contains limited factual corrections and explicit italicized **Update needed** passages. See [revision notes](Article%20and%20bibliography/Revision%20notes.md); the substantive narrative remains for the author to revise.
+
+Rebuild the available Results collection with `python .\generate_results.py`. [Reproduction instructions](Results/Run%20records/Reproduction/README.md) describe prerequisites, workers, validation and archived replacements. The command rebuilds the numerical code and reports from the saved profiles; it does not start equilibrium searches.

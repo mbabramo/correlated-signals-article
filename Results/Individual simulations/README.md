@@ -1,10 +1,6 @@
 # Individual simulations
 
-72 of 74 profiles selected for the revised article are available and fully audited. Each report includes entry, exit commitments, agreement decisions and complete mixed offer policies, including off-path actions.
-
-The two pending profiles are British, risk averse, cost 1, with 8 signals/15 offers and 12 signals/8 offers. No placeholder equilibrium is substituted.
-
-Trial-only fee shifting is included only at cost 1. The other eight historical trial-only profiles remain in the preserved computational archive.
+Each complete profile was reloaded and checked for normalization, full unilateral best response, accounting, saved actions and numeric replay. All scientific profile data match the previous audited outputs exactly.
 
 - [asymmetric-risk__d-only-ra__american__d-only-ra__cost-1](asymmetric-risk__d-only-ra__american__d-only-ra__cost-1/strategy.pdf)
 - [asymmetric-risk__d-only-ra__complete__d-only-ra__cost-1](asymmetric-risk__d-only-ra__complete__d-only-ra__cost-1/strategy.pdf)
