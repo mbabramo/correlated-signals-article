@@ -11,6 +11,17 @@
 backend=bibtex]{biblatex}
 \usepackage{graphicx}
 \usepackage{float}
+% Allow figures and tables to share pages with text rather than forcing page gaps.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
 \usepackage{needspace}
 \usepackage [english]{babel}
 \usepackage [autostyle, english = american]{csquotes}
@@ -111,7 +122,7 @@ This integral accounts for every possible underlying quality that could produce 
 
 Figure \ref{fig:information-structure} illustrates the relationship between case quality and the parties' information. Because $Q$ is defined continuously, the groupings on the left are illustrative only. The highlighted fan out demonstrates the relative probabilities that a plaintiff or a defendant will receive different signals given that the continuous case quality is somewhere between $0.6$ and $0.8$. The combined probability that the signal is within this range (either $0.65$ or $0.75$) is $39.9\%$, and the probability that the signal is less than $0.5$ is only $17.9\%$. The informal intent is for information to be fairly strong. This baseline is selected because the paper focuses on correlated signals, and this approach addresses the concern that any strategic behavior that results might be attributable to the correlation being too low. 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 1 - Information structure.pdf}
     \caption{Information structure}
@@ -143,7 +154,7 @@ A plaintiff prevailing at trial receives a unit damages award. The allocation of
 
 The ordinary-cost specifications set $c_{file}=c_{answer}=c_{trial}=0.15$. Here $c_{trial}$ is the additional trial cost for each party, so each spends $0.30$ if the case reaches trial. There is no separate bargaining cost. Costs are fixed rather than chosen strategically. The model does not differentiate whether these costs take the form of attorney fees, court costs, or litigants' time. Each party's initial wealth is $10.0$; with risk neutrality, this initial level does not affect the equilibrium.
 
-A computational model also can easily consider the effects of risk aversion. Utility with constant absolute risk aversion is modeled as a function of wealth, $U=-e^{-\alpha W}$. The main risk-averse comparison sets $\alpha=2$ for both parties. Utility values may be positively scaled and shifted without affecting the equilibrium. The Online Repository's Supplemental Materials folder contains a subfolder "Risk aversion utility curves" with a diagram illustrating utility as a function of wealth with this level of risk aversion.
+A computational model also can easily consider the effects of risk aversion. Utility with constant absolute risk aversion is modeled as a function of wealth, $U=-e^{-\alpha W}$. The main risk-averse comparison sets $\alpha=2$ for both parties. Utility values may be positively scaled and shifted without affecting the equilibrium. The Online Repository\footnote{Article materials: \url{https://github.com/mbabramo/correlated-signals-article/tree/main}. Replication code for the correlated signals paper: \url{https://github.com/mbabramo/ACESim4/tree/codex/correlated-signals-replication} (branch \texttt{codex/correlated-signals-replication}).}'s Supplemental Materials folder contains a subfolder "Risk aversion utility curves" with a diagram illustrating utility as a function of wealth with this level of risk aversion.
 
 Under the American rule, each party bears its own costs. The British rule requires that the loser pay all of the other party's costs incurred. This applies to a party that does not answer or to a party that exits before trial.  This approach is generally similar to that of settled English cases, where each party bears its own costs. See, e.g., Civil Procedure Rules 1998, S.I. 1998/3132, rr. 12.5(2)--(3), 38.6(1), 45.16 (U.K.) (as amended). There are occasions in American law, however, where fee shifting is available unless a party exits early. See, e.g., Ariz. Rev. Stat. § 12-341.01 (restricting fee awards under the provision to contested contract actions); Ungerer \& Co. v. Alkaline88 LLC, 2:23-cv-01153 (Feb. 16, 2024) (denying fees under that provision where the defendant never appeared or defended); see also Cal. Civil Code. § 1717 (barring contractual attorney fees on voluntarily dismissed contract claims). Meanwhile, some of the literature, including Farmer and Pecorino (2017) \cite{farmerpecorino} and Huang (2004), limits fee shifting to occurring only after trial. Section \ref{sec:robustness} thus also considers a rule in which fee-shifting is triggered only by a loss at trial. In any event, no fee award attaches to nonfiling, and withdrawal still saves future trial expenses. 
 
@@ -152,7 +163,7 @@ Under the American rule, each party bears its own costs. The British rule requir
 
 Table \ref{tab:model-primitives} summarizes the parameters of the model. 
 
-\begin{table}[H]
+\begin{table}[!htb]
     \centering
     \caption{Model primitives}
     \label{tab:model-primitives}
@@ -161,7 +172,7 @@ Table \ref{tab:model-primitives} summarizes the parameters of the model.
 
 Figure \ref{fig:worked-equilibrium-path} illustrates a portion of the game tree for the baseline simulation under the American rule. The $C$ squares represent chance decisions, while the $P$ and $D$ circles represent plaintiff and defendant information sets numbered in the full game tree. Decision probabilities are rounded to three decimal places. The first panel illustrates two different possible signals, and those divergent paths are continued in the next two panels. The defendant does not know the plaintiff's signal. For example, at $D_{23}$, the defendant acts based on its anticipated utility absent this information, deciding to offer $0.05$ because that maximizes utility. Meanwhile, $P_{72}$ illustrates a mixed strategy, where the plaintiff is indifferent whether to file because each decision yields in expectation the same wealth and utility. The third panel in the diagram continues the first and illustrates two settlements, one on the equilibrium path and one off it, which both happen to occur when the plaintiff's demand equals the defendant's offer. Finally, trial probabilities are listed in the bottom panel.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth,height=0.76\textheight,keepaspectratio]{../Figures/Figure 2 - Worked equilibrium path.pdf}
     \caption{Worked equilibrium path}
@@ -197,7 +208,7 @@ Figure \ref{fig:dispositions} reports the dispositions of potential disputes und
 
 The most surprising aspect of the results is that no cases settle under the British rule. Of course, some cases do settle with fee-shifting in reality, leading to the question whether this is attributable to risk aversion, to players playing nonequilibrium strategies, or some other factor, such as the level of noise, the existence of litigants with different priors about the relevant signals. The point of the analysis, of course, is not to make a point estimate, and some settlement occurs in models only slightly different; for example,  in a game tree with 12 signals per party and 8 offers (whose welfare results are summarized in Section \ref{sec:robustness}), $4.2\%$ of cases settle with the British rule. Whether settlement is rare or nonexistent, the results do reflect the conventional wisdom that the British rule may lead more cases to be resolved without litigation, as parties with relatively weak cases may be less likely to fight.  In addition, the results reflect the familiar finding from Shavell (1982) \cite[65--66]{shavell} that fee shifting should make trial more likely conditional on filing and answering, because higher stakes should make mutually optimistic parties less willing to settle.  
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 3 - Dispositions.pdf}
     \caption{Risk-neutral dispositions}
@@ -206,7 +217,7 @@ The most surprising aspect of the results is that no cases settle under the Brit
 
 Figure \ref{fig:participation-and-offers} illustrates substantial strategic bargaining even with the baseline information structure. That strategic bargaining might occur is not surprising. All of the Bayesian models of settlement that use Chatterjee-Samuelson bargaining (including Friedman and Wittman (2006) \cite{friedmanwittman}) recognize that each party faces a trade-off: Greater generosity increases the chance of avoiding trial, but greater stinginess increases the portion of the bargaining surplus that the offeror will receive if a settlement does occur. But strategic bargaining plays a considerably larger role than one might expect. Real-world bargaining includes many features not accounted for in this model, but this result tentatively suggests that litigants might rationally often fail to reach settlements even when their actual assessments of the litigation value are not far apart. At least, these results should make us cautious about accepting at face value the results of Landes-Posner-Gould models that assume settlement occurs whenever there is a settlement amount that both parties prefer to trial.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 4 - Participation and offers.pdf}
     \caption{Risk-neutral participation and offers}
@@ -217,7 +228,7 @@ As Figure \ref{fig:participation-and-offers} illustrates, parties do not file or
 
 Table \ref{tab:strategy-mechanisms} helps explain the baseline patterns by identifying critical actions in the baseline strategies and disaggregating the interactions that led them to change or not. For example, we can see that the direct result of changing to the British rule without changing the defendant's strategy from the American rule equilibrium is that it becomes modestly more profitable for the plaintiff to file at signal $0.25$, yet the decline in the defendant's willingness to bargain strongly counteracts this, and the probability that the plaintiff files at that signal falls from a probability of $87.8\%$ to $0\%$. The defendant's willingness to answer at another signal falls from just $8.3\%$ to $0$, yet here there is a much larger direct effect in favor of answering, and a range of changes in the plaintiff's strategy that push in the opposite direction. The parties' willingness to commit to exit and to agree to bargain, as well as offers, also reflect complex dynamics at various critical points. 
 
-\begin{table}[H]
+\begin{table}[!htb]
     \centering
     \caption{Selected risk-neutral strategy changes}
     \label{tab:strategy-mechanisms}
@@ -236,21 +247,21 @@ Figure \ref{fig:risk-averse-dispositions} reports dispositions when both parties
 
 The dispositions are strikingly different for the American rule. The plaintiff always files, the defendant always answers, and settlement is reached $95.9\%$ of the time, with trial occurring on the remaining occasions. Comparing the risk neutral to the risk averse equilibrium, as in Table \ref{tab:risk-averse-strategy-changes}, tells us that the increased willingness to file and answer arise entirely because of the changes in party offers. These offers now have considerable overlap, as shown in Figure \ref{fig:risk-averse-participation-and-offers}, though still not exhibiting a gradual increase with increased signals. Rather, both are step functions, with offers rising from $0.25$ to $0.75$, albeit at different signals, reaching the higher value at $0.65$ for the plaintiff's signal and $0.45$ for the defendant's signal. Panel A of Table \ref{tab:risk-averse-strategy-changes} attributes the selected offer changes to changes in the opponent's offers. 
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 5 - Risk-averse dispositions.pdf}
     \caption{Risk-averse dispositions}
     \label{fig:risk-averse-dispositions}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 6 - Risk-averse participation and offers.pdf}
     \caption{Risk-averse participation and offers}
     \label{fig:risk-averse-participation-and-offers}
 \end{figure}
 
-\begin{table}[H]
+\begin{table}[!htb]
 \centering
 \caption{Selected strategy changes from introducing risk aversion}
 \label{tab:risk-averse-strategy-changes}
@@ -268,7 +279,7 @@ The overall pattern is quite clear. With risk neutrality, fee shifting reduces t
 
 The pattern under risk aversion is largely the same, though a bit messier. Most notably, nonliable defendants benefit from the American rule rather than the British rule with high cost multipliers. The intuition is that when legal costs are very high, even plaintiffs with favorable signals may not file suit under the American rule, because the cost of litigating a case through trial may exceed damages. Such cases, however, become more feasible to bring with fee shifting, and even defendants who are not truly liable may ultimately settle, exit, or pay to defend themselves, and if the court errs, pay both damages and the plaintiff's fees.
 
-\begin{figure}[H]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=\linewidth]{../Figures/Figure 7 - Welfare outcomes.pdf}
     \caption{Welfare outcomes by cost multiplier under risk neutrality and risk aversion}
@@ -290,7 +301,7 @@ First, the timing of incursion of costs was varied. With later costs, $c_{file} 
 The findings are summarized in Table \ref{tab:robustness-outcomes}. Each cell shows a difference in an error measure (or in percentage points of trial or settlement) attributable to fee shifting. Panel A reflects the same result as Figure \ref{fig:welfare-outcomes}: Meritorious plaintiffs and nonliable plaintiffs benefit from fee shifting, while liable defendants have an increased excess burden. And again, symmetric risk aversion has a messier pattern. Many of the comparisons are in the same direction, though there are some exceptions. For example, with high private noise, the meritorious plaintiff does worse under risk aversion. Finally, Panel C shows that when one party is risk averse and the other is not, the plaintiff that is risk averse does slightly worse under fee shifting. 
 
 \setcounter{table}{4}
-\begin{table}[H]
+\begin{table}[!htb]
 \centering
 \caption{Outcome differences: British minus American}
 \label{tab:robustness-outcomes}
@@ -304,14 +315,7 @@ Finding an equilibrium does not establish whether it is representative of other 
 
 The multiple approximate equilibrium search thus calculated, after each pivot step, each party's best response to the other's current strategy (removing action probabilities below 0.005 from the current strategy and renormalizing remaining probabilities at each information set). Then the gain in utility for each player from switching to the best response was divided by the player's normalized utility (where 0 is the player's minimum possible score and 1 is the player's maximum possible score). If the average of the two normalized gains was below 0.001, the approximate equilibrium was accepted. If 20,000 pivots occurred without acceptance, then the lowest average normalized gain so far was accepted, unless it was greater than 0.0025, in which case that search would be considered a failure. 
 
-This procedure was performed for our four baseline simulations (varying fee shifting and risk preferences), 50 times for each. Of 200 simulations, 199 produced approximate equilibria results. Figure \ref{fig:multiple-equilibria} illustrates the results. The improvement from fee shifting for meritorious parties and the increased burden for truly liable defendants were observed in all risk neutral profiles, though in some equilibria, the difference was quite small. With risk aversion, the pattern usually held, though there were a few exceptional equilibria, where meritorious parties performed better without fee shifting. 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth,height=0.80\textheight,keepaspectratio]{../Figures/Figure 8 - Multiple equilibrium welfare outcomes.pdf}
-\caption{Multiple equilibrium welfare outcomes}
-\label{fig:multiple-equilibria}
-\end{figure}
+This procedure was performed for our four baseline simulations (varying fee shifting and risk preferences), 50 times for each. Of 200 simulations, 199 produced approximate equilibria results. A figure illustrating all recovered profiles is available in the Online Repository, in \href{https://github.com/mbabramo/correlated-signals-article/blob/main/Figures/Figure%208%20-%20Multiple%20equilibrium%20welfare%20outcomes.pdf}{\texttt{Figures/Figure 8 - Multiple equilibrium welfare outcomes.pdf}}. The improvement from fee shifting for meritorious parties and the increased burden for truly liable defendants were observed in all risk neutral profiles, though in some equilibria, the difference was quite small. With risk aversion, the pattern usually held, though there were a few exceptional equilibria, where meritorious parties performed better without fee shifting. 
 
 These exceptional equilibria, however, seemed more precarious. Specifically, as shown in the tremble reports in the Online Repository, we calculated the best response gain each player could receive in the event that the opponent slightly changed strategy. Specifically, for each equilibrium, we simulated five trembles for each player, with each tremble reallocating 1\% of the probability at each information set to inactive strategies (in one case evenly, in four cases randomly), calculating how much this increased the opponent's best response gain. The additional gain was $5.4$ times and $6.0$ times greater in the cases in which the usual meritorious plaintiff and nonliable defendant results, respectively, were reversed. It is difficult to extrapolate to a theory of how parties will actually play a real life version of the game, but this indicated that the case reversals were not simply equally attractive approximate equilibria that the pivot algorithm tended to miss for some technical reason.
 
@@ -326,6 +330,11 @@ Second, models' usefulness may depend on parameter values, and the parameters he
 
 Third, the model omits important features of litigation, including learning and bargaining over time, as well as the role of lawyers and agency costs. Indeed, this is but a first step toward building models that can incorporate even more complex features of the litigation game. Because the game tree size may increase exponentially with additional features, other computational game theory approaches that seek approximate equilibria may be needed to make larger game models solvable.
 
+\begingroup
+\singlespacing
+\small
+\setlength{\bibitemsep}{3pt}
 \printbibliography
+\endgroup
 
 \end{document}
