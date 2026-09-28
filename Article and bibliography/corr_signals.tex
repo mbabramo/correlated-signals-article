@@ -266,11 +266,11 @@ The British rule dispositions are closer to the results under risk neutrality. T
 \subsection{Welfare Analysis}
 \label{sec:welfare-analysis}
 
-Figure \ref{fig:welfare-outcomes} reports welfare measures under both risk neutrality and risk aversion. It compares monetary burdens, gross outcome error, and real expenditures across fee rules and risk preferences, using the definitions in Section \ref{sec:outcome-measures}. \revisionnote{The current British profiles have lower conditional answering than the American profiles; the old explanation is not supported.}{Because complete fee-shifting promotes defendant answering with both risk neutrality and risk aversion, the effects of fee-shifting on the average plaintiff and the defendant are not identical.} The first two columns of Figure \ref{fig:welfare-outcomes} contain measures of the quality of the litigation system from the perspective of the party in the right, a meritorious plaintiff in the first column, and a nonliable defendant in the second. These measures may be more useful than the gross outcome accuracy and total expenditures figures in the fourth and fifth columns, because they combine considerations of accuracy and litigation expense to determine how they in combination may adversely affect innocent parties. 
+Figure \ref{fig:welfare-outcomes} reports welfare measures under both risk neutrality and risk aversion, both at the baseline costs level and at other multipliers of this level. It compares monetary burdens, gross outcome error, and real expenditures across fee rules and risk preferences, using the definitions in Section \ref{sec:outcome-measures}. The first two columns of Figure \ref{fig:welfare-outcomes} contain measures of the quality of the litigation system from the perspective of a meritorious plaintiff and of a truly not liable defendant, as any shortfall or burden in the net returns of these respective parties can be seen as an imperfection of the legal system. The third column measures the extent to which liable defendants bear an excess burden above damages. This is more difficult to interpret from a welfare perspective, as excess burden may represent either improved deterrence or overdeterrence, depending on the context. Either way, these three columns collectively reflect overall welfare effects in a way that takes into account accuracy and litigation expenses. The fourth column shows the absolute error of judgments, ignoring litigation costs, but this is less useful because what matters to parties and may affect their behavior is not accuracy in the abstract but their net returns from litigation. Meanwhile, the last column illustrates the real costs of litigation, an important measure but one that is also already reflected in the first three columns.
 
-\revisionnote{These trial-only versus complete-shifting rankings and the answering explanation refer to the old profiles. Reassess the claims using Figure 7 and current decompositions.}{%
-When the meritorious plaintiff falls short of full recovery, taking into account its litigation expenses, or the nonliable defendant bears a burden from either litigation expenses or the judgment, the legal system's imperfections impose costs on innocent parties. Under both risk neutrality and risk aversion, the meritorious-plaintiff expected monetary shortfall is lower under trial fee-shifting than under complete fee-shifting in the selected baseline equilibria, given the tendency of the latter to induce defendant answering and, under risk neutrality, discourage plaintiff filing.  For the nonliable defendant, the preference is reversed under risk neutrality, though the relative burdens are nearly identical under risk aversion. Meanwhile, a liable defendant bears a greater excess burden (total spending above the level of damages) with complete fee-shifting under both risk preferences. Whether this represents an improvement in deterrence or overdeterrence may depend on the particular litigation context.%
-}
+The overall pattern is quite clear. With risk neutrality, fee shifting reduces the meritorious plaintiff's average shortfall and the nonliable defendant's average burden, with greater benefits generally arising when the overall litigation system is more expensive. For the liable defendant, however, the excess burden increases with fee shifting. These individual effects are not surprising; meritorious plaintiffs benefit from fee reimbursement or its anticipation, while nonliable defendants benefit from the reduced filing of nonmeritorious plaintiffs, and liable defendants suffer from having to pay opponents' fees. Note that gross outcome error reflects virtually no change in the aggregate, masking the combination of benefits for parties who justly should win and costs for defendants who should lose. 
+
+The pattern under risk aversion is largely the same, though a bit messier. Most notably, nonliable defendants benefit from the American rule rather than the British rule with high cost multipliers. The intuition is that when legal costs are very high, even plaintiffs with favorable signals may not file suit under the American rule, because the cost of litigating a case through trial may exceed damages. Such cases, however, become more feasible to bring with fee shifting, and even defendants who are not truly liable may ultimately settle, exit, or pay to defend themselves, and if the court errs, pay both damages and the plaintiff's fees.
 
 \begin{figure}[H]
     \centering
@@ -287,52 +287,17 @@ Robustness was assessed both by changing parameters and by searching for multipl
 \subsection{Parameter Changes}
 \label{sec:parameter-changes}
 
-To assess the robustness of the findings, various parameter values were changed. 
+To assess the robustness of the findings, various parameter values were changed relative to baseline. 
 
-First, the baseline cost levels were multiplied by each element of $\{\frac{1}{4},\frac{1}{2},1,2,4\}$. 
+First, the timing of incursion of costs was varied. With later costs, $c_{file} = c_{answer} = 0.075$ and $c_{trial}=0.225$. With earlier costs, $c_{file} = c_{answer} = 0.225$ and $c_{trial}=0.075$. Second, a simulation tested trial-only fee shifting, i.e. where no fee shifting occurs if a party does not litigate or exits before trial. Third, different noise values were used. Specifically, $\sigma_P$ and $\sigma_D$ were halved to $0.1$ and doubled to $0.4$, and in separate simulations, $\sigma_C$ was also changed. Fourth, variations on the number of signals and offers were changed (8 signals and 15 offers, 12 signals and 8 offers, and as a control, 8 signals and 8 offers). Fifth, in place of a uniform distribution of case merits, center-weighted merits and polarized merits assume that close cases are relatively common ($Q \sim \operatorname{Beta}(2,2)$) or uncommon ($Q \sim \operatorname{Beta}(\frac{1}{2},\frac{1}{2})$), respectively. Similarly, in the direct binary-state signals model, the parties and court receive signals directly of true liability $T$. The noise parameters are calibrated to approximate the joint distributions of the parties' and court's signals in the baseline model.
 
-Second, the timing of incursion of costs was varied. With later costs, $c_{file} = c_{answer} = 0.075$ and $c_{trial}=0.225$. With earlier costs, $c_{file} = c_{answer} = 0.225$ and $c_{trial}=0.075$.
-
-\revisionnote{Private-signal noise and court noise are varied separately in the executed cases; this sentence currently implies a joint variation.}{%
-Third, the parameters $\sigma_P$, $\sigma_D$, and $\sigma_C$ were doubled to $0.4$, for a high noise condition, and halved to $0.1$, for a low noise condition.%
-}
-
-\revisionnote{Truth-conditioned latent merits is retired from the current collection. Calibrated direct binary uses the revised calibration target; distinguish merits variations from any still-undecided truth-map sensitivity.}{%
-Fourth, the distributions of truth and merits were varied. All specifications retain binary true liability $T \in \{0,1\}$ with $\Pr(T=1)=\frac{1}{2}$. In place of a uniform distribution of case merits, center-weighted merits and polarized merits assume that close cases are relatively common ($Q \sim \operatorname{Beta}(2,2)$) or uncommon ($Q \sim \operatorname{Beta}(\frac{1}{2},\frac{1}{2})$), respectively. Next, in the truth-conditioned latent merits model, the true liability state generates merits $Q$ through a draw from $\mathcal{N}(T,0.35^2)$ truncated to $[0,1]$ and discretized into ten equal-width intervals represented by their midpoints. Finally, in the direct binary-state signals model, the parties and court receive signals directly of true liability $T$. The noise parameters are calibrated to approximate the joint distributions of the parties' and court's signals in the truth-conditioned latent-merits model.%
-}
-
-\revisionnote{The executed grids are 8/15, 12/8 and 8/8 signals/offers, not 10/15. Two British risk-averse rows are still pending in the recorded collection.}{%
-Fifth, the sensitivity of the offer grid was increased. The number of possible offer levels was increased from $10$ to $15$, while retaining ten signal levels for each party. The reason for focusing on offers rather than signals is the possibility that slight changes in the parties' offers could have large effects on the settlement rate. Finer-grained offers address this, at considerable computational expense, but do not prove convergence to a model with continuous offers.%
-}
-
-\revisionnote{Extensions now use cost multiplier 1 and American/British comparisons. The previous full crossing with five costs and three rules is no longer the run plan.}{%
-The noise, merits, and cost-timing alternatives were introduced without interacting them with one another. Each ten-offer specification was evaluated at all five cost multipliers under all three fee-shifting rules and both risk preferences. The fifteen-offer check was limited to the baseline cost level and other baseline parameters, again under all three fee-shifting rules and both risk preferences.%
-}
-
-\revisionnote{Table 5 now reports British-minus-American differences, not sign counts over 46 settings. Replace this interpretation and its universal-answering claims; two grid contrasts remain pending.}{%
-Table \ref{tab:robustness-outcomes} provides a summary of how some key outcome variables compared across fee-shifting rules over all of the robustness checks. The individual cells indicate the number of simulations in which the outcome variable for the first listed fee-shifting rule was greater than, equal to, or less than the same variable for the second listed fee-shifting rule. Each comparison covers 46 settings per risk preference, using a tolerance of $10^{-5}$ for ties. Filing and answering shares are measured over all potential disputes; answering share is the joint probability that the plaintiff files and the defendant answers. Several regularities are notable. First, in every simulation, defendants always answered conditional on plaintiffs' filing under complete fee-shifting. Second, complete fee shifting usually produced no more filing than the other rules, though there were exceptions, particularly under risk aversion. Third, gross outcome error and meritorious-plaintiff shortfall were no higher with trial than under complete fee-shifting in all but two simulations in each of the risk neutral and risk averse conditions. Under risk neutrality, nonliable-defendant burden was more often higher under trial than complete fee-shifting, while liable-defendant excess burden was always at least as high under complete as under trial fee-shifting. Both comparisons were more mixed under risk aversion. Fourth, compared with the American rule, trial fee-shifting generally reduced meritorious-plaintiff shortfall under both risk preferences. Both fee-shifting rules generally reduced nonliable-defendant burden, especially under risk neutrality, but complete fee-shifting had mixed effects on meritorious-plaintiff shortfall. Both rules increased liable-defendant excess burden in most risk-neutral simulations, with more exceptions under risk aversion.%
-}
 
 \setcounter{table}{4}
 \begin{table}[H]
 \centering
 \caption{Outcome differences: British minus American}
 \label{tab:robustness-outcomes}
-\includegraphics[page=1,width=\linewidth,height=0.71\textheight,keepaspectratio]{../Tables/Table 5 - Overall results summary.pdf}
-\end{table}
-
-\begin{table}[H]
-\ContinuedFloat
-\centering
-\caption{Outcome differences: British minus American (continued)}
-\includegraphics[page=2,width=\linewidth,height=0.71\textheight,keepaspectratio]{../Tables/Table 5 - Overall results summary.pdf}
-\end{table}
-
-\begin{table}[H]
-\ContinuedFloat
-\centering
-\caption{Outcome differences: British minus American (continued)}
-\includegraphics[page=3,width=\linewidth,height=0.71\textheight,keepaspectratio]{../Tables/Table 5 - Overall results summary.pdf}
+\includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{../Tables/Table 5 - Overall results summary.pdf}
 \end{table}
 
 
