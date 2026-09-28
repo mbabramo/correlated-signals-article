@@ -118,9 +118,6 @@ Figure \ref{fig:information-structure} illustrates the relationship between case
     \label{fig:information-structure}
 \end{figure}
 
-A simpler design would restrict $q$ to $\{0, 1\}$ and then to derive each party's and the court's signal directly from the true state. The approach of allowing a continuous $Q$ is more consistent with the literature, particularly Klerman, Lee, and Liu, though in their benchmark they allow factual strength to vary across the entire real line while constraining trial-win probability to only two values. More significantly, continuous merits better exhibit an important feature of correlated signals, that a party expects that its opponent likely has a signal close to the party's own. Not necessarily so with a direct signal of truth. For example, with the symmetric signal distributions used here, when a party receives a signal of exactly $0.5$ (as would be possible with an odd number of signals), the opponent is no more likely to receive a signal of $0.5$ than if the party had drawn any other signal. The approach of drawing a signal directly from the underlying truth is, however, used as a robustness check in Section \ref{sec:parameter-changes}.
-
-\Needspace{4\baselineskip}
 \subsection{Litigation sequence and updating}
 \label{sec:litigation-sequence}
 
@@ -188,7 +185,6 @@ The monetary measures distinguish three interests. For a meritorious plaintiff, 
 
 Gross outcome error separately measures the absolute difference between the base payment and the payment warranted by true liability, before litigation costs and separately awarded fees. Real expenditures measure resources consumed in filing, answering, and trial. These measures distinguish errors in payments from the costs of obtaining a disposition. Their relative importance may be context-sensitive. 
 
-\clearpage
 \section{Results}
 \label{sec:results}
 
@@ -291,6 +287,7 @@ To assess the robustness of the findings, various parameter values were changed 
 
 First, the timing of incursion of costs was varied. With later costs, $c_{file} = c_{answer} = 0.075$ and $c_{trial}=0.225$. With earlier costs, $c_{file} = c_{answer} = 0.225$ and $c_{trial}=0.075$. Second, a simulation tested trial-only fee shifting, i.e. where no fee shifting occurs if a party does not litigate or exits before trial. Third, different noise values were used. Specifically, $\sigma_P$ and $\sigma_D$ were halved to $0.1$ and doubled to $0.4$, and in separate simulations, $\sigma_C$ was also changed. Fourth, variations on the number of signals and offers were changed (8 signals and 15 offers, 12 signals and 8 offers, and as a control, 8 signals and 8 offers). Fifth, in place of a uniform distribution of case merits, center-weighted merits and polarized merits assume that close cases are relatively common ($Q \sim \operatorname{Beta}(2,2)$) or uncommon ($Q \sim \operatorname{Beta}(\frac{1}{2},\frac{1}{2})$), respectively. Similarly, in the direct binary-state signals model, the parties and court receive signals directly of true liability $T$. The noise parameters are calibrated to approximate the joint distributions of the parties' and court's signals in the baseline model.
 
+The findings are summarized in Table \ref{tab:robustness-outcomes}. Each cell shows a difference in an error measure (or in percentage points of trial or settlement) attributable to fee shifting. Panel A reflects the same result as Figure \ref{fig:welfare-outcomes}: Meritorious plaintiffs and nonliable plaintiffs benefit from fee shifting, while liable defendants have an increased excess burden. And again, symmetric risk aversion has a messier pattern. Many of the comparisons are in the same direction, though there are some exceptions. For example, with high private noise, the meritorious plaintiff does worse under risk aversion. Finally, Panel C shows that when one party is risk averse and the other is not, the plaintiff that is risk averse does slightly worse under fee shifting. 
 
 \setcounter{table}{4}
 \begin{table}[H]
@@ -300,13 +297,14 @@ First, the timing of incursion of costs was varied. With later costs, $c_{file} 
 \includegraphics[width=\linewidth,height=0.88\textheight,keepaspectratio]{../Tables/Table 5 - Overall results summary.pdf}
 \end{table}
 
-
 \subsection{Multiple Equilibria}
 \label{sec:multiple-equilibria}
 
-Finding an equilibrium does not establish whether it is representative of other equilibria of the same game. The computational approach therefore raises the question whether the results depend on which equilibrium the algorithm finds. I address this by varying the initial strategy profiles supplied to the solver and examining both the distinct profiles recovered and the variation in their outcomes. The search requested 50 starting profiles for each of the four American/British and risk-preference combinations (200 starts), of which 199 passed the approximate acceptance criteria. This exercise cannot determine with certainty how many equilibria exist. In principle, the recovered profiles could be the entire population or a small sample. \revisionnote{These are obsolete search/group counts. The current four-case search accepted 50, 50, 50 and 49 starts; distinct-profile counts require an explicit grouping criterion and tolerance.}{The exercise produced 21, 11, and 15 profiles for the three fee-shifting rules under risk neutrality, and 12, 19, and 7 under risk aversion.} The counts distinguish complete strategies, which can differ only at unreached decision points and still produce the same outcomes.
+Finding an equilibrium does not establish whether it is representative of other equilibria of the same game. The computational approach therefore raises the question whether the results depend on which equilibrium the algorithm finds. To address this, we can vary the initial strategy profiles supplied to the solver and examine the equilibria found. Meanwhile, instead of searching for exact equilibria, we can search for approximate equilibria. This has two advantages. First, as a practical matter, there is not much reason to believe that real world players are more likely to arrive at an exact equilibria than at one in which one player hypothetically might win a few more dollars on average by changing strategy. Allowing approximate equilibria thus reduces the danger that the exactness requirement is driving results. Second, finding approximate equilibria can be faster, especially since the algorithm can be used with floating point numbers instead of exact rational arithmetic. 
 
-\revisionnote{Figure 8 now shows welfare outcomes rather than disposition ranges. The current risk-neutral searches show outcome variation. These are accepted approximate profiles, not a proof of distinct exact equilibria or their likelihood.}{As shown in Figure \ref{fig:multiple-equilibria}, the multiple equilibria under risk neutrality all produced the same dispositions breakdown within each fee-shifting rule.} Under risk aversion and the American rule, settlement ranged from $13.8\%$ to $95.9\%$. Some risk-averse equilibria produced lower expenditures or lower gross outcome error than the risk-neutral equilibrium; expenditures ranged from $0.182$ to $0.336$, compared to $0.292$ under risk neutrality, and the gross outcome range was $0.276$ to $0.399$, compared to $0.278$. The risk-averse burden ranges under different fee-shifting rules also overlapped.
+The multiple approximate equilibrium search thus calculated, after each pivot step, each party's best response to the other's current strategy (removing action probabilities below 0.005 from the current strategy and renormalizing remaining probabilities at each information set). Then the gain in utility for each player from switching to the best response was divided by the player's normalized utility (where 0 is the player's minimum possible score and 1 is the player's maximum possible score). If the average of the two normalized gains was below 0.001, the approximate equilibrium was accepted. If 20,000 pivots occurred without acceptance, then the lowest average normalized gain so far was accepted, unless it was greater than 0.0025, in which case that search would be considered a failure. 
+
+This procedure was performed for our four baseline simulations (varying fee shifting and risk preferences), 50 times for each. Of 200 simulations, 199 produced approximate equilibria results. Figure \ref{fig:multiple-equilibria} illustrates the results. The improvement from fee shifting for meritorious parties and the increased burden for truly liable defendants were observed in all risk neutral profiles, though in some equilibria, the difference was quite small. With risk aversion, the pattern usually held, though there were a few exceptional equilibria, where meritorious parties performed better without fee shifting. 
 
 \begin{figure}[H]
 \centering
@@ -315,13 +313,12 @@ Finding an equilibrium does not establish whether it is representative of other 
 \label{fig:multiple-equilibria}
 \end{figure}
 
-\clearpage
+These exceptional equilibria, however, seemed more precarious. Specifically, as shown in the tremble reports in the Online Repository, we calculated the best response gain each player could receive in the event that the opponent slightly changed strategy. Specifically, for each equilibrium, we simulated five trembles for each player, with each tremble reallocating 1\% of the probability at each information set to inactive strategies (in one case evenly, in four cases randomly), calculating how much this increased the opponent's best response gain. The additional gain was $5.4$ times and $6.0$ times greater in the cases in which the usual meritorious plaintiff and nonliable defendant results, respectively, were reversed. It is difficult to extrapolate to a theory of how parties will actually play a real life version of the game, but this indicated that the case reversals were not simply equally attractive approximate equilibria that the pivot algorithm tended to miss for some technical reason.
+
 \section{Conclusion}
 \label{sec:conclusion}
 
-\revisionnote{The concluding universal-answering mechanism and trial-only welfare ranking are superseded. Preserve the general framing but reassess those conclusions using current results.}{%
-The computational model developed here complements analytical models by allowing interaction of different model features and variation of parameter values. The results do not produce an unequivocal win for either the American rule or the English rule writ large, but do show how changing what triggers fee-shifting may have significant effects on outcomes. In particular, with complete fee-shifting, defendants' incentive is to always answer, and this inevitability will in equilibrium tend to discourage plaintiffs with borderline signals from filing. In the baseline comparisons and most tested settings, a fee-shifting rule that applies only after trial produces a smaller expected monetary shortfall for meritorious plaintiffs than the more expansive rule, while the analysis from the perspective of the burden on a nonliable defendant is much more equivocal.%
-}
+The computational model developed here complements analytical models by allowing interaction of different model features and variation of parameter values. The recovered equilibrium strategies suggest that even with reasonably strong information, parties engage in considerable strategic behavior and that with risk neutrality, file and answer decisions play a greater role than settlement bargaining in resolving cases. Meanwhile, fee-shifting appears generally beneficial to meritorious parties, especially with risk neutrality.
 
 At least three limitations affect the interpretation of the model. First, litigants may not be rational Bayesians who play equilibrium strategies. But, as the literature generally presumes, models assuming rationality may provide a first guess at how litigants behave, and economic forces may gradually push actors in any given legal context toward equilibrium strategies.  
 
@@ -329,7 +326,6 @@ Second, models' usefulness may depend on parameter values, and the parameters he
 
 Third, the model omits important features of litigation, including learning and bargaining over time, as well as the role of lawyers and agency costs. Indeed, this is but a first step toward building models that can incorporate even more complex features of the litigation game. Because the game tree size may increase exponentially with additional features, other computational game theory approaches that seek approximate equilibria may be needed to make larger game models solvable.
 
-\clearpage
 \printbibliography
 
 \end{document}
