@@ -6,3 +6,4 @@
 - [Catalog](selected-primary-catalog.json)
 - [Welfare decompositions](Main-welfare-decomposition/welfare-decomposition.csv)
 - [Tremble sensitivity](Equilibrium%20sensitivity/Report.md)
+- [Truth-formula sensitivity](Truth%20sensitivity/truth-sensitivity.md)
