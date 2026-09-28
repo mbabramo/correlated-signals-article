@@ -1,4 +1,39 @@
-% Compile each panel source independently; merge in the listed order.
-% Table 3 - Risk-averse strategy changes - panel 1.tex
-% Table 3 - Risk-averse strategy changes - panel 2.tex
-% Table 3 - Risk-averse strategy changes - panel 3.tex
+\documentclass[10pt,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,booktabs,array,tabularx,microtype,tikz}
+\usetikzlibrary{patterns,patterns.meta,shapes.geometric,arrows.meta,calc,positioning}
+\begin{document}
+\begin{tabular}{@{}l@{}}
+\begin{minipage}{18.420cm}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\noindent\textbf{Panel A. American | Risk neutral to risk averse}\par\smallskip
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.600cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{0.700cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{2.300cm}>{\centering\arraybackslash}p{2.350cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}@{}}
+\toprule
+\textbf{Decision} & \textbf{Signal} & \textbf{Own exit} & \textbf{Action} & \textbf{Action \%} & \textbf{Reach \%} & \textbf{Direct} & \textbf{Entry} & \textbf{Offers} & \textbf{Exit} & \textbf{Agree}\\\midrule
+P files & 0.05 & -- & Yes & 0.0 $\to$ 100.0 & 8.04 $\to$ 8.04 & +0.0 & +0.0 & +100.0 & +0.0 & +0.0\\
+D answers & 0.75 & -- & Yes & 0.0 $\to$ 100.0 & 10.33 $\to$ 10.62 & +0.0 & +0.0 & +100.0 & +0.0 & +0.0\\
+P offer & 0.25 & C & 0.05 & 100.0 $\to$ 0.0 & 8.34 $\to$ 10.62 & +0.0 & +0.0 & -100.0 & +0.0 & +0.0\\
+D offer & 0.05 & C & 0.05 & 100.0 $\to$ 0.0 & 4.05 $\to$ 8.05 & +0.0 & +0.0 & -100.0 & +0.0 & +0.0\\
+\bottomrule\end{tabular}
+\par\smallskip{\footnotesize Action/reach: percent. Contributions: percentage points. C/E: continue/exit.}
+\end{minipage}
+\\[12pt]
+\begin{minipage}{18.420cm}
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.25}
+\noindent\textbf{Panel B. British | Risk neutral to risk averse}\par\smallskip
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.600cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{0.700cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{2.300cm}>{\centering\arraybackslash}p{2.350cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}>{\centering\arraybackslash}p{1.150cm}@{}}
+\toprule
+\textbf{Decision} & \textbf{Signal} & \textbf{Own exit} & \textbf{Action} & \textbf{Action \%} & \textbf{Reach \%} & \textbf{Direct} & \textbf{Entry} & \textbf{Offers} & \textbf{Exit} & \textbf{Agree}\\\midrule
+P commits to exit & 0.45 & -- & Yes & 0.0 $\to$ 100.0 & 7.60 $\to$ 7.60 & +100.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+D commits to exit & 0.45 & -- & Yes & 0.0 $\to$ 100.0 & 7.67 $\to$ 6.16 & +100.0 & +33.3 & +0.0 & -66.7 & +33.3\\
+P files & 0.35 & -- & Yes & 100.0 $\to$ 0.0 & 10.81 $\to$ 10.81 & -100.0 & +0.0 & +0.0 & +0.0 & +0.0\\
+D agrees & 0.35 & C & Yes & 12.4 $\to$ 76.6 & 6.41 $\to$ 4.72 & +87.6 & -29.2 & +20.8 & -79.2 & +0.0\\
+\bottomrule\end{tabular}
+\par\smallskip{\footnotesize Action/reach: percent. Contributions: percentage points. C/E: continue/exit.}
+\end{minipage}
+\end{tabular}
+\end{document}

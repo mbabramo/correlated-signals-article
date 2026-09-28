@@ -1,0 +1,1190 @@
+{
+  "Panels": [
+    {
+      "Title": "Panel A. American | Risk neutral to risk averse",
+      "SourceCase": {
+        "Id": "baseline__standard__american__rn__cost-1",
+        "Family": "baseline",
+        "Variant": "standard",
+        "FeeRule": "american",
+        "AlphaP": 0,
+        "AlphaD": 0,
+        "CostMultiplier": 1,
+        "Signals": 10,
+        "Offers": [
+          0.05,
+          0.15,
+          0.25,
+          0.35,
+          0.45,
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": "Agreement-Enabled__Specification-Baseline__Cost-1__Fee-American",
+        "CalibrationSha256": null,
+        "IsExternalImport": true
+      },
+      "TargetCase": {
+        "Id": "baseline__standard__american__ra__cost-1",
+        "Family": "baseline",
+        "Variant": "standard",
+        "FeeRule": "american",
+        "AlphaP": 2,
+        "AlphaD": 2,
+        "CostMultiplier": 1,
+        "Signals": 10,
+        "Offers": [
+          0.05,
+          0.15,
+          0.25,
+          0.35,
+          0.45,
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": "Agreement-Enabled__Specification-ModerateRiskAversion__Cost-1__Fee-American",
+        "CalibrationSha256": null,
+        "IsExternalImport": true
+      },
+      "Rows": [
+        {
+          "Decision": "P Files",
+          "Eligible": true,
+          "Key": "0/9/5:1",
+          "InformationSetOrder": 0,
+          "InformationSetNumber": 0,
+          "History": "P Liability Signal: 1",
+          "Player": 0,
+          "Signal": 0.05,
+          "ExitCommitment": null,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.08045000000000001,
+          "TargetReach": 0.08045000000000001,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.856261576434378,
+              "Loss": 0.14374140826562254,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 10.0000029847,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 1000.044474561819,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 1000.0000018767998,
+              "Loss": 0.044472685019172786,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 0,
+          "TargetProbability": 1,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100
+          ],
+          "Allocation": {
+            "Direct": 0,
+            "Entry": 0,
+            "Offers": 100.00000000000003,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": []
+        },
+        {
+          "Decision": "D Answers",
+          "Eligible": true,
+          "Key": "1/10/6:8;9:1",
+          "InformationSetOrder": 67,
+          "InformationSetNumber": 48,
+          "History": "D Liability Signal: 8;P Files: 1",
+          "Player": 1,
+          "Signal": 0.75,
+          "ExitCommitment": null,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.1032617039791052,
+          "TargetReach": 0.1061763222,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 8.882253778087327,
+              "Loss": 0.11775489901267377,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 9.0000086771,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 999.200648447785,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 998.8079768399999,
+              "Loss": 0.39267160778513244,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 0,
+          "TargetProbability": 1,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100
+          ],
+          "Allocation": {
+            "Direct": 0,
+            "Entry": 0,
+            "Offers": 100.00000000000003,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": []
+        },
+        {
+          "Decision": "P Offer",
+          "Eligible": true,
+          "Key": "0/14/5:3;9:1;10:1;20:2;12:1;13:1",
+          "InformationSetOrder": 45,
+          "InformationSetNumber": 77,
+          "History": "P Liability Signal: 3;P Files: 1;D Answers: 1;P Abandons: 2;P Agrees To Bargain: 1;D Agrees To Bargain: 1",
+          "Player": 0,
+          "Signal": 0.25,
+          "ExitCommitment": 2,
+          "ActionIndex": 0,
+          "Action": "0.05",
+          "SourceReach": 0.08344080577459174,
+          "TargetReach": 0.10618,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 9.9000046355,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.863163692508435,
+              "Loss": 0.036840942991565484,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 1000.0236014520134,
+              "Loss": 0.0295424424535895,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 1000.0391109521452,
+              "Loss": 0.014032942321819064,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 1000.053143894467,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9538183530937,
+              "Loss": 0.09932554137333227,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9563831562822,
+              "Loss": 0.09676073818479836,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9587043643019,
+              "Loss": 0.09443953016511841,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.960803609156,
+              "Loss": 0.09234028531102467,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9627034633695,
+              "Loss": 0.0904404310974769,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9044879575408,
+              "Loss": 0.1486559369261613,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9044879575408,
+              "Loss": 0.1486559369261613,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 1,
+          "TargetProbability": 0,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0
+          ],
+          "Allocation": {
+            "Direct": 0,
+            "Entry": 0,
+            "Offers": -100.00000000000003,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": [
+            0,
+            1,
+            4,
+            5,
+            8,
+            9,
+            12,
+            13
+          ]
+        },
+        {
+          "Decision": "D Offer",
+          "Eligible": true,
+          "Key": "1/15/6:1;9:1;10:1;21:2;12:1;13:1",
+          "InformationSetOrder": 101,
+          "InformationSetNumber": 9,
+          "History": "D Liability Signal: 1;P Files: 1;D Answers: 1;D Defaults: 2;P Agrees To Bargain: 1;D Agrees To Bargain: 1",
+          "Player": 1,
+          "Signal": 0.05,
+          "ExitCommitment": 2,
+          "ActionIndex": 0,
+          "Action": "0.05",
+          "SourceReach": 0.04049536704362302,
+          "TargetReach": 0.08045061999999999,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 9.641395206032735,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.623576359893857,
+              "Loss": 0.017818846138878186,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.605757513754979,
+              "Loss": 0.03563769227775637,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.5879386676161,
+              "Loss": 0.05345653841663456,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.570119821477222,
+              "Loss": 0.07127538455551274,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.552300975338346,
+              "Loss": 0.08909423069438915,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.534482129199466,
+              "Loss": 0.10691307683326912,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.28787581674339,
+              "Loss": 0.35351938928934423,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.176220200561268,
+              "Loss": 0.4651750054714672,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.114605608052337,
+              "Loss": 0.5267895979803985,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "0.05",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.6579077292969,
+              "Loss": 0.0918231682384203,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "0.15",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.6579077292969,
+              "Loss": 0.0918231682384203,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 3,
+              "Label": "0.25",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 999.7497308975353,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 4,
+              "Label": "0.35",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.7077310005202,
+              "Loss": 0.04199989701510276,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 5,
+              "Label": "0.45",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.6613190796471,
+              "Loss": 0.0884118178881863,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 6,
+              "Label": "0.55",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.6100239479022,
+              "Loss": 0.1397069496331369,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 7,
+              "Label": "0.65",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.5533315830887,
+              "Loss": 0.19639931444658032,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 8,
+              "Label": "0.75",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.4849826089447,
+              "Loss": 0.2647482885905674,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 9,
+              "Label": "0.85",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.4111940664095,
+              "Loss": 0.33853683112579347,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 10,
+              "Label": "0.95",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.3296451172054,
+              "Loss": 0.42008578032994137,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 1,
+          "TargetProbability": 0,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0,
+            100,
+            100,
+            0,
+            0
+          ],
+          "Allocation": {
+            "Direct": 0,
+            "Entry": 0,
+            "Offers": -100.00000000000003,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": []
+        }
+      ],
+      "CoalitionSha256": "b1c47e93ac189fec6f9e4ba67a6d1e5a7ef67191a3d16c870686198b7ff3bcbf"
+    },
+    {
+      "Title": "Panel B. British | Risk neutral to risk averse",
+      "SourceCase": {
+        "Id": "baseline__standard__complete__rn__cost-1",
+        "Family": "baseline",
+        "Variant": "standard",
+        "FeeRule": "complete",
+        "AlphaP": 0,
+        "AlphaD": 0,
+        "CostMultiplier": 1,
+        "Signals": 10,
+        "Offers": [
+          0.05,
+          0.15,
+          0.25,
+          0.35,
+          0.45,
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": "Agreement-Enabled__Specification-Baseline__Cost-1__Fee-British__ExitFees-AllUnilateralExits",
+        "CalibrationSha256": null,
+        "IsExternalImport": true
+      },
+      "TargetCase": {
+        "Id": "baseline__standard__complete__ra__cost-1",
+        "Family": "baseline",
+        "Variant": "standard",
+        "FeeRule": "complete",
+        "AlphaP": 2,
+        "AlphaD": 2,
+        "CostMultiplier": 1,
+        "Signals": 10,
+        "Offers": [
+          0.05,
+          0.15,
+          0.25,
+          0.35,
+          0.45,
+          0.55,
+          0.65,
+          0.75,
+          0.85,
+          0.95
+        ],
+        "Distribution": "uniform",
+        "PartySigma": 0.2,
+        "CourtSigma": 0.2,
+        "EntryCost": 0.15,
+        "TrialCost": 0.15,
+        "OriginalOptionName": "Agreement-Enabled__Specification-ModerateRiskAversion__Cost-1__Fee-British__ExitFees-AllUnilateralExits",
+        "CalibrationSha256": null,
+        "IsExternalImport": true
+      },
+      "Rows": [
+        {
+          "Decision": "P Abandons",
+          "Eligible": true,
+          "Key": "0/20/5:5;9:1;10:1",
+          "InformationSetOrder": 14,
+          "InformationSetNumber": 85,
+          "History": "P Liability Signal: 5;P Files: 1;D Answers: 1",
+          "Player": 0,
+          "Signal": 0.45,
+          "ExitCommitment": null,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.075951612,
+          "TargetReach": 0.075951612,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.707519364776632,
+              "Loss": 0.21395778144948885,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 9.92147714622612,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 999.9403109899714,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.8822273221372,
+              "Loss": 0.05808366783423935,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 0,
+          "TargetProbability": 1,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "Allocation": {
+            "Direct": 100,
+            "Entry": 0,
+            "Offers": 0,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "Decision": "D Defaults",
+          "Eligible": true,
+          "Key": "1/21/6:5;9:1;10:1",
+          "InformationSetOrder": 74,
+          "InformationSetNumber": 31,
+          "History": "D Liability Signal: 5;P Files: 1;D Answers: 1",
+          "Player": 1,
+          "Signal": 0.45,
+          "ExitCommitment": null,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.07668992490000001,
+          "TargetReach": 0.0616045699,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 8.719360996164221,
+              "Loss": 0.4494928728560712,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 9.168853869020293,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 998.594858080572,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 998.4115461286663,
+              "Loss": 0.1833119519056936,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "SourceProbability": 0,
+          "TargetProbability": 1,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            100,
+            100,
+            100,
+            100,
+            0,
+            0,
+            0,
+            0,
+            100,
+            100,
+            100,
+            100,
+            0,
+            100,
+            0,
+            100
+          ],
+          "Allocation": {
+            "Direct": 100,
+            "Entry": 33.333333333333336,
+            "Offers": 0,
+            "Exit": -66.66666666666666,
+            "Agreement": 33.333333333333336,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": true,
+            "Maximum": 25.000000000000007
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": [
+            1,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "Decision": "P Files",
+          "Eligible": true,
+          "Key": "0/9/5:4",
+          "InformationSetOrder": 3,
+          "InformationSetNumber": 78,
+          "History": "P Liability Signal: 4",
+          "Player": 0,
+          "Signal": 0.35,
+          "ExitCommitment": null,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.1081,
+          "TargetReach": 0.1081,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 10.00053607592197,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 9.999995939000001,
+              "Loss": 0.0005401369219679708,
+              "Best": false,
+              "NearBest": false
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0,
+              "CounterfactualConditionalUtility": 999.9159769400832,
+              "Loss": 0.08401997351666068,
+              "Best": false,
+              "NearBest": false
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 1,
+              "CounterfactualConditionalUtility": 999.9999969135998,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "SourceProbability": 1,
+          "TargetProbability": 0,
+          "MaximumCoordinateChange": 1,
+          "CoalitionProbabilitiesPercent": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "Allocation": {
+            "Direct": -100,
+            "Entry": 0,
+            "Offers": 0,
+            "Exit": 0,
+            "Agreement": 0,
+            "SelectionResidual": 0
+          },
+          "Sensitivity": {
+            "Tie": false,
+            "Completion": false,
+            "Maximum": 0
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": []
+        },
+        {
+          "Decision": "D Agrees To Bargain",
+          "Eligible": true,
+          "Key": "1/13/6:4;9:1;10:1;21:2",
+          "InformationSetOrder": 87,
+          "InformationSetNumber": 28,
+          "History": "D Liability Signal: 4;P Files: 1;D Answers: 1;D Defaults: 2",
+          "Player": 1,
+          "Signal": 0.35,
+          "ExitCommitment": 2,
+          "ActionIndex": 0,
+          "Action": "Yes",
+          "SourceReach": 0.06414480449999999,
+          "TargetReach": 0.0472422885,
+          "SourceActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0.12419544855498489,
+              "CounterfactualConditionalUtility": 9.358249766762444,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0.8758045514450151,
+              "CounterfactualConditionalUtility": 9.358249766762444,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "TargetActions": [
+            {
+              "Action": 1,
+              "Label": "Yes",
+              "Probability": 0.7658299520270445,
+              "CounterfactualConditionalUtility": 998.9223028985595,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            },
+            {
+              "Action": 2,
+              "Label": "No",
+              "Probability": 0.23417004797295546,
+              "CounterfactualConditionalUtility": 998.9223028985595,
+              "Loss": 0,
+              "Best": true,
+              "NearBest": true
+            }
+          ],
+          "SourceProbability": 0.12419544855498489,
+          "TargetProbability": 0.7658299520270445,
+          "MaximumCoordinateChange": 0.6416345034720596,
+          "CoalitionProbabilitiesPercent": [
+            100,
+            100,
+            100,
+            100,
+            0,
+            0,
+            100,
+            12.41954485549849,
+            100,
+            100,
+            100,
+            100,
+            0,
+            0,
+            100,
+            12.41954485549849
+          ],
+          "Allocation": {
+            "Direct": 87.58045514450151,
+            "Entry": -29.19348504816717,
+            "Offers": 20.806514951832828,
+            "Exit": -79.19348504816718,
+            "Agreement": 0,
+            "SelectionResidual": 64.16345034720597
+          },
+          "Sensitivity": {
+            "Tie": true,
+            "Completion": true,
+            "Maximum": 87.58045514450151
+          },
+          "CounterfactualUndefined": false,
+          "UnreachedCoalitions": [
+            0,
+            1,
+            2,
+            3,
+            9,
+            11
+          ]
+        }
+      ],
+      "CoalitionSha256": "0ded4803cec217062d3ce2ac11c84eed90704e030e1c0127df4f7c379fbb2b10"
+    }
+  ],
+  "RecomputedFromCachedCoalitions": true,
+  "IndependentSubsetFormulaVerified": true,
+  "NoEquilibriumSolves": true
+}
