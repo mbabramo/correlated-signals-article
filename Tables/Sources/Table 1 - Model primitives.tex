@@ -10,16 +10,12 @@
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{3.178cm}>{\raggedright\arraybackslash}p{12.632cm}@{}}
 \toprule
 \textbf{Primitive} & \textbf{Value / interpretation}\\\midrule
-Merits and truth & Q is uniform on [0,1]; true liability T | Q is Bernoulli(Q).\\
-Signals & 10 private signal bins per party; party noise 0.2; court noise 0.2; two court findings.\\
-Damages and wealth & Damages 1; initial wealth 10 per party. Monetary quantities are in units of damages.\\
-Preferences & Risk neutral or symmetric CARA risk aversion with alpha = 2.\\
-Costs & Filing / answering: 0.15 each; additional trial costs: 0.15 each; ordinary multiplier 1.\\
-Private exit commitments & After filing and answering, each party commits whether to exit if bargaining fails.\\
-Agreement and offers & Simultaneous agreement; offers only if both agree. Separate information sets; own commitment is remembered.\\
-Offer actions & 0.05, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95; overlapping offers settle at their midpoint.\\
-Unsuccessful bargaining & Apply private exit commitments: abandonment, default, mutual-exit lottery, or trial. Refusal is not a terminal disposition.\\
-Fee rules & American: own costs. British: loser pays at trial and the specified unilateral exits. Trial-only fee shifting is a separate cost-1 extension.\\
+Merits and truth & $Q$ is uniformly distributed on [0,1]; true liability $T$ satisfies $\Pr(T=1\mid Q=q)=q$.\\
+Baseline signals & 10 signals per party, with 2 signals for court; party and court noise: 0.2.\\
+Damages and wealth & Damages 1; initial wealth 10 per party.\\
+Preferences & Risk neutral or symmetric CARA risk aversion with $\alpha$ = 2.\\
+Baseline costs & Filing and answering: 0.15 each; additional trial costs: 0.15 each.\\
+Offer actions & 0.05, 0.15, ..., 0.95.\\
 \bottomrule\end{tabular}
 \end{minipage}
 \end{document}
