@@ -1,9 +1,6 @@
 # Aggregated data
 
-72 revalidated primary profiles; all 20 main American/British cost-series profiles are present. The selected catalog lists the two incomplete grid cases.
+74 of 74 planned profiles are available. Missing profiles are listed in the resolved plan and never filled with zeros.
 
-- [Outcomes](selected-primary-outcomes.csv)
-- [Catalog](selected-primary-catalog.json)
-- [Welfare decompositions](Main-welfare-decomposition/welfare-decomposition.csv)
-- [Tremble sensitivity](Equilibrium%20sensitivity/Report.md)
-- [Truth-formula sensitivity](Truth%20sensitivity/truth-sensitivity.md)
+- [Primary outcomes](selected-primary-outcomes.csv)
+- [Primary catalog](selected-primary-catalog.json)

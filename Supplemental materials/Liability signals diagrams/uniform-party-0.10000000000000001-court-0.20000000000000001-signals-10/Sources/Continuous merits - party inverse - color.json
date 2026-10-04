@@ -1,0 +1,140 @@
+{
+  "Case": {
+    "Id": "private-noise__sigma-0p1__american__ra__cost-1",
+    "Family": "private-noise",
+    "Variant": "sigma-0p1",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.1,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "Posterior source distribution given a party signal",
+      "SourceTitle": "Party signal (sigma=0.10)",
+      "DestinationTitle": "Merits interval Q",
+      "Sources": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "Destinations": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "JointMass": [
+        [
+          0.08140711584939342,
+          0.0075203761882073695,
+          3.750050794049205E-05,
+          5.341062021266148E-09,
+          1.8314550665908266E-14
+        ],
+        [
+          0.07452011541161055,
+          0.030988800059455007,
+          0.0008101560378221969,
+          7.097135715821831E-07,
+          1.624070978450869E-11
+        ],
+        [
+          0.035049357976375886,
+          0.061266441716625195,
+          0.007445047539384555,
+          3.750714671508259E-05,
+          5.5475240195838045E-09
+        ],
+        [
+          0.008120638299129849,
+          0.061130354005172055,
+          0.03075206546811798,
+          0.0008104169658967825,
+          7.40410886584928E-07
+        ],
+        [
+          0.0008626121981213275,
+          0.030795443189838453,
+          0.06095523044673477,
+          0.007449945673456446,
+          3.941429069931659E-05
+        ],
+        [
+          3.941429069931571E-05,
+          0.0074499456734564385,
+          0.06095523044673474,
+          0.03079544318983846,
+          0.0008626121981213274
+        ],
+        [
+          7.404108865855487E-07,
+          0.0008104169658967804,
+          0.030752065468117977,
+          0.06113035400517207,
+          0.008120638299129826
+        ],
+        [
+          5.547524020439193E-09,
+          3.750714671508219E-05,
+          0.007445047539384562,
+          0.06126644171662529,
+          0.0350493579763759
+        ],
+        [
+          1.624071120551863E-11,
+          7.097135715827209E-07,
+          0.0008101560378221948,
+          0.03098880005945499,
+          0.07452011541161055
+        ],
+        [
+          1.8313984697299753E-14,
+          5.341062022027915E-09,
+          3.750050794049136E-05,
+          0.007520376188207371,
+          0.0814071158493934
+        ]
+      ],
+      "Highlight": 4,
+      "HighlightedSourceMass": 0.10010264579885031,
+      "ConditionalDestinationProbabilities": [
+        0.008617276708696492,
+        0.30763865374467597,
+        0.6089272662105286,
+        0.07442306458539191,
+        0.00039373875070711933
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__private-noise__sigma-0p1__american__ra__cost-1; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.10000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events.\n\nInverse party-signal diagram: the same joint distribution is transposed, not a forward noise kernel read backwards without its prior. Source buckets are party signals; destination buckets are merits or true liability. Ribbon widths remain joint probability masses. The reference lower-middle signal bucket is 0.45; this label denotes a bin midpoint, not an exact continuous observation. The companion conditional probabilities are posterior destination probabilities given that one signal bin. They are NOT conditioned on filing, answering, trial, or the other party\u0027s signal. The adjacent upper-middle signal is its mirror image in these symmetric specifications. Continuous merits retain the same five display intervals as the forward diagram. For truth-conditioned discrete merits, the ten point masses are grouped into those same five intervals for comparison; this does not make the model continuous. Direct-binary signals have true liability, not a latent merits variable, on the destination axis. No equilibrium or solver is used. Explanations and conditional probabilities are intentionally outside the graphic. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination.\n\nReference source (highlighted in both palettes): 0.45; source probability mass: 0.10010264579885031.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.00--0.20: 0.0086172767086964922\n0.20--0.40: 0.30763865374467597\n0.40--0.60: 0.60892726621052862\n0.60--0.80: 0.074423064585391913\n0.80--1.00: 0.00039373875070711933\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}

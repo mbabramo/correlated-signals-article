@@ -1,5 +1,8 @@
 # Equilibrium solution paths
 
-Three current exact replays have passed endpoint/trajectory checks: American risk neutral, British risk neutral, and American risk averse, all at cost 1. Their self-contained viewers are included for review. The British risk-averse replay is pending in the latest recorded status.
+The four core-game viewers retain complete recorded strategies and native solver coordinates. Each saved frame is replay-checked against the current game and final equilibrium; this is distinct from an algebraic proof of every tableau pivot. Open these HTML files locally in a current Chrome, Edge or Firefox browser. Keep any adjacent `-data` folder beside its HTML file: large traces use local script chunks to stay below repository file limits. The compressed payload is reconstructed exactly, with no omitted frames or rounded values.
 
-Interactive browser QA is pending: the available browser tool rejected local files. These viewers are not marked publication-ready. No superseded trajectory or duplicate solve is substituted. The fourth viewer will be added only after replay verification.
+- [baseline__standard__american__ra__cost-1](baseline__standard__american__ra__cost-1.html)
+- [baseline__standard__american__rn__cost-1](baseline__standard__american__rn__cost-1.html)
+- [baseline__standard__complete__ra__cost-1](baseline__standard__complete__ra__cost-1.html)
+- [baseline__standard__complete__rn__cost-1](baseline__standard__complete__rn__cost-1.html)

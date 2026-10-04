@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=.5in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array,tabularx,longtable,microtype}
+\begin{document}\textbf{Fee shifting: Complete Fee-Shifting to American}\par
+Risk preferences unchanged: moderately risk averse; cost multiplier 1\par
+{\footnotesize direct-binary / calibrated-to-uniform-merits; 10 signals; 10 offers; party noise 0.36495; court noise 0.312719; entry cost 0.15; trial cost 0.15.}\par
+{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{6}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Opponent\\agreement} & Remaining & Sensitive \\\midrule
+P commits to abandon & 0.05--0.15 & $100\%\to 0\%$ & $0$ & $0$ & $-33.3$ & $+66.7$ & $-33.3$ & $-100$ & Yes\\
+P commits to abandon & 0.65 & $100\%\to 0\%$ & $-100$ & $0$ & $+33.3$ & $+33.3$ & $+33.3$ & $-100$ & Yes\\
+P demand, continue & 0.25--0.35 & $0.15\to 0.35$ & $0.00$ & $0.00$ & $+0.20$ & $0.00$ & $0.00$ & $0.00$ & No\\
+P demand, continue$^{*}$ & 0.45 & $0.15\to 0.35$ & $0.00$ & $0.00$ & $+0.20$ & $0.00$ & $0.00$ & $0.00$ & No\\
+P demand, continue & 0.55 & $0.15\to 0.35$ & $+0.70$ & $0.00$ & $-0.15$ & $-0.35$ & $0.00$ & $0.00$ & Yes\\
+P demand, continue & 0.75--0.95 & $0.85\to 0.65$ & $0.00$ & $0.00$ & $-0.20$ & $0.00$ & $0.00$ & $0.00$ & At some signals\\
+D commits to default & 0.35 & $100\%\to 0\%$ & $-100$ & $0$ & $+33.3$ & $+33.3$ & $+33.3$ & $-100$ & Yes\\
+D commits to default & 0.85--0.95 & $100\%\to 0\%$ & $0$ & $0$ & $-33.3$ & $+66.7$ & $-33.3$ & $-100$ & Yes\\
+D offer, continue & 0.05--0.25 & $0.15\to 0.35$ & $0.00$ & $0.00$ & $+0.20$ & $0.00$ & $0.00$ & $0.00$ & At some signals\\
+D offer, continue & 0.45 & $0.85\to 0.65$ & $-0.70$ & $0.00$ & $+0.15$ & $+0.35$ & $0.00$ & $0.00$ & Yes\\
+D offer, continue$^{*}$ & 0.55 & $0.85\to 0.65$ & $0.00$ & $0.00$ & $-0.20$ & $0.00$ & $0.00$ & $0.00$ & No\\
+D offer, continue & 0.65--0.75 & $0.85\to 0.65$ & $0.00$ & $0.00$ & $-0.20$ & $0.00$ & $0.00$ & $0.00$ & No\\
+\bottomrule\end{tabularx}}
+
+\smallskip{\footnotesize Probability contributions are percentage points; pure offer changes are fractions of damages. Direct changes the rule or preferences first.\par
+Opponent entry, offers, exit and agreement contributions average all 24 replacement orders. Their sum plus Direct and Remaining equals the endpoint change before rounding.\par
+Remaining retains equilibrium-selection and continuation differences. Sensitive flags tie or off-path completion dependence; these are conditional diagnostics, not causal shares.\par
+$^{*}$: an intermediate hybrid does not reach this history, although its continuation remains defined by positive opponent-and-chance reach.}\par
+\clearpage
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Fee shifting: Complete Fee-Shifting to American; Risk preferences unchanged: moderately risk averse; costs 1.\par
+{\footnotesize direct-binary / calibrated-to-uniform-merits; 10 signals; 10 offers; party noise 0.36495; court noise 0.312719; entry cost 0.15; trial cost 0.15.}\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{11}{@{}l}{\textbf{Plaintiff}}\\
+Commit to abandon\newline No vs Yes$^{*\S}$ & 0.05 & -226.9844 & 105.0088 & +331.9932 & +226.9844 & 0 & +2.5846 & -8.2432 & +5.6585 & +105.0088\\[3pt]
+Commit to abandon\newline No vs Yes$^{*\S}$ & 0.15 & -217.5294 & 104.98 & +322.5094 & +217.5294 & 0 & +2.5978 & -7.7597 & +5.1619 & +104.98\\[3pt]
+Commit to abandon\newline No vs Yes$^{*\S}$ & 0.65 & -38.1714 & 104.4114 & +142.5828 & +43.8776 & 0 & -8.443 & +7.4118 & -4.6751 & +104.4114\\[3pt]
+\multicolumn{11}{@{}l}{\textbf{Defendant}}\\
+Commit to default\newline No vs Yes$^{*\S}$ & 0.35 & -282.0472 & 771.501 & +1053.5482 & +324.2119 & 0 & -62.3834 & +54.7648 & -34.5461 & +771.501\\[3pt]
+Commit to default\newline No vs Yes$^{*\S}$ & 0.85 & -1607.348 & 775.6995 & +2383.0475 & +1607.348 & 0 & +19.196 & -57.3407 & +38.1447 & +775.6995\\[3pt]
+Commit to default\newline No vs Yes$^{*\S}$ & 0.95 & -1677.2101 & 775.9126 & +2453.1227 & +1677.2101 & 0 & +19.0988 & -60.9106 & +41.8118 & +775.9126\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit, Agreement: marginal opponent replacements averaged over 24 orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all six columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=.5in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array,tabularx,longtable,microtype}
+\begin{document}\textbf{Fee shifting: American to Complete Fee-Shifting}\par
+Risk preferences unchanged: risk neutral; cost multiplier 1\par
+{\footnotesize direct-binary / calibrated-to-uniform-merits; 10 signals; 10 offers; party noise 0.36495; court noise 0.312719; entry cost 0.15; trial cost 0.15.}\par
+{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{6}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Opponent\\agreement} & Remaining & Sensitive \\\midrule
+P files & 0.25 & $100\%\to 0\%$ & $0$ & $0$ & $0$ & $0$ & $-100$ & $0$ & No\\
+P commits to abandon$^{*}$ & 0.35 & $0\%\to 100\%$ & $0$ & $+66.7$ & $+16.7$ & $0$ & $+16.7$ & $0$ & Yes\\
+P agrees, continue & 0.75--0.85 & $100\%\to 0\%$ & $0$ & $+41.7$ & $+8.3$ & $-41.7$ & $-8.3$ & $-100$ & Yes\\
+P agrees, continue & 0.95 & $100\%\to 0\%$ & $0$ & $+50$ & $0$ & $-33.3$ & $-16.7$ & $-100$ & Yes\\
+D answers & 0.65 & $81.2\%\to 0\%$ & $+18.8$ & $-33.3$ & $-33.3$ & $+16.7$ & $-50$ & $0$ & Yes\\
+D agrees, continue & 0.05 & $100\%\to 0\%$ & $-100$ & $+25$ & $+75$ & $+25$ & $-25$ & $-100$ & Yes\\
+D agrees, continue & 0.15 & $100\%\to 0\%$ & $-100$ & $+66.7$ & $+66.7$ & $-16.7$ & $-16.7$ & $-100$ & Yes\\
+D agrees, continue & 0.25 & $100\%\to 0\%$ & $0$ & $+25$ & $+41.7$ & $-58.3$ & $-8.3$ & $-100$ & Yes\\
+D agrees, continue & 0.35 & $100\%\to 0\%$ & $0$ & $+16.7$ & $+33.3$ & $-33.3$ & $-16.7$ & $-100$ & Yes\\
+D agrees, continue & 0.45 & $100\%\to 0\%$ & $0$ & $+8.3$ & $+25$ & $-25$ & $-8.3$ & $-100$ & Yes\\
+D agrees, continue & 0.55 & $100\%\to 0\%$ & $0$ & $-8.3$ & $+25$ & $-8.3$ & $-8.3$ & $-100$ & Yes\\
+\bottomrule\end{tabularx}}
+
+\smallskip{\footnotesize Probability contributions are percentage points; pure offer changes are fractions of damages. Direct changes the rule or preferences first.\par
+Opponent entry, offers, exit and agreement contributions average all 24 replacement orders. Their sum plus Direct and Remaining equals the endpoint change before rounding.\par
+Remaining retains equilibrium-selection and continuation differences. Sensitive flags tie or off-path completion dependence; these are conditional diagnostics, not causal shares.\par
+$^{*}$: an intermediate hybrid does not reach this history, although its continuation remains defined by positive opponent-and-chance reach.}\par
+\clearpage
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Fee shifting: American to Complete Fee-Shifting; Risk preferences unchanged: risk neutral; costs 1.\par
+{\footnotesize direct-binary / calibrated-to-uniform-merits; 10 signals; 10 offers; party noise 0.36495; court noise 0.312719; entry cost 0.15; trial cost 0.15.}\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{11}{@{}l}{\textbf{Plaintiff}}\\
+Agree / continue\newline No vs Yes$^{\S}$ & 0.75 & 0 & 0 & 0 & 0 & -4.7047 & -29.676 & +0.6501 & +33.7305 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{\S}$ & 0.85 & 0 & 0 & 0 & 0 & -2.539 & -10.9525 & +0.6759 & +12.8155 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{\S}$ & 0.95 & 0 & 0 & 0 & 0 & -1.249 & -4.1812 & +0.6678 & +4.7624 & 0\\[3pt]
+\multicolumn{11}{@{}l}{\textbf{Defendant}}\\
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.05 & -93.599 & 201.8624 & +295.4614 & +100.9887 & -2.9144 & -7.4525 & +0.3234 & +2.6537 & +201.8624\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.15 & -91.5425 & 186.8346 & +278.3771 & +94.3561 & -3.706 & -9.3004 & +0.9885 & +9.2044 & +186.8346\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.25 & -87.8978 & 161.6598 & +249.5576 & +82.609 & -4.6187 & -15.6258 & +2.6022 & +22.9311 & +161.6598\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.35 & -82.3253 & 126.3653 & +208.6907 & +64.6447 & -4.6033 & -30.2385 & +6.4238 & +46.0986 & +126.3653\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.45 & -75.4687 & 87.5077 & +162.9763 & +42.5234 & -2.6785 & -55.1017 & +14.2983 & +76.4271 & +87.5077\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.55 & -68.956 & 54.6008 & +123.5567 & +2.4883 & -19.2476 & -66.9539 & +21.2348 & +131.4344 & +54.6008\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit, Agreement: marginal opponent replacements averaged over 24 orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all six columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
+\end{document}

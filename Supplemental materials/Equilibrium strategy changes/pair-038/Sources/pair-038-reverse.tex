@@ -1,0 +1,61 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=.5in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array,tabularx,longtable,microtype}
+\begin{document}\textbf{Preferences: moderately risk averse to risk neutral}\par
+American rule remains in force; cost multiplier 0.5\par
+{\footnotesize cost-multiplier / standard; 10 signals; 10 offers; party noise 0.2; court noise 0.2; entry cost 0.15; trial cost 0.15.}\par
+{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{6}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Opponent\\agreement} & Remaining & Sensitive \\\midrule
+P files & 0.05--0.15 & $100\%\to 0\%$ & $0$ & $0$ & $-100$ & $0$ & $0$ & $0$ & No\\
+P demand, continue & 0.25 & $0.15\to 0.75$ & $0.00$ & $-0.233$ & $+0.417$ & $+0.017$ & $0.00$ & $+0.40$ & Yes\\
+P demand, continue & 0.35 & $0.15\to 0.75$ & $+0.40$ & $-0.258$ & $+0.025$ & $+0.025$ & $+0.008$ & $+0.40$ & Yes\\
+P demand, continue & 0.45 & $0.55\to 0.85$ & $0.00$ & $-0.175$ & $+0.158$ & $+0.008$ & $+0.008$ & $+0.30$ & Yes\\
+P demand, continue & 0.55 & $0.55\to 0.85$ & $+0.30$ & $-0.183$ & $-0.133$ & $+0.017$ & $0.00$ & $+0.30$ & Yes\\
+P demand, continue & 0.65 & $0.55\to 0.95$ & $+0.30$ & $-0.20$ & $-0.10$ & $0.00$ & $0.00$ & $+0.40$ & Yes\\
+P demand, continue & 0.75--0.85 & $0.85\to 0.95$ & $0.00$ & $-0.05$ & $+0.05$ & $0.00$ & $0.00$ & $+0.10$ & Yes\\
+P demand, continue$^{*}$ & 0.95 & $0.85\to 0.95$ & $+0.10$ & $-0.10$ & $0.00$ & $0.00$ & $0.00$ & $+0.10$ & Yes\\
+D answers & 0.85--0.95 & $100\%\to 0\%$ & $0$ & $0$ & $-100$ & $0$ & $0$ & $0$ & No\\
+D offer, continue$^{*}$ & 0.05 & $0.15\to 0.05$ & $-0.10$ & $+0.10$ & $0.00$ & $0.00$ & $0.00$ & $-0.10$ & Yes\\
+D offer, continue & 0.15--0.35 & $0.15\to 0.05$ & $0.00$ & $+0.05$ & $-0.05$ & $0.00$ & $0.00$ & $-0.10$ & Yes\\
+D offer, continue & 0.45 & $0.55\to 0.15$ & $-0.40$ & $+0.233$ & $+0.183$ & $-0.017$ & $0.00$ & $-0.40$ & Yes\\
+D offer, continue & 0.55 & $0.55\to 0.15$ & $-0.40$ & $+0.425$ & $-0.008$ & $-0.008$ & $-0.008$ & $-0.40$ & Yes\\
+D offer, continue & 0.65 & $0.85\to 0.25$ & $-0.30$ & $-0.042$ & $-0.425$ & $-0.025$ & $-0.008$ & $+0.20$ & Yes\\
+D offer, continue & 0.75 & $0.85\to 0.25$ & $-0.30$ & $-0.067$ & $-0.417$ & $-0.017$ & $0.00$ & $+0.20$ & Yes\\
+\bottomrule\end{tabularx}}
+
+\smallskip{\footnotesize Probability contributions are percentage points; pure offer changes are fractions of damages. Direct changes the rule or preferences first.\par
+Opponent entry, offers, exit and agreement contributions average all 24 replacement orders. Their sum plus Direct and Remaining equals the endpoint change before rounding.\par
+Remaining retains equilibrium-selection and continuation differences. Sensitive flags tie or off-path completion dependence; these are conditional diagnostics, not causal shares.\par
+$^{*}$: an intermediate hybrid does not reach this history, although its continuation remains defined by positive opponent-and-chance reach.}\par
+\clearpage
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Preferences: moderately risk averse to risk neutral; American rule remains in force; costs 0.5.\par
+{\footnotesize cost-multiplier / standard; 10 signals; 10 offers; party noise 0.2; court noise 0.2; entry cost 0.15; trial cost 0.15.}\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{11}{@{}l}{\textbf{Plaintiff}}\\
+Demand / continue\newline 0.75 vs 0.15$^{\S}$ & 0.25 & -57.1125 & 27.0347 & +84.1471 & -8.4546 & -5.9477 & +100.0819 & +0.069 & -1.6015 & 0\\[3pt]
+Demand / continue\newline 0.75 vs 0.15$^{\S}$ & 0.35 & -39.6227 & 73.9547 & +113.5774 & +51.6418 & -10.9259 & +75.3812 & +0.2872 & -2.8069 & 0\\[3pt]
+Demand / continue\newline 0.85 vs 0.55$^{\S}$ & 0.45 & -18.4453 & 0 & +18.4453 & +14.8742 & -9.0807 & +15.9127 & -0.6753 & -2.5856 & 0\\[3pt]
+Demand / continue\newline 0.85 vs 0.55$^{\S}$ & 0.55 & -10.9846 & 0 & +10.9846 & +53.1919 & -13.8851 & -23.9078 & -0.8579 & -3.5565 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.55$^{\S}$ & 0.65 & -20.927 & 0 & +20.927 & +51.8401 & -20.381 & -7.0548 & +0.788 & -4.2652 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S}$ & 0.75 & -14.6753 & 0 & +14.6753 & -19.0152 & -5.785 & +39.8735 & +0.8317 & -1.2297 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S}$ & 0.85 & -10.662 & 0 & +10.662 & -0.3371 & -7.5761 & +20.046 & +0.1327 & -1.6035 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S\ddagger}$ & 0.95 & -7.255 & 0 & +7.255 & +14.8021 & -8.0423 & +2.5732 & -0.4528 & -1.6253 & 0\\[3pt]
+\multicolumn{11}{@{}l}{\textbf{Defendant}}\\
+Offer / continue\newline 0.05 vs 0.15$^{\S\ddagger}$ & 0.05 & -53.6127 & 0 & +53.6127 & +61.1575 & -8.0406 & +2.5729 & -0.4523 & -1.6249 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.15 & -78.7848 & 0 & +78.7848 & +67.7861 & -7.5768 & +20.0465 & +0.1326 & -1.6037 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.25 & -108.4426 & 0 & +108.4426 & +74.7509 & -5.7856 & +39.8756 & +0.8316 & -1.2299 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.35 & -135.7023 & 0 & +135.7023 & +79.3284 & -2.6828 & +57.9326 & +1.5356 & -0.4115 & 0\\[3pt]
+Offer / continue\newline 0.15 vs 0.55$^{\S}$ & 0.45 & -92.5257 & 0 & +92.5257 & +171.036 & -18.5834 & -54.9274 & -0.562 & -4.4374 & 0\\[3pt]
+Offer / continue\newline 0.15 vs 0.55$^{\S}$ & 0.55 & -187.287 & 0 & +187.287 & +198.3538 & -12.483 & +5.4145 & -0.6133 & -3.3851 & 0\\[3pt]
+Offer / continue\newline 0.25 vs 0.85$^{\S}$ & 0.65 & -319.7825 & 73.9558 & +393.7383 & +320.9494 & -11.1524 & +86.5757 & +0.2533 & -2.8876 & 0\\[3pt]
+Offer / continue\newline 0.25 vs 0.85$^{\S}$ & 0.75 & -453.5158 & 27.0348 & +480.5507 & +374.5323 & -6.0752 & +113.6924 & +0.049 & -1.6479 & 0\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit, Agreement: marginal opponent replacements averaged over 24 orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all six columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
+\end{document}

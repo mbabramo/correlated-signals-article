@@ -1,0 +1,200 @@
+{
+  "Case": {
+    "Id": "asymmetric-risk__d-only-ra__american__d-only-ra__cost-1",
+    "Family": "asymmetric-risk",
+    "Variant": "d-only-ra",
+    "FeeRule": "american",
+    "AlphaP": 0,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "Other-party signal distribution given one party\u0027s signal",
+      "SourceTitle": "Plaintiff signal (sigma=0.20)",
+      "DestinationTitle": "Defendant signal (sigma=0.20)",
+      "Sources": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "Destinations": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "JointMass": [
+        [
+          0.018699229906464266,
+          0.019255143036934555,
+          0.01643083970840164,
+          0.011804008845744693,
+          0.0072696050430859855,
+          0.003909354716208939,
+          0.001865240670100499,
+          0.0007983855926249918,
+          0.0003083499568711787,
+          0.000107672083417213
+        ],
+        [
+          0.01925514303693455,
+          0.020989390798193105,
+          0.019262695977121217,
+          0.015155066912456197,
+          0.010411768757365833,
+          0.006346566118805517,
+          0.0034706775975021104,
+          0.001712613201454377,
+          0.0007641028088015215,
+          0.00030834995687117856
+        ],
+        [
+          0.016430839708401656,
+          0.019262695977121214,
+          0.01935986065097837,
+          0.01699106654612239,
+          0.013231067755993227,
+          0.009243560442981996,
+          0.005827265971291666,
+          0.003321644529876628,
+          0.0017126132014543762,
+          0.0007983855926249919
+        ],
+        [
+          0.011804008845744693,
+          0.0151550669124562,
+          0.01699106654612239,
+          0.016902168095120573,
+          0.015084766133955698,
+          0.012148485367443227,
+          0.00884663340931655,
+          0.005827265971291671,
+          0.0034706775975021087,
+          0.0018652406701004961
+        ],
+        [
+          0.00726960504308599,
+          0.010411768757365832,
+          0.013231067755993227,
+          0.015084766133955704,
+          0.015519229225416967,
+          0.014437011787482863,
+          0.012148485367443217,
+          0.009243560442982001,
+          0.006346566118805514,
+          0.003909354716208937
+        ],
+        [
+          0.0039093547162089405,
+          0.006346566118805516,
+          0.009243560442981991,
+          0.012148485367443227,
+          0.014437011787482861,
+          0.015519229225416981,
+          0.015084766133955695,
+          0.01323106775599324,
+          0.01041176875736583,
+          0.007269605043085986
+        ],
+        [
+          0.001865240670100499,
+          0.0034706775975021083,
+          0.005827265971291668,
+          0.008846633409316549,
+          0.012148485367443215,
+          0.015084766133955691,
+          0.016902168095120552,
+          0.01699106654612239,
+          0.015155066912456184,
+          0.011804008845744682
+        ],
+        [
+          0.0007983855926249922,
+          0.0017126132014543781,
+          0.00332164452987663,
+          0.005827265971291673,
+          0.009243560442982001,
+          0.013231067755993245,
+          0.016991066546122393,
+          0.019359860650978413,
+          0.019262695977121234,
+          0.016430839708401666
+        ],
+        [
+          0.00030834995687117894,
+          0.0007641028088015219,
+          0.0017126132014543766,
+          0.0034706775975021087,
+          0.006346566118805516,
+          0.010411768757365833,
+          0.015155066912456189,
+          0.01926269597712124,
+          0.02098939079819309,
+          0.01925514303693455
+        ],
+        [
+          0.000107672083417213,
+          0.00030834995687117856,
+          0.0007983855926249917,
+          0.0018652406701004964,
+          0.003909354716208939,
+          0.007269605043085985,
+          0.011804008845744684,
+          0.016430839708401666,
+          0.01925514303693455,
+          0.01869922990646426
+        ]
+      ],
+      "Highlight": 4,
+      "HighlightedSourceMass": 0.10760141534874025,
+      "ConditionalDestinationProbabilities": [
+        0.06756049648162085,
+        0.09676237736855874,
+        0.12296369627770078,
+        0.14019114976383357,
+        0.14422885772569588,
+        0.1341712071415786,
+        0.11290265400384852,
+        0.08590556558223024,
+        0.05898218065474374,
+        0.03633181500018909
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__asymmetric-risk__d-only-ra__american__d-only-ra__cost-1; plaintiff sigma=0.20000000000000001; defendant sigma=0.20000000000000001; boundary=EqualWidth. Q~Uniform(0,1); T|Q=q~Bernoulli(q). Signals are independent conditional on exact Q. The production belief calculation integrates the product of both signal kernels over Q, not the product of averages within display intervals.\n\nParty-to-party prediction: J[i,j] = P(S_P=i) P(S_D=j | S_P=i), using the production Bayesian signal methods. Ribbon widths are joint masses, not normalized conditional probabilities. The reference fan starts at plaintiff signal 0.45; labels denote signal-bin midpoints, not exact continuous observations. The right column shows possible defendant signals, not an opponent signal observed by the plaintiff. This is Bayesian prediction, not a causal effect of one signal on the other. The probabilities below are the plaintiff\u0027s belief before any procedural selection: NOT conditioned on filing, answering, offers, or trial. With equal party noise the same relationship applies in reverse; the adjacent upper-middle signal is the reflected case in these symmetric specifications. No solver, equilibrium file, action utility, or strategic mixing is involved. Both palettes have identical data. Grayscale: all background ribbons have the same pale-gray fill, regardless of signal strength or source range. The reference fan alone uses darker gray and is drawn last. Gray shade indicates highlighting, not signal strength. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. The JSON Highlight index identifies the fan and the companion\u0027s reference calculation.\n\nReference source (highlighted in both palettes): 0.45; source probability mass: 0.10760141534874025.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.05: 0.067560496481620852\n0.15: 0.096762377368558736\n0.25: 0.12296369627770078\n0.35: 0.14019114976383357\n0.45: 0.14422885772569588\n0.55: 0.1341712071415786\n0.65: 0.11290265400384852\n0.75: 0.085905565582230239\n0.85: 0.05898218065474374\n0.95: 0.036331815000189088\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n\nUnconditional defendant signal probabilities, bottom to top:\n0.05: 0.080447829559853967\n0.15: 0.097676375165505633\n0.25: 0.10617900037684651\n0.35: 0.1080953795490536\n0.45: 0.10760141534874025\n0.55: 0.10760141534874026\n0.65: 0.10809537954905356\n0.75: 0.10617900037684661\n0.85: 0.097676375165505591\n0.95: 0.080447829559853967\n\nMiddle defendant signal range [0.40,0.60), combining bins labeled 0.45, 0.55:\nUnconditional mass: 0.21520283069748053\nConditional on reference plaintiff signal: 0.27840006486727448\nThese comparisons use each model\u0027s production calibration, not identical noise standard deviations. In the symmetric, conditionally independent direct-binary benchmark, this symmetric middle range has equal likelihood under both truth states; learning one\u0027s own signal therefore does not change its probability for the opponent. It can still change which side of the distribution the opponent is likely to occupy. This is a limitation of that information structure, not of every model with binary truth.\n"
+}

@@ -1,0 +1,135 @@
+{
+  "Case": {
+    "Id": "private-noise__sigma-0p4__american__ra__cost-1",
+    "Family": "private-noise",
+    "Variant": "sigma-0p4",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.4,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "The same merits generate each party\u0027s signal",
+      "SourceTitle": "Merits interval Q",
+      "DestinationTitle": "Party signal (sigma=0.40)",
+      "Sources": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "Destinations": [
+        "0.05",
+        "0.15",
+        "0.25",
+        "0.35",
+        "0.45",
+        "0.55",
+        "0.65",
+        "0.75",
+        "0.85",
+        "0.95"
+      ],
+      "JointMass": [
+        [
+          0.03372714458465987,
+          0.03362188346471033,
+          0.03153687909169361,
+          0.027833671061988842,
+          0.023114106212008403,
+          0.01806088571587645,
+          0.013278681953571552,
+          0.009185898427687,
+          0.005979086840332785,
+          0.0036617626474712123
+        ],
+        [
+          0.022442257612121597,
+          0.02531057226403937,
+          0.026858992917619014,
+          0.026818330480074707,
+          0.02519585411775097,
+          0.022273151911595228,
+          0.018526274349602433,
+          0.014499323857853507,
+          0.010677222716842849,
+          0.0073980197725003385
+        ],
+        [
+          0.013557975541179376,
+          0.017297497004256656,
+          0.02076452053966738,
+          0.023453751895162668,
+          0.024926255019733907,
+          0.024926255019733917,
+          0.023453751895162654,
+          0.020764520539667396,
+          0.017297497004256646,
+          0.013557975541179376
+        ],
+        [
+          0.007398019772500338,
+          0.010677222716842866,
+          0.014499323857853495,
+          0.018526274349602433,
+          0.022273151911595238,
+          0.02519585411775097,
+          0.02681833048007471,
+          0.026858992917619062,
+          0.02531057226403938,
+          0.02244225761212159
+        ],
+        [
+          0.003661762647471213,
+          0.005979086840332785,
+          0.00918589842768697,
+          0.013278681953571563,
+          0.018060885715876426,
+          0.023114106212008403,
+          0.0278336710619888,
+          0.031536879091693636,
+          0.03362188346471033,
+          0.03372714458465984
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.2000000000000001,
+      "ConditionalDestinationProbabilities": [
+        0.03699009886250167,
+        0.05338611358421431,
+        0.07249661928926744,
+        0.09263137174801211,
+        0.11136575955797613,
+        0.12597927058875477,
+        0.1340916524003735,
+        0.13429496458809526,
+        0.12655286132019683,
+        0.1122112880606079
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__private-noise__sigma-0p4__american__ra__cost-1; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.40000000000000002; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events. Ribbon width denotes joint probability mass, not conditional probability. One reference source group\u0027s conditional destination probabilities are listed in this companion file and in JSON, not inside the diagram. They sum to one before display rounding. For continuous merits they condition on the entire reference interval, with the prior integrated over that interval, not on its midpoint or on a single exact Q. Bucket labels for party signals are bin midpoints, not point events. The accompanying JSON also contains unrounded joint masses. Crossings imply no extra probability. Q and T are italic mathematical variables; the Greek symbol sigma denotes the noise standard deviation. Color and grayscale share identical data and ribbon coordinates. No transparency, gradients, equilibrium loading, or solver call. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination. This standalone file depicts: The same merits generate each party\u0027s signal.\n\nReference source (highlighted in both palettes): 0.60--0.80; source probability mass: 0.20000000000000009.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.05: 0.036990098862501673\n0.15: 0.053386113584214308\n0.25: 0.072496619289267442\n0.35: 0.092631371748012115\n0.45: 0.11136575955797613\n0.55: 0.12597927058875477\n0.65: 0.13409165240037349\n0.75: 0.13429496458809526\n0.85: 0.12655286132019683\n0.95: 0.1122112880606079\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}

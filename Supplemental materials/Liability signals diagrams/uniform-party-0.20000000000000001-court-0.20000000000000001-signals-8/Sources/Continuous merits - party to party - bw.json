@@ -1,0 +1,156 @@
+{
+  "Case": {
+    "Id": "grid__signals-8-offers-12__american__ra__cost-1",
+    "Family": "grid",
+    "Variant": "signals-8-offers-12",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 8,
+    "Offers": [
+      0.05,
+      0.1318181818181818,
+      0.21363636363636362,
+      0.2954545454545454,
+      0.3772727272727272,
+      0.4590909090909091,
+      0.5409090909090909,
+      0.6227272727272727,
+      0.7045454545454545,
+      0.7863636363636364,
+      0.8681818181818183,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "Other-party signal distribution given one party\u0027s signal",
+      "SourceTitle": "Plaintiff signal (sigma=0.20)",
+      "DestinationTitle": "Defendant signal (sigma=0.20)",
+      "Sources": [
+        "0.06",
+        "0.19",
+        "0.31",
+        "0.44",
+        "0.56",
+        "0.69",
+        "0.81",
+        "0.94"
+      ],
+      "Destinations": [
+        "0.06",
+        "0.19",
+        "0.31",
+        "0.44",
+        "0.56",
+        "0.69",
+        "0.81",
+        "0.94"
+      ],
+      "JointMass": [
+        [
+          0.029829372495591665,
+          0.02943026512711897,
+          0.02197538011295571,
+          0.012837027184771494,
+          0.006076994037686098,
+          0.002401420748251089,
+          0.000806354363874242,
+          0.00023161358611239222
+        ],
+        [
+          0.029430265127118972,
+          0.03207568900275115,
+          0.02735176379788195,
+          0.01890354724738609,
+          0.01090711114891508,
+          0.005348327469378473,
+          0.0022438302237449397,
+          0.0008063543638742404
+        ],
+        [
+          0.02197538011295572,
+          0.02735176379788194,
+          0.02759322518455152,
+          0.023241022872127877,
+          0.016637405110943058,
+          0.010191387929297272,
+          0.005348327469378474,
+          0.0024014207482510883
+        ],
+        [
+          0.012837027184771498,
+          0.018903547247386108,
+          0.023241022872127894,
+          0.02428563674315772,
+          0.0217160063922131,
+          0.016637405110943068,
+          0.010907111148915086,
+          0.006076994037686102
+        ],
+        [
+          0.006076994037686103,
+          0.010907111148915074,
+          0.016637405110943065,
+          0.021716006392213088,
+          0.02428563674315771,
+          0.02324102287212789,
+          0.0189035472473861,
+          0.0128370271847715
+        ],
+        [
+          0.0024014207482510874,
+          0.005348327469378473,
+          0.010191387929297272,
+          0.016637405110943058,
+          0.023241022872127887,
+          0.027593225184551505,
+          0.027351763797881935,
+          0.02197538011295571
+        ],
+        [
+          0.0008063543638742424,
+          0.0022438302237449406,
+          0.005348327469378477,
+          0.010907111148915082,
+          0.01890354724738609,
+          0.027351763797881946,
+          0.032075689002751144,
+          0.029430265127118976
+        ],
+        [
+          0.00023161358611239232,
+          0.0008063543638742403,
+          0.0024014207482510887,
+          0.0060769940376861,
+          0.012837027184771498,
+          0.02197538011295572,
+          0.02943026512711897,
+          0.02982937249559166
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.13460475073720057,
+      "ConditionalDestinationProbabilities": [
+        0.09536830694656709,
+        0.14043744476963513,
+        0.1726612377708954,
+        0.1804218395721595,
+        0.16133164894462723,
+        0.12360191612720699,
+        0.08103065522709443,
+        0.04514695064181423
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__grid__signals-8-offers-12__american__ra__cost-1; plaintiff sigma=0.20000000000000001; defendant sigma=0.20000000000000001; boundary=EqualWidth. Q~Uniform(0,1); T|Q=q~Bernoulli(q). Signals are independent conditional on exact Q. The production belief calculation integrates the product of both signal kernels over Q, not the product of averages within display intervals.\n\nParty-to-party prediction: J[i,j] = P(S_P=i) P(S_D=j | S_P=i), using the production Bayesian signal methods. Ribbon widths are joint masses, not normalized conditional probabilities. The reference fan starts at plaintiff signal 0.44; labels denote signal-bin midpoints, not exact continuous observations. The right column shows possible defendant signals, not an opponent signal observed by the plaintiff. This is Bayesian prediction, not a causal effect of one signal on the other. The probabilities below are the plaintiff\u0027s belief before any procedural selection: NOT conditioned on filing, answering, offers, or trial. With equal party noise the same relationship applies in reverse; the adjacent upper-middle signal is the reflected case in these symmetric specifications. No solver, equilibrium file, action utility, or strategic mixing is involved. Both palettes have identical data. Grayscale: all background ribbons have the same pale-gray fill, regardless of signal strength or source range. The reference fan alone uses darker gray and is drawn last. Gray shade indicates highlighting, not signal strength. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. The JSON Highlight index identifies the fan and the companion\u0027s reference calculation.\n\nReference source (highlighted in both palettes): 0.44; source probability mass: 0.13460475073720057.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.06: 0.095368306946567089\n0.19: 0.14043744476963513\n0.31: 0.1726612377708954\n0.44: 0.18042183957215949\n0.56: 0.16133164894462723\n0.69: 0.12360191612720699\n0.81: 0.081030655227094434\n0.94: 0.045146950641814232\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n\nUnconditional defendant signal probabilities, bottom to top:\n0.06: 0.10358842765636168\n0.19: 0.12706688838105087\n0.31: 0.13473993322538697\n0.44: 0.13460475073720052\n0.56: 0.13460475073720052\n0.69: 0.13473993322538697\n0.81: 0.1270668883810509\n0.94: 0.10358842765636167\n\nMiddle defendant signal range [0.40,0.60), combining bins labeled 0.44, 0.56:\nUnconditional mass: 0.26920950147440104\nConditional on reference plaintiff signal: 0.34175348851678672\nThese comparisons use each model\u0027s production calibration, not identical noise standard deviations. In the symmetric, conditionally independent direct-binary benchmark, this symmetric middle range has equal likelihood under both truth states; learning one\u0027s own signal therefore does not change its probability for the opponent. It can still change which side of the distribution the opponent is likely to occupy. This is a limitation of that information structure, not of every model with binary truth.\n"
+}

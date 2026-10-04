@@ -1,6 +1,6 @@
-# Tables
+# Article tables
 
-Existing roles and article order are preserved. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria. Other file identifiers are unchanged. Editable sources, complete numerical data and separate captions are in Sources.
+Editable TeX and data are in `Sources`. Figure 7 replaces the former welfare table; numbering follows the manuscript.
 
 - [Table 1 - Model primitives](Table%201%20-%20Model%20primitives.pdf)
 - [Table 2 - Strategy mechanisms](Table%202%20-%20Strategy%20mechanisms.pdf)

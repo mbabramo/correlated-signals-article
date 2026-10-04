@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,landscape,margin=.5in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern,booktabs,array,tabularx,longtable,microtype}
+\begin{document}\textbf{Fee shifting: American to Complete Fee-Shifting}\par
+Risk preferences unchanged: moderately risk averse; cost multiplier 1\par
+{\footnotesize private-noise / sigma-0p1; 10 signals; 10 offers; party noise 0.1; court noise 0.2; entry cost 0.15; trial cost 0.15.}\par
+{\fontsize{9.5}{11.5}\selectfont\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{1.35in}>{\centering\arraybackslash}p{.45in}>{\centering\arraybackslash}p{1.05in}*{6}{>{\centering\arraybackslash}X}>{\centering\arraybackslash}p{.65in}@{}}
+\toprule Decision & Signal & Original $\to$ Target & Direct & \shortstack{Opponent\\entry} & \shortstack{Opponent\\offers} & \shortstack{Opponent\\exit} & \shortstack{Opponent\\agreement} & Remaining & Sensitive \\\midrule
+P files & 0.05--0.15 & $100\%\to 0\%$ & $0$ & $0$ & $-50$ & $0$ & $-50$ & $0$ & Yes\\
+P files & 0.25--0.45 & $100\%\to 0\%$ & $0$ & $0$ & $0$ & $0$ & $-100$ & $0$ & Yes\\
+P commits to abandon$^{*}$ & 0.55 & $0\%\to 80.8\%$ & $+100$ & $0$ & $-50$ & $-50$ & $0$ & $+80.8$ & Yes\\
+P agrees, continue & 0.65 & $100\%\to 16.3\%$ & $0$ & $-8.3$ & $+25$ & $-8.3$ & $-8.3$ & $-83.7$ & Yes\\
+P agrees, continue & 0.75--0.85 & $100\%\to 0\%$ & $0$ & $-8.3$ & $+25$ & $-8.3$ & $-8.3$ & $-100$ & Yes\\
+P agrees, continue & 0.95 & $100\%\to 0\%$ & $0$ & $+33.3$ & $+33.3$ & $-50$ & $-16.7$ & $-100$ & Yes\\
+P demand, continue 0.45$^{*}$ & 0.55 & $100\%\to 0\%$ & $-100$ & $0$ & $0$ & $0$ & $0$ & $0$ & No\\
+P demand, continue 0.65$^{*}$ & 0.55 & $0\%\to 36.3\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $+36.3$ & No\\
+P demand, continue 0.75$^{*}$ & 0.55 & $0\%\to 26.7\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $+26.7$ & No\\
+P demand, continue 0.85$^{*}$ & 0.55 & $0\%\to 36.9\%$ & $0$ & $-16.7$ & $-16.7$ & $0$ & $+33.3$ & $+36.9$ & Yes\\
+P demand, continue 0.85$^{*}$ & 0.65 & $100\%\to 2.9\%$ & $0$ & $-8.3$ & $-25$ & $-8.3$ & $+41.7$ & $-97.1$ & Yes\\
+P demand, continue 0.95$^{*}$ & 0.65 & $0\%\to 97.1\%$ & $0$ & $+8.3$ & $-25$ & $+8.3$ & $+8.3$ & $+97.1$ & Yes\\
+D answers & 0.55 & $100\%\to 19.3\%$ & $0$ & $0$ & $-16.7$ & $+33.3$ & $-16.7$ & $-80.7$ & Yes\\
+D answers & 0.65--0.95 & $100\%\to 0\%$ & $0$ & $0$ & $0$ & $0$ & $-100$ & $0$ & At some signals\\
+D commits to default$^{*}$ & 0.55 & $0\%\to 100\%$ & $0$ & $+8.3$ & $+8.3$ & $-8.3$ & $+91.7$ & $0$ & Yes\\
+D agrees, continue & 0.05 & $100\%\to 0\%$ & $0$ & $+33.3$ & $+33.3$ & $-50$ & $-16.7$ & $-100$ & Yes\\
+D agrees, continue & 0.25 & $100\%\to 42.3\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $-57.7$ & Yes\\
+D agrees, continue & 0.35 & $100\%\to 0\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $-100$ & Yes\\
+D agrees, continue$^{*}$ & 0.45 & $100\%\to 0\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $-100$ & Yes\\
+D offer, continue$^{*}$ & 0.15 & $0.15\to 0.05$ & $0.00$ & $+0.275$ & $-0.008$ & $-0.208$ & $-0.058$ & $-0.10$ & Yes\\
+D offer, continue 0.05 & 0.25 & $0\%\to 15\%$ & $0$ & $0$ & $0$ & $0$ & $0$ & $+15$ & Yes\\
+D offer, continue 0.15 & 0.25 & $100\%\to 85\%$ & $0$ & $-50$ & $-16.7$ & $+33.3$ & $+33.3$ & $-15$ & Yes\\
+\bottomrule\end{tabularx}}
+
+\smallskip{\footnotesize Probability contributions are percentage points; pure offer changes are fractions of damages. Direct changes the rule or preferences first.\par
+Opponent entry, offers, exit and agreement contributions average all 24 replacement orders. Their sum plus Direct and Remaining equals the endpoint change before rounding.\par
+Remaining retains equilibrium-selection and continuation differences. Sensitive flags tie or off-path completion dependence; these are conditional diagnostics, not causal shares.\par
+$^{*}$: an intermediate hybrid does not reach this history, although its continuation remains defined by positive opponent-and-chance reach.}\par
+\clearpage
+\clearpage {\large\bfseries Relative-payoff changes}\par
+Fee shifting: American to Complete Fee-Shifting; Risk preferences unchanged: moderately risk averse; costs 1.\par
+{\footnotesize private-noise / sigma-0p1; 10 signals; 10 offers; party noise 0.1; court noise 0.2; entry cost 0.15; trial cost 0.15.}\par
+{\small Supplement to partial strategy decompositions. Gap: conditional utility of actions gaining probability minus that of actions losing probability. Positive favors the gaining side.}\par
+{\small\setlength{\tabcolsep}{3pt}\begin{longtable}{@{}>{\raggedright\arraybackslash}p{1.7in}rrrrrrrrrr@{}}
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endfirsthead
+\toprule Decision / comparison & Signal & Original & Target & Change & \shortstack{Direct/\\reopt.} & Entry & Offers & Exit & Agreement & Remaining \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{11}{@{}l}{\textbf{Plaintiff}}\\
+Commit to abandon\newline Yes vs No$^{\S\ddagger}$ & 0.55 & -92.8917 & 0 & +92.8917 & +92.9608 & +30.0904 & -2.0731 & -17.9828 & -10.1037 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{\S}$ & 0.65 & -56.9539 & 0 & +56.9539 & -40.4913 & -20.6733 & +15.2047 & +33.6119 & +69.3019 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.75 & -37.2604 & 16.7581 & +54.0185 & -18.1345 & -20.7597 & +15.3901 & +21.8254 & +38.9392 & +16.7581\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.85 & -19.8343 & 23.5016 & +43.3359 & +0.3477 & -19.1154 & +7.2398 & +12.198 & +19.1641 & +23.5016\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.95 & -10.9039 & 30.2916 & +41.1954 & +9.5954 & -12.7014 & +0.6741 & +6.7023 & +6.6335 & +30.2916\\[3pt]
+Demand / continue\newline 36.3\% 0.65 + 26.7\% 0.75 + 36.9\% 0.85 vs 0.45$^{\S\ddagger}$ & 0.55 & -8.2636 & 54.9402 & +63.2038 & -27.8098 & -26.3309 & +14.0031 & +26.744 & +76.5973 & 0\\[3pt]
+Demand / continue\newline 0.95 vs 0.85$^{\S\ddagger}$ & 0.65 & -56.9539 & 0 & +56.9539 & -40.4913 & +16.5789 & +44.6922 & +41.9078 & -5.7337 & 0\\[3pt]
+\multicolumn{11}{@{}l}{\textbf{Defendant}}\\
+Answer\newline No vs Yes$^{\S}$ & 0.55 & -375.8353 & 0 & +375.8353 & -482.309 & +137.7259 & +190.9093 & -121.0362 & +650.5452 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.05 & -80.5828 & 293.6791 & +374.2618 & +70.9124 & -114.0959 & +52.5053 & +68.6452 & +2.6159 & +293.6791\\[3pt]
+Agree / continue\newline No vs Yes$^{\S}$ & 0.25 & -275.3251 & 0 & +275.3251 & -133.9891 & -169.496 & +204.9245 & +295.2032 & +78.6826 & 0\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S}$ & 0.35 & -420.8432 & 182.3152 & +603.1584 & -344.1523 & -149.3983 & +265.9705 & +483.1266 & +165.2966 & +182.3152\\[3pt]
+Agree / continue\newline No vs Yes$^{*\S\ddagger}$ & 0.45 & -564.8958 & 132.502 & +697.3979 & -603.1481 & -167.6705 & +257.8433 & +681.1358 & +396.7354 & +132.502\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S\ddagger}$ & 0.15 & -146.5603 & 0 & +146.5603 & +2.5699 & +63.6144 & +52.1965 & +24.2739 & +3.9056 & 0\\[3pt]
+Offer / continue\newline 0.05 vs 0.15$^{\S}$ & 0.25 & -275.3251 & 0 & +275.3251 & -133.9891 & +185.1186 & +153.2522 & +58.3019 & +12.6415 & 0\\[3pt]
+\end{longtable}} {\footnotesize All numbers on this page are $1000\times$ utility differences (not percentages or money). The JSON/text files retain unscaled values. Mixtures weight each action by its share of the probability mass gained/lost between endpoints.\par
+Direct/reopt.: new rule/preferences and optimized own continuation against the original opponent. Entry, Offers, Exit, Agreement: marginal opponent replacements averaged over 24 orders. Original and Target use actual endpoint continuations; any final continuation mismatch is Remaining$^*$. Change equals all six columns before rounding.\par
+$\dagger$: tie-sensitive payoff allocation. $\S$: unvisited-opponent-policy sensitivity. $\ddagger$: conditional on an intermediate history not reached in that hybrid. Undefined values are not zero.\par
+These comparisons explain changes in relative incentives, not the exact equilibrium mixing probabilities or an observed dynamic path. Utility scales are convention-dependent, particularly across preference regimes, and are not cross-regime welfare comparisons.}\par
+\end{document}

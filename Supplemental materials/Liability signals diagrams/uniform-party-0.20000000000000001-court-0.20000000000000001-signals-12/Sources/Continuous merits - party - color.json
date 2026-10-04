@@ -1,0 +1,147 @@
+{
+  "Case": {
+    "Id": "grid__signals-12-offers-8__american__ra__cost-1",
+    "Family": "grid",
+    "Variant": "signals-12-offers-8",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 12,
+    "Offers": [
+      0.05,
+      0.17857142857142855,
+      0.3071428571428571,
+      0.43571428571428567,
+      0.5642857142857143,
+      0.692857142857143,
+      0.8214285714285714,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "The same merits generate each party\u0027s signal",
+      "SourceTitle": "Merits interval Q",
+      "DestinationTitle": "Party signal (sigma=0.20)",
+      "Sources": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "Destinations": [
+        "0.04",
+        "0.13",
+        "0.21",
+        "0.29",
+        "0.38",
+        "0.46",
+        "0.54",
+        "0.63",
+        "0.71",
+        "0.79",
+        "0.88",
+        "0.96"
+      ],
+      "JointMass": [
+        [
+          0.04608612606655949,
+          0.046745572056032206,
+          0.04050901263682677,
+          0.029994777832212938,
+          0.01897426848096027,
+          0.010250775566850811,
+          0.004726956535156467,
+          0.00185923399528349,
+          0.0006232503662984913,
+          0.00017790492873853345,
+          4.32035457966259E-05,
+          8.917989283948937E-06
+        ],
+        [
+          0.016333513911650763,
+          0.024498812412659263,
+          0.03137333866002952,
+          0.03431676228481872,
+          0.03206799556692882,
+          0.02560065491491919,
+          0.017455910640913102,
+          0.010161460420327027,
+          0.005046902550741073,
+          0.0021370928119550936,
+          0.0007708852778270254,
+          0.00023667054723039863
+        ],
+        [
+          0.0029530072937192895,
+          0.006517445657832259,
+          0.012263812479704083,
+          0.0196891917852696,
+          0.026986278239524118,
+          0.031590264543950634,
+          0.031590264543950655,
+          0.026986278239524084,
+          0.01968919178526962,
+          0.012263812479704086,
+          0.0065174456578322515,
+          0.0029530072937192947
+        ],
+        [
+          0.00023667054723039665,
+          0.000770885277827026,
+          0.0021370928119550945,
+          0.005046902550741074,
+          0.010161460420327045,
+          0.017455910640913088,
+          0.02560065491491921,
+          0.0320679955669288,
+          0.03431676228481874,
+          0.031373338660029546,
+          0.024498812412659263,
+          0.016333513911650777
+        ],
+        [
+          8.917989283949823E-06,
+          4.3203545796627464E-05,
+          0.00017790492873853353,
+          0.0006232503662984863,
+          0.001859233995283497,
+          0.004726956535156461,
+          0.01025077556685081,
+          0.01897426848096023,
+          0.029994777832212955,
+          0.04050901263682676,
+          0.046745572056032164,
+          0.04608612606655952
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.20000000000000007,
+      "ConditionalDestinationProbabilities": [
+        0.0011833527361519828,
+        0.003854426389135129,
+        0.010685464059775468,
+        0.025234512753705363,
+        0.050807302101635206,
+        0.08727955320456542,
+        0.128003274574596,
+        0.16033997783464393,
+        0.17158381142409362,
+        0.15686669330014769,
+        0.12249406206329627,
+        0.08166756955825386
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__grid__signals-12-offers-8__american__ra__cost-1; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.20000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events. Ribbon width denotes joint probability mass, not conditional probability. One reference source group\u0027s conditional destination probabilities are listed in this companion file and in JSON, not inside the diagram. They sum to one before display rounding. For continuous merits they condition on the entire reference interval, with the prior integrated over that interval, not on its midpoint or on a single exact Q. Bucket labels for party signals are bin midpoints, not point events. The accompanying JSON also contains unrounded joint masses. Crossings imply no extra probability. Q and T are italic mathematical variables; the Greek symbol sigma denotes the noise standard deviation. Color and grayscale share identical data and ribbon coordinates. No transparency, gradients, equilibrium loading, or solver call. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination. This standalone file depicts: The same merits generate each party\u0027s signal.\n\nReference source (highlighted in both palettes): 0.60--0.80; source probability mass: 0.20000000000000007.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.04: 0.0011833527361519828\n0.13: 0.0038544263891351288\n0.21: 0.010685464059775468\n0.29: 0.025234512753705363\n0.38: 0.050807302101635206\n0.46: 0.087279553204565416\n0.54: 0.12800327457459601\n0.63: 0.16033997783464393\n0.71: 0.17158381142409362\n0.79: 0.15686669330014769\n0.88: 0.12249406206329627\n0.96: 0.081667569558253855\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}

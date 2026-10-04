@@ -1,6 +1,6 @@
 # Individual simulations
 
-Each complete profile was reloaded and checked for normalization, full unilateral best response, accounting, saved actions and numeric replay. All scientific profile data match the previous audited outputs exactly.
+Complete profiles, saved actions, numeric replay and unrestricted best responses were checked against the freshly built code.
 
 - [asymmetric-risk__d-only-ra__american__d-only-ra__cost-1](asymmetric-risk__d-only-ra__american__d-only-ra__cost-1/strategy.pdf)
 - [asymmetric-risk__d-only-ra__complete__d-only-ra__cost-1](asymmetric-risk__d-only-ra__complete__d-only-ra__cost-1/strategy.pdf)
@@ -48,10 +48,12 @@ Each complete profile was reloaded and checked for normalization, full unilatera
 - [direct-binary__calibrated-to-uniform-merits__complete__rn__cost-1](direct-binary__calibrated-to-uniform-merits__complete__rn__cost-1/strategy.pdf)
 - [grid__signals-12-offers-8__american__ra__cost-1](grid__signals-12-offers-8__american__ra__cost-1/strategy.pdf)
 - [grid__signals-12-offers-8__american__rn__cost-1](grid__signals-12-offers-8__american__rn__cost-1/strategy.pdf)
+- [grid__signals-12-offers-8__complete__ra__cost-1](grid__signals-12-offers-8__complete__ra__cost-1/strategy.pdf)
 - [grid__signals-12-offers-8__complete__rn__cost-1](grid__signals-12-offers-8__complete__rn__cost-1/strategy.pdf)
-- [grid__signals-8-offers-15__american__ra__cost-1](grid__signals-8-offers-15__american__ra__cost-1/strategy.pdf)
-- [grid__signals-8-offers-15__american__rn__cost-1](grid__signals-8-offers-15__american__rn__cost-1/strategy.pdf)
-- [grid__signals-8-offers-15__complete__rn__cost-1](grid__signals-8-offers-15__complete__rn__cost-1/strategy.pdf)
+- [grid__signals-8-offers-12__american__ra__cost-1](grid__signals-8-offers-12__american__ra__cost-1/strategy.pdf)
+- [grid__signals-8-offers-12__american__rn__cost-1](grid__signals-8-offers-12__american__rn__cost-1/strategy.pdf)
+- [grid__signals-8-offers-12__complete__ra__cost-1](grid__signals-8-offers-12__complete__ra__cost-1/strategy.pdf)
+- [grid__signals-8-offers-12__complete__rn__cost-1](grid__signals-8-offers-12__complete__rn__cost-1/strategy.pdf)
 - [grid__signals-8-offers-8__american__ra__cost-1](grid__signals-8-offers-8__american__ra__cost-1/strategy.pdf)
 - [grid__signals-8-offers-8__american__rn__cost-1](grid__signals-8-offers-8__american__rn__cost-1/strategy.pdf)
 - [grid__signals-8-offers-8__complete__ra__cost-1](grid__signals-8-offers-8__complete__ra__cost-1/strategy.pdf)

@@ -1,0 +1,79 @@
+{
+  "Case": {
+    "Id": "merits-distribution__polarized__american__ra__cost-1",
+    "Family": "merits-distribution",
+    "Variant": "polarized",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 10,
+    "Offers": [
+      0.05,
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.65,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "Distribution": "beta-half-half",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "A court finding is not true liability",
+      "SourceTitle": "Merits interval Q",
+      "DestinationTitle": "Court finding (sigma=0.20)",
+      "Sources": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "Destinations": [
+        "Not liable",
+        "Liable"
+      ],
+      "JointMass": [
+        [
+          0.2867364390171032,
+          0.008430796283763455
+        ],
+        [
+          0.11607675499106852,
+          0.024661792859090058
+        ],
+        [
+          0.06409421684897496,
+          0.06409421684897494
+        ],
+        [
+          0.024661792859090054,
+          0.11607675499106841
+        ],
+        [
+          0.008430796283763468,
+          0.28673643901710316
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.14073854785015846,
+      "ConditionalDestinationProbabilities": [
+        0.17523125849889382,
+        0.8247687415011062
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__merits-distribution__polarized__american__ra__cost-1; Q~Beta(0.5,0.5); T|Q=q~Bernoulli(q). Party sigma=0.20000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events. Ribbon width denotes joint probability mass, not conditional probability. One reference source group\u0027s conditional destination probabilities are listed in this companion file and in JSON, not inside the diagram. They sum to one before display rounding. For continuous merits they condition on the entire reference interval, with the prior integrated over that interval, not on its midpoint or on a single exact Q. Bucket labels for party signals are bin midpoints, not point events. The accompanying JSON also contains unrounded joint masses. Crossings imply no extra probability. Q and T are italic mathematical variables; the Greek symbol sigma denotes the noise standard deviation. Color and grayscale share identical data and ribbon coordinates. No transparency, gradients, equilibrium loading, or solver call. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination. This standalone file depicts: A court finding is not true liability.\n\nReference source (highlighted in both palettes): 0.60--0.80; source probability mass: 0.14073854785015846.\nConditional destination probabilities, bottom to top (destination bucket: probability):\nNot liable: 0.17523125849889382\nLiable: 0.82476874150110624\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}

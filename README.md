@@ -1,33 +1,28 @@
-# Correlated-signals litigation article
+# Correlated signals in litigation
 
-Revised 25 September 2026 in the existing repository structure. Eight figures and four tables cover the currently available results. Figure 7 replaces Table 4 in Welfare Analysis; Figure 8 replaces Table 6 in Multiple Equilibria; Table 5 labels the two unfinished grid contrasts. The prior typography, directional patterns and shared American/British strategy axes are restored. Table names and captions are separate from the table files. No manuscript reorganization or figure consolidation is introduced.
+[Author-maintained article](https://github.com/mbabramo/correlated-signals-article/tree/main/Article%20and%20bibliography) · [Figures](Figures/README.md) · [Tables](Tables/README.md)
 
-- [Figures](Figures/README.md)
-- [Tables](Tables/README.md)
-- [Individual simulations](Results/Individual%20simulations/README.md)
-- [Aggregated data](Results/Aggregated%20Data/README.md)
-- [Generated pairwise comparisons](Supplemental%20materials/Generated%20pairwise%20comparisons/README.md)
-- [Equilibrium strategy changes](Supplemental%20materials/Equilibrium%20strategy%20changes/README.md)
-- [Liability signals diagrams](Supplemental%20materials/Liability%20signals%20diagrams/README.md)
-- [Game tree diagrams](Supplemental%20materials/Game%20tree%20diagrams/README.md)
-- [Multiple equilibria](Supplemental%20materials/Multiple%20equilibria/README.md)
-- [Equilibrium solution paths](Supplemental%20materials/Equilibrium%20solution%20paths/README.md)
-- [Risk aversion utility curves](Supplemental%20materials/Risk%20aversion%20utility%20curves/README.md)
+This collection contains 74 validated primary profiles from the 74-case resolved article plan. The grid comparisons are 8 signals / 12 offers (both risk preferences); 12 signals / 8 offers (both risk preferences); 8 signals / 8 offers (both risk preferences). American and British denote the principal rules; trial-only fee shifting is a separate extension.
 
-The main material says American and British. Trial-only fee shifting is a cost-1 extension. Agreement decisions remain part of every primary game. Technical evidence stays with Sources and Run records.
+- **Figures** and **Tables**: exhibits included in the article, with editable sources and previews.
+- **Results/Individual simulations**: complete strategies, audits, numerical reports and standard diagrams for every reported game.
+- **Results/Aggregated Data**: matched comparisons, welfare measures, truth-formula sensitivity and tremble responses.
+- **Supplemental materials**: multiple-equilibrium results, decompositions, solution-path viewers, signal and game-tree diagrams, and utility curves.
 
-Curation excludes eight non-cost-1 trial-only profiles, 40 associated directed decomposition reports, duplicate color signal diagrams, superseded overviews and failed render caches. All underlying research records are preserved in the isolated workspace.
+The **Article and bibliography** folder is author-maintained and separate from default replication. The journal command generates the four research-output folders above. An optional `--manuscript true` author build also compiles the embedded manuscript snapshot with generated numerical bindings; it never overwrites the author's checkout.
 
-Still pending before final publication:
+## Replication
 
-- Two British risk-averse cost-1 exact profiles: 8 signals/15 offers and 12 signals/8 offers.
-- Their two welfare comparisons and eight strategic directions, followed by updated Table 5 and supplemental summaries.
-- Fourth verified trajectory and interactive visual QA of the viewers.
-- User choice on truth-map sensitivity exponents (proposed 0.5 and 2, baseline 1), or explicit omission.
-- Complete final release evidence after the pending work; the reviewed available working collection has now been archived, synchronized and committed.
+Use the `ArticleReplication` C# project in the [ACESim4 correlated-signals branch](https://github.com/mbabramo/ACESim4/tree/correlated-signals). Follow its [installation instructions](https://github.com/mbabramo/ACESim4/blob/correlated-signals/ArticleReplication/INSTALL.md) for .NET, TeX, fonts and PDF tools, or use its container build target. Tools are installed separately.
 
-[Manuscript and bibliography](Article%20and%20bibliography/) remain in their existing folder. This is the reviewed available working collection, not a certificate of completed final publication. Historical generated material is preserved in the external hash-verified archive identified in Results/Run records/working-collection-update.json.
+Download and extract the optional saved-solutions archive from the [article repository releases](https://github.com/mbabramo/correlated-signals-article/releases). From the code checkout, run:
 
-The manuscript now contains limited factual corrections and explicit italicized **Update needed** passages. See [revision notes](Article%20and%20bibliography/Revision%20notes.md); the substantive narrative remains for the author to revise.
+```sh
+dotnet run --project ArticleReplication -c Release -- rebuild --source . --output /path/new-rebuild --input /path/saved-solutions --missing wait --workers 4
+```
 
-Rebuild the available Results collection with `python .\generate_results.py`. [Reproduction instructions](Results/Run%20records/Reproduction/README.md) describe prerequisites, workers, validation and archived replacements. The command rebuilds the numerical code and reports from the saved profiles; it does not start equilibrium searches.
+Read the collection in `new-rebuild/run/article`. Remove `--input` and use `--missing compute` for a complete fresh calculation, which can take substantially longer. Settings and stage switches are documented in the [coordinator README](https://github.com/mbabramo/ACESim4/blob/correlated-signals/ArticleReplication/README.md). Worker counts must account for other active computations.
+
+Shortcuts contain only complete primary equilibria, the 200 multiple-start outcomes (including explicit failed attempts), and optional solver histories. Every accepted profile is revalidated; histories are replay-checked. Decompositions, tremble experiments, reports and exhibits are freshly generated. The manuscript PDF is compiled only when explicitly requested. Failed searches are not proofs of nonexistence. Exact-primary, approximate-search and trajectory-replay criteria remain distinct.
+
+The case inventory is [selected-primary-catalog.json](Results/Aggregated%20Data/selected-primary-catalog.json). Temporary build, execution and release-review records belong outside this published collection.

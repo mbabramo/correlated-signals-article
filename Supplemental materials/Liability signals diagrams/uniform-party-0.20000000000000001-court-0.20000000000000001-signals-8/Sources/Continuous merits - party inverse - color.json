@@ -1,0 +1,126 @@
+{
+  "Case": {
+    "Id": "grid__signals-8-offers-12__american__ra__cost-1",
+    "Family": "grid",
+    "Variant": "signals-8-offers-12",
+    "FeeRule": "american",
+    "AlphaP": 2,
+    "AlphaD": 2,
+    "CostMultiplier": 1,
+    "Signals": 8,
+    "Offers": [
+      0.05,
+      0.1318181818181818,
+      0.21363636363636362,
+      0.2954545454545454,
+      0.3772727272727272,
+      0.4590909090909091,
+      0.5409090909090909,
+      0.6227272727272727,
+      0.7045454545454545,
+      0.7863636363636364,
+      0.8681818181818183,
+      0.95
+    ],
+    "Distribution": "uniform",
+    "PartySigma": 0.2,
+    "CourtSigma": 0.2,
+    "EntryCost": 0.15,
+    "TrialCost": 0.15,
+    "OriginalOptionName": null,
+    "CalibrationSha256": null,
+    "IsExternalImport": false
+  },
+  "Panels": [
+    {
+      "Title": "Posterior source distribution given a party signal",
+      "SourceTitle": "Party signal (sigma=0.20)",
+      "DestinationTitle": "Merits interval Q",
+      "Sources": [
+        "0.06",
+        "0.19",
+        "0.31",
+        "0.44",
+        "0.56",
+        "0.69",
+        "0.81",
+        "0.94"
+      ],
+      "Destinations": [
+        "0.00--0.20",
+        "0.20--0.40",
+        "0.40--0.60",
+        "0.60--0.80",
+        "0.80--1.00"
+      ],
+      "JointMass": [
+        [
+          0.06983974113397985,
+          0.027575984475733638,
+          0.005632260121596616,
+          0.0005177159789806094,
+          2.272583757436039E-05
+        ],
+        [
+          0.06350096962543861,
+          0.04462968050860593,
+          0.016102005309659016,
+          0.002626932658031908,
+          0.00020730062624475047
+        ],
+        [
+          0.04075987618312348,
+          0.05094356424086503,
+          0.032378074031067725,
+          0.0093382461517106,
+          0.0013201721154150626
+        ],
+        [
+          0.018459945696900546,
+          0.0410418485258017,
+          0.045887660537676615,
+          0.0233260274602706,
+          0.0058892687813233814
+        ],
+        [
+          0.005889268781323385,
+          0.023326027460270606,
+          0.04588766053767663,
+          0.041041848525801734,
+          0.018459945696900536
+        ],
+        [
+          0.0013201721154150654,
+          0.009338246151710604,
+          0.032378074031067725,
+          0.05094356424086506,
+          0.04075987618312346
+        ],
+        [
+          0.00020730062624474974,
+          0.002626932658031907,
+          0.016102005309659016,
+          0.04462968050860592,
+          0.06350096962543862
+        ],
+        [
+          2.272583757435861E-05,
+          0.0005177159789806105,
+          0.005632260121596618,
+          0.027575984475733655,
+          0.06983974113397982
+        ]
+      ],
+      "Highlight": 3,
+      "HighlightedSourceMass": 0.13460475100197283,
+      "ConditionalDestinationProbabilities": [
+        0.1371418583630082,
+        0.30490638866974445,
+        0.34090669308547705,
+        0.1732927499708292,
+        0.043752309910941145
+      ]
+    }
+  ],
+  "Description": "Specification=Final-Agreement__grid__signals-8-offers-12__american__ra__cost-1; Q~Uniform(0,1); T|Q=q~Bernoulli(q). Party sigma=0.20000000000000001; court sigma=0.20000000000000001; boundary=EqualWidth. Five merits intervals are display groups ONLY, not model states or quadrature nodes. Flows integrate the production signal kernel over each interval with 64-point Gauss-Legendre integration (theta transform for Beta(0.5,0.5)). Party/court signals are independent conditional on exact Q, not generally conditional on a displayed interval. The court signal is not observed by litigants before bargaining. Panels show marginal joint distributions, not a sequence of observed events.\n\nInverse party-signal diagram: the same joint distribution is transposed, not a forward noise kernel read backwards without its prior. Source buckets are party signals; destination buckets are merits or true liability. Ribbon widths remain joint probability masses. The reference lower-middle signal bucket is 0.44; this label denotes a bin midpoint, not an exact continuous observation. The companion conditional probabilities are posterior destination probabilities given that one signal bin. They are NOT conditioned on filing, answering, trial, or the other party\u0027s signal. The adjacent upper-middle signal is its mirror image in these symmetric specifications. Continuous merits retain the same five display intervals as the forward diagram. For truth-conditioned discrete merits, the ten point masses are grouped into those same five intervals for comparison; this does not make the model continuous. Direct-binary signals have true liability, not a latent merits variable, on the destination axis. No equilibrium or solver is used. Explanations and conditional probabilities are intentionally outside the graphic. Color: lower-half source buckets are orange and upper-half buckets are blue (a bucket centered exactly at the midpoint joins the upper half). The reference fan retains its source hue at greater saturation and is drawn last. Other ribbons have pale fills. No ribbons have outlines; their widths are set by probability mass without an added border stroke. Only endpoint boxes retain black borders. Colors identify the source bucket, not the destination.\n\nReference source (highlighted in both palettes): 0.44; source probability mass: 0.13460475100197283.\nConditional destination probabilities, bottom to top (destination bucket: probability):\n0.00--0.20: 0.13714185836300821\n0.20--0.40: 0.30490638866974445\n0.40--0.60: 0.34090669308547705\n0.60--0.80: 0.17329274997082919\n0.80--1.00: 0.043752309910941145\nEach value equals the corresponding ribbon\u0027s joint probability mass divided by the reference source mass.\n"
+}
