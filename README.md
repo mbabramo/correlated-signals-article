@@ -11,8 +11,6 @@ Replication regenerates the results, tables, figures and supplemental materials.
 
 ## Replication
 
-*The container release is still being validated; the command below is not yet ready for use.*
-
 No programming experience is required. Docker runs the replication software with its required tools already installed.
 
 1. **Install and start Docker.** Use [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/) or [Docker Engine for Linux](https://docs.docker.com/engine/install/). On Windows, use Linux containers (the default).
