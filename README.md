@@ -1,28 +1,31 @@
 # Correlated signals in litigation
 
-[Author-maintained article](https://github.com/mbabramo/correlated-signals-article/tree/main/Article%20and%20bibliography) · [Figures](Figures/README.md) · [Tables](Tables/README.md)
-
-This collection contains 74 validated primary profiles from the 74-case resolved article plan. The grid comparisons are 8 signals / 12 offers (both risk preferences); 12 signals / 8 offers (both risk preferences); 8 signals / 8 offers (both risk preferences). American and British denote the principal rules; trial-only fee shifting is a separate extension.
+[Article](https://github.com/mbabramo/correlated-signals-article/tree/main/Article%20and%20bibliography) · [Figures](Figures/README.md) · [Tables](Tables/README.md)
 
 - **Figures** and **Tables**: exhibits included in the article, with editable sources and previews.
 - **Results/Individual simulations**: complete strategies, audits, numerical reports and standard diagrams for every reported game.
 - **Results/Aggregated Data**: matched comparisons, welfare measures, truth-formula sensitivity and tremble responses.
 - **Supplemental materials**: multiple-equilibrium results, decompositions, solution-path viewers, signal and game-tree diagrams, and utility curves.
 
-The **Article and bibliography** folder is author-maintained and separate from default replication. The journal command generates the four research-output folders above. An optional `--manuscript true` author build also compiles the embedded manuscript snapshot with generated numerical bindings; it never overwrites the author's checkout.
+Replication regenerates the results, tables, figures and supplemental materials. The article and bibliography are maintained separately.
 
 ## Replication
 
-Use the `ArticleReplication` C# project in the [ACESim4 correlated-signals branch](https://github.com/mbabramo/ACESim4/tree/correlated-signals). Follow its [installation instructions](https://github.com/mbabramo/ACESim4/blob/correlated-signals/ArticleReplication/INSTALL.md) for .NET, TeX, fonts and PDF tools, or use its container build target. Tools are installed separately.
+*The container release is still being validated; the command below is not yet ready for use.*
 
-Download and extract the optional saved-solutions archive from the [article repository releases](https://github.com/mbabramo/correlated-signals-article/releases). From the code checkout, run:
+No programming experience is required. Docker runs the replication software with its required tools already installed.
+
+1. **Install and start Docker.** Use [Docker Desktop for Windows](https://docs.docker.com/desktop/setup/install/windows-install/) or [Docker Engine for Linux](https://docs.docker.com/engine/install/). On Windows, use Linux containers (the default).
+2. **Download the saved solutions.** Create a new folder called `replication`. Download [this ZIP file](https://github.com/mbabramo/correlated-signals-article/releases/download/replication-20261004/correlated-signals-saved-solutions.zip), extract it, and put its contents in a folder named `solutions` inside `replication`. The `solutions` folder should contain `Equilibria`, `Search` and `Histories` directly.
+3. **Open a terminal in the `replication` folder.** On Windows, right-click inside that folder and choose **Open in Terminal**, using a PowerShell tab. On Linux, open a terminal in that folder.
+4. **Copy and paste this entire command**, then press Enter. You do not need to change any paths:
 
 ```sh
-dotnet run --project ArticleReplication -c Release -- rebuild --source . --output /path/new-rebuild --input /path/saved-solutions --missing wait --workers 4
+docker run --rm --network none --cpus 4 -v "${PWD}/solutions:/inputs:ro" -v "${PWD}/output:/output" ghcr.io/mbabramo/acesim-correlated-signals:2026-10-04.1 run --input /inputs --output /output/run --missing wait --workers 4
 ```
 
-Read the collection in `new-rebuild/run/article`. Remove `--input` and use `--missing compute` for a complete fresh calculation, which can take substantially longer. Settings and stage switches are documented in the [coordinator README](https://github.com/mbabramo/ACESim4/blob/correlated-signals/ArticleReplication/README.md). Worker counts must account for other active computations.
+The first run downloads the software automatically; you do not need a GitHub account or a copy of the code. Leave the terminal open until it finishes. The completed results will be in **`replication/output/run/article`**. The program creates the output folders for you and refuses to overwrite an existing run. Use a new `replication` folder if you want to repeat the exercise.
 
-Shortcuts contain only complete primary equilibria, the 200 multiple-start outcomes (including explicit failed attempts), and optional solver histories. Every accepted profile is revalidated; histories are replay-checked. Decompositions, tremble experiments, reports and exhibits are freshly generated. The manuscript PDF is compiled only when explicitly requested. Failed searches are not proofs of nonexistence. Exact-primary, approximate-search and trajectory-replay criteria remain distinct.
+The supplied solutions avoid repeating the slow equilibrium searches. The program checks those solutions and recalculates the analyses, tables and figures. This command is for Windows or Linux on an Intel/AMD computer; the tested machine has four available processors and 16 GB of memory.
 
-The case inventory is [selected-primary-catalog.json](Results/Aggregated%20Data/selected-primary-catalog.json). Temporary build, execution and release-review records belong outside this published collection.
+[Detailed instructions and other options](https://github.com/mbabramo/ACESim4/blob/correlated-signals/ArticleReplication/INSTALL.md) · [C# source code](https://github.com/mbabramo/ACESim4/tree/correlated-signals) · [Simulation inventory](Results/Aggregated%20Data/selected-primary-catalog.json)
