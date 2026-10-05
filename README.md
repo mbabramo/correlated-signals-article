@@ -27,13 +27,13 @@ Open PowerShell on Windows, or a terminal on Linux, **inside the `replication` f
 **With saved solutions:**
 
 ```sh
-docker run --rm --network none --cpus 4 -v "${PWD}/solutions:/inputs:ro" -v "${PWD}/output:/output" ghcr.io/mbabramo/acesim-correlated-signals:2026-10-04.1 run --input /inputs --output /output/run --missing wait --workers 4
+docker run --rm --network none --cpus 4 -v "${PWD}/solutions:/inputs:ro" -v "${PWD}/output:/output" ghcr.io/mbabramo/acesim-correlated-signals:2026-10-05 run --input /inputs --output /output/run --missing wait --workers 4
 ```
 
 **From scratch, without saved solutions:**
 
 ```sh
-docker run --rm --network none --cpus 4 -v "${PWD}/output:/output" ghcr.io/mbabramo/acesim-correlated-signals:2026-10-04.1 run --output /output/run --missing compute --workers 4
+docker run --rm --network none --cpus 4 -v "${PWD}/output:/output" ghcr.io/mbabramo/acesim-correlated-signals:2026-10-05 run --output /output/run --missing compute --workers 4
 ```
 
 Docker downloads the software automatically. You do not need a GitHub account, a copy of the code, or separate .NET, TeX, font or PDF-tool installations.
